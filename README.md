@@ -1,7 +1,7 @@
 # CoMerger
-Holistic Multiple Ontologies Merge
+Holistic Multiple Ontologies Merger
 
-CoMerger is a Holistic Multiple Ontologies Merge tool, available at http://comerger.uni-jena.de/.
+CoMerger is a Holistic Multiple Ontologies Merging tool, available at http://comerger.uni-jena.de/.
 
 It consists of several packages:
 * Merger package: It includes a holistic merge method based on the given source ontologies and their mapping. 
