@@ -1,4 +1,4 @@
-package fusion.oapt.algorithm.merger.holisticMerge.consistency;
+package fusion.comerger.algorithm.merger.holisticMerge.consistency;
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory.
@@ -28,11 +28,11 @@ import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 import com.hp.hpl.jena.rdf.model.Model;
 
 import fusion.oapt.MatchingProcess;
-import fusion.oapt.MergingProcess;
-import fusion.oapt.algorithm.merger.holisticMerge.HolisticMerger;
-import fusion.oapt.algorithm.merger.holisticMerge.general.HSave;
-import fusion.oapt.algorithm.merger.holisticMerge.general.SaveTxt;
-import fusion.oapt.algorithm.merger.model.HModel;
+import fusion.comerger.MergingProcess;
+import fusion.comerger.algorithm.merger.holisticMerge.HolisticMerger;
+import fusion.comerger.algorithm.merger.holisticMerge.general.HSave;
+import fusion.comerger.algorithm.merger.holisticMerge.general.SaveTxt;
+import fusion.comerger.algorithm.merger.model.HModel;
 
 public class ConsistencyProcess {
 

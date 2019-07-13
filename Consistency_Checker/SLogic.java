@@ -1,4 +1,4 @@
-package fusion.oapt.algorithm.merger.holisticMerge.consistency;
+package fusion.comerger.algorithm.merger.holisticMerge.consistency;
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory

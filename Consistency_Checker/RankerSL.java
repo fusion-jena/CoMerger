@@ -1,4 +1,4 @@
-package fusion.oapt.algorithm.merger.holisticMerge.consistency;
+package fusion.comerger.algorithm.merger.holisticMerge.consistency;
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory
@@ -15,7 +15,7 @@ import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
-import fusion.oapt.algorithm.merger.model.HModel;
+import fusion.comerger.algorithm.merger.model.HModel;
 
 public class RankerSL {
 

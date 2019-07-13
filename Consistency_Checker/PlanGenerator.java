@@ -1,4 +1,4 @@
-package fusion.oapt.algorithm.merger.holisticMerge.consistency;
+package fusion.comerger.algorithm.merger.holisticMerge.consistency;
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory
@@ -22,7 +22,7 @@ import org.semanticweb.owlapi.model.OWLObjectSomeValuesFrom;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
-import fusion.oapt.algorithm.merger.model.HModel;
+import fusion.comerger.algorithm.merger.model.HModel;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLObjectUnionOfImpl;
 

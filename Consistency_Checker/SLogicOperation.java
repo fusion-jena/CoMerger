@@ -41,9 +41,9 @@ import org.semanticweb.owlapi.model.OWLSubObjectPropertyOfAxiom;
 import org.semanticweb.owlapi.model.OWLSymmetricObjectPropertyAxiom;
 import org.semanticweb.owlapi.model.OWLTransitiveObjectPropertyAxiom;
 
-import fusion.oapt.algorithm.merger.holisticMerge.general.ClassProcess;
-import fusion.oapt.algorithm.merger.holisticMerge.mapping.HMappedClass;
-import fusion.oapt.algorithm.merger.model.HModel;
+import fusion.comerger.algorithm.merger.holisticMerge.general.ClassProcess;
+import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedClass;
+import fusion.comerger.algorithm.merger.model.HModel;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLObjectSomeValuesFromImpl;
 
