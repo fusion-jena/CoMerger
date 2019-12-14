@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Chemotherapy"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugTreatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Drug"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Drug"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Observation_for_PSA-only_recurrences"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Phenotype"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Gene"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Gene"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#SNP"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Variant"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#RNA"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Mrna"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Diseases"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Disease"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Cisplatin"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Cisplatin"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Vitamin"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Vitamin"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Morbidity"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DiseaseSeverity"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Aspirin"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Aspirin"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Infections"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Infection"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.968421052631579</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Education"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugDose"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8708383473726433</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#ALT"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugSalt"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8571428571428571</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

@@ -1,0 +1,2240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://joelcummings.ca/epa_dco.owl#"
+     xml:base="http://joelcummings.ca/epa_dco.owl"
+     xmlns:ns5="http://joelcummings.ca/epa_dco.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:v1="http://purl.org/dco/v1#"
+     xmlns:ns2="http://purl.obolibrary.org/obo/bfo.owl#"
+     xmlns:ns1="http://joelcummings.ca/dco.owl#"
+     xmlns:ns4="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.org/dco/v1">
+        <owl:versionIRI rdf:resource="http://purl.org/dco/v1"/>
+        <ns1:competency_question xml:lang="en">Capability: Has the ability to assign qualities to data type?</ns1:competency_question>
+        <rdfs:comment xml:lang="en">The Data Collection Ontology (DCO) is an ontology designed for data collection providing classes and relations on top of the Basic Formal Ontology (BFO) to facilitate data collection processes, subjects, and data anaylsis through the use of classifiers.
+
+DCO is based on the notion of reasoning to validate incoming data through their definitions based on classifiers.</rdfs:comment>
+        <ns1:competency_question xml:lang="en">Capability: Has the ability to assign units of measure to data captured?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Selection: Can query based on data type and by data structure?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Counting: What is the amount of captured aggregates?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Capability: Has support for the construction of complex structures composed of several types allowing existing structures to mimicked?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Capability: Has the ability to assign expected types to individuals allowing automatic classification using the reasoner with a fallback?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Capability: Has the ability to apply universal time across the ontology?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Selection: Has the ability to query based on time?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Capability: Has the ability to re-classify existing data?</ns1:competency_question>
+        <ns1:competency_question xml:lang="en">Capability: Can construct a process based on differing control flow?</ns1:competency_question>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000179 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000179">
+        <ns4:IAO_0000115 xml:lang="en">Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification.</ns4:IAO_0000115>
+        <ns4:IAO_0000232 xml:lang="en">Really of interest to developers only</ns4:IAO_0000232>
+        <rdfs:label xml:lang="en">BFO OWL specification label</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000180 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000180">
+        <ns4:IAO_0000115 xml:lang="en">Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2</ns4:IAO_0000115>
+        <ns4:IAO_0000119>Person:Alan Ruttenberg</ns4:IAO_0000119>
+        <ns4:IAO_0000232 xml:lang="en">Really of interest to developers only</ns4:IAO_0000232>
+        <rdfs:label xml:lang="en">BFO CLIF specification label</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">alternative term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">curator note</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000601 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000601">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">has associated axiom(nl)</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000602 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000602">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">has associated axiom(fol)</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0010000 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0010000">
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">has axiom label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/bfo.owl#OWLAnnotationProperty_3e9583c3_76b8_4e45_b63b_a6cd46c9ec92 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/bfo.owl#OWLAnnotationProperty_3e9583c3_76b8_4e45_b63b_a6cd46c9ec92">
+        <rdfs:comment xml:lang="en">protoge:defaultLanguage</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/member -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/member"/>
+    
+
+
+    <!-- http://purl.org/dco/v1#competency_question -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dco/v1#competency_question">
+        <rdfs:comment xml:lang="en">Used to define competency questions for the ontology design</rdfs:comment>
+        <rdfs:label xml:lang="en">competency question</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#example_of_usage -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dco/v1#example_of_usage">
+        <rdfs:comment xml:lang="en">Used to provide examples of where a term or relation should be used.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#example_usage -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dco/v1#example_usage"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://joelcummings.ca/dco_survey_improved.owl#branch_of -->
+
+    <owl:ObjectProperty rdf:about="http://joelcummings.ca/dco_survey_improved.owl#branch_of">
+        <rdfs:subPropertyOf rdf:resource="http://joelcummings.ca/dco_survey_improved.owl#object_control_to"/>
+        <rdfs:label>branch of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://joelcummings.ca/dco_survey_improved.owl#object_control_to -->
+
+    <owl:ObjectProperty rdf:about="http://joelcummings.ca/dco_survey_improved.owl#object_control_to">
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#has_object_control"/>
+        <rdfs:label>object control to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#branchesTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#branchesTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_object_control"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#branchesTo"/>
+        <v1:example_usage>An if statement branches to a function call</v1:example_usage>
+        <rdfs:comment xml:lang="en">Represents a point where some object may branch to another object based on a particular condition</rdfs:comment>
+        <rdfs:label xml:lang="en">branches to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#contains_process -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#contains_process">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_part"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#contains_process"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#process_to"/>
+        <v1:example_usage>Vehicle production contains processes such as assembly and painting</v1:example_usage>
+        <rdfs:comment xml:lang="en">Allows composition of processes within classes</rdfs:comment>
+        <rdfs:label xml:lang="en">contains process</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#data_entity_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#data_entity_to">
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#has_data_entity"/>
+        <rdfs:comment xml:lang="en">Links data entities to respective objects</rdfs:comment>
+        <rdfs:label xml:lang="en">data entity to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_data_entity -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_data_entity">
+        <rdfs:comment xml:lang="en">Data entities are objects that exist only to store data typically this will be used to store things like meta data which includes some unit type and the values expected.</rdfs:comment>
+        <rdfs:label>has data entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_measure -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_measure">
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#measurement_to"/>
+        <rdfs:comment xml:lang="en">Links a measurement taken to a particular instance</rdfs:comment>
+        <rdfs:label>has measure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_measurement_datum -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_measurement_datum">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_measure"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#measurement_datum_to"/>
+        <rdfs:range rdf:resource="http://purl.org/dco/v1#meta_data_content_entity"/>
+        <rdfs:comment xml:lang="en">Links a measurement datum individual to another individual. Measurement datums are designed to capture one or more measures as well as the measurement units as opposed to linking only values. Expected to be used with both complex and scalar measurement datum instances.</rdfs:comment>
+        <rdfs:label xml:lang="en">has measurement datum</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_measurement_unit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_measurement_unit">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_measure"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#measurement_unit_to"/>
+        <rdfs:comment xml:lang="en">Represents the unit of measure for a particular complex or scalar measure</rdfs:comment>
+        <rdfs:label xml:lang="en">has measurement unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_object_control -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_object_control">
+        <rdfs:comment xml:lang="en">Represents controls such as looping, repeating, branching etc that may take place in data collection such as things like a process or survey</rdfs:comment>
+        <rdfs:label>has object control</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_part -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_part">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#part_to"/>
+        <rdfs:comment xml:lang="en">The inverse of part_to i.e. a person has_part arm or a vehicle has_part engine</rdfs:comment>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_quality -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_quality">
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">Represents a quality that a particular class has such as being bounded, numerical etc</rdfs:comment>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_subject_type -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_subject_type">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_part"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#subject_type_of"/>
+        <v1:example_of_usage xml:lang="en">If a Subject was a 2017 Ford Mustang that represents things common to all 2017 Mustangs we may collect data on a particular 2017 Ford Mustang that is occurrent as it is a particular vehicle that will exists in time and space and we can say it&apos;s subject type is that of 2017 Ford Mustangs.</v1:example_of_usage>
+        <rdfs:comment xml:lang="en">Used to denote that this individual has a type of some subject. It links objects that are occurrents to their continuant definition. This is because an occurrent is disjoint from a continuant.</rdfs:comment>
+        <rdfs:label xml:lang="en">has subject type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_time_stamp -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#has_time_stamp">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_measure"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#time_stamp_to"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/dco/v1#time_measurement_datum"/>
+        <rdfs:comment xml:lang="en">Represents a time stamp with a particular time unit allowing one to specify time along with domain dependent time units</rdfs:comment>
+        <rdfs:label xml:lang="en">has time stamp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#located_in -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#located_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#location_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Links a particular individual to a location individual i.e. a person to a place</rdfs:comment>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#location_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#location_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Links a particular location individual to another individual</rdfs:comment>
+        <rdfs:label xml:lang="en">location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#measurement_datum_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#measurement_datum_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#measurement_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/dco/v1#meta_data_content_entity"/>
+        <rdfs:label>measurement datum to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#measurement_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#measurement_to">
+        <rdfs:comment xml:lang="en">Links a measurement individual to a individual</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#measurement_unit_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#measurement_unit_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#measurement_to"/>
+        <rdfs:label>measurement unit to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#part_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#part_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Links an individual back to its composed object</rdfs:comment>
+        <rdfs:label xml:lang="en">part to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#process_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#process_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#part_to"/>
+        <rdfs:label>process to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#realized_in -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#realized_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://purl.org/dco/v1#realizes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label>realized in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#realizes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#realizes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#subject_type_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#subject_type_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#part_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#time_stamp_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dco/v1#time_stamp_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#measurement_to"/>
+        <rdfs:label>time stamp to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dco/v1#canRepeat -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#canRepeat">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_control"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Can repeat is a boolean value that dictates whether a process_part or process can repeat, this may be used for data collection that reoccurs over a period of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">can repeat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#hasSequence -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#hasSequence">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_control"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Represents a sequence value relative to other objects in the same process to provide either order or unique reference</rdfs:comment>
+        <rdfs:label xml:lang="en">has sequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_control -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_control">
+        <rdfs:comment xml:lang="en">provides control flow properties for objects such as repeating, sequencing etc</rdfs:comment>
+        <rdfs:label xml:lang="en">has control</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_coordinate_value -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_coordinate_value">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_value"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Represents a coordinate in physical space such as a x, y, or z coordinate in 3D space for a particular objects location</rdfs:comment>
+        <rdfs:label xml:lang="en">has coordinate value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_expected_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_expected_property">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <v1:example_usage>A class may expect to have several string properties which this may be used to represent</v1:example_usage>
+        <rdfs:comment xml:lang="en">Provides the ability for external applications to read for expected properties of particular classes</rdfs:comment>
+        <rdfs:label xml:lang="en">has expected property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_expected_type -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_expected_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <v1:example_usage>Links to a Java class of a known type must be some URI that allows for this class to be uniquely established</v1:example_usage>
+        <rdfs:comment xml:lang="en">Designed to be used with classifiers to establish type expected by annecdotal data or expected ranges based on best known values currently. This will then be used in conjunction with the classifier type assigned by the reasoner which if the URIs do not match one can determine if that instance is an error or the ontologies view (and your anecdotal estimate) is incorrect and needs to be adjusted.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents a type either internal or external to the ontology such as class or representing a database entity, or language class to link the individual to for processing.</rdfs:comment>
+        <rdfs:label xml:lang="en">has expected type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_maximum -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_maximum">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_value"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <v1:example_usage>a percentage has a maximum value of 100, a 5 star rating has a maximum value of 5</v1:example_usage>
+        <rdfs:comment>represents a maximum value expected for a particular class or individual data point</rdfs:comment>
+        <rdfs:label>has maximum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_measurement_value -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_measurement_value">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_value"/>
+        <rdfs:domain rdf:resource="http://purl.org/dco/v1#scalar_measurement_datum"/>
+        <v1:example_of_usage xml:lang="en">vehicle_length_meta_object has_measure 172.3</v1:example_of_usage>
+        <rdfs:comment xml:lang="en">A value representing a measurement of some concrete entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">has measurement value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_minimum -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_minimum">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_value"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <v1:example_usage>an unsigned integer has a minimum value of 0</v1:example_usage>
+        <rdfs:comment>represents a minimum expected value for a particular class or individual data point</rdfs:comment>
+        <rdfs:label>has minimum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_percentage -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_percentage">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_value"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <v1:example_of_usage xml:lang="en">student_grade_meta has_percentage 78</v1:example_of_usage>
+        <rdfs:comment xml:lang="en">Used for any individual that captures some percentage value (0 - 100) such as confidence, a grade etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_time_value -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_time_value">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dco/v1#has_value"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+        <v1:example_usage>Todays date as an epoch long integer</v1:example_usage>
+        <rdfs:comment xml:lang="en">Allows a time value (an epoch time) that represents sequentially when something has occured</rdfs:comment>
+        <rdfs:label xml:lang="en">has time value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dco/v1#has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dco/v1#has_value">
+        <rdfs:comment xml:lang="en">Used for particular entities that contain a value</rdfs:comment>
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://joelcummings.ca/dco_survey.owl#numerically_bounded -->
+
+    <owl:Class rdf:about="http://joelcummings.ca/dco_survey.owl#numerically_bounded">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_66eddafd_b562_47f7_8dd1_0824f5c9a805"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
+        <ns4:BFO_0000179>entity</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Entity</ns4:BFO_0000180>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <ns4:BFO_0000179>continuant</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Continuant</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">continuant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/126-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/008-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/011-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/126-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/009-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/011-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/009-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <ns4:BFO_0000179>occurrent</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Occurrent</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">Every occurrent occupies_spatiotemporal_region some spatiotemporal region. (axiom label in BFO2 Reference: [108-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">occurrent</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Every occurrent occupies_spatiotemporal_region some spatiotemporal region. (axiom label in BFO2 Reference: [108-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/108-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/079-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/108-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/079-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <ns4:BFO_0000179>ic</ns4:BFO_0000179>
+        <ns4:BFO_0000180>IndependentContinuant</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])</ns4:IAO_0000115>
+        <ns4:IAO_0000601 xml:lang="en">For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">independent continuant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/017-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/134-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/018-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/134-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/018-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/017-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <ns4:BFO_0000179>s-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>SpatialRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">All continuant parts of spatial regions are spatial regions.(axiom label in BFO2 Reference: [036-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">spatial region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">All continuant parts of spatial regions are spatial regions.(axiom label in BFO2 Reference: [036-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/036-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/036-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/035-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ns4:BFO_0000179>t-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>TemporalRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">All parts of temporal regions are temporal regions.(axiom label in BFO2 Reference: [101-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">Every temporal region t is such that t occupies_temporal_region t. (axiom label in BFO2 Reference: [119-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (r) (if (TemporalRegion r) (occupiesTemporalRegion r r))) // axiom label in BFO2 CLIF: [119-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x y) (if (and (TemporalRegion x) (occurrentPartOf y x)) (TemporalRegion y))) // axiom label in BFO2 CLIF: [101-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (TemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [100-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">temporal region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">All parts of temporal regions are temporal regions.(axiom label in BFO2 Reference: [101-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/101-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Every temporal region t is such that t occupies_temporal_region t. (axiom label in BFO2 Reference: [119-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/119-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (r) (if (TemporalRegion r) (occupiesTemporalRegion r r))) // axiom label in BFO2 CLIF: [119-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/119-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (and (TemporalRegion x) (occurrentPartOf y x)) (TemporalRegion y))) // axiom label in BFO2 CLIF: [101-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/101-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (TemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [100-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/100-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+        <ns4:BFO_0000179>2d-s-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>TwoDimensionalSpatialRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (TwoDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [039-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">two-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (TwoDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [039-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/039-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <ns4:BFO_0000179>st-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>SpatiotemporalRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">All parts of spatiotemporal regions are spatiotemporal regions.(axiom label in BFO2 Reference: [096-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">Each spatiotemporal region at any time t projects_onto some spatial region at t. (axiom label in BFO2 Reference: [099-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">Each spatiotemporal region projects_onto some temporal region. (axiom label in BFO2 Reference: [098-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">Every spatiotemporal region occupies_spatiotemporal_region itself.</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">Every spatiotemporal region s is such that s occupies_spatiotemporal_region s. (axiom label in BFO2 Reference: [107-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (r) (if (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion r r))) // axiom label in BFO2 CLIF: [107-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x t) (if (SpatioTemporalRegion x) (exists (y) (and (SpatialRegion y) (spatiallyProjectsOntoAt x y t))))) // axiom label in BFO2 CLIF: [099-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x y) (if (and (SpatioTemporalRegion x) (occurrentPartOf y x)) (SpatioTemporalRegion y))) // axiom label in BFO2 CLIF: [096-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (SpatioTemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [095-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (SpatioTemporalRegion x) (exists (y) (and (TemporalRegion y) (temporallyProjectsOnto x y))))) // axiom label in BFO2 CLIF: [098-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">spatiotemporal region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">All parts of spatiotemporal regions are spatiotemporal regions.(axiom label in BFO2 Reference: [096-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/096-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Each spatiotemporal region at any time t projects_onto some spatial region at t. (axiom label in BFO2 Reference: [099-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/099-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Each spatiotemporal region projects_onto some temporal region. (axiom label in BFO2 Reference: [098-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/098-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Every spatiotemporal region s is such that s occupies_spatiotemporal_region s. (axiom label in BFO2 Reference: [107-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/107-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (r) (if (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion r r))) // axiom label in BFO2 CLIF: [107-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/107-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x t) (if (SpatioTemporalRegion x) (exists (y) (and (SpatialRegion y) (spatiallyProjectsOntoAt x y t))))) // axiom label in BFO2 CLIF: [099-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/099-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (and (SpatioTemporalRegion x) (occurrentPartOf y x)) (SpatioTemporalRegion y))) // axiom label in BFO2 CLIF: [096-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/096-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (SpatioTemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [095-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/095-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (SpatioTemporalRegion x) (exists (y) (and (TemporalRegion y) (temporallyProjectsOnto x y))))) // axiom label in BFO2 CLIF: [098-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/098-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#part_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ns4:BFO_0000179>process</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Process</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])</ns4:IAO_0000115>
+        <ns4:IAO_0000602>(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/083-003"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/083-003"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <ns4:BFO_0000179>disposition</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Disposition</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">disposition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/063-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/063-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/062-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ns4:BFO_0000179>realizable</ns4:BFO_0000179>
+        <ns4:BFO_0000180>RealizableEntity</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">realizable entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/060-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/060-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/058-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+        <ns4:BFO_0000179>0d-s-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ZeroDimensionalSpatialRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (ZeroDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [037-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">zero-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000018"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ZeroDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [037-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/037-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <ns4:BFO_0000179>quality</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Quality</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/105-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/055-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/105-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <ns4:BFO_0000179>sdc</ns4:BFO_0000179>
+        <ns4:BFO_0000180>SpecificallyDependentContinuant</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of bs existence. (axiom label in BFO2 Reference: [050-003])</ns4:IAO_0000115>
+        <ns4:IAO_0000602>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of bs existence. (axiom label in BFO2 Reference: [050-003])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <ns4:BFO_0000179>role</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Role</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/061-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <ns4:BFO_0000179>fiat-object-part</ns4:BFO_0000179>
+        <ns4:BFO_0000180>FiatObjectPart</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">fiat object part</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/027-004"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+        <ns4:BFO_0000179>1d-s-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>OneDimensionalSpatialRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (OneDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [038-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">one-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (OneDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [038-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/038-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <ns4:BFO_0000179>object-aggregate</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ObjectAggregate</ns4:BFO_0000180>
+        <ns4:IAO_0000119>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</ns4:IAO_0000119>
+        <ns4:IAO_0000602>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">object aggregate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <owl:annotatedTarget>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000300"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <ns4:BFO_0000179>3d-s-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ThreeDimensionalSpatialRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (ThreeDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [040-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">three-dimensional spatial region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ThreeDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [040-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/040-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <ns4:BFO_0000179>site</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Site</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">site</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/034-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <ns4:BFO_0000179>object</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Object</ns4:BFO_0000180>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <ns4:BFO_0000179>gdc</ns4:BFO_0000179>
+        <ns4:BFO_0000180>GenericallyDependentContinuant</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</ns4:IAO_0000115>
+        <ns4:IAO_0000602>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <ns4:BFO_0000179>function</ns4:BFO_0000179>
+        <ns4:BFO_0000180>Function</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">function</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/064-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_time_value"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ns4:BFO_0000179>p-boundary</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ProcessBoundary</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">p is a process boundary =Def. p is a temporal part of a process &amp; p has no proper temporal parts. (axiom label in BFO2 Reference: [084-001])</ns4:IAO_0000115>
+        <ns4:IAO_0000601 xml:lang="en">Every process boundary occupies_temporal_region a zero-dimensional temporal region. (axiom label in BFO2 Reference: [085-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x) (if (ProcessBoundary x) (exists (y) (and (ZeroDimensionalTemporalRegion y) (occupiesTemporalRegion x y))))) // axiom label in BFO2 CLIF: [085-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(iff (ProcessBoundary a) (exists (p) (and (Process p) (temporalPartOf a p) (not (exists (b) (properTemporalPartOf b a)))))) // axiom label in BFO2 CLIF: [084-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">process boundary</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">p is a process boundary =Def. p is a temporal part of a process &amp; p has no proper temporal parts. (axiom label in BFO2 Reference: [084-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/084-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Every process boundary occupies_temporal_region a zero-dimensional temporal region. (axiom label in BFO2 Reference: [085-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/085-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ProcessBoundary x) (exists (y) (and (ZeroDimensionalTemporalRegion y) (occupiesTemporalRegion x y))))) // axiom label in BFO2 CLIF: [085-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/085-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (ProcessBoundary a) (exists (p) (and (Process p) (temporalPartOf a p) (not (exists (b) (properTemporalPartOf b a)))))) // axiom label in BFO2 CLIF: [084-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/084-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measurement_datum"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/dco/v1#time_measurement_datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <ns4:BFO_0000179>1d-t-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>OneDimensionalTemporalRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(forall (x) (if (OneDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [103-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">one-dimensional temporal region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (OneDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [103-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/103-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <ns4:BFO_0000179>material</ns4:BFO_0000179>
+        <ns4:BFO_0000180>MaterialEntity</ns4:BFO_0000180>
+        <ns4:IAO_0000601 xml:lang="en">Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000601 xml:lang="en">every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/020-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/021-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/019-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/021-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/020-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <ns4:BFO_0000179>cf-boundary</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ContinuantFiatBoundary</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">b is a continuant fiat boundary = Def. b is an immaterial entity that is of zero, one or two dimensions and does not include a spatial region as part. (axiom label in BFO2 Reference: [029-001])</ns4:IAO_0000115>
+        <ns4:IAO_0000601 xml:lang="en">Every continuant fiat boundary is located at some spatial region at every time at which it exists</ns4:IAO_0000601>
+        <ns4:IAO_0000602>(iff (ContinuantFiatBoundary a) (and (ImmaterialEntity a) (exists (b) (and (or (ZeroDimensionalSpatialRegion b) (OneDimensionalSpatialRegion b) (TwoDimensionalSpatialRegion b)) (forall (t) (locatedInAt a b t)))) (not (exists (c t) (and (SpatialRegion c) (continuantPartOfAt c a t)))))) // axiom label in BFO2 CLIF: [029-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">continuant fiat boundary</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a continuant fiat boundary = Def. b is an immaterial entity that is of zero, one or two dimensions and does not include a spatial region as part. (axiom label in BFO2 Reference: [029-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/029-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (ContinuantFiatBoundary a) (and (ImmaterialEntity a) (exists (b) (and (or (ZeroDimensionalSpatialRegion b) (OneDimensionalSpatialRegion b) (TwoDimensionalSpatialRegion b)) (forall (t) (locatedInAt a b t)))) (not (exists (c t) (and (SpatialRegion c) (continuantPartOfAt c a t)))))) // axiom label in BFO2 CLIF: [029-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/029-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <ns4:BFO_0000179>immaterial</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ImmaterialEntity</ns4:BFO_0000180>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000146"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000147"/>
+        <ns4:BFO_0000179>1d-cf-boundary</ns4:BFO_0000179>
+        <ns4:BFO_0000180>OneDimensionalContinuantFiatBoundary</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(iff (OneDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (OneDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [032-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">one-dimensional continuant fiat boundary</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000142"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (OneDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (OneDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [032-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/032-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000144">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ns4:BFO_0000179>process-profile</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ProcessProfile</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">b is a process_profile =Def. there is some process c such that b process_profile_of c (axiom label in BFO2 Reference: [093-002])</ns4:IAO_0000115>
+        <ns4:IAO_0000602>(forall (x y) (if (processProfileOf x y) (and (properContinuantPartOf x y) (exists (z t) (and (properOccurrentPartOf z y) (TemporalRegion t) (occupiesSpatioTemporalRegion x t) (occupiesSpatioTemporalRegion y t) (occupiesSpatioTemporalRegion z t) (not (exists (w) (and (occurrentPartOf w x) (occurrentPartOf w z))))))))) // axiom label in BFO2 CLIF: [094-005] </ns4:IAO_0000602>
+        <ns4:IAO_0000602>(iff (ProcessProfile a) (exists (b) (and (Process b) (processProfileOf a b)))) // axiom label in BFO2 CLIF: [093-002] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">process profile</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a process_profile =Def. there is some process c such that b process_profile_of c (axiom label in BFO2 Reference: [093-002])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/093-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (processProfileOf x y) (and (properContinuantPartOf x y) (exists (z t) (and (properOccurrentPartOf z y) (TemporalRegion t) (occupiesSpatioTemporalRegion x t) (occupiesSpatioTemporalRegion y t) (occupiesSpatioTemporalRegion z t) (not (exists (w) (and (occurrentPartOf w x) (occurrentPartOf w z))))))))) // axiom label in BFO2 CLIF: [094-005] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/094-005"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (ProcessProfile a) (exists (b) (and (Process b) (processProfileOf a b)))) // axiom label in BFO2 CLIF: [093-002] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/093-002"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000145">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ns4:BFO_0000179>r-quality</ns4:BFO_0000179>
+        <ns4:BFO_0000180>RelationalQuality</ns4:BFO_0000180>
+        <ns4:IAO_0000115 xml:lang="en">b is a relational quality = Def. for some independent continuants c, d and for some time t: b quality_of c at t &amp; b quality_of d at t. (axiom label in BFO2 Reference: [057-001])</ns4:IAO_0000115>
+        <ns4:IAO_0000602>(iff (RelationalQuality a) (exists (b c t) (and (IndependentContinuant b) (IndependentContinuant c) (qualityOfAt a b t) (qualityOfAt a c t)))) // axiom label in BFO2 CLIF: [057-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">relational quality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a relational quality = Def. for some independent continuants c, d and for some time t: b quality_of c at t &amp; b quality_of d at t. (axiom label in BFO2 Reference: [057-001])</owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/057-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (RelationalQuality a) (exists (b c t) (and (IndependentContinuant b) (IndependentContinuant c) (qualityOfAt a b t) (qualityOfAt a c t)))) // axiom label in BFO2 CLIF: [057-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/057-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000146">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <ns4:BFO_0000179>2d-cf-boundary</ns4:BFO_0000179>
+        <ns4:BFO_0000180>TwoDimensionalContinuantFiatBoundary</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(iff (TwoDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (TwoDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [033-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">two-dimensional continuant fiat boundary</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000146"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (TwoDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (TwoDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [033-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/033-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <ns4:BFO_0000179>0d-cf-boundary</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ZeroDimensionalContinuantFiatBoundary</ns4:BFO_0000180>
+        <ns4:IAO_0000602>(iff (ZeroDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (ZeroDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [031-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">zero-dimensional continuant fiat boundary</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000147"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (ZeroDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (ZeroDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [031-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/031-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measurement_datum"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/dco/v1#time_measurement_datum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ns4:BFO_0000179>0d-t-region</ns4:BFO_0000179>
+        <ns4:BFO_0000180>ZeroDimensionalTemporalRegion</ns4:BFO_0000180>
+        <ns4:IAO_0000118 xml:lang="en">temporal instant.</ns4:IAO_0000118>
+        <ns4:IAO_0000602>(forall (x) (if (ZeroDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [102-001] </ns4:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">zero-dimensional temporal region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ZeroDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [102-001] </owl:annotatedTarget>
+        <ns4:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/102-001"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dco/v1#Basic_State -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#Basic_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#Exclusive_State_Driven_Process"/>
+        <rdfs:comment xml:lang="en">A basic state represnts the restriction that one must state must finish before another state begins, the probability of another state happening is 100% and is not based around any particular parameters or functions.</rdfs:comment>
+        <rdfs:label xml:lang="en">basic state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#DataRole -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#DataRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment xml:lang="en">A role a particular piece of data has i.e. a field in a program, a form, a attribute etc.</rdfs:comment>
+        <rdfs:label>data role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#Dependent_Process -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#Dependent_Process">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_part"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A dependent process places restrictions on state transitions such that there are restrictions on concurrent events, this model is deterministic in that all states and sub processes must come to an end.</rdfs:comment>
+        <rdfs:label xml:lang="en">dependent process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#Exclusive_State_Driven_Process -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#Exclusive_State_Driven_Process">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#Dependent_Process"/>
+        <rdfs:label xml:lang="en">Exclusive State Driven Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#Independent_Process -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#Independent_Process">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment xml:lang="en">&quot;&quot;\&quot;\&quot;\&quot;&quot;An independent process is defined as one which can overlap infinetly many times with some other process or process state at any given point in time. Thus a process is considered concurrent.
+
+An example would be a multi core processor running several threads at a time.&quot;\\\&quot;\&quot;\&quot;&quot;&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">independent process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#Nested_Process -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#Nested_Process">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#Dependent_Process"/>
+        <rdfs:comment xml:lang="en">A nested process represents a process that allows other processes to concurrently run but end when the parent process (outside process) terminates.</rdfs:comment>
+        <rdfs:label xml:lang="en">nested process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_1d2299fa_f478_4421_ad84_15d765ed157c -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_1d2299fa_f478_4421_ad84_15d765ed157c">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_a3edb151_8bf7_419e_9f17_1a31a5aa9481"/>
+        <owl:disjointWith rdf:resource="http://purl.org/dco/v1#OWLClass_20cfe3d6_b9bf_43af_a299_a906982d1e36"/>
+        <rdfs:label xml:lang="en">approximate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_20cfe3d6_b9bf_43af_a299_a906982d1e36 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_20cfe3d6_b9bf_43af_a299_a906982d1e36">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_a3edb151_8bf7_419e_9f17_1a31a5aa9481"/>
+        <rdfs:label xml:lang="en">exact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_2c4397b1_1461_4c39_9026_a63c17619e1e -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_2c4397b1_1461_4c39_9026_a63c17619e1e">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_93d4c7cf_65d2_4323_90bc_42150dd91497"/>
+        <rdfs:label xml:lang="en">uncountable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">datatype property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_66b7cc01_fbb4_44e0_b8ff_5d4a52878143 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_66b7cc01_fbb4_44e0_b8ff_5d4a52878143">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_93d4c7cf_65d2_4323_90bc_42150dd91497"/>
+        <rdfs:label xml:lang="en">finite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_66eddafd_b562_47f7_8dd1_0824f5c9a805 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_66eddafd_b562_47f7_8dd1_0824f5c9a805">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_a80cdeb5_5258_4c9d_a892_e1f2f3772bc6"/>
+        <owl:disjointWith rdf:resource="http://purl.org/dco/v1#OWLClass_ecb32c7f_9a86_4e4e_a7d7_e86c68487b09"/>
+        <rdfs:label xml:lang="en">bounded</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_725be624_3f6f_4cd1_8572_d5f4aa102946 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_725be624_3f6f_4cd1_8572_d5f4aa102946">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda"/>
+        <rdfs:label xml:lang="en">numericalness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_93d4c7cf_65d2_4323_90bc_42150dd91497 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_93d4c7cf_65d2_4323_90bc_42150dd91497">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda"/>
+        <rdfs:label xml:lang="en">cardinality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_a3edb151_8bf7_419e_9f17_1a31a5aa9481 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_a3edb151_8bf7_419e_9f17_1a31a5aa9481">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda"/>
+        <rdfs:label xml:lang="en">exactness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_a7a0d05a_5751_4a9b_9690_7eb12c92257b -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_a7a0d05a_5751_4a9b_9690_7eb12c92257b">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_725be624_3f6f_4cd1_8572_d5f4aa102946"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+                            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#NCName"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#NMTOKEN"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#Name"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#byte"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#language"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#token"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#rational"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/dco/v1#numerical"/>
+        <rdfs:label xml:lang="en">non numerical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_a80cdeb5_5258_4c9d_a892_e1f2f3772bc6 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_a80cdeb5_5258_4c9d_a892_e1f2f3772bc6">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda"/>
+        <rdfs:label xml:lang="en">boundedness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#OWLClass_ecb32c7f_9a86_4e4e_a7d7_e86c68487b09 -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#OWLClass_ecb32c7f_9a86_4e4e_a7d7_e86c68487b09">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_a80cdeb5_5258_4c9d_a892_e1f2f3772bc6"/>
+        <rdfs:label xml:lang="en">unbounded</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#Probabilstic_State -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#Probabilstic_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#Exclusive_State_Driven_Process"/>
+        <rdfs:comment xml:lang="en">A probabilistic state represnts a state transition that is based around some probability or function that determines the likelyhood of a particular transformation happening.</rdfs:comment>
+        <rdfs:label xml:lang="en">Probabilistic State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#classifier -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#classifier">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment xml:lang="en">Used to group data elements that are related but not necessairly the same in key attributes. Examples include EPA size classification which goes by interior volume but this can vary widely depending on vehicle configuration.
+
+Classifiers should be used to group subjects and their instances via larger catch-bags.</rdfs:comment>
+        <rdfs:label xml:lang="en">classifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#complex_measurement_datum -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#complex_measurement_datum">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#measurement"/>
+        <rdfs:comment xml:lang="en">Measurement Datums for complex types involving multiple fields</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#countable -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#countable">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_93d4c7cf_65d2_4323_90bc_42150dd91497"/>
+        <rdfs:label xml:lang="en">countable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#equal -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#equal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#equality"/>
+        <owl:disjointWith rdf:resource="http://purl.org/dco/v1#inequal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#equality -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#equality">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_49a47c21_5fc1_4e7f_8559_4bd318376bda"/>
+        <rdfs:label xml:lang="en">equality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#geographic_location -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#geographic_location">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <rdfs:comment xml:lang="en">This represents some geographic location on the earth where an entity is located, it may represent the coordinates of a building or an address of a house.</rdfs:comment>
+        <rdfs:label xml:lang="en">geographic location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#inequal -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#inequal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#equality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#length_measurement_datum -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#length_measurement_datum">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measurement_unit"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/dco/v1#length_unit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measurement_value"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#scalar_measurement_datum"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measurement_unit"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/dco/v1#length_unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Length measures are used for dimensions of something or someone</rdfs:comment>
+        <rdfs:label>length measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#length_unit -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#length_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#measurement_unit_label"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/dco/v1#numerical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A unit of distance between two points i.e. cm, mm, in, m etc.</rdfs:comment>
+        <rdfs:label>length unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#measurement -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#measurement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#meta_data_content_entity"/>
+        <v1:example_of_usage xml:lang="en">Capture a persons height in cm
+
+IndividualPerson hasHeight heightDatum(hasValue 176, hasValue &apos;cm&apos;)</v1:example_of_usage>
+        <rdfs:comment xml:lang="en">Measurements seek to capture some numeric or statistical measure of a particular entity</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#measurement_unit_label -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#measurement_unit_label">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#meta_data_content_entity"/>
+        <rdfs:comment>Provides the ability to label datatypes as particular units rather than simply numbers or letters.</rdfs:comment>
+        <rdfs:label>measurement unit label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#meta_data_content_entity -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#meta_data_content_entity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <v1:example_of_usage>When capturing a persons height one may want to capture the value in feet and in cm and will use meta data to capture the unit as well.</v1:example_of_usage>
+        <rdfs:comment xml:lang="en">These entities represent descriptors about universals they describe like metadata in a file that captures time and size.
+
+Metadata is also used for capturing units along with the data itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">meta data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#numerical -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#numerical">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#OWLClass_725be624_3f6f_4cd1_8572_d5f4aa102946"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#long"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#negativeInteger"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#real"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#process_part -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#process_part">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_part"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#canRepeat"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#hasSequence"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">&quot;&quot;\&quot;\&quot;\&quot;&quot;A part of a process such as a step or stage
+
+Each process has at last two boundaries a start boundary and stop boundary that represents when it occured in time
+
+A sequence represents the order of which the process_part exists in a process allowing branches to occur to a specified processSequence&quot;\\\&quot;\&quot;\&quot;&quot;&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#scalar_measurement_datum -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#scalar_measurement_datum">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#measurement"/>
+        <rdfs:comment xml:lang="en">Scalar Measurement Datums capture a single data point along with the unit it is captured in. This is the most common case of measurement datum and should be used whenever possible.</rdfs:comment>
+        <rdfs:label>scalar measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#subject -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#subject">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:comment xml:lang="en">Note a subject is not disjoint with material entity or immaterial entity meaning your subject can be material (a person) or immaterial (an organization)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The universal for which we are capturing data for or about. It defines the entity for which we want to relate captured content to. i.e a car, a person, an animal etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#time_measurement_datum -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#time_measurement_datum">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measure"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/dco/v1#time_unit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_time_value"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#scalar_measurement_datum"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_measurement_unit"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/dco/v1#time_unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dco/v1#has_time_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents an epoch time</rdfs:comment>
+        <rdfs:label>time measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dco/v1#time_unit -->
+
+    <owl:Class rdf:about="http://purl.org/dco/v1#time_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dco/v1#measurement_unit_label"/>
+        <rdfs:comment>A measurement unit of time i.e. seconds, minutes etc.</rdfs:comment>
+        <rdfs:label>time unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <ns2:OWLAnnotationProperty_3e9583c3_76b8_4e45_b63b_a6cd46c9ec92>en</ns2:OWLAnnotationProperty_3e9583c3_76b8_4e45_b63b_a6cd46c9ec92>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com/bfo-spec-label">
+        <ns4:IAO_0000119>Person:Alan Ruttenberg</ns4:IAO_0000119>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000011"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/dco/v1#OWLClass_2c4397b1_1461_4c39_9026_a63c17619e1e"/>
+            <rdf:Description rdf:about="http://purl.org/dco/v1#OWLClass_66b7cc01_fbb4_44e0_b8ff_5d4a52878143"/>
+            <rdf:Description rdf:about="http://purl.org/dco/v1#countable"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

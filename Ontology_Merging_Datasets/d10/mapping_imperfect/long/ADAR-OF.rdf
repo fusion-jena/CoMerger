@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Generically_dependent_continuant"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Continuant"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Continuant"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Quality"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Entity"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/span#TemporalRegion"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Temporal_region"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/span#ProcessBoundary"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Process_boundary"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Spatiotemporal_region"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Specifically_dependent_continuant"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Occurent"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9647058823529412</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Indipendent_continuant"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9631079478054567</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#builtin"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#builtin"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#arguments"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#arguments"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#argument1"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#argument1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#classPredicate"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#classPredicate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#argument2"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#argument2"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#head"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#head"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2003/11/swrl#body"/>
+        <entity2 rdf:resource="http://www.w3.org/2003/11/swrl#body"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

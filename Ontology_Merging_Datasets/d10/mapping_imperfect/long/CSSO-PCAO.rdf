@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000233"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Frequency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000234"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Urgency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000119"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Fatigue"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000078"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Bone_pain"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000133"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Hypertension"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000074"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Hematuria"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000225"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Tenderness"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000085"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Castration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8584177835894083</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

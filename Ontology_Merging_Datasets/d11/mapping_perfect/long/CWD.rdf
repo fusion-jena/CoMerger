@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/RCTOntology.owl#Date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.shojaee.com/shr/shr.owl#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://childhealthservicemodels.eu/asthma#MOCHA-ADHD_000003"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000320"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#BMI"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.shojaee.com/shr/shr.owl#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Calories"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#calories"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/RCTOntology.owl#Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000022"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#female"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/BiodiversityOntologyFull.owl#Species"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000025"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Observation"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Death"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000022"/>
+        <entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Female"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <entity2 rdf:resource="http://knoesis.wright.edu/ParasiteExperiment.owl#sample"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Observation_for_PSA-only_recurrences"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/GO_0016265"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000023"/>
+        <entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Male"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <entity2 rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Female"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000022"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Death"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Observation"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bootstrep.eu/ontology/GRO#Death"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000021"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/BiodiversityOntologyFull.owl#Sex"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Observation"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/biotop/biotop.owl#Death"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#male"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0000_000023"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000023"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Male"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#GeneProduct"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000021"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#sex"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Birth"/>
+        <entity2 rdf:resource="https://w3id.org/ahso#AHSO_0001_000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#GeneProduct"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Disease"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Death"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Patient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000020"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Synthesis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Population"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Phenotype"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8551724137931034</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000055"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#has_id"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000046"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#isStudiedBy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9454545454545454</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

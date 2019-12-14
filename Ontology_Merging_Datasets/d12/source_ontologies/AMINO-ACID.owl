@@ -1,0 +1,3055 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.co-ode.org/ontologies/amino-acid/2006/05/18/amino-acid.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.co-ode.org/ontologies/amino-acid/2006/05/18/amino-acid.owl#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >classified</owl:versionInfo>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >version 1.2, copyright The University of
+			Manchester, Nick Drummond, Georgina Moulton, Robert Stevens, Phil Lord</owl:versionInfo>
+    <rdfs:comment xml:lang="en">Amino acids and their properties</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="TinyPolarAminoAcid">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="AminoAcid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Tiny"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasSize"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Polar"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasPolarity"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AliphaticAminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Positive">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Neutral"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Negative"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Charge"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PositiveChargedAminoAcid">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AminoAcid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Positive"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasCharge"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SpecificAminoAcid"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Q">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="S"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="T"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Aliphatic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Glutamine</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="R"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="G"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="V"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LargeAliphaticAminoAcid"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="P"/>
+    </owl:disjointWith>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gln</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="H"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="K"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Aliphatic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="C"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="L"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="W"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="A"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="D"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Large"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="E"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="N"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Y"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Large"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="F"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#W">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >trp</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#H"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tryptophan</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#L"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Large"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Hydrophobic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#S"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Y"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Large"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Aromatic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophobic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AromaticAminoAcid"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#F"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#P"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Charge">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Positive"/>
+          <owl:Class rdf:about="#Neutral"/>
+          <owl:Class rdf:about="#Negative"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="RefiningFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Small">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Large"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Tiny"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Size"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Polar">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Non-Polar"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Polarity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#S">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ser</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Serine</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#F"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Aliphatic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#TinyPolarAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#P"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Y"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Aliphatic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#H"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#L"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Q"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Aliphatic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Aromatic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SideChainStructure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#F">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophobic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Phenylalanine</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Y"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Large"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#H"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#L"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophobic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >phe</shortName>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Large"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#P"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AromaticAminoAcid"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#LargeAliphaticAminoAcid">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AminoAcid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Large"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasSize"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AliphaticAminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Large">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Tiny"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Small"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Size"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Hydrophobic">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Hydrophilic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Hydrophobicity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#H">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#P"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Y"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AromaticAminoAcid"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Positive"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Histidine</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PositiveChargedAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Positive"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >his</shortName>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#L"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#L">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#LargeAliphaticAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#P"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Leucine</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Y"/>
+    </owl:disjointWith>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >leu</shortName>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SideChainStructure">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Aromatic"/>
+          <owl:Class rdf:about="#Aliphatic"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#RefiningFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AromaticAminoAcid">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AminoAcid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Aromatic"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SpecificAminoAcid"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#AliphaticAminoAcid">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AminoAcid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SpecificAminoAcid"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Y">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#P"/>
+    </owl:disjointWith>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Tyrosine</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >tyr</shortName>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Aromatic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AromaticAminoAcid"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#P">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#N"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pro</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#L"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Proline</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#N">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >asn</shortName>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Asparagine</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: Should this be Aliphatic?</owl:versionInfo>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#D"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Negative">
+    <owl:disjointWith rdf:resource="#Positive"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Neutral"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Charge"/>
+  </owl:Class>
+  <owl:Class rdf:about="#D">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >asp</shortName>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Negative"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: Aspartate?</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Negative"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#R"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Aspartate</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NegativeChargedAminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#R">
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Positive"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <owl:disjointWith rdf:resource="#F"/>
+    <rdfs:subClassOf rdf:resource="#PositiveChargedAminoAcid"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Positive"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#V"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#LargeAliphaticAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Arginine</rdfs:label>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >arg</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Size">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Large"/>
+          <owl:Class rdf:about="#Small"/>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#RefiningFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#V">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >val</shortName>
+    <owl:disjointWith rdf:resource="#R"/>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#T"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Valine</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Aromatic">
+    <owl:disjointWith rdf:resource="#Aliphatic"/>
+    <rdfs:subClassOf rdf:resource="#SideChainStructure"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Hydrophobicity">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Hydrophobic"/>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#RefiningFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#T">
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith rdf:resource="#V"/>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#TinyPolarAminoAcid"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#R"/>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#D"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Hydrophilic"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith rdf:resource="#W"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >thr</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#I"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Threonine</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Hydrophilic">
+    <owl:disjointWith rdf:resource="#Hydrophobic"/>
+    <rdfs:subClassOf rdf:resource="#Hydrophobicity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AminoAcid">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="#SpecificAminoAcid"/>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#A"/>
+          <owl:Class rdf:about="#R"/>
+          <owl:Class rdf:about="#N"/>
+          <owl:Class rdf:about="#D"/>
+          <owl:Class rdf:about="#C"/>
+          <owl:Class rdf:about="#E"/>
+          <owl:Class rdf:about="#Q"/>
+          <owl:Class rdf:about="#G"/>
+          <owl:Class rdf:about="#H"/>
+          <owl:Class rdf:about="#I"/>
+          <owl:Class rdf:about="#L"/>
+          <owl:Class rdf:about="#K"/>
+          <owl:Class rdf:about="#M"/>
+          <owl:Class rdf:about="#F"/>
+          <owl:Class rdf:about="#P"/>
+          <owl:Class rdf:about="#S"/>
+          <owl:Class rdf:about="#T"/>
+          <owl:Class rdf:about="#W"/>
+          <owl:Class rdf:about="#Y"/>
+          <owl:Class rdf:about="#V"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#I">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#L"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#D"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#V"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Isoleucine</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#G"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Neutral"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#T"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ile</shortName>
+    <owl:disjointWith rdf:resource="#R"/>
+    <rdfs:subClassOf rdf:resource="#LargeAliphaticAminoAcid"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Neutral">
+    <owl:disjointWith rdf:resource="#Positive"/>
+    <owl:disjointWith rdf:resource="#Negative"/>
+    <rdfs:subClassOf rdf:resource="#Charge"/>
+  </owl:Class>
+  <owl:Class rdf:about="#G">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#E"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#R"/>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith rdf:resource="#T"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Glycine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+    <owl:disjointWith rdf:resource="#I"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gly</shortName>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#V"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#L"/>
+  </owl:Class>
+  <owl:Class rdf:about="#E">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophilic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#F"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Negative"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#H"/>
+    <owl:disjointWith rdf:resource="#R"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#T"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith rdf:resource="#G"/>
+    <owl:disjointWith rdf:resource="#S"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Negative"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#V"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith rdf:resource="#I"/>
+    <owl:disjointWith rdf:resource="#L"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Glutamate</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophilic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#D"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#A"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >glu</shortName>
+    <owl:disjointWith rdf:resource="#N"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NegativeChargedAminoAcid"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#NegativeChargedAminoAcid">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AminoAcid"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Negative"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasCharge"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+  </owl:Class>
+  <owl:Class rdf:about="#A">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ala</shortName>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Tiny"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#K"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#L"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <owl:disjointWith rdf:resource="#E"/>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#R"/>
+    <owl:disjointWith rdf:resource="#G"/>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#S"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Alanine</rdfs:label>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#T"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#V"/>
+    <owl:disjointWith rdf:resource="#I"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#K">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#H"/>
+    <owl:disjointWith rdf:resource="#S"/>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lys</shortName>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#I"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophilic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#M"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#L"/>
+    <rdfs:subClassOf rdf:resource="#LargeAliphaticAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#R"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#G"/>
+    <owl:disjointWith rdf:resource="#V"/>
+    <owl:disjointWith rdf:resource="#A"/>
+    <owl:disjointWith rdf:resource="#E"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophilic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Positive"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Lysine</rdfs:label>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf rdf:resource="#PositiveChargedAminoAcid"/>
+    <owl:disjointWith rdf:resource="#T"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Positive"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#P"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#N"/>
+  </owl:Class>
+  <owl:Class rdf:about="#M">
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#G"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#A"/>
+    <owl:disjointWith rdf:resource="#E"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:subClassOf rdf:resource="#LargeAliphaticAminoAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#L"/>
+    <owl:disjointWith rdf:resource="#R"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#K"/>
+    <owl:disjointWith rdf:resource="#V"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#C"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >met</shortName>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#T"/>
+    <owl:disjointWith rdf:resource="#S"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Methionine</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Large"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#I"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SpecificAminoAcid">
+    <owl:equivalentClass rdf:resource="#AminoAcid"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Polarity">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Polar"/>
+          <owl:Class rdf:about="#Non-Polar"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#RefiningFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#C">
+    <owl:disjointWith rdf:resource="#R"/>
+    <owl:disjointWith rdf:resource="#T"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#F"/>
+    <owl:disjointWith rdf:resource="#A"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <shortName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cys</shortName>
+    <owl:disjointWith rdf:resource="#H"/>
+    <owl:disjointWith rdf:resource="#Y"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Neutral"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasCharge"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#M"/>
+    <owl:disjointWith rdf:resource="#V"/>
+    <owl:disjointWith rdf:resource="#Q"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Hydrophobic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasHydrophobicity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#E"/>
+    <owl:disjointWith rdf:resource="#S"/>
+    <owl:disjointWith rdf:resource="#G"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Small"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSize"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#L"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Aliphatic"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSideChainStructure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#W"/>
+    <owl:disjointWith rdf:resource="#D"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Polar"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasPolarity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AliphaticAminoAcid"/>
+    <owl:disjointWith rdf:resource="#N"/>
+    <owl:disjointWith rdf:resource="#I"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cysteine</rdfs:label>
+    <owl:disjointWith rdf:resource="#P"/>
+    <owl:disjointWith rdf:resource="#K"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Non-Polar">
+    <owl:disjointWith rdf:resource="#Polar"/>
+    <rdfs:subClassOf rdf:resource="#Polarity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Tiny">
+    <owl:disjointWith rdf:resource="#Large"/>
+    <owl:disjointWith rdf:resource="#Small"/>
+    <rdfs:subClassOf rdf:resource="#Size"/>
+  </owl:Class>
+  <owl:FunctionalProperty rdf:about="#hasSideChainStructure">
+    <rdfs:domain rdf:resource="#AminoAcid"/>
+    <rdfs:range rdf:resource="#SideChainStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasHydrophobicity">
+    <rdfs:domain rdf:resource="#AminoAcid"/>
+    <rdfs:range rdf:resource="#Hydrophobicity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasSize">
+    <rdfs:domain rdf:resource="#AminoAcid"/>
+    <rdfs:range rdf:resource="#Size"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasCharge">
+    <rdfs:domain rdf:resource="#AminoAcid"/>
+    <rdfs:range rdf:resource="#Charge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasPolarity">
+    <rdfs:domain rdf:resource="#AminoAcid"/>
+    <rdfs:range rdf:resource="#Polarity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:AnnotationProperty rdf:ID="shortName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:AnnotationProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

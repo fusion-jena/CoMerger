@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Treatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Patient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Clinical_Process-Procedure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8615384615384616</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientMonitoring"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Monitoring"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7977959076254733</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Care_Setting"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7925566803833111</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientAssessment"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Patient_entlassen"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.878099173553719</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataClassification"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Classification"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.875</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ICD"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#ICD-10"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7573355524910652</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#kein_Patient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Human_Resources"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7220000232827455</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#has"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#is_involved"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9454545454545454</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

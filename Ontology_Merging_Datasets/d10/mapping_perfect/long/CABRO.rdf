@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#SpeechTherapy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/HIO_0000114"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/INO_0000002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugInteraction"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+        <entity2 rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Interaction"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#treatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Treatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+        <entity2 rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+        <entity2 rdf:resource="http://purl.org/autism-ontology/1.0/autism-core.owl#AUTISMC1000045"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.neomark.eu/ontologies/Treatment"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Patient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000090"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+        <entity2 rdf:resource="http://purl.org/biotop/biotop.owl#Human"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ico.owl/ICO_0000321"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/Patient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://bmi.utah.edu/ontologies/peontology/Treatment"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VisualImpairment"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/HP_0000505"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ERO_0000071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/INO_0000118"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#GeneProductInteraction"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

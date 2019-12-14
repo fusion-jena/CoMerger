@@ -1,0 +1,2423 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID1538"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://semanticscience.org/resource/Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/HuPSON#SCAIVPH_00000294"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CSP/2482-1824"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/acgt/1.0#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/FLU_0000786"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85035876"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C78441"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU046569"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906059661148625"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://www.projecthalo.com/aura#Sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#5095"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#floors"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/4350765e4f5c52c7fc0dc1873893145c090be686"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002355"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85123396"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2482080"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/ontoparonnoy#Date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25347"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://aimlab.cs.uoregon.edu/smash/ontologies/biomarker.owl#Weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/410672004"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/obo/owl/PATO#PATO_0000119"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.regenstrief.org/loinc#LP18015-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X75Ob"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/2a38b9fadb2e4f83fc397132227a50f0c6fa4463"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/ClinicalEvaluation.owl#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#11413"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/TRAK_0001278"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#steps"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D012890"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontoparonnoy#Efficacite"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/TopicCategory/elevation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.co-ode.org/ontologies/galen#inactive"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/HL7/C3244313"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/6f839cac5bc18e26bd5da81d233d8b494bc14c15"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://bioontology.org/projects/ontologies/birnlex#birnlex_2052"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RXNORM/1001007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D012890"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/HL7/C3244312"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#clock"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000596"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bioontology.org/pma.owl#PMA_872"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bioontology.org/pma.owl#PMA_1306"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/TRAK_0000882"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDLINEPLUS/C1305855"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/席婷/ontologies/2019/3/untitled-ontology-62#Sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/53914106b583482739ef6a3b6ece8c0b563942d4"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU000047"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#_6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP97908-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://childhealthservicemodels.eu/asthma#MOCHA-ADHD_000003"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/obo/owl/GO#GO_0030431"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bioontology.org/pma.owl#PMA_208"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://carre.kmi.open.ac.uk/ontology/lifestyle.owl#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/445b63243780b5d9275dd69b3774f0955f63344e"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://data.bnf.fr/ark:/12148/cb12294604n"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#gps"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000951"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/PATO#PATO_0000128"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.icn.ch/icnp#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000176"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ODGI.owl#BMI"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001309"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/8c1d415ba6ede00a92ababd68ecba02f4de7462c"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://hl7.org/fhir/date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.cvrgrid.org/files/ECGOntologyv1.owl#ECG_000000159"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP18015-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D012890"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/DDO.owl#DDO_0000230"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/d8b1fc75b4be941eb70b06d61664b394e4b824bb"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000542"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU004087"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://semanticscience.org/resource/SIO_000040"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.co-ode.org/ontologies/galen#StartTime"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/CMO_0000012"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0043100"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sweetontology.net/propSpaceHeight/Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/5/22/Ontology1277229984000.owl#HPI:0000154"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0037313"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="file:/Users/allanthird/Work/CARRE/CARREOntology/carre-sensors.xml#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU000050"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Calories"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#calories"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/npo#NPO_1818"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.icn.ch/icnp#Weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2959418_2959420"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/LifO_0000046"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/73425007"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/LifO_0000044"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CSP/1743-9596"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#calories"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Calories"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/GO_0030431"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/6f53c308abcdb8dde938316c31e1923e2d8dca3d"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C126083"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://sweetontology.net/reprTime/Duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://edamontology.org/data_2156"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP182451-7"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <entity2 rdf:resource="http://aimlab.cs.uoregon.edu/smash/ontologies/biomarker.owl#Height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10047890"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/784f162a7fb7c8f2e4d4354ebaaf35e75cc9737a"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/G-7290"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#clock"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/OGG_3000009575"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/WC_inactive"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/33E5."/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C1301880"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.regenstrief.org/loinc#LP28807-3"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D004526"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#F02.830.855"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000128"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25164"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.dataone.org/odo/ECSO_00002051"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#F02.784.692.351"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP221195-3"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2959577_2959578"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="file:/Users/allanthird/Work/CARRE/CARREOntology/carre-sensors.xml#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://lod.nal.usda.gov/nalt/10123"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0678121"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1171063716.owl#BMI"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000433"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/XEO_00239"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://radlex.org/RID/RID39316"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000243"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://d-nb.info/gnd/4216824-7"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#gps"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/phenX/020700"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mre.zcu.cz/ontology/dasta.owl#Weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP28807-3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0013682"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001687"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#13132"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.uni-rostock.de/comodi/comodi#Date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/PMR.owl#Weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/567de0cf7925c781862282a15b13e47513ed3a87"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X7A2s"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00264"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sweetontology.net/matrInstrument/GPS"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#gps"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://sweetontology.net/propSpaceHeight/Elevation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D004526"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU005354"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://bioportal.bioontology.org/ontologies/FISHO#FISHO_0000128"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/ontoparonsoc#Dormir"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D004526"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/762636008"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh85003927"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#altimeter"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://psink.de/scio/Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://cerrado.linkeddata.es/ecology/fire#Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://scai.fraunhofer.de/AlzheimerOntology#FAT"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00271"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh85049184"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#floors"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/parracarlos/ontologies/2019/3/untitled-ontology-31#Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://purl.org/net/OCRe/OCRe.owl#OCRE400057"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/VBcv_0000933"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#clock"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/OGG_3000012753"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/pallabi.d/ontologies/2014/2/untitled-ontology-11#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/103720008"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU021563"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU001938"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/obo/owlATOL_0002159"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00734"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0449238"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2012/11/abnormalities.owl#phenodb:0014"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU021546"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0011008"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mre.zcu.cz/ontology/dasta.owl#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP14744-4"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/phenX/021500"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ExO_0000054"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.pepathway.org/peo/1.2#bmi"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/VBcv_0000705"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#Duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0169"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/Date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1358660052.owl#Sleep"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X78zx"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/RCTOntology.owl#Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/A56003"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/130ce1b41c1390bb62ec3fc9540ca5dfa030dec7"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#G11.561.600.815"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/RCTOntology.owl#Date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C154407"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/e9cbc4bf055e37cec6ed91e27e746e5bac9701a4"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#3187541_2757879"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#37294"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/726527001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25347"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/CCTO_000003"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25330"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#42729"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001029"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/OntologyXCT.owl#Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0489786"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <entity2 rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#_1.15"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/NLMVS/2.16.840.1.113883.3.464.1003.121.12.1015"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <entity2 rdf:resource="http://semanticscience.org/resource/StartTime"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000208"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sweetontology.net/propTime/Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/5f32c7dad7f48fae21d4bf1e34e2dcb70313b665"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <entity2 rdf:resource="http://semanticscience.org/resource/SIO_000669"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/PATO#PATO_0001687"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bioontology.org/pma.owl#PMA_914"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#calories"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/npo#NPO_1333"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/tome/ontologies/2018/3/ISO-FOOD#Date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#34468"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#calories"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X78wF"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.projecthalo.com/aura#Fat"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#clock"/>
+        <entity2 rdf:resource="http://identifiers.org/ncbigene/60447"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/34d69627b81e6980e66248bd9688cd0adf3a4d98"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ID_0000024"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/VANDF/4020667"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.regenstrief.org/loinc#LP14744-4"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://scai.fraunhofer.de/CSEO#CSEO_00000187"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#BMI"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#clock"/>
+        <entity2 rdf:resource="http://identifiers.org/ncbigene/9575"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://hl7.org/fhir/BMI"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://psink.de/scio/Duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/CSEO#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0037313"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Fat"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/SBO_0000347"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/DDO.owl#DDO_0000129"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/vanessa/ontologies/2012/7/untitled-ontology-33#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000429"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2012/11/abnormalities.owl#phenodb:0003"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.shojaee.com/shr/shr.owl#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.dataone.org/odo/ECSO_00000511"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh2002006552"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/8bad6275d22066e01cc85e2dfdb6b662749e33ea"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://carre.kmi.open.ac.uk/ontology/lifestyle.owl#date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/CCTO_000209"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DDO.owl#DDO_0000130"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://scai.fraunhofer.de/HuPSON#SCAIVPH_00000305"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP102339-1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1358660052.owl#Date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://hl7.org/fhir/height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/ClinicalEvaluation.owl#Weight"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA18632-2"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/093896a35fee06c3b8a7301b75acd9b51f79f6ed"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://neurolog.unice.fr/ontoneurolog/v3.0/ontoneurolog-extension-of-dolce.owl#date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA18125-7"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/931a61c3c8b7b8563854e21870a7cb9937425eb2"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25208"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#steps"/>
+        <entity2 rdf:resource="http://w3id.org/ontopbm#OntoPBM_00524"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000119"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/NLMVS/2.16.840.1.113883.3.464.1003.121.12.1014"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/256674009"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/FBbi_00000320"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.ifomis.org/acgt/1.0#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontoparonsoc#Sommeil"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://dicom.nema.org/resources/ontology/DCM/121207"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/HL7/C1608263"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/G-A378"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <entity2 rdf:resource="http://www.shojaee.com/shr/shr.owl#Weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://sweetontology.net/propFraction/Efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.jp/bio/11/meo/MEO_0001601"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ID_0000056"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/103335007"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.dataone.org/odo/ECSO_00001567"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://uri.neuinfo.org/nif/nifstd/birnlex_2052"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <entity2 rdf:resource="http://sweetontology.net/propTime/StartTime"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/PMR.owl#Basal_metabolic_rate"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/201306062549271620"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#35766"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://schema.org/Date"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/席婷/ontologies/2019/3/untitled-ontology-62#Height"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#height"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/STATO_0000093"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X79YD"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/NDFRT/N0000022876"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://schema.org/Duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://localhost/plosthes.2017-1#9407"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://sweetontology.net/prop/Efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#4291"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906063093181830"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://scai.fraunhofer.de/AlzheimerOntology#bmi"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#bmi"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/258158006"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#basalMetabolicRate"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/165109007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25494"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#clock"/>
+        <entity2 rdf:resource="http://identifiers.org/ncbigene/12753"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://hl7.org/fhir/duration"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ID_0000112"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#weight"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73425"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#sleep"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#elevation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA25349-4"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh85047430"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/Xa0ck"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/ec5cb494971100756efecfc2a4bfe0f78cd4d7aa"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#inactive"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/398201009"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#startTime"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://bioportal.bioontology.org/ontologies/FTDM.owl#fat"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/410671006"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#date"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#duration"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/RT_0000164"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#efficiency"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/PATO#PATO_0001029"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

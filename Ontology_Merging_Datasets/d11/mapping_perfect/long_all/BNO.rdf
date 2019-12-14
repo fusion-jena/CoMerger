@@ -1,0 +1,3655 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh85145447"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906002981839560"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.icn.ch/icnp#Individual"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP21229-7"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/VANDF/4018738"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://www.imgt.org/download/IMGT-ONTOLOGY/IMGT-ONTOLOGY-v1-0-3.owl#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="https://bioportal.bioontology.org/ontologies/FTDM.owl#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000542"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/225770002"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Enteral"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/席婷/ontologies/2019/3/untitled-ontology-62#Screening"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C44044"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/df22e74b746847850431fe220f139bdeb2183dc9"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/HL7/C3245468"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#F01.145.407.432.500.775"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_15377"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://bioportal.bioontology.org/ontologies/FTDM.owl#regular"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/G-A403"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325521724189.owl#Outpatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/77ec21aa8d0167ce71965d40edff325e3b45b55f"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Poly"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0032400"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/leila.kiani/ontologies/2019/5/untitled-ontology-104#screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://scai.fraunhofer.de/AlzheimerOntology#FAT"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/f366f8daa2ce5d275b3ae696a63d38a8b01d3d4f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85090425"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#PRO"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/assert.owl#Pro"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0311400"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP200187-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D014867"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/30731f39de4a5b03186c92be12a6a435a3465462"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/hyk038/ontologies/2018/7/untitled-ontology-17#Treadmill"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/10/gmo/GMO_001891"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0220908"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Fibre"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D044242"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/XE1TS"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/MVC_0000476"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/HL7/C0441833"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0225326"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/WBPhenotype_0000542"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.projecthalo.com/aura#Navigation"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://hadatac.org/ont/chear#Screening"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T096"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Mono"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU004087"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://radlex.org/RID/RID49652"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/phenX/020000"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Anthropometrics"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0037981"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ERO_0000500"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CSP/1743-9596"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/707d38253d2074e8b96e457a4e64535a9173495f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0043047"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#G07.100.049"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.regenstrief.org/loinc#LP29719-9"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Skinfold"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Macronutrient"/>
+        <entity2 rdf:resource="http://www.projecthalo.com/aura#Macronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D10.251.355.920"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906072291781478"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA12070-1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ERO_0000446"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Skinfold"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP6521-1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Saturated"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0522534"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906001263663074"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/meo/MEO_0000036"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/VariO_0266"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25647"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28293"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP7250-6"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Formula"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Macronutrient"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68548"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/jbagwell/ontologies/2017/9/untitled-ontology-6#fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP34059-3"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/0d9d118926c1904b20e678317f55d4f9f54e52ef"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#WholeFood"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/Ub0dT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh99005758"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D004493"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/9d292c43eaa083d334cebf0056b3169e5b09b160"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/acgt/1.0#Screening"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906088222564809"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Micronutrient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Micronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/HL7/C0030547"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#F01.145.466.349.500.775"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906003938764196"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DRON_00012121"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/F-60040"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D01.455.900"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Poly"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#48007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://bigdatau.org/dseo#education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#21880"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID1538"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D044242"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://www.projecthalo.com/aura#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/103401005"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Saturated"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/f9912840b7884230eb2f9678027947539fb27c3c"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/NDDF/002430"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID28817"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://childhealthservicemodels.eu/asthma#MOCHA-Asthma_000015"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://childhealthservicemodels.eu/asthma#MOCHA-Asthma_000014"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#J02.500.590.780"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://vocabularies.wikipathways.org/gpml#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D001823"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D013147"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/A-17222"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0225326"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44044"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/NDFRT/N0000148368"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Poly"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Poly"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/TRAK_0000173"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00399"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/C-10120"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/f880685baf0ee185e8e4f77a7d5d64167c0d603f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA14387-7"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/34eec6a3c8fc8385c7aed7ce59da5bce7d90478c"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/席婷/ontologies/2019/3/untitled-ontology-62#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA15287-8"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="urn:absolute:FMPM#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh96001154"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://bmi.utah.edu/ontologies/peontology/C0039401"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/SENTINEL_0000014"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2012/11/abnormalities.owl#phenodb:2361"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://neuromorpho.org/ontologies/objectivetypeH.owl#NMOOt_490"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Micronutrient"/>
+        <entity2 rdf:resource="http://onstr.googlecode.com/svn/tags/currentRelease/2014-09-03/ONSTR.owl#ONSTR_7216679"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2261957_3371890"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/bfb5458b92d3899773cdba55cf1ca8efeb96c5e6"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP99666-7"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CMDO/CM1680"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#1182"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/menelastop/regular"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Saturated"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Saturated"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/menelastop#regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0021562"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP89780-8"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ICPS/ontologies/ActionsToReduceRisk#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://webprotege.stanford.edu/RDnSlG2Va92wrs2OnRuDcGl"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17719"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0184069"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA6511-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/256674009"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP32937-2"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/1211003"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://presence-ontology.org/ontology/OutPatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#I02"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C1304890"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Enteral"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#56264"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/leila.kiani/ontologies/2019/4/untitled-ontology-47#screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#PRO"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Pro"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP100611-5"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://aimlab.cs.uoregon.edu/smash/ontologies/smash-ontology#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.org/obo/owlapi/fma#FMA_62912"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#CHO"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#CHO"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.bioontology.org/pma.owl#PMA_9"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0441833"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/ac4cc9b05c0c6d873890f63f699d0710aa54ea14"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28240"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D013147"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/7dc1ff4a45ca9b32d5be0864e6e1a1ef781ea463"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mged.sourceforge.net/ontologies/MGEDOntology.owl#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Poly"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Poly"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.co-ode.org/ontologies/galen#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/745C100"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/VTO_9026738"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D062410"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP28807-3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#28406"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://uwhealth.org/himc/i2b2/gpi_codes/#GPI_46300003"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Unsaturated"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Unsaturated"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0043047"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139210"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/CHEBI#CHEBI_24433"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Macronutrient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Macronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Formula"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU024418"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C28240"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C150414"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-environment.owl#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Mono"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CSP/3156-9415"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://mged.sourceforge.net/ontologies/MGEDOntology.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/ontoparonsoc#Eau"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CSP/2598-6627"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Unsaturated"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/G-D644"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Navigation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RXNORM/70727"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.projecthalo.com/aura#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP7719-0"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/epo.owl#Regular"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/ac94e968eafdea4edde3b3e4818f2348e4294ac0"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/773b9e88546910150525d43ce0d00f42595254ce"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/416800000"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://bioportal.bioontology.org/ontologies/umls/sty/T096"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C88163"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA19777-4"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Formula"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906046028841848"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://webprotege.stanford.edu/R9MhgvC0bffW1YQbY1jsSzJ"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C1260603"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh00006623"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://cbakerlab.unbsj.ca:8080/ontologies/BIM.owl#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/764376008"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Enteral"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://bmi.utah.edu/ontologies/hfontology/C0037981"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/XM0ll"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/5d9e9c714823135fa097ae48b4c611ed00ecc4b3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Fiber"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh88000120"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Poly"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0071360"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325521724189.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/7731c46ab003262fbe69ffcbb313255c5999c33c"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X75Rn"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#13112"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/782e79dac29c55fc7f36f91877abd2ac8c859865"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://www.cea.fr/ontotoxnuc#Criblage"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Macronutrient"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33937"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0005885"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP32889-5"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#WholeFood"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/228077008"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh85040989"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/hll/ontologies/2013/8/untitled-ontology-2#Metabolic"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/32d978ac746b8b7ac6907a5849576e7e83209a91"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C1257879"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85047430"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/assert.owl#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Enteral"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID11099"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/8a34fdfb34380dbadf0050deb437ff51b3b987b9"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontopsychiasoc#Individu"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/dd30d66e0df6f3a76798bf9e9643a5da9cc0cf7c"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0021562"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/c951a54e67c94535d8cb0f97dea6e0aef0fd3a09"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP212101-2"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/8cdefd5856e0bf2e42c567b21b226aa9c6064574"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sweetontology.net/humanDecision/Screening"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Formula"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906012073941061"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C85397"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Inpatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ICDO_0000052"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://childhealthservicemodels.eu/asthma#MOCHA-Asthma_000079"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/68...00"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/ExO_0000041"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002209"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Enteral"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D001823"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/5882.00"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.allotrope.org/ontologies/material#AFM_0001084"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#CHO"/>
+        <entity2 rdf:resource="http://neuromorpho.org/ontologies/archiveH.owl#NMOOt_331"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/409073007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://scdontology.h3abionet.org/ontology/SCDO_0001100"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.ICPS/ontologies/AmelioratingActions.owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/5ec541077aa3c8f720dc016a4d16e9f939030e30"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906071059087526"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA15487-4"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP6527-8"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.cvrgrid.org/files/ECGOntologyv1.owl#ECG_000000529"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/CLO_0054358"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#CHO"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16529"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/tome/ontologies/2015/7/Richfields#water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Outpatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/d7571fb3fb5eda5c888ba2e24745920895df9c1c"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/HL7/C1551969"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#TransFattyAcids"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D044242"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://www.bioontology.org/pma.owl#PMA_506"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/hyk038/ontologies/2018/7/untitled-ontology-17#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D001823"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/9831d2ad36ce9dc57c857857fb8a8e819b8fb0db"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU001475"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#ScientificLiterature"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85118691"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh85015239"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="urn:absolute:OFSMR#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU054690"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/HL7/C1551432"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/NDFRT/N0000022876"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/GAZ_00378987"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/STO.owl#OWLClass_e7d1d558_9609_411c_82f2_86fdb20e96b5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X79YD"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#G03.180"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000021"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C1305399"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/席婷/ontologies/2019/3/untitled-ontology-62#Snacks"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/518e8ef2a8be30b1394556dbdb14cb028af720b2"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontopsychiasoc#Instruction"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C1304649"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48261"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/400293002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/VANDF/4020667"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D062410"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/385435006"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.dataone.org/odo/ECSO_00000526"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU011902"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA22185-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/371930bbfd057364746c757ac60af8a2b89d11c1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CSP/0985-9472"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#G02.111.097"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/PMR.owl#Spirometry"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Saturated"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Saturated"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/a3c97875f05b433d994ac505d45448eba4ad26f6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/246261001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/389109008"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://scdontology.h3abionet.org/ontology/SCDO_0000414"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#CHO"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MCCL/MCC_0000102"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Unsaturated"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Unsaturated"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Micronutrient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Micronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D004493"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://d-nb.info/gnd/4041457-7"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://www.onto-med.de/ontologies/gfo-persian-medicine-diseases.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906007440473653"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#20458"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#2039"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Formula"/>
+        <entity2 rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/Formula"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16529"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906021373423983"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://presence-ontology.org/ontology/InPatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Screening"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/HL7/C1698960"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0237401"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325521724189.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU031869"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/738984000"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/phenX/091600"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/c7479ccc4b69de91addf07189eff55dcb8847bd5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID11175"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/PORO_0000305"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU036072"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP201866-3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Unsaturated"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP21086-1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/504dfec8eb081bead8bd962edef66075e21e5660"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDLINEPLUS/C0043047"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/127783003"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.projecthalo.com/aura#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://sweetontology.net/propCategorical/Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Macronutrient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Macronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Micronutrient"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68549"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25182"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontopsychiasoc#Groupe"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/BTO_0000450"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontopsychiasoc#Regulier"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <entity2 rdf:resource="http://www.shojaee.com/shr/shr.owl#MONO"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/Q000193"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Fiber"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#E01.370.386.700.750"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/OntoFood.owl#Mono"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Mono"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0429271"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.jp/bio/11/orth#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/d86cc38c77b3e95ae476a387f0f33c51c4c032a4"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D013147"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/BiodiversityOntologyFull.owl#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#11636"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/2ee0df0e9adb10eb81442c11b708ebe7f4bfc086"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Formula"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA26132-3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/NDDF/000738"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OBT_000132"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Spirometry"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/XEO_00048"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/phenX/020300"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/17854005"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.org/sig/ont/fma/fma62912"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#WholeFood"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0453870"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1502"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://onstr.googlecode.com/svn/tags/currentRelease/2014-09-03/ONSTR.owl#ONSTR_8083622"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Macronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/5882."/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CST/PULMMETABOLIC"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#4484"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/251433001"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002210"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.mskcc.org/ontologies/2013/03/sae.owl#Metabolic"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/68592003"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Unsaturated"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/103402003"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/osnathakimi/ontologies/deb#Fiber"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/0a383f70e3d8d2f5d70720c0aa51dc428a0cc172"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/fa7f1940e025a44372fbb6f517f78d4076f2b988"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/CSEO#Fat"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X76CQ"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Unsaturated"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0522535"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU029820"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.projecthalo.com/aura#Micronutrient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Micronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/席婷/ontologies/2019/3/untitled-ontology-62#Fiber"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/784f162a7fb7c8f2e4d4354ebaaf35e75cc9737a"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10041629"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C43359"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Parenteral"/>
+        <entity2 rdf:resource="https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0002210"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48261"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.imgt.org/download/IMGT-ONTOLOGY/IMGT-ONTOLOGY-v1-0-3.owl#regular"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84954"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/F-61C60"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/5/22/Ontology1277229984000.owl#HPI:0000034"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU051568"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43359"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D062410"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Snacks"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDLINEPLUS/C0225326"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/11713004"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.icn.ch/icnp#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15377"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/NDDUO#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/pallabi.d/ontologies/2014/2/untitled-ontology-11#FAT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27027"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Micronutrient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/9c70.00"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA21591-5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OGG_3000948996"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#CHO"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/NDFRT/N0000147042"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/HL7/C1561557"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Treadmill"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/PMR.owl#Treadmill"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#8323"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#BodyComposition"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CSP/0467-2059"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Saturated"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/G-D642"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MMO_0000094"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://hadatac.org/ont/hasco/SOCGroup"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/vanessa/ontologies/2012/7/untitled-ontology-33#Outpatient"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X77Hw"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/envo#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#Group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontoparonmed#Spirometrie"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1171063716.owl#education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Enteral"/>
+        <entity2 rdf:resource="https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0002209"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Group"/>
+        <entity2 rdf:resource="http://aims.fao.org/aos/geopolitical.owl#group"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://data.bnf.fr/ark:/12148/cb119326029"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/95285036cae53b7ba024e79d7d9247f3f5f4e2ca"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RXNORM/11295"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/hyk038/ontologies/2018/7/untitled-ontology-17#Regular"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D01.650.550.925"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://www.projecthalo.com/aura#Fiber"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/HL7/C1550678"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#FAT"/>
+        <entity2 rdf:resource="http://www.regenstrief.org/loinc#LP28807-3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://www.cognitiveatlas.org/ontology/cogat.owl#CAO_00416"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/PMR.owl#Education"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/e0ebea8f4dd46992f5aa3fa56cf508b99e921414"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Navigation"/>
+        <entity2 rdf:resource="http://sweetontology.net/matrEquipment/Navigation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Poly"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Poly"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/A8467_0000076"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#CHO"/>
+        <entity2 rdf:resource="http://data.bnf.fr/ark:/12148/cb11978522x"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906064200541841"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/VANDF/4020864"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://webprotege.stanford.edu/RN3AqGt6oljcfaWMIRdD6M"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0100650"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/d2064eba12f06a51ad17ccaf0a1500ce4087663f"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X78xd"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D014867"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0205272"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Regular"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Screening"/>
+        <entity2 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2017140_2570677"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Metabolic"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Metabolic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10062557"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Grip_Strength"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65147"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/373864002"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Spirometry"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85126789"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-chemistry.owl#Water"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Water"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Fiber"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/HL7/C3669659"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

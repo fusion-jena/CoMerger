@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#Risk_factor"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/RiskFactors"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9714285714285714</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#Locality"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/TLocalization"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8941488324709749</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-core.owl#has_value"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasValue"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#has_risk_factor"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasRiskFactors"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9987309928354172</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_15"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo15"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9127126927581706</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_14"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo14"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9108926010468569</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_13"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo13"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9074282125992087</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_11"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo11"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.904163920231808</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_12"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo12"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.904163920231808</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_7"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo7"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8995750368011549</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_6"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8995750368011549</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_9"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo9"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8966872750200456</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_8"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo8"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8779884052948279</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_10"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo10"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8768779052897492</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_5"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8606053197781793</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_3"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8259092124241603</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/CA_ADOS1-2001.owl#Ados1_2001_Observation_1_1"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8218075820441967</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_2"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo2"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8124170823219433</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_MBIOther_4"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo4"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7848797424239734</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_Expressive_20"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo20"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7730244537556274</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_Expressive_19"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo19"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7730244537556274</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_Expressive_17"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo17"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7730244537556274</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_Expressive_18"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo18"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7730244537556274</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_vinelandsurvey-2005.owl#Vinelandsurvey_2005_Expressive_16"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasNo16"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7686060100860481</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#has_locality_area"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasAreaForT"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7612876125017918</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#has_locality"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasTFSite"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7525527817395143</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/ca_adi-2003.owl#ADI_2003_funccom_speech_cmt"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasSpeech"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.721019473940659</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#has_locality_type"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/hasHPV_Type"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7016076547859843</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

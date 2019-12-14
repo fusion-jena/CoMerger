@@ -1,0 +1,1016 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ahso#"
+     xml:base="https://w3id.org/ahso"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:core="http://purl.obolibrary.org/obo/core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:svala="urn:absolute:svala#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:insect-anatomy="http://purl.obolibrary.org/obo/uberon/insect-anatomy#">
+    <owl:Ontology rdf:about="https://w3id.org/ahso">
+        <terms:creator>Fernanda Dórea (nanda@datadrivensurveillance.org), Crawford Revie, Ann Lindberg, Eva Blomqvist</terms:creator>
+        <terms:contributor>Flavie Vial, Karl Hammar, Patrick Lambrix, Noel Kennedy</terms:contributor>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This is an ontology for health surveillance, assuming that surveillance data is recorded at three main levels:
+
+SAMPLE data - data about specific collected samples; OBSERVATIONS, which can aggregate several samples; and OBSERVATIONAL CONTEXT, which is the context in which the observations were made (for instance clinical observation, surveillance sampling, etc). 
+
+HEALTH EVENT is the occurrence in the real World to be modeled. This occurrence is an abstract concept, as it generally cannot be determined what are its boundaries in time, space, or population units. 
+
+We assume that several OBSERVATIONS are derived from each health event, and recorded in the same or different databases - for instance clinical journal, laboratory database, abattoir. At the same time or not. 
+
+AHSO attempts to model these time specific observations. The ontology is focused on the modeling of the animal and health information connected to a single observation, made at a specific point on time. All the information recorded is relative to that specific point in time.
+
+For instance, an animal belongs to a herd, which belongs to an owner, AT THE TIME OF THE OBSERVATION. We do not attempt to model how that animal changed herds on time. Similarly, we do not model clinical progression. It is up to those using the data to create definitions of when two observations should be connected to the same event.</rdfs:comment>
+        <terms:description xml:lang="en">An ontology to support the use of animal health data for data-driven surveillance ontology. Mode details at http://datadrivensurveillance.org.</terms:description>
+        <terms:title>Animal Health Surveillance Ontology (AHSO)</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000027 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000027">
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000035"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000003"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label xml:lang="en">containsRecordsOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000029 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000029">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000013"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000029"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasAgeCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000031 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000031">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000019"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000031"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasBreed</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000032 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000032">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000005"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000007"/>
+        <rdfs:label xml:lang="en">hasGeographicInformation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000033 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000033">
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000045"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:label xml:lang="en">hasMember</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000034 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000034">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000020"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000034"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasProductionType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000035 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000035">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000003"/>
+        <rdfs:label xml:lang="en">hasRecordInRegistry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000036 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000036">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000021"/>
+        <rdfs:label xml:lang="en">hasSex</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000037 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000037">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000025"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000031"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000044"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000037"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSpecies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000038 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000038">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000019"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000031"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000038"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000038"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubjectBreed</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000039 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000039">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000020"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000034"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000039"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000039"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubjectProductionType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000040 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000040">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000025"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000037"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000040"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000040"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubjectSpecies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000041 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000041">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000042 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000042">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000041"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000042"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000042"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubjectAnimal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000043 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000043">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000041"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000011"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000043"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000043"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubjectHerd</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000044 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000044">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000019"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000025"/>
+        <rdfs:label xml:lang="en">isBreedOfSpecies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000045 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000045">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:label xml:lang="en">isMemberOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000046 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000046">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000005"/>
+        <rdfs:label xml:lang="en">isObservedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000048 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000048">
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000049"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000008"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000045"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000048"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">isOwnedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000049 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000049">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000008"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000049"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">isOwnerOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000050 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000050">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000005"/>
+        <rdfs:label xml:lang="en">isRecordedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000061 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000061">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000013"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000029"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000061"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000061"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">hasSubjectAgeCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000003 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0002_000003">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000010"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000004"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label>contains observation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000004 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0002_000004">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000009"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label>observed in observation context</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000005 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000005">
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000006"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label xml:lang="en">is member of system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000006 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000006">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label xml:lang="en">has member activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000007 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000007">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000010"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000008"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">contains sample</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000008 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000008">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000009"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000008"/>
+            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000004"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">is sample of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000009 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000009">
+        <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0003_000010"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label xml:lang="en">is a member of context</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000010 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000010">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:label xml:lang="en">has context member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000053 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000053">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000059"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="en">hasAgeValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000054 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000054">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">hasDOB</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000055 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000055">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000003"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000005"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">hasID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000056 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000056">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">occursOnDateTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000057 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000057">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">isRecordedOnDateTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000059 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000059">
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <rdfs:label xml:lang="en">hasAgeInformation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000060 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000060">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000059"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>days</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>months</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>weeks</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>years</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">hasAgeUnit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000001">
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000002">
+        <rdfs:label xml:lang="en">Zoographical Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000003">
+        <rdfs:label xml:lang="en">Registry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000004">
+        <rdfs:label xml:lang="en">Population unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000005">
+        <rdfs:label xml:lang="en">Health and surveillance actors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000007">
+        <rdfs:label xml:lang="en">Geographical Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000005"/>
+        <rdfs:label xml:lang="en">Animal owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000009">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000005"/>
+        <rdfs:label xml:lang="en">Veterinarian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000010">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:label xml:lang="en">Individual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000011">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
+        <rdfs:label xml:lang="en">Herd</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000002"/>
+        <rdfs:label xml:lang="en">Age Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000019 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000019">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000002"/>
+        <rdfs:label xml:lang="en">Breed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000020 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000020">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000002"/>
+        <rdfs:label xml:lang="en">Production Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000021 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000021">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000002"/>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000022 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000022">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000021"/>
+        <rdfs:label xml:lang="en">Female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000023 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000023">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000021"/>
+        <rdfs:label xml:lang="en">Male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000024 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000024">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000023"/>
+        <rdfs:label xml:lang="en">Castrated male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000025 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000025">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000002"/>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0000_000026 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000026">
+        <rdfs:label>Mapped terminologies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000001">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label xml:lang="en">Birth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label xml:lang="en">Death</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0001_000002"/>
+        <rdfs:label xml:lang="en">Fallen stock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0001_000003"/>
+        <rdfs:label xml:lang="en">Fallen stock destroyed on farm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0001_000003"/>
+        <rdfs:label xml:lang="en">Fallen stock not destroyed on farm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label xml:lang="en">Declared movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000007">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label xml:lang="en">Slaughter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0001_000007"/>
+        <rdfs:label xml:lang="en">Home slaughter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000009">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label xml:lang="en">Stillbirth event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000010">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000003"/>
+        <rdfs:label xml:lang="en">Movement Registry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0001_000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0001_000011">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label>Registered Animal Movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0002_000001">
+        <rdfs:label>Observation context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0002_000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label>Necropsy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0002_000005">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
+        <rdfs:label>Pathological examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0002_000006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000005"/>
+        <rdfs:label>Ante Mortem Pathological Examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0002_000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0002_000007">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000005"/>
+        <rdfs:label>Post Mortem Pathological Examination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0003_000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label xml:lang="en">Surveillance system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0003_000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
+        <rdfs:label xml:lang="en">Surveillance activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ahso#AHSO_0003_000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0003_000004">
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,1943 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY EpilepsyOntology "http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#" >
+    <!ENTITY Dravet "http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Dravet&#39;" >
+    <!ENTITY Autosomal_Dominant "http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Familial_(Autosomal_Dominant)" >
+    <!ENTITY or_Probably_Symptomatic "http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Symptomatic_(or_Probably_Symptomatic)" >
+    <!ENTITY temporal_lobe "http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Typical_(temporal_lobe)" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:or_Probably_Symptomatic="&EpilepsyOntology;Symptomatic_(or_Probably_Symptomatic)"
+     xmlns:Dravet="&EpilepsyOntology;Dravet&#39;"
+     xmlns:temporal_lobe="&EpilepsyOntology;Focal_Motor_Seizure_With_Typical_(temporal_lobe)"
+     xmlns:EpilepsyOntology="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Autosomal_Dominant="&EpilepsyOntology;Familial_(Autosomal_Dominant)"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Relation -->
+
+    <owl:ObjectProperty rdf:about="#Relation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#relation1 -->
+
+    <owl:ObjectProperty rdf:about="#relation1">
+        <rdfs:subPropertyOf rdf:resource="#Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#relation2 -->
+
+    <owl:ObjectProperty rdf:about="#relation2">
+        <rdfs:subPropertyOf rdf:resource="#Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#relation3 -->
+
+    <owl:ObjectProperty rdf:about="#relation3">
+        <rdfs:subPropertyOf rdf:resource="#Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#relation4 -->
+
+    <owl:ObjectProperty rdf:about="#relation4">
+        <rdfs:subPropertyOf rdf:resource="#Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property -->
+
+    <owl:DatatypeProperty rdf:about="#Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property1 -->
+
+    <owl:DatatypeProperty rdf:about="#property1">
+        <rdfs:subPropertyOf rdf:resource="#Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property2 -->
+
+    <owl:DatatypeProperty rdf:about="#property2">
+        <rdfs:subPropertyOf rdf:resource="#Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property3 -->
+
+    <owl:DatatypeProperty rdf:about="#property3">
+        <rdfs:subPropertyOf rdf:resource="#Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property4 -->
+
+    <owl:DatatypeProperty rdf:about="#property4">
+        <rdfs:subPropertyOf rdf:resource="#Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Absence_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Absence_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Absence status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal de aus&#234;ncias</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Alcohol_withdrawal_seizures -->
+
+    <owl:Class rdf:about="#Alcohol_withdrawal_seizures">
+        <rdfs:label xml:lang="en"
+            >Alcohol withdrawal seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises por priva&#231;&#227;o de &#225;lcool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure -->
+
+    <owl:Class rdf:about="#Atonic_Seizure">
+        <rdfs:label xml:lang="en">Atonic seizure</rdfs:label>
+        <rdfs:label xml:lang="pt">Crise at&#243;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An epileptic seizure characterized by sudden loss of muscle tone; may cause head drop, objects to fall from the hands, or falling.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atypical_Absence_Seizure -->
+
+    <owl:Class rdf:about="#Atypical_Absence_Seizure">
+        <rdfs:label xml:lang="en"
+            >Atypical absence seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise de aus&#234;ncia at&#237;pica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A staring spell characterized by partial impairment of consciousness; often occurs in children with the Lennox-Gastaut syndrome.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura -->
+
+    <owl:Class rdf:about="#Aura">
+        <rdfs:label xml:lang="en">Aura</rdfs:label>
+        <rdfs:label xml:lang="pt">Aura</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A warning before a seizure; a simple partial seizure occurring within seconds or minutes before a complex partial or secondarily generalized tonic-clonic seizure, or it may occur alone; also a warn-ing before a migraine headache or a primary generalized seizure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura_Continua -->
+
+    <owl:Class rdf:about="#Aura_Continua">
+        <rdfs:label xml:lang="en">Aura continua</rdfs:label>
+        <rdfs:label xml:lang="pt">Aura cont&#237;nua</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism -->
+
+    <owl:Class rdf:about="#Automatism">
+        <rdfs:label xml:lang="en">Automatism</rdfs:label>
+        <rdfs:label xml:lang="pt">Automatismo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Automatic, involuntary movement during a seizure; may involve mouth, hand, leg, or body movements; consciousness is usually impaired; occurs during complex partial and absence seizures and after tonic-clonic seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy -->
+
+    <owl:Class rdf:about="#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Autosomal dominant nocturnal frontal lobe epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia nocturna do lobo frontal, autoss&#243;mica dominante</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Familial_(Autosomal_Dominant)_Focal_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_childhood_epilepsy_with_centrotemporal_spikes -->
+
+    <owl:Class rdf:about="#Benign_childhood_epilepsy_with_centrotemporal_spikes">
+        <rdfs:label xml:lang="en"
+            >Benign childhood epilepsy with centrotemporal spikes</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia benigna da crian&#231;a com pontas centro-temporais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Focal_Epilepsies_of_Infancy_and_Childhood"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_familial_infantile_seizures -->
+
+    <owl:Class rdf:about="#Benign_familial_infantile_seizures">
+        <rdfs:label xml:lang="en"
+            >Benign familial infantile seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises familiares benignas infantis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Familial_(Autosomal_Dominant)_Focal_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_familial_neonatal_seizures -->
+
+    <owl:Class rdf:about="#Benign_familial_neonatal_seizures">
+        <rdfs:label xml:lang="en"
+            >Benign familial neonatal seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises neonatais benignas familiares</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Familial_(Autosomal_Dominant)_Focal_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_myoclonic_epilepsy_in_infancy -->
+
+    <owl:Class rdf:about="#Benign_myoclonic_epilepsy_in_infancy">
+        <rdfs:label xml:lang="en"
+            >Benign myoclonic epilepsy in infancy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia miocl&#243;nica benigna na inf&#226;ncia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Generalized_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_neonatal_seizures -->
+
+    <owl:Class rdf:about="#Benign_neonatal_seizures">
+        <rdfs:label xml:lang="en"
+            >Benign neonatal seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises neonatais benignas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_non-familial_infantile_seizures -->
+
+    <owl:Class rdf:about="#Benign_non-familial_infantile_seizures">
+        <rdfs:label xml:lang="en"
+            >Benign non-familial infantile seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises familiares benignas infantis (n&#227;o familiares)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Focal_Epilepsies_of_Infancy_and_Childhood"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere -->
+
+    <owl:Class rdf:about="#Cerebral_Hemisphere">
+        <rdfs:label xml:lang="en"
+            >Cerebral Hemisphere</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Hemisf&#233;rio cerebral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >One side of the cerebrum (upper brain). Each hemisphere contains four lobes: frontal, parietal, occipital, and temporal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy -->
+
+    <owl:Class rdf:about="#Cerebral_Palsy">
+        <rdfs:label xml:lang="en">Cerebral Palsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Paralisia cerebral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A condition with combinations of impaired muscle tone and strength, coordination, and intelligence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy -->
+
+    <owl:Class rdf:about="#Childhood_absence_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Childhood absence epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia de aus&#234;ncias na crian&#231;a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Generalized_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure -->
+
+    <owl:Class rdf:about="#Clonic_Seizure">
+        <rdfs:label xml:lang="en">Clonic Seizure</rdfs:label>
+        <rdfs:label xml:lang="pt">Crise cl&#243;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An epileptic seizure characterized by jerking movements and involving muscles on both sides.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure_Without_Tonic_Features -->
+
+    <owl:Class rdf:about="#Clonic_Seizure_Without_Tonic_Features">
+        <rdfs:label xml:lang="en"
+            >Clonic seizure without tonic features</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise cl&#243;nica sem componentes t&#243;nicos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Clonic_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure_with_Tonic_Features -->
+
+    <owl:Class rdf:about="#Clonic_Seizure_with_Tonic_Features">
+        <rdfs:label xml:lang="en"
+            >Clonic seizure with tonic features</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise cl&#243;nica com componentes t&#243;nicos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Clonic_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Clonic_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Clonic status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal cl&#243;nico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cognitive -->
+
+    <owl:Class rdf:about="#Cognitive">
+        <rdfs:label xml:lang="en">Cognitive</rdfs:label>
+        <rdfs:label xml:lang="pt">Cogni&#231;&#227;o</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Pertaining to the mental processes of perceiving, thinking, and remembering; i.e., intellectual functions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Consciousness -->
+
+    <owl:Class rdf:about="#Consciousness">
+        <rdfs:label xml:lang="en">Consciousness</rdfs:label>
+        <rdfs:label xml:lang="pt">Consci&#234;ncia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >State of awareness; if consciousness is preserved during a seizure, the person can respond and recall what occurred during the spell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Continuous_Seizure -->
+
+    <owl:Class rdf:about="#Continuous_Seizure">
+        <rdfs:label xml:lang="en"
+            >Continuous seizure types</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises cont&#237;nuas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizure_Types"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Corpus_Callosotomy -->
+
+    <owl:Class rdf:about="#Corpus_Callosotomy">
+        <rdfs:label xml:lang="en"
+            >Corpus Callosotomy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Surgery that disconnects the cerebral hemispheres and reduces atonic and tonic-clonic seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cortical_Dysplasia -->
+
+    <owl:Class rdf:about="#Cortical_Dysplasia">
+        <rdfs:label xml:lang="en"
+            >Cortical Dyplasia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An abnormality in the development and organization of the cerebral c&#243;rtex that can cause seizures and other neurologic disorders.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Dravet&#39;s_syndrome -->
+
+    <owl:Class rdf:about="#Dravet&#39;s_syndrome">
+        <rdfs:label xml:lang="en"
+            >Dravet&#39;s syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome de Dravet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Drug_or_other_chemically-induced_seizures -->
+
+    <owl:Class rdf:about="#Drug_or_other_chemically-induced_seizures">
+        <rdfs:label xml:lang="en"
+            >Drug or other chemically-induced seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises induzidas por f&#225;rmacos ou outros qu&#237;micos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy -->
+
+    <owl:Class rdf:about="#Early_myoclonic_encephalopathy">
+        <rdfs:label xml:lang="en"
+            >Early myoclonic encephalopathy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Encefalopatia miocl&#243;nica precoce</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_onset_benign_childhood_occipital_epilepsy_(Panayiotopoulos_type) -->
+
+    <owl:Class rdf:about="#Early_onset_benign_childhood_occipital_epilepsy_(Panayiotopoulos_type)">
+        <rdfs:label xml:lang="en"
+            >Early onset benign childhood occipital epilepsy (Panayiotopoulos type)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia occipital benigna da crian&#231;a com in&#237;cio precoce (tipo Panayiotopoulos)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Focal_Epilepsies_of_Infancy_and_Childhood"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Electrode -->
+
+    <owl:Class rdf:about="#Electrode">
+        <rdfs:label xml:lang="en">Electrode</rdfs:label>
+        <rdfs:label xml:lang="pt">El&#233;ctrodo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A conductor through which electrical current enters or leaves. When used to record the electroencephalogarm, a small metal disc attached to a wire is usually used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Electroencephalography -->
+
+    <owl:Class rdf:about="#Electroencephalography">
+        <rdfs:label xml:lang="en"
+            >Electroencephalography</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Eletroencefalogia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >apparatus that records, in the form of brain waves, electrical discharge from neurons in the brain through electrodes attached to the scalp.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsia_Partialis_Continua_of_Kojevnikov -->
+
+    <owl:Class rdf:about="#Epilepsia_Partialis_Continua_of_Kojevnikov">
+        <rdfs:label xml:lang="en"
+            >Epilepsia partialis continua of Kojevnikov</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia partialis continua de Kojevnikov</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy -->
+
+    <owl:Class rdf:about="#Epilepsy">
+        <rdfs:label xml:lang="en">Epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt">Epilepsia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >chronic neurological disorder characterized by recurrent seizures</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_continuous_spike-and-waves_during_slow-wave_sleep_(other_than_Landau-Kleffner_syndrome) -->
+
+    <owl:Class rdf:about="#Epilepsy_with_continuous_spike-and-waves_during_slow-wave_sleep_(other_than_Landau-Kleffner_syndrome)">
+        <rdfs:label xml:lang="en"
+            >Epilepsy with continuous spike-and-waves during slow-wave sleep (other than Landau-Kleffner syndrome)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia com ponta-onda cont&#237;nua no sono de ondas lentas (n&#227;o inclui s&#237;ndrome Landau-Kleffner)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_generalized_tonic-clonic_seizures_only -->
+
+    <owl:Class rdf:about="#Epilepsy_with_generalized_tonic-clonic_seizures_only">
+        <rdfs:label xml:lang="en"
+            >Epilepsy with generalized tonic-clonic seizures only</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia apenas com crises t&#243;nico-cl&#243;nicas generalizadas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_generalized_epilepsies_with_variable_phenotypes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_myoclonic-astatic_seizures -->
+
+    <owl:Class rdf:about="#Epilepsy_with_myoclonic-astatic_seizures">
+        <rdfs:label xml:lang="en"
+            >Epilepsy with myoclonic-astatic seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia com crises miocl&#243;nico-ast&#225;ticas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Generalized_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_myoclonic_absences -->
+
+    <owl:Class rdf:about="#Epilepsy_with_myoclonic_absences">
+        <rdfs:label xml:lang="en"
+            >Epilepsy with myoclonic absences</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia com aus&#234;ncias miocl&#243;nicas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Generalized_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction) -->
+
+    <owl:Class rdf:about="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)">
+        <rdfs:label xml:lang="en"
+            >Epileptic Encephalopathies (in which the epileptiform abnormalities may contribute to progressive dysfunction)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Encefalopatias epil&#233;pticas (em que anomalias epileptiforme contribuem para a disfun&#231;&#227;o progressiva)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epileptic_Syndromes -->
+
+    <owl:Class rdf:about="#Epileptic_Syndromes">
+        <rdfs:label xml:lang="en"
+            >Epileptic Syndromes</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndromes Epil&#233;pticos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epileptiform -->
+
+    <owl:Class rdf:about="#Epileptiform">
+        <rdfs:label xml:lang="en">Epileptiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Resembling epilepsy or its manifestations; often refers to EEG patterns.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epileptogenic -->
+
+    <owl:Class rdf:about="#Epileptogenic">
+        <rdfs:label xml:lang="en">Epileptogenic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Causing epilepsy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epileptologist -->
+
+    <owl:Class rdf:about="#Epileptologist">
+        <rdfs:label xml:lang="en">Epileptologist</rdfs:label>
+        <rdfs:label xml:lang="pt">Epileptologista</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A neurologist with specialty training in epilepsy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Eyelid_Myoclonia -->
+
+    <owl:Class rdf:about="#Eyelid_Myoclonia">
+        <rdfs:label xml:lang="en"
+            >Eyelid myoclonia</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Mioclonias palpebrais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Eyelid_Myoclonia_With_Absences -->
+
+    <owl:Class rdf:about="#Eyelid_Myoclonia_With_Absences">
+        <rdfs:label xml:lang="en"
+            >Eyelid myoclonia with absences</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Mioclonias palpebrais com aus&#234;ncia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Eyelid_Myoclonia"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Eyelid_Myoclonia_Without_Absences -->
+
+    <owl:Class rdf:about="#Eyelid_Myoclonia_Without_Absences">
+        <rdfs:label xml:lang="en"
+            >Eyelid myoclonia without absences</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Mioclonias palpebrais sem aus&#234;ncia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Eyelid_Myoclonia"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Familial_(Autosomal_Dominant)_Focal_Epilepsies -->
+
+    <owl:Class rdf:about="#Familial_(Autosomal_Dominant)_Focal_Epilepsies">
+        <rdfs:label xml:lang="en"
+            >Familial (Autosomal Dominant) Focal Epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias focais familiares (Autos&#243;micas Dominantes)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Familial_temporal_lobe_epilepsies -->
+
+    <owl:Class rdf:about="#Familial_temporal_lobe_epilepsies">
+        <rdfs:label xml:lang="en"
+            >Familial temporal lobe epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias do lobo temporal familiares</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Familial_(Autosomal_Dominant)_Focal_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures -->
+
+    <owl:Class rdf:about="#Febrile_seizures">
+        <rdfs:label xml:lang="en"
+            >Febrile seizures</rdfs:label>
+        <rdfs:label xml:lang="pt">Crises febris</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Asymmetrical_Tonic_Motor_Seizures -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure_With_Asymmetrical_Tonic_Motor_Seizures">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure with asymmetrical tonic motor seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora com crises motoras t&#243;nicas assim&#233;tricas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Motor_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Elementary_Clonic_Motor_Signs -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure_With_Elementary_Clonic_Motor_Signs">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure with elementary clonic motor signs</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora com sinais motores cl&#243;nicos elementares</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Motor_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Focal_Negative_Myoclonus -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure_With_Focal_Negative_Myoclonus">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure with focal negative myoclonus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora com mioclonia negativa focal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Motor_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Hyperkinetic_Automatisms -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure_With_Hyperkinetic_Automatisms">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure with hyperkinetic automatisms</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora com automatismos hipercin&#233;ticos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Motor_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Inhibitory_Motor_Seizures -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure_With_Inhibitory_Motor_Seizures">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure with inhibitory motor seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora com crises motoras inibit&#243;rias</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Motor_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure_With_Typical_(temporal_lobe)_Automatisms -->
+
+    <owl:Class rdf:about="#Focal_Motor_Seizure_With_Typical_(temporal_lobe)_Automatisms">
+        <rdfs:label xml:lang="en"
+            >Focal motor seizure with typical (temporal lobe) automatisms</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal motora com automatismos (lobo temporal) t&#237;picos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Motor_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Seizure -->
+
+    <owl:Class rdf:about="#Focal_Seizure">
+        <rdfs:label xml:lang="en">Focal seizure</rdfs:label>
+        <rdfs:label xml:lang="pt">Crise focal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Self-limited_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Sensory_Seizure -->
+
+    <owl:Class rdf:about="#Focal_Sensory_Seizure">
+        <rdfs:label xml:lang="en"
+            >Focal sensory seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal sensorial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Sensory_Seizure_With_Elementary_Sensory_Symptoms -->
+
+    <owl:Class rdf:about="#Focal_Sensory_Seizure_With_Elementary_Sensory_Symptoms">
+        <rdfs:label xml:lang="en"
+            >Focal sensory seizure with elementary sensory symptoms</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal sensorial com sintomas sensoriais elementares</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Sensory_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Sensory_Seizure_With_Experiential_Sensory_Symptoms -->
+
+    <owl:Class rdf:about="#Focal_Sensory_Seizure_With_Experiential_Sensory_Symptoms">
+        <rdfs:label xml:lang="en"
+            >Focal sensory seizure with experiential sensory symptoms</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise focal sensorial com sintomas sensoriais vivenciais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Sensory_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Focal_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Focal status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal focal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Continuous_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focus -->
+
+    <owl:Class rdf:about="#Focus">
+        <rdfs:label xml:lang="en">Focus</rdfs:label>
+        <rdfs:label xml:lang="pt">Foco</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >The center or region of the brain from which seizures begin; used in reference to partial seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Gelastic_Seizure -->
+
+    <owl:Class rdf:about="#Gelastic_Seizure">
+        <rdfs:label xml:lang="en"
+            >Gelastic seizure</rdfs:label>
+        <rdfs:label xml:lang="pt">Crise gel&#225;stica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts -->
+
+    <owl:Class rdf:about="#General_Concepts">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure -->
+
+    <owl:Class rdf:about="#Generalized_Seizure">
+        <rdfs:label xml:lang="en"
+            >Generalized Seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise Generalizada</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Self-limited_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Generalized_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Generalized status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal generalizado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Continuous_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Tonic-clonic_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Generalized_Tonic-clonic_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Generalized tonic-clonic status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal t&#243;nico-cl&#243;nico generalizado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#HH_syndrome -->
+
+    <owl:Class rdf:about="#HH_syndrome">
+        <rdfs:label xml:lang="en">HH syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome HH (Hemiconvuls&#227;o &#8211; Hemiplegia)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Neocortical_epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Hemiclonic_Seizure -->
+
+    <owl:Class rdf:about="#Hemiclonic_Seizure">
+        <rdfs:label xml:lang="en"
+            >Hemiclonic seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise hemicl&#243;nicas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Hemoconvulsive_Status_With_Hemiparesis -->
+
+    <owl:Class rdf:about="#Hemoconvulsive_Status_With_Hemiparesis">
+        <rdfs:label xml:lang="en"
+            >Hemoconvulsive status with hemiparesis</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal hemiconvulsivo com hemiperesia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ictal -->
+
+    <owl:Class rdf:about="#Ictal">
+        <rdfs:label xml:lang="en">Ictal</rdfs:label>
+        <rdfs:label xml:lang="pt">Ictal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Referring to the period during a sudden attack, such as a seizure or stroke.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic -->
+
+    <owl:Class rdf:about="#Idiopathic">
+        <rdfs:label xml:lang="en">Idiopathic</rdfs:label>
+        <rdfs:label xml:lang="pt">Idiop&#225;tico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Referring to a disorder of unknown cause.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic_Focal_Epilepsies_of_Infancy_and_Childhood -->
+
+    <owl:Class rdf:about="#Idiopathic_Focal_Epilepsies_of_Infancy_and_Childhood">
+        <rdfs:label xml:lang="en"
+            >Idiopathic Focal Epilepsies of Infancy and Childhood</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias focais idiop&#225;ticas da Inf&#226;ncia e da Crian&#231;a</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic_Generalized_Epilepsies -->
+
+    <owl:Class rdf:about="#Idiopathic_Generalized_Epilepsies">
+        <rdfs:label xml:lang="en"
+            >Idiopathic Generalized Epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias generalizadas idiop&#225;ticas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic_generalized_epilepsies_with_variable_phenotypes -->
+
+    <owl:Class rdf:about="#Idiopathic_generalized_epilepsies_with_variable_phenotypes">
+        <rdfs:label xml:lang="en"
+            >Idiopathic generalized epilepsies with variable phenotypes</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias generalizadas idiop&#225;ticas com fen&#243;tipos vari&#225;veis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Generalized_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic_photosensitive_occipital_lobe_epilepsy -->
+
+    <owl:Class rdf:about="#Idiopathic_photosensitive_occipital_lobe_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Idiopathic photosensitive occipital lobe epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia do lobo occipital fotossens&#237;vel idiop&#225;tica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Reflex_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Immediate_and_early_post_traumatic_seizures -->
+
+    <owl:Class rdf:about="#Immediate_and_early_post_traumatic_seizures">
+        <rdfs:label xml:lang="en"
+            >Immediate and early post traumatic seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises p&#243;s-traum&#225;ticas imediatas ou precoces</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Interictal -->
+
+    <owl:Class rdf:about="#Interictal">
+        <rdfs:label xml:lang="en">Interictal</rdfs:label>
+        <rdfs:label xml:lang="pt">Interictal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Referring to the period between seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_absence_epilepsy -->
+
+    <owl:Class rdf:about="#Juvenile_absence_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Juvenile absence epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia de aus&#234;ncias juvenil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_generalized_epilepsies_with_variable_phenotypes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy -->
+
+    <owl:Class rdf:about="#Juvenile_myoclonic_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Juvenile myoclonic epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia miocl&#243;nica juvenil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_generalized_epilepsies_with_variable_phenotypes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet -->
+
+    <owl:Class rdf:about="#Ketogenic_Diet">
+        <rdfs:label xml:lang="en">Ketogenic Diet</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Dieta Ketog&#233;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A high-fat, low-carbohydrate diet used to control seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Landau-Kleffner_syndrome -->
+
+    <owl:Class rdf:about="#Landau-Kleffner_syndrome">
+        <rdfs:label xml:lang="en"
+            >Landau-Kleffner syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome de Landau-Kleffner</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A disorder of childhood characterized by the regression of language milestones in association with frequent epilepsy waves on the EEG.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Late_onset_childhood_occipital_epilepsy_(Gastaut_type) -->
+
+    <owl:Class rdf:about="#Late_onset_childhood_occipital_epilepsy_(Gastaut_type)">
+        <rdfs:label xml:lang="en"
+            >Late onset childhood occipital epilepsy (Gastaut type)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia occipital benigna da crian&#231;a com in&#237;cio tardio (tipo Gastaut)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Idiopathic_Focal_Epilepsies_of_Infancy_and_Childhood"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome -->
+
+    <owl:Class rdf:about="#Lennox-Gastaut_syndrome">
+        <rdfs:label xml:lang="en"
+            >Lennox-Gastaut syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome de Lennox-Gastaut</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A disorder beginning in childhood, characterized by developmental delay or mental retardation, multiple seizure types that do not respond well to therapy, and slow spike-and-wave discharges on the EEG.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Limbic_Status_Epilepticus_(psychomotor_status) -->
+
+    <owl:Class rdf:about="#Limbic_Status_Epilepticus_(psychomotor_status)">
+        <rdfs:label xml:lang="en"
+            >Limbic status epilepticus (psychomotor status)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal l&#237;mbico (status psicomotor)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Limbic_epilepsies -->
+
+    <owl:Class rdf:about="#Limbic_epilepsies">
+        <rdfs:label xml:lang="en"
+            >Limbic epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias l&#237;mbicas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Symptomatic_(or_Probably_Symptomatic)_Focal_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Imaging -->
+
+    <owl:Class rdf:about="#Magnetic_Resonance_Imaging">
+        <rdfs:label xml:lang="en"
+            >Magnetic resonance imaging</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Resson&#226;ncia magn&#233;tica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A scanning technique that creates pictures of the inside of the body and the brain; uses a strong magnet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy -->
+
+    <owl:Class rdf:about="#Magnetic_Resonance_Spectroscopy">
+        <rdfs:label xml:lang="en"
+            >Magnetic resonance spectroscopy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A scanning technique that examines the atoms hydrogen and phosphorus to measure chemical activity in small areas of brain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetoencephalography -->
+
+    <owl:Class rdf:about="#Magnetoencephalography">
+        <rdfs:label xml:lang="en"
+            >Magnetoencephalography</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A diagnostic test that uses a very low dose of a radioactive compound to measure blood &#64258;ow in the brain.</rdfs:comment>
+        <rdfs:comment xml:lang="en"
+            >Recording the brain&#8217;s magnetic activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Massive_Bilateral_Myoclonus -->
+
+    <owl:Class rdf:about="#Massive_Bilateral_Myoclonus">
+        <rdfs:label xml:lang="en"
+            >Massive bilateral myoclonus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_defined_by_specific_etiologies -->
+
+    <owl:Class rdf:about="#Mesial_temporal_lobe_epilepsy_defined_by_specific_etiologies">
+        <rdfs:label xml:lang="en"
+            >Mesial temporal lobe epilepsy defined by specific etiologies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia do lobo temporal mesial definida por etiologias espec&#237;ficas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Limbic_epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis -->
+
+    <owl:Class rdf:about="#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis">
+        <rdfs:label xml:lang="en"
+            >Mesial temporal lobe epilepsy with hippocampal sclerosis</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia do lobo temporal mesial com esclerose do hipocampo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Limbic_epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Absence_Seizure -->
+
+    <owl:Class rdf:about="#Myoclonic_Absence_Seizure">
+        <rdfs:label xml:lang="en"
+            >Myoclonic absence seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise de aus&#234;ncia miocl&#243;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Myoclonic absences is a rare seizure type with a male preponderance; The seizures are of sudden onset and offset, occurring especially soon after awakening, and can be precipitated by hyperventilation. The seizure duration ranges from less than 10 seconds to more than 2 minutes, and the seizure frequency is usually high.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Atonic_Seizure -->
+
+    <owl:Class rdf:about="#Myoclonic_Atonic_Seizure">
+        <rdfs:label xml:lang="en"
+            >Myoclonic atonic seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise at&#243;nico-miocl&#243;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure -->
+
+    <owl:Class rdf:about="#Myoclonic_Seizure">
+        <rdfs:label xml:lang="en"
+            >Myoclonic seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise miocl&#243;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A rare group of epilepsies, often inherited characterized by myoclonic and other seizures and progressive neurologic impairment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Myoclonic_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Myoclonic status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal miocl&#243;nico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Negative_Myoclonus -->
+
+    <owl:Class rdf:about="#Negative_Myoclonus">
+        <rdfs:label xml:lang="en"
+            >Negative myoclonus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Mioclonia negativa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Neocortical_epilepsies -->
+
+    <owl:Class rdf:about="#Neocortical_epilepsies">
+        <rdfs:label xml:lang="en"
+            >Neocortical epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias neocorticais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Symptomatic_(or_Probably_Symptomatic)_Focal_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ohtahara_syndrome -->
+
+    <owl:Class rdf:about="#Ohtahara_syndrome">
+        <rdfs:label xml:lang="en"
+            >Ohtahara syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome de Ohtahara</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Other_types_defined_by_location_and_etiology_1 -->
+
+    <owl:Class rdf:about="#Other_types_defined_by_location_and_etiology_1">
+        <rdfs:label xml:lang="en"
+            >Other types defined by location and etiology</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Outros tipos definidos  pela localiza&#231;&#227;o e etiologia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Limbic_epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Other_types_defined_by_location_and_etiology_2 -->
+
+    <owl:Class rdf:about="#Other_types_defined_by_location_and_etiology_2">
+        <rdfs:label xml:lang="en"
+            >Other types defined by location and etiology</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Outros tipos definidos  pela localiza&#231;&#227;o e etiologia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Neocortical_epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Other_visual_sensitive_epilepsies -->
+
+    <owl:Class rdf:about="#Other_visual_sensitive_epilepsies">
+        <rdfs:label xml:lang="en"
+            >Other visual sensitive epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Outras epilepsias sensitivas visuais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Reflex_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal -->
+
+    <owl:Class rdf:about="#Paroxysmal">
+        <rdfs:label xml:lang="en">Paroxysmal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Pertaining to a sudden outburst, such sudden symptoms or epileptiform activity on the EEG.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation -->
+
+    <owl:Class rdf:about="#Photic_Stimulation">
+        <rdfs:label xml:lang="en"
+            >Photic stimulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Shining, flashing (strobe) lights in the eyes (which may be closed) of a person; used during the EEG to detect photosensitive epilepsy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Positron_Emission_Tomography -->
+
+    <owl:Class rdf:about="#Positron_Emission_Tomography">
+        <rdfs:label xml:lang="en"
+            >Positron emission tomography</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Tomografia por emiss&#227;o de positr&#245;es</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A diagnostic test that uses a very low dose of a radioactive compound to measure metabolic activity in the brain; areas of decreased metabolism correspond to the seizure focus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Postictal -->
+
+    <owl:Class rdf:about="#Postictal">
+        <rdfs:label xml:lang="en">Postictal</rdfs:label>
+        <rdfs:label xml:lang="pt">Postictal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Referring to the period immediately after a seizure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Primary_reading_epilepsy -->
+
+    <owl:Class rdf:about="#Primary_reading_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Primary reading epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia prim&#225;ria da leitura</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Reflex_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis -->
+
+    <owl:Class rdf:about="#Prognosis">
+        <rdfs:label xml:lang="en">Prognosis</rdfs:label>
+        <rdfs:label xml:lang="pt">Progn&#243;stico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >The outlook for a medical condition; the chances the condition will improve, remain unchanged, or worsen.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Progressive_Myoclonus_Epilepsies -->
+
+    <owl:Class rdf:about="#Progressive_Myoclonus_Epilepsies">
+        <rdfs:label xml:lang="en"
+            >Progressive Myoclonus Epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias miocl&#243;nicas progressivas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A rare group of epilepsies, often inherited characterized by myoclonic and other seizures and progressive neurologic impairment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rarely_repeated_seizures_(oligo-epilepsy) -->
+
+    <owl:Class rdf:about="#Rarely_repeated_seizures_(oligo-epilepsy)">
+        <rdfs:label xml:lang="en"
+            >Rarely repeated seizures (oligo-epilepsy)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises raramente repetidas (oligo-epilepsia)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome -->
+
+    <owl:Class rdf:about="#Rasmussen_syndrome">
+        <rdfs:label xml:lang="en"
+            >Rasmussen syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome de Rasmussen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Neocortical_epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A disorder with frequent or continuous partial seizures and a progressive abnormality in the brain, possibly the result of a virus or autoimmune process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Reflex_Epilepsies -->
+
+    <owl:Class rdf:about="#Reflex_Epilepsies">
+        <rdfs:label xml:lang="en"
+            >Reflex Epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias reflexas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Reflex_Seizure_(in_focal_epilepsy_syndromes) -->
+
+    <owl:Class rdf:about="#Reflex_Seizure_(in_focal_epilepsy_syndromes)">
+        <rdfs:label xml:lang="en"
+            >Reflex seizure (in focal epilepsy syndromes)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise reflexa em s&#237;ndromos epil&#233;pticos focais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Seizures precipitated by certain conditions or stimuli, such as &#64258;ashing lights or loud sounds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Reflex_seizure_(in_generalized_epilepsy_syndromes) -->
+
+    <owl:Class rdf:about="#Reflex_seizure_(in_generalized_epilepsy_syndromes)">
+        <rdfs:label xml:lang="en"
+            >Reflex seizure (in generalized epilepsy syndromes)</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises reflexas (em s&#237;ndromos epil&#233;pticos generalizados)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Seizures precipitated by certain conditions or stimuli, such as &#64258;ashing lights or loud sounds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Reflex_seizures -->
+
+    <owl:Class rdf:about="#Reflex_seizures">
+        <rdfs:label xml:lang="en">Reflex seizures</rdfs:label>
+        <rdfs:label xml:lang="pt">Crises reflexas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Secondarily_Generalized_Seizure -->
+
+    <owl:Class rdf:about="#Secondarily_Generalized_Seizure">
+        <rdfs:label xml:lang="en"
+            >Secondarily generalized seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise secundariamente generalizadas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Focal_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Seizure -->
+
+    <owl:Class rdf:about="#Seizure">
+        <rdfs:label xml:lang="en">Seizure</rdfs:label>
+        <rdfs:label xml:lang="pt">Crise</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A sudden, excessive discharge of nervous-system electrical activity that usually causes a change in behavior</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Seizure_Types -->
+
+    <owl:Class rdf:about="#Seizure_Types">
+        <rdfs:label xml:lang="en">Seizure Types</rdfs:label>
+        <rdfs:label xml:lang="pt">Tipos de Crise</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy -->
+
+    <owl:Class rdf:about="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy">
+        <rdfs:label xml:lang="en"
+            >Seizures Not Necessarily Requiring a Diagnosis of Epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises que n&#227;o obrigam necessariamente ao diagn&#243;stico de Epilepsia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Self-limited_Seizure -->
+
+    <owl:Class rdf:about="#Self-limited_Seizure">
+        <rdfs:label xml:lang="en"
+            >Self-limited Seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises auto-limitadas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizure_Types"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Sharp_Wave -->
+
+    <owl:Class rdf:about="#Sharp_Wave">
+        <rdfs:label xml:lang="en">Sharp wave</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An EEG pattern indicating the potential for epilepsy; &#8220;benign&#8221; sharp waves are not associated with seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Single-photon_Emission_Computed_Tomography_ -->
+
+    <owl:Class rdf:about="#Single-photon_Emission_Computed_Tomography_">
+        <rdfs:label xml:lang="en"
+            >Single-photon emission computed tomography</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Tomografia computadorizada por emiss&#227;o de f&#243;ton &#250;nico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A diagnostic test that uses a very low dose of a radioactive compound to measure blood &#64258;ow in the brain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Single_seizures_or_isolated_clusters_of_seizures -->
+
+    <owl:Class rdf:about="#Single_seizures_or_isolated_clusters_of_seizures">
+        <rdfs:label xml:lang="en"
+            >Single seizures or isolated clusters of seizures</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crises isoladas ou grupos isolados de crises</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Seizures_Not_Necessarily_Requiring_a_Diagnosis_of_Epilepsy"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Slowing -->
+
+    <owl:Class rdf:about="#Slowing">
+        <rdfs:label xml:lang="en">Slowing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A term used for brain waves on the EEG that have a lower frequency than expected, can result from drowsiness or sleep, drugs, or brain injuries and occur during or after seizures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spasms -->
+
+    <owl:Class rdf:about="#Spasms">
+        <rdfs:label xml:lang="en">Spasms</rdfs:label>
+        <rdfs:label xml:lang="pt">Espasmos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Spasms consist of brief massive contractions of the axial musculature, that may be in flexion, extension, or mixed. They last a fraction of a second but recur in clusters of 5 to 50, several clusters occurring each day, often on awakening.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spell -->
+
+    <owl:Class rdf:about="#Spell">
+        <rdfs:label xml:lang="en">Spell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A period, bout, or episode of illness or indisposition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spike -->
+
+    <owl:Class rdf:about="#Spike">
+        <rdfs:label xml:lang="en">Spike</rdfs:label>
+        <rdfs:label xml:lang="pt">Pico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Electroencephalography"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An EEG pattern strongly correlated with seizures;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Startle_epilepsy -->
+
+    <owl:Class rdf:about="#Startle_epilepsy">
+        <rdfs:label xml:lang="en"
+            >Startle epilepsy</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsia do susto (surpresa)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Reflex_Epilepsies"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Symptomatic_(or_Probably_Symptomatic)_Focal_Epilepsies -->
+
+    <owl:Class rdf:about="#Symptomatic_(or_Probably_Symptomatic)_Focal_Epilepsies">
+        <rdfs:label xml:lang="en"
+            >Symptomatic (or Probably Symptomatic) Focal Epilepsies</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Epilepsias focais sintom&#225;ticas (ou provavelmente sintom&#225;ticas)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Syndromes"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Synapse -->
+
+    <owl:Class rdf:about="#Synapse">
+        <rdfs:label xml:lang="en">Synapse</rdfs:label>
+        <rdfs:label xml:lang="pt">Sinapse</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >The junction between one nerve cell and another nerve cell; the axon of one nerve cell releases a neurotransmitter, which di&#64256;uses across the synapse and causes changes in the membrane of the adjacent cell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope -->
+
+    <owl:Class rdf:about="#Syncope">
+        <rdfs:label xml:lang="en">Syncope</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">Fainting</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syndrome -->
+
+    <owl:Class rdf:about="#Syndrome">
+        <rdfs:label xml:lang="en">Syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt">S&#237;ndrome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#General_Concepts"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A group of signs and symptoms that collectively de&#64257;ne or characterize a disease or disorder; signs are objective &#64257;ndings such as weakness, and symptoms are subjective &#64257;ndings such as a feeling of fear.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure -->
+
+    <owl:Class rdf:about="#Tonic-clonic_Seizure">
+        <rdfs:label xml:lang="en"
+            >Tonic-clonic Seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise t&#243;nico-cl&#243;nicas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >A convulsion; newer term for grand mal or major motor seizure; characterized by loss of consciousness, falling, sti&#64256;ening, and jerking.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure -->
+
+    <owl:Class rdf:about="#Tonic_Seizure">
+        <rdfs:label xml:lang="en">Tonic seizure</rdfs:label>
+        <rdfs:label xml:lang="pt">Crise t&#243;nica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An epileptic seizure that causes sti&#64256;ening on both sides of the body, and electrical discharge involves all or most of the brain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Status_Epilepticus -->
+
+    <owl:Class rdf:about="#Tonic_Status_Epilepticus">
+        <rdfs:label xml:lang="en"
+            >Tonic status epilepticus</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Estado de mal t&#243;nico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Status_Epilepticus"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Typical_Absence_Seizure -->
+
+    <owl:Class rdf:about="#Typical_Absence_Seizure">
+        <rdfs:label xml:lang="en"
+            >Typical absence seizure</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >Crise de aus&#234;ncia t&#237;pica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Generalized_Seizure"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >Typical absences are brief, generalized epileptic seizures of sudden onset and termination. They have 2 essential components: (1) clinically the impairment of consciousness (absence) and (2) EEG generalized 3 Hz to 4 Hz (less than 2.5 Hz) spike and slow wave discharges.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#West_syndrome -->
+
+    <owl:Class rdf:about="#West_syndrome">
+        <rdfs:label xml:lang="en">West syndrome</rdfs:label>
+        <rdfs:label xml:lang="pt"
+            >S&#237;ndrome de West</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Epileptic_Encephalopathies_(in_which_the_epileptiform_abnormalities_may_contribute_to_progressive_dysfunction)"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en"
+            >An epileptic syndrome characterized by infantile spasms, mental retardation, and an abnormal EEG pattern (hypsarrhythmia); begins before 1 year of age.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1042) http://owlapi.sourceforge.net -->
+
