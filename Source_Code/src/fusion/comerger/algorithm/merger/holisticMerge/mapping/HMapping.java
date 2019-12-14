@@ -1,0 +1,484 @@
+package fusion.comerger.algorithm.merger.holisticMerge.mapping;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.logging.Level;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+
+import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
+import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
+import fusion.comerger.algorithm.merger.model.HModel;
+
+public class HMapping {
+	public static void main(String[] args) throws Exception {
+		String ontList = "C:\\LOCAL_FOLDER\\cmt.owl";
+		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\conference.owl";
+		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\confOf.owl";
+		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\edas.owl";
+		
+
+		String mapList = "C:\\LOCAL_FOLDER\\cmt-conference.rdf";
+		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\cmt-confOf.rdf";
+		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\cmt-edas.rdf";
+		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\conference-confof.rdf";
+		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\conference-edas.rdf";
+		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\confOf-edas.rdf";
+
+		HModel ontM = new HModel();
+		HMapping om = new HMapping();
+
+		// find mapping
+		om.run(ontM, mapList);
+		System.out.println("Done!");
+
+	}
+
+	public HModel run(HModel ontM, String alignF) {
+		long startTime = System.currentTimeMillis();
+		ArrayList<HMappedClass> RefClass = new ArrayList<HMappedClass>();
+		ArrayList<HMappedObj> RefObjPro = new ArrayList<HMappedObj>();
+		ArrayList<HMappedDpro> RefDataPro = new ArrayList<HMappedDpro>();
+
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+		OWLOntology ontology = ontM.getOwlModel();
+		OWLDataFactory factory = manager.getOWLDataFactory();
+
+		Set<OWLClass> tempClass = new HashSet<OWLClass>();
+		Set<OWLObjectProperty> tempObjPro = new HashSet<OWLObjectProperty>();
+		Set<OWLDataProperty> tempDataPro = new HashSet<OWLDataProperty>();
+		HMappedClass HtempClass = new HMappedClass();
+		HMappedObj HtempObjPro = new HMappedObj();
+		HMappedDpro HtempDataPro = new HMappedDpro();
+
+		if (alignF != null) {
+			String[] nm = alignF.split(";");
+			for (int ontID = 0; ontID < nm.length; ontID++) {
+				if (!nm[ontID].toString().equals("null")) {
+					String OntName = nm[ontID];
+					try {
+						File file = new File(OntName);
+						SAXReader reader = new SAXReader();
+						Document doc = reader.read(file);
+						Element root = doc.getRootElement();
+						Element align = root.element("Alignment");
+						Iterator<?> map = align.elementIterator("map");
+						if (!map.hasNext()) {
+							// return null;
+						}
+
+						while (map.hasNext()) {
+							Element cell = ((Element) map.next()).element("Cell");
+							if (cell == null) {
+								continue;
+							}
+							String s1 = cell.element("entity1").attributeValue("resource");
+							String s2 = cell.element("entity2").attributeValue("resource");
+
+							// TO DO: delete this condition
+							if (ontology.containsClassInSignature(IRI.create(s1))
+									&& ontology.containsClassInSignature(IRI.create(s2))) {
+								OWLClass cls1 = factory.getOWLClass(IRI.create(s1));
+								OWLClass cls2 = factory.getOWLClass(IRI.create(s2));
+								if (cls1 == null || cls2 == null) {
+									System.err.println("readError: Cannot find such entity.");
+									continue;
+								}
+								// double sim =
+								// Double.parseDouble(cell.elementText("measure"));
+								// String rel = cell.elementText("relation");
+								ArrayList<HMappedClass> check = CheckNotExistClass(RefClass, cls1, cls2);
+								if (check.size() == 0) {
+									tempClass = new HashSet<OWLClass>();
+									HtempClass = new HMappedClass();
+									tempClass.add(cls1);
+									tempClass.add(cls2);
+									HtempClass.setMappedClass(tempClass);
+									HtempClass.setLenClass(2);
+									RefClass.add(RefClass.size(), HtempClass);
+								} else {
+									HtempClass = new HMappedClass();
+									for (int c = 0; c < check.size(); c++) {
+										HMappedClass tem = check.get(c);
+										RefClass.remove(tem);
+										HtempClass.getMappedCalss().addAll(tem.getMappedCalss());
+										HtempClass.getMappedCalss().add(cls1);
+										HtempClass.getMappedCalss().add(cls2);
+									}
+									HtempClass.setLenClass(HtempClass.getMappedCalss().size());
+									RefClass.add(RefClass.size(), HtempClass);
+
+								}
+							} else if (ontology.containsObjectPropertyInSignature(IRI.create(s1))
+									&& ontology.containsObjectPropertyInSignature(IRI.create(s2))) {
+								OWLObjectProperty pro1 = factory.getOWLObjectProperty(IRI.create(s1));
+								OWLObjectProperty pro2 = factory.getOWLObjectProperty(IRI.create(s2));
+								if (pro1 == null || pro2 == null) {
+									System.err.println("readError: Cannot find such entity.");
+									continue;
+								}
+								// double sim =
+								// Double.parseDouble(cell.elementText("measure"));
+								// String rel = cell.elementText("relation");
+								ArrayList<HMappedObj> check = CheckNotExistObj(RefObjPro, pro1, pro2);
+								if (check.size() == 0) {
+									tempObjPro = new HashSet<OWLObjectProperty>();
+									HtempObjPro = new HMappedObj();
+									tempObjPro.add(pro1);
+									tempObjPro.add(pro2);
+									HtempObjPro.setMappedObj(tempObjPro);
+									HtempObjPro.setLenObj(2);
+									RefObjPro.add(RefObjPro.size(), HtempObjPro);
+								} else {
+									HtempObjPro = new HMappedObj();
+									for (int c = 0; c < check.size(); c++) {
+										HMappedObj tem = check.get(c);
+										RefObjPro.remove(tem);
+										HtempObjPro.getMappedObj().addAll(tem.getMappedObj());
+										HtempObjPro.getMappedObj().add(pro1);
+										HtempObjPro.getMappedObj().add(pro2);
+									}
+									HtempObjPro.setLenObj(HtempClass.getMappedCalss().size());
+									RefObjPro.add(RefObjPro.size(), HtempObjPro);
+								}
+
+							} else if (ontology.containsDataPropertyInSignature(IRI.create(s1))
+									&& ontology.containsDataPropertyInSignature(IRI.create(s2))) {
+								OWLDataProperty pro1 = factory.getOWLDataProperty(IRI.create(s1));
+								OWLDataProperty pro2 = factory.getOWLDataProperty(IRI.create(s2));
+								if (pro1 == null || pro2 == null) {
+									System.err.println("readError: Cannot find such entity.");
+									continue;
+								}
+								// double sim =
+								// Double.parseDouble(cell.elementText("measure"));
+								// String rel = cell.elementText("relation");
+								ArrayList<HMappedDpro> check = CheckNotExistDp(RefDataPro, pro1, pro2);
+								if (check.size() == 0) {
+									tempDataPro = new HashSet<OWLDataProperty>();
+									HtempDataPro = new HMappedDpro();
+									tempDataPro.add(pro1);
+									tempDataPro.add(pro2);
+									HtempDataPro.setMappedDpro(tempDataPro);
+									HtempDataPro.setLenDpro(2);
+									RefDataPro.add(RefDataPro.size(), HtempDataPro);
+								} else {
+									HtempDataPro = new HMappedDpro();
+									for (int c = 0; c < check.size(); c++) {
+										HMappedDpro tem = check.get(c);
+										RefDataPro.remove(tem);
+										HtempDataPro.getMappedDpro().addAll(tem.getMappedDpro());
+										HtempDataPro.getMappedDpro().add(pro1);
+										HtempDataPro.getMappedDpro().add(pro2);
+									}
+									HtempDataPro.setLenDpro(HtempClass.getMappedCalss().size());
+									RefDataPro.add(RefDataPro.size(), HtempDataPro);
+								}
+							} else {
+								int w = 0;// other type
+							}
+
+						}
+
+					} catch (DocumentException e) {
+						e.printStackTrace();
+						MyLogging.log(Level.SEVERE, "Exception from reading corresponding entities: " + e.toString());
+
+					}
+				}
+
+			}
+		}
+		// Determine the reference_class and create a key value of them
+		ontM = determineRefClass(ontM, RefClass);
+		ontM = determineRefObjPro(ontM, RefObjPro);
+		ontM = determineRefDataPro(ontM, RefDataPro);
+		//TODO: correct labeling;
+//		SKOSVocabulary.ALTLABEL.getIRI()
+		
+
+		ontM.SetEqClasses(RefClass);
+		ontM.SetEqObjProperties(RefObjPro);
+		ontM.SetEqDataProperties(RefDataPro);
+
+		String collapsInfo = RefClass.size() + " classes have been collapsed; \t " + RefObjPro.size()
+				+ " object properties have been collapsed; \t" + RefDataPro.size()
+				+ " datatype properties have been collapsed. \n";
+		MyLogging.log(Level.INFO, collapsInfo);
+
+		StatisticTest.result.put("corresponding_Class", String.valueOf(RefClass.size()));
+		StatisticTest.result.put("corresponding_object_properties", String.valueOf(RefObjPro.size()));
+		StatisticTest.result.put("corresponding_data_properties", String.valueOf(RefDataPro.size()));
+
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = stopTime - startTime;
+		MyLogging.log(Level.INFO,
+				"Total time for reading and parsing the corresponding entities between the input ontologies is: "
+						+ elapsedTime + " ms. \n");
+		MyLogging.log(Level.INFO,
+				"Number of corresponding classes: " + RefClass.size()
+						+ ", \t Number of corresponding object properties: " + RefObjPro.size()
+						+ ", \t Number of corresponding dataproperties: " + RefDataPro.size() + ". \n");
+
+		StatisticTest.result.put("time_reading_alignment", String.valueOf(elapsedTime));
+
+		return ontM;
+
+	}
+
+	private HashMap<OWLClass, OWLClass> createKeyValueClasses(ArrayList<HMappedClass> refSet) {
+		HashMap<OWLClass, OWLClass> res = new HashMap<OWLClass, OWLClass>();
+		for (int i = 0; i < refSet.size(); i++) {
+			HMappedClass s = refSet.get(i);
+			Iterator<OWLClass> iter = s.getMappedCalss().iterator();
+			while (iter.hasNext()) {
+				OWLClass c = iter.next();
+				res.put(c, s.getRefClass());
+			}
+		}
+
+		return res;
+	}
+
+	private HashMap<OWLObjectProperty, OWLObjectProperty> createKeyValueObj(ArrayList<HMappedObj> refSet) {
+		HashMap<OWLObjectProperty, OWLObjectProperty> res = new HashMap<OWLObjectProperty, OWLObjectProperty>();
+		for (int i = 0; i < refSet.size(); i++) {
+			HMappedObj s = refSet.get(i);
+			Iterator<OWLObjectProperty> iter = s.getMappedObj().iterator();
+			while (iter.hasNext()) {
+				OWLObjectProperty c = iter.next();
+				res.put(c, s.getRefObj());
+			}
+		}
+
+		return res;
+	}
+
+	private HashMap<OWLDataProperty, OWLDataProperty> createKeyValueDpro(ArrayList<HMappedDpro> refSet) {
+		HashMap<OWLDataProperty, OWLDataProperty> res = new HashMap<OWLDataProperty, OWLDataProperty>();
+		for (int i = 0; i < refSet.size(); i++) {
+			HMappedDpro s = refSet.get(i);
+			Iterator<OWLDataProperty> iter = s.getMappedDpro().iterator();
+			while (iter.hasNext()) {
+				OWLDataProperty c = iter.next();
+				res.put(c, s.getRefDpro());
+			}
+		}
+
+		return res;
+	}
+
+	private HModel determineRefDataPro(HModel ontM, ArrayList<HMappedDpro> cList) {
+		HashMap<OWLDataProperty, OWLDataProperty> keyValue = new HashMap<OWLDataProperty, OWLDataProperty>();
+		for (int i = 0; i < cList.size(); i++) {
+			OWLDataProperty c = findRefDataPro(ontM, cList.get(i).getMappedDpro());
+			cList.get(i).setRefDpro(c);
+
+			Iterator<OWLDataProperty> iter = cList.get(i).getMappedDpro().iterator();
+			while (iter.hasNext())
+				keyValue.put(iter.next(), cList.get(i).getRefDpro());
+		}
+		ontM.setKeyValueEqDataPro(keyValue);
+		ontM.SetEqDataProperties(cList);
+		return ontM;
+	}
+
+	private HModel determineRefObjPro(HModel ontM, ArrayList<HMappedObj> cList) {
+		HashMap<OWLObjectProperty, OWLObjectProperty> keyValue = new HashMap<OWLObjectProperty, OWLObjectProperty>();
+		for (int i = 0; i < cList.size(); i++) {
+			OWLObjectProperty c = findRefObjPro(ontM, cList.get(i).getMappedObj());
+			cList.get(i).setRefObj(c);
+
+			Iterator<OWLObjectProperty> iter = cList.get(i).getMappedObj().iterator();
+			while (iter.hasNext())
+				keyValue.put(iter.next(), cList.get(i).getRefObj());
+		}
+		ontM.setKeyValueEqObjProperty(keyValue);
+		ontM.SetEqObjProperties(cList);
+		return ontM;
+	}
+
+	private HModel determineRefClass(HModel ontM, ArrayList<HMappedClass> cList) {
+		HashMap<OWLClass, OWLClass> keyValue = new HashMap<OWLClass, OWLClass>();
+		for (int i = 0; i < cList.size(); i++) {
+			OWLClass c = findRefClass(ontM, cList.get(i).getMappedCalss());
+			cList.get(i).setRefClass(c);
+
+			Iterator<OWLClass> iter = cList.get(i).getMappedCalss().iterator();
+			while (iter.hasNext())
+				keyValue.put(iter.next(), cList.get(i).getRefClass());
+
+		}
+		ontM.setKeyValueEqClass(keyValue);
+		ontM.SetEqClasses(cList);
+		return ontM;
+	}
+
+	private OWLClass findRefClass(HModel ontM, Set<OWLClass> cList) {
+		String pOnt = ontM.getPreferedOnt();
+		Iterator<OWLClass> citer = cList.iterator();
+		while (citer.hasNext()) {
+			OWLClass p = citer.next();
+			if (p.getIRI().getNamespace().equals(pOnt))
+				return p;
+		}
+
+		// if nothing return, means 1- they are equal or 2- the mapped pair does
+		// not belong to preferred ontology
+		String[] sList = convertToStringClass(cList);
+		String type = "class";
+		// String res = LabelIdentifier.identifyCommonWords(sList, type);
+		String res = LabelIdentifier.createLabel(sList, type);
+		OWLClass refClass = ontM.getManager().getOWLDataFactory().getOWLClass(IRI.create("http://merged#" + res));
+		return refClass;
+
+	}
+
+	private OWLObjectProperty findRefObjPro(HModel ontM, Set<OWLObjectProperty> cList) {
+		String pOnt = ontM.getPreferedOnt();
+		Iterator<OWLObjectProperty> citer = cList.iterator();
+		while (citer.hasNext()) {
+			OWLObjectProperty p = citer.next();
+			if (p.getIRI().getNamespace().equals(pOnt))
+				return p;
+		}
+
+		// if nothing return, means 1- they are equal or 2- the mapped pair does
+		// not belong to preferred ontology
+		String[] sList = convertToStringObjPro(cList);
+		String type = "object";
+		String res = LabelIdentifier.createLabel(sList, type);
+		OWLObjectProperty refClass = ontM.getManager().getOWLDataFactory()
+				.getOWLObjectProperty(IRI.create("http://merged#" + res));
+		return refClass;
+
+	}
+
+	private String[] convertToStringObjPro(Set<OWLObjectProperty> cList) {
+		String[] sList = new String[cList.size()];
+		int i = 0;
+		Iterator<OWLObjectProperty> iterList = cList.iterator();
+		while (iterList.hasNext()) {
+			OWLObjectProperty c = iterList.next();
+			sList[i] = c.getIRI().getFragment().toString().toLowerCase();
+			sList[i] = deleteUnChar(sList[i]);
+			i++;
+		}
+		return sList;
+	}
+
+	private String deleteUnChar(String s) {
+		s = s.replaceAll("__", "_");
+		if (s == null || s.length() < 1) {
+			return s;
+		}
+		if (s.substring(0, 1).equals("_"))
+			s = s.substring(1);
+		if (s.substring(s.length() - 1).equals("_"))
+			s = s.substring(0, s.length() - 1);
+		int index1 = s.indexOf("_");
+		while (index1 >= 0) {
+			StringBuilder sb = new StringBuilder(s);
+			sb.deleteCharAt(sb.indexOf("_"));
+			s = sb.toString();
+			s = s.substring(0, index1) + s.substring(index1, index1 + 1).toUpperCase() + s.substring(index1 + 1);
+			index1 = s.indexOf("_", index1 + 1);
+		}
+		return s;
+	}
+
+	private OWLDataProperty findRefDataPro(HModel ontM, Set<OWLDataProperty> cList) {
+		String pOnt = ontM.getPreferedOnt();
+		Iterator<OWLDataProperty> citer = cList.iterator();
+		while (citer.hasNext()) {
+			OWLDataProperty p = citer.next();
+			if (p.getIRI().getNamespace().equals(pOnt))
+				return p;
+		}
+
+		// if nothing return, means 1- they are equal or 2- the mapped pair does
+		// not belong to preferred ontology
+		String[] sList = convertToStringDataPro(cList);
+		String type = "object";
+		String res = LabelIdentifier.createLabel(sList, type);
+		OWLDataProperty refClass = ontM.getManager().getOWLDataFactory()
+				.getOWLDataProperty(IRI.create("http://merged#" + res));
+		return refClass;
+
+	}
+
+	private String[] convertToStringDataPro(Set<OWLDataProperty> cList) {
+		String[] sList = new String[cList.size()];
+		int i = 0;
+		Iterator<OWLDataProperty> iterList = cList.iterator();
+		while (iterList.hasNext()) {
+			OWLDataProperty c = iterList.next();
+			sList[i] = c.getIRI().getFragment().toString().toLowerCase();
+			sList[i] = deleteUnChar(sList[i]);
+			i++;
+		}
+		return sList;
+	}
+
+	private String[] convertToStringClass(Set<OWLClass> cList) {
+		String[] sList = new String[cList.size()];
+		int i = 0;
+		Iterator<OWLClass> iterList = cList.iterator();
+		while (iterList.hasNext()) {
+			OWLClass c = iterList.next();
+			sList[i] = c.getIRI().getFragment().toString();
+			if (sList[i].trim().length() > 0)
+				sList[i] = deleteUnChar(sList[i]);
+			i++;
+		}
+		return sList;
+	}
+
+	private ArrayList<HMappedDpro> CheckNotExistDp(ArrayList<HMappedDpro> refDataPro, OWLDataProperty pro1,
+			OWLDataProperty pro2) {
+		ArrayList<HMappedDpro> idx = new ArrayList<HMappedDpro>();
+		for (int i = 0; i < refDataPro.size(); i++) {
+			Set<OWLDataProperty> a = refDataPro.get(i).getMappedDpro();
+			if (a.contains(pro1) || a.contains(pro2))
+				idx.add(refDataPro.get(i));
+		}
+		return idx;
+	}
+
+	private ArrayList<HMappedObj> CheckNotExistObj(ArrayList<HMappedObj> refObjPro, OWLObjectProperty pro1,
+			OWLObjectProperty pro2) {
+		ArrayList<HMappedObj> idx = new ArrayList<HMappedObj>();
+		for (int i = 0; i < refObjPro.size(); i++) {
+			Set<OWLObjectProperty> a = refObjPro.get(i).getMappedObj();
+			if (a.contains(pro1) || a.contains(pro2))
+				idx.add(refObjPro.get(i));
+		}
+		return idx;
+	}
+
+	private ArrayList<HMappedClass> CheckNotExistClass(ArrayList<HMappedClass> refClass, OWLClass cls1, OWLClass cls2) {
+		ArrayList<HMappedClass> idx = new ArrayList<HMappedClass>();
+		for (int i = 0; i < refClass.size(); i++) {
+			Set<OWLClass> a = refClass.get(i).getMappedCalss();
+			if (a.contains(cls1) || a.contains(cls2))
+				idx.add(refClass.get(i));
+		}
+
+		return idx;
+	}
+}
