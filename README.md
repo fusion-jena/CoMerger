@@ -15,7 +15,7 @@ This repository dedicated to CoMerger packages, inculding source codes and datas
 * Evaluator package: aim at evaluating the merged ontology based on the source ontologies.
 * Consistency checker package: It is based on the subjective logic theory to resolve the inconsistency of the merged ontology with respect to views of source ontologies. 
 * Generic Merge Requirements (GMR)s package: It consists of a set of requirements and criteria that a merged ontology expects to achieve. Their implementation and the graph-based compatibility checker between them exist.
-* An embeded ontolog alignment tool: We pull the SeeCOnt tool from https://github.com/fusion-jena/OAPT and embeded in our tool, to generate the mapping for the source ontologies before merging them. For SeeCOnt please refer to: <br> Algergawy, Alsayed, Samira Babalou, Mohammad J. Kargar, and S. Hashem Davarpanah. "Seecont: A new seeding-based clustering approach for ontology matching." In East European Conference on Advances in Databases and Information Systems, pp. 245-258. Springer, Cham, 2015.
+* An embedded ontology alignment tool: We pull the SeeCOnt tool from https://github.com/fusion-jena/OAPT and embedded in our tool, to generate the mapping for the source ontologies before merging them. For SeeCOnt please refer to: <br> Algergawy, Alsayed, Samira Babalou, Mohammad J. Kargar, and S. Hashem Davarpanah. "Seecont: A new seeding-based clustering approach for ontology matching." In East European Conference on Advances in Databases and Information Systems, pp. 245-258. Springer, Cham, 2015.
 * Holistic merge dataset
 * Merge evaluation dataset
 
