@@ -17,7 +17,7 @@
 | PCAO |Prostate Cancer Ontology | 1.0|https://bioportal.bioontology.org/ontologies/PCAO|
 | PHARE |Pharmacogenomic Relationships Ontology |01/14/2011 |https://bioportal.bioontology.org/ontologies/PHARE|
 | PSO |PatientSafetyOntology |003:2017-05-22|https://bioportal.bioontology.org/ontologies/PSO|
-| RAO |Rheumatoid Arthritis ontology | 1.0|https://bioportal.bioontology.org/ontologies/|
+| RAO |Rheumatoid Arthritis ontology | 1.0|https://bioportal.bioontology.org/ontologies/RAO|
 
 
 
