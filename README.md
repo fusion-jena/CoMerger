@@ -11,8 +11,7 @@ CoMerger is a Holistic Multiple Ontologies Merging tool, available at http://com
 5. Babalou, Samira, and Birgitta König-Ries. "Holistic Knowledge Integration with {C}o{M}erger: A divide-and-conquer approach" Submitted to ESWC2020.
 6. Babalou, Samira, and Birgitta König-Ries. "How good is this merged ontology? Towards a customizable quality evaluation" Submitted to ESWC2020.
 
-This repository dedicated to CoMerger packages, including merger, evaluator, consistency checker, and the online tool’s source code.
-It consists of several packages:
+This repository dedicated to CoMerger packages, inculding source codes and datasets:
 * Merger package: It includes a holistic merge method based on the given source ontologies and their mapping. 
 * Evaluator package: aim at evaluating the merged ontology based on the source ontologies.
 * Consistency checker package: It is based on the subjective logic theory to resolve the inconsistency of the merged ontology with respect to views of source ontologies. 
