@@ -1,13 +1,13 @@
 # Source ontologies are:
-| Acronym | Full Name | Link |
-| ------------- |:-------------:|:-------------:|
-| AHSO |Animal Health Surveillance Ontology|https://bioportal.bioontology.org/ontologies/AHSO|
-|BNO| Bionutrition Ontology | https://bioportal.bioontology.org/ontologies/BNO|
-|CABRO| Computer Assisted Brain Injury Rehabilitation Ontology|https://bioportal.bioontology.org/ontologies/CABRO|
-|EPILONT|Epilepsy Ontology| https://bioportal.bioontology.org/ontologies/EPILONT|
-|RAO|Rheumatoid Arthritis ontology| https://bioportal.bioontology.org/ontologies/RAO|
-|RNPRIO|Research Network and Patient Registry Inventory Ontology| https://bioportal.bioontology.org/ontologies/RNPRIO
-|RO|Radiomics Ontology|https://bioportal.bioontology.org/ontologies/RO
+| Acronym | Full Name | Version| Link |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| AHSO |Animal Health Surveillance Ontology| 0.1.0 |https://bioportal.bioontology.org/ontologies/AHSO|
+|BNO| Bionutrition Ontology |0.2 | https://bioportal.bioontology.org/ontologies/BNO|
+|CABRO| Computer Assisted Brain Injury Rehabilitation Ontology|0.5 | https://bioportal.bioontology.org/ontologies/CABRO|
+|EPILONT|Epilepsy Ontology|V1| https://bioportal.bioontology.org/ontologies/EPILONT|
+|RAO|Rheumatoid Arthritis ontology| 1.0| https://bioportal.bioontology.org/ontologies/RAO|
+|RNPRIO|Research Network and Patient Registry Inventory Ontology| 1 | https://bioportal.bioontology.org/ontologies/RNPRIO
+|RO|Radiomics Ontology| 2.1|https://bioportal.bioontology.org/ontologies/RO
 
 # Mapping files are:
 | Mapping Type | Link |
