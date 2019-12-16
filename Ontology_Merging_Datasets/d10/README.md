@@ -1,5 +1,5 @@
 # Source ontologies are:
-| Acronym | Full Name | Version |Link |
+| Acronym | Full Name | Version /Uploaded |Link |
 | ------------- |:-------------:|:-------------:|:-------------:|
 | ADAR |Autism DSM-ADI-R ontology|1.1|https://bioportal.bioontology.org/ontologies/ADAR|
 | AHSO |Animal Health Surveillance Ontology|0.1.0 |https://bioportal.bioontology.org/ontologies/AHSO|
