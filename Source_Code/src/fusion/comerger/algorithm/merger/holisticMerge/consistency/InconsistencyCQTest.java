@@ -25,10 +25,8 @@ public class InconsistencyCQTest {
 	static String[][] QueryRef = new String[Qsize][2];
 
 	public static void main(String[] args) throws IOException {
-		String ontName = "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\consistentOnt\\old\\d4-new-seecont-root-om2.owl";
-		// String ontName =
-		// "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\ekaw.owl";
-		String Q = "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\query\\d4-new-om-query.csv";
+		String ontName = "C:\\LOCAL_FOLDER\\d4-new-seecont-root-om2.owl";
+		String Q = "C:\\LOCAL_FOLDER\\d4-new-om-query.csv";
 		InconsistencyCQTest ct = new InconsistencyCQTest();
 		ct.Run(Q, ontName);
 		// test(ontName);

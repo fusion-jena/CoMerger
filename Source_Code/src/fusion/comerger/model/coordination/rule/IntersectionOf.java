@@ -1,19 +1,9 @@
 
 package fusion.comerger.model.coordination.rule;
-
-/*import com.hp.hpl.jena.query.Dataset;
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;*/
-
-
-
-
-
-
+/* 
+* Please refer to https://github.com/fusion-jena/OAPT
+* Algergawy, Alsayed, Samira Babalou, Mohammad J. Kargar, and S. Hashem Davarpanah. "SeeCOnt: A new seeding-based clustering approach for ontology matching." In East European Conference on Advances in Databases and Information Systems, pp. 245-258. Springer, Cham, 2015.
+*/
 
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;

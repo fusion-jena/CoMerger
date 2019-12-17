@@ -1,6 +1,10 @@
 /*Converts an ontology (written in RDF(S) or OWL) to a Pajek network.*/
 
 package fusion.comerger.general.visualization;
+/* 
+* Please refer to https://github.com/fusion-jena/OAPT
+* Algergawy, Alsayed, Samira Babalou, Mohammad J. Kargar, and S. Hashem Davarpanah. "SeeCOnt: A new seeding-based clustering approach for ontology matching." In East European Conference on Advances in Databases and Information Systems, pp. 245-258. Springer, Cham, 2015.
+*/
 
 import java.io.BufferedReader;
 import java.io.File;

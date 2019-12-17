@@ -1,5 +1,30 @@
 package fusion.comerger.algorithm.merger.query;
-
+/*
+ * CoMerger: Holistic Ontology Merging
+ * %%
+ * Copyright (C) 2019 Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+ /**
+ * Author: Samira Babalou<br>
+ * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+ * Heinz-Nixdorf Chair for Distributed Information Systems<br>
+ * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+ * Date: 17/12/2019
+ */
+ 
 import com.hp.hpl.jena.vocabulary.OWL;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
@@ -19,9 +44,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
@@ -42,11 +64,6 @@ import org.semanticweb.owlapi.model.IRI;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-//import org.apache.jena.ontology.OntModel;
-//import org.apache.jena.ontology.OntModelSpec;
-//import org.apache.jena.rdf.model.ModelFactory;
-//import org.apache.jena.util.FileManager;
-//import org.apache.jena.vocabulary.RDFS;
 
 public class QueryExcecute {
 	public static String RunQuery(String ontName, String queryString) throws IOException {

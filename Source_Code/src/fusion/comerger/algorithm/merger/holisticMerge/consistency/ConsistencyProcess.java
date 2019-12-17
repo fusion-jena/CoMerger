@@ -38,12 +38,11 @@ import fusion.comerger.algorithm.merger.model.HModel;
 public class ConsistencyProcess {
 
 	public static void main(String[] args) throws Exception {
-		String directory = "C:\\Users\\Samira\\Downloads\\";
-		String ontList = "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\cmt.owl";
-		ontList = ontList + ";" + "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\conference.owl";
-		ontList = ontList + ";" + "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\confOf.owl";
-		// String mergedOnt =
-		// "C:\\Users\\Samira\\Desktop\\mergeDataset\\allConf\\MergedOnt592.owl";
+		String directory = "C:\\LOCAL_FOLDER\\";
+		String ontList = "C:\\LOCAL_FOLDER\\cmt.owl";
+		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\conference.owl";
+		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\confOf.owl";
+	
 		String mappingFile = MatchingProcess.CreateMap(ontList, "1", "1", directory);
 		// HModel ontM = ModelReader.createReadModel(ontList, mappingFile,
 		// mergedOnt, "equal");
