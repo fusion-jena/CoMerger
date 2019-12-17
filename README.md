@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3580593.svg)](https://doi.org/10.5281/zenodo.3580593)
+
 # CoMerger
 CoMerger is a Holistic Multiple Ontologies Merging tool, available at http://comerger.uni-jena.de/.
 
