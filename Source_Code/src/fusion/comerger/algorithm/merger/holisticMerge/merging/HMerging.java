@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.merging;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,7 +79,7 @@ import org.semanticweb.owlapi.model.OWLTransitiveObjectPropertyAxiom;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.HClusterRefine;
+import fusion.comerger.algorithm.merger.holisticMerge.divideConquer.HBlockRefine;
 import fusion.comerger.algorithm.merger.holisticMerge.general.HSave;
 import fusion.comerger.algorithm.merger.holisticMerge.general.Zipper;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
@@ -123,10 +122,10 @@ public class HMerging {
 		// refine clusters
 		if (selectedUserItem != null && selectedUserItem.contains("localRefinement")) {
 			if (ontM.getClusters().size() > 1) {
-				// TODO: is it a good decision, if cluster size is 1, we do not
+				// if cluster size is 1, we do not
 				// refine this one cluster and only let that global refinements
-				// will be done?
-				HClusterRefine hcr = new HClusterRefine();
+				// will be done
+				HBlockRefine hcr = new HBlockRefine();
 				ontM = hcr.run(ontM, selectedUserItem);
 			}
 		} else {
@@ -218,9 +217,6 @@ public class HMerging {
 	public static HModel equalProcess(HModel ontM) {
 		long startTime = System.currentTimeMillis();
 
-		// add classes, collapsed equivalent classes, collapsed eq-properties
-		// TODO: not for all axioms, sondern, only 1-retrieve all axioms for all
-		// equivalent-classes, and then re-write those axioms
 		OWLOntologyManager manager = ontM.getManager();
 		OWLDataFactory factory = manager.getOWLDataFactory();
 		OWLOntology ontology = ontM.getOwlModel();
@@ -229,9 +225,6 @@ public class HMerging {
 			OWLAxiom oldAxiom = axiter.next();
 			String axiomType = oldAxiom.getAxiomType().toString();
 
-			if (oldAxiom.toString().toLowerCase().contains("hasdecision")) {
-				int w = 0;
-			}
 			switch (axiomType) {
 			case "SubClassOf":
 				manager = SubClassProcessor(oldAxiom, ontM, ontology, manager, factory);
@@ -311,7 +304,7 @@ public class HMerging {
 
 			{
 				if (axiomType != "Declaration")
-					System.out.println("procees me Samira in HMerging" + oldAxiom);
+					System.out.println("procees me in HMerging" + oldAxiom); // TODO
 
 			}
 			}
@@ -621,7 +614,8 @@ public class HMerging {
 
 	private static OWLOntologyManager DifferentIndividualsProcessor(OWLAxiom oldAxiom, HModel ontM,
 			OWLOntology ontology, OWLOntologyManager manager, OWLDataFactory factory) {
-		System.out.println(oldAxiom + " Samira process me in DifferentIndividualsProcessor in HMerging.java");
+		System.out.println(oldAxiom + " process me in DifferentIndividualsProcessor in HMerging.java");
+		// TODO
 		return manager;
 	}
 
@@ -646,7 +640,6 @@ public class HMerging {
 				ontM.setNumRewriteAxioms(r + 1);
 			}
 		} else if (c instanceof OWLObjectSomeValuesFrom) {
-			int wait = 0;
 			System.out.println("unprocess axioms:" + oldAxiom);
 		}
 
@@ -738,17 +731,12 @@ public class HMerging {
 					}
 				} else if (cls instanceof OWLObjectIntersectionOf) {
 					Set<OWLClassExpression> tempAll = new HashSet<OWLClassExpression>();
-					OWLClass aClass = null;
-					OWLObjectProperty aProperty = null;
-					Iterator<OWLClass> cl = ((OWLObjectIntersectionOf) cls).getClassesInSignature().iterator();
-					Iterator<OWLObjectProperty> ob = ((OWLObjectIntersectionOf) cls).getObjectPropertiesInSignature()
-							.iterator();
 					Iterator<OWLClassExpression> cll = ((OWLObjectIntersectionOf) cls).getOperands().iterator();
 
 					while (cll.hasNext()) {
 						OWLClassExpression c = cll.next();
 						if (c instanceof OWLClassImpl) {
-							int wwo = 0;
+							// no need
 						} else if (c instanceof OWLObjectUnionOf) {
 							Set<OWLClassExpression> tempObj = new HashSet<OWLClassExpression>();
 							Iterator<OWLClassExpression> rangExist = ((OWLObjectUnionOf) c).getOperands().iterator();
@@ -770,7 +758,6 @@ public class HMerging {
 						} else if (c instanceof OWLObjectSomeValuesFrom) {
 							OWLClass aaClass = null;
 							OWLObjectProperty aaProperty = null;
-							OWLObjectPropertyExpression rangExist = ((OWLObjectSomeValuesFrom) c).getProperty();// .getOperands();//.iterator();
 							Iterator<OWLClass> ac = ((OWLObjectSomeValuesFrom) c).getClassesInSignature().iterator();
 							Iterator<OWLObjectProperty> ap = ((OWLObjectSomeValuesFrom) c)
 									.getObjectPropertiesInSignature().iterator();
@@ -1296,7 +1283,6 @@ public class HMerging {
 				ontM.setNumRewriteAxioms(r + 1);
 			}
 		} else {
-			int w = 0;
 			System.out.println("Process me in HMerging.java in SubClassProcessor");
 		}
 		return manager;

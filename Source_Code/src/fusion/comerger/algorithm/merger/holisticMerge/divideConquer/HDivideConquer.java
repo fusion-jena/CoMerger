@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.divideConquer;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,8 +43,6 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.AssignClusterProperties;
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.ClusterModel;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedClass;
 import fusion.comerger.algorithm.merger.model.HModel;
@@ -63,7 +60,7 @@ public class HDivideConquer {
 		ontM = division(ontM, coreList, adjacentList);
 
 		/* Setp 3: add properrties */
-		AssignClusterProperties acp = new AssignClusterProperties();
+		AssignBlockProperties acp = new AssignBlockProperties();
 		ontM = acp.run(ontM);
 
 		long stopTime = System.currentTimeMillis();
@@ -88,16 +85,16 @@ public class HDivideConquer {
 		if (coreList.size() < 1)
 			return ontM;
 
-		// TODO: check corelist.size>0
+
 		boolean breakDown = true;
 		int numBlock = 0;
 
-		ArrayList<ClusterModel> ClusterList = new ArrayList<ClusterModel>();
+		ArrayList<BlockModel> ClusterList = new ArrayList<BlockModel>();
 		HashSet<OWLClassExpression> alreadyAdded = new HashSet<OWLClassExpression>();
 
 		// creating the 1st block
 		try {
-			ClusterModel cm = new ClusterModel();
+			BlockModel cm = new BlockModel();
 			OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 			String clusterName = ontM.getPath() + "cluster" + numBlock + ".owl";
 			File fileM = new File(clusterName);
@@ -151,7 +148,7 @@ public class HDivideConquer {
 
 		try {
 			while (breakDown) {
-				ClusterModel cm = new ClusterModel();
+				BlockModel cm = new BlockModel();
 				OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 				String clusterName = ontM.getPath() + "cluster" + numBlock + ".owl";
 				File fileM = new File(clusterName);
@@ -232,7 +229,7 @@ public class HDivideConquer {
 		return ontM;
 	}
 
-	private HMappedClass selectNextCore(ArrayList<HMappedClass> coreList, ArrayList<ClusterModel> clusterList,
+	private HMappedClass selectNextCore(ArrayList<HMappedClass> coreList, ArrayList<BlockModel> clusterList,
 			HashSet<OWLClassExpression> alreadyAdded) {
 		/*
 		 * the core list is already soreted based on the goodness. here we only

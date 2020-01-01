@@ -1,4 +1,5 @@
 package fusion.comerger.algorithm.merger.query;
+
 /*
  * CoMerger: Holistic Ontology Merging
  * %%
@@ -16,54 +17,39 @@ package fusion.comerger.algorithm.merger.query;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
+/**
  * Author: Samira Babalou<br>
  * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
  * Heinz-Nixdorf Chair for Distributed Information Systems<br>
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
-import com.hp.hpl.jena.vocabulary.OWL;
-import com.hp.hpl.jena.vocabulary.RDFS;
-
-import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.model.RBGModelFactory;
-
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
-import com.hp.hpl.jena.query.*;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.util.FileManager;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.logging.Level;
-import java.util.zip.DataFormatException;
-import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.jena.ontology.OntDocumentManager;
-import org.apache.jena.sparql.function.library.leviathan.log;
-import org.semanticweb.owlapi.model.IRI;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSetFormatter;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.util.FileManager;
 
+import com.hp.hpl.jena.vocabulary.OWL;
+import com.hp.hpl.jena.vocabulary.RDFS;
+
+import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 
 public class QueryExcecute {
 	public static String RunQuery(String ontName, String queryString) throws IOException {
@@ -94,7 +80,7 @@ public class QueryExcecute {
 		}
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
-		MyLogging.log(Level.INFO,"Query done! Total time  " + elapsedTime+" ms. \n");
+		MyLogging.log(Level.INFO, "Query done! Total time  " + elapsedTime + " ms. \n");
 		return res;
 	}
 
@@ -111,11 +97,7 @@ public class QueryExcecute {
 		// System.out.println("Loaded German disambiguation dataset.");
 		// model.read(in3, null, "N-TRIPLES");
 
-		String inputFileName = "C:\\Users\\Samira\\Desktop\\mergeDataset\\cmt\\MergedOnt.owl";// MergedOnt.zip";
-		// //
-		// cmt.owl";
-		// inputFileName = CreateTemp(inputFileName);
-		// String inputFileName = inputFileName2;
+		String inputFileName = "C:\\YOUR_LOCAL_FOLDER\\MergedOnt.owl";
 		OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF);
 		if (inputFileName.endsWith(".zip")) {
 			inputFileName = unzip(inputFileName);
@@ -140,30 +122,6 @@ public class QueryExcecute {
 			System.out.println("Query is not processable");
 		}
 
-	}
-
-	private static String CreateTemp(String mFile) {
-
-		try {
-			File oldFile = File.createTempFile(mFile.substring(0, mFile.indexOf(".owl")), ".owl");
-			File ff = new File(mFile);
-			String str = ff.getName().substring(0, ff.getName().length());
-			File newFile = new File(oldFile.getParent(), str);//
-
-			try {
-				// Files.move(oldFile.toPath(), newFile.toPath(),
-				// StandardCopyOption.REPLACE_EXISTING);
-				FileUtils.copyFile(oldFile, newFile);
-			} catch (IOException ex) {
-				System.out.println(ex);
-
-			}
-			mFile = oldFile.toString();
-		} catch (IOException e) {
-			System.out.println(e);
-			e.printStackTrace();
-		}
-		return mFile;
 	}
 
 	private static String unzip(String zipFilePath) throws IOException {
@@ -278,11 +236,11 @@ public class QueryExcecute {
 			Answer[0] = "Query is not processable";
 			Answer[1] = "Query is not processable";
 		}
-		
+
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
-		MyLogging.log(Level.INFO,"Quuery done! Total time  " + elapsedTime+" ms. \n");
-		
+		MyLogging.log(Level.INFO, "Quuery done! Total time  " + elapsedTime + " ms. \n");
+
 		return Answer;
 	}
 }

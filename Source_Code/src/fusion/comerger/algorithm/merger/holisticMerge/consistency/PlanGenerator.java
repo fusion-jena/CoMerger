@@ -1,4 +1,29 @@
 package fusion.comerger.algorithm.merger.holisticMerge.consistency;
+/*
+ * CoMerger: Holistic Ontology Merging
+ * %%
+ * Copyright (C) 2019 Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory
@@ -9,7 +34,6 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import org.semanticweb.owlapi.model.OWLAxiom;
@@ -116,60 +140,7 @@ public class PlanGenerator {
 		return plan;
 	}
 
-	private static ArrayList<ErrornousAxioms> normalizedValue(ArrayList<ErrornousAxioms> allErrAx) {
-		double[] minMax = findMinMaxTrust(allErrAx);
-		double min = minMax[0];
-		double max = minMax[1];
-		for (int i = 0; i < allErrAx.size(); i++) {
-			ErrornousAxioms group = allErrAx.get(i);
-			Iterator<ArrayList<Opinion>> iter = group.getRankedAxioms().iterator();
-			while (iter.hasNext()) {
-				ArrayList<Opinion> op = iter.next();
-				for (int j = 0; j < op.size(); j++) {
-					double tt = new Double(op.get(j).getTrust());
-					double norm = (tt - min) / (max - min);
-					DecimalFormat df = new DecimalFormat("#.###");
-					norm = Double.valueOf(df.format(norm));
-					op.get(j).setNormTrust(norm);
-				}
-			}
-		}
-		return allErrAx;
-	}
-
-	private static double[] findMinMaxTrust(ArrayList<ErrornousAxioms> allErrAx) {
-		double[] res = new double[2];
-		double min = 0.0, max = 0.0;
-		if (allErrAx.get(0).getRankedAxioms() != null) {
-			min = new Double(allErrAx.get(0).getRankedAxioms().iterator().next().get(0).getTrust());
-			max = new Double(min);
-		}
-		for (int i = 0; i < allErrAx.size(); i++) {
-			ErrornousAxioms group = allErrAx.get(i);
-			Iterator<ArrayList<Opinion>> iter = group.getRankedAxioms().iterator();
-			while (iter.hasNext()) {
-				ArrayList<Opinion> op = iter.next();
-				for (int j = 0; j < op.size(); j++) {
-					double t = op.get(j).getTrust();
-					System.out.println(t);
-					int comp1 = new Double(t).compareTo(new Double(min));
-					if (comp1 < 0) {
-						min = new Double(t);
-					}
-					int comp2 = new Double(t).compareTo(new Double(max));
-					if (comp2 > 0) {
-						max = new Double(t);
-					}
-
-				}
-			}
-		}
-		res[0] = new Double(min);
-		res[1] = new Double(max);
-		System.out.println("min:" + min + "\tmax:" + max);
-		return res;
-	}
-
+	
 	private static ArrayList<ArrayList<Opinion>> doOrderAxiom(ArrayList<ArrayList<Opinion>> axList) {
 		ArrayList<ArrayList<Opinion>> res = new ArrayList<ArrayList<Opinion>>();
 
@@ -243,35 +214,6 @@ public class PlanGenerator {
 		}
 
 		return newAxiom;
-	}
-
-	private static ArrayList<OWLAxiom> findMinRanks(ArrayList<ArrayList<Opinion>> rankedAxioms) {
-		ArrayList<OWLAxiom> res = new ArrayList<OWLAxiom>();
-		for (int k = 0; k < rankedAxioms.size(); k++) {
-			ArrayList<Opinion> ax = rankedAxioms.get(k);
-			OWLAxiom minRankedAxiom = null;
-			double min = 5;
-			for (int m = 0; m < ax.size(); m++) {
-				Opinion axx = ax.get(m);
-
-				if (axx.getTrust() < min) {
-					minRankedAxiom = axx.getAxiom();
-					min = axx.getTrust();
-				}
-			}
-			res.add(minRankedAxiom);
-		}
-		return res;
-	}
-
-	private static String findAxiomID(ArrayList<HashMap<OWLAxiom, String>> errAx, OWLAxiom highRankedAxiom) {
-		for (int k = 0; k < errAx.size(); k++) {
-			HashMap<OWLAxiom, String> ax = errAx.get(k);
-			for (int m = 0; m < ax.size(); m++) {
-				String axx = ax.get(m);
-			}
-		}
-		return null;
 	}
 
 }

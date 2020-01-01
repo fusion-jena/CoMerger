@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.evaluator;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 public class GuiOutput {
 
 	public static String createCompletenessGui(String[] res) {

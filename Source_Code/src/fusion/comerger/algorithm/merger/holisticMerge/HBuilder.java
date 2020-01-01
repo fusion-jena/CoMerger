@@ -1,3 +1,4 @@
+
 package fusion.comerger.algorithm.merger.holisticMerge;
 /*
  * CoMerger: Holistic Ontology Merging
@@ -24,7 +25,6 @@ package fusion.comerger.algorithm.merger.holisticMerge;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;

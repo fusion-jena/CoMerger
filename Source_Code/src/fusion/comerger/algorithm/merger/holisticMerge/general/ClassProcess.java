@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.general;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -37,10 +36,6 @@ import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 
 public class ClassProcess {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 	public static Set<OWLClass> getAllSupClasses(OWLClass cl, OWLOntology Om) {
 		Set<OWLClass> res = new HashSet<OWLClass>();
 		Set<OWLClassExpression> list = cl.getSuperClasses(Om);
@@ -48,7 +43,7 @@ public class ClassProcess {
 		Set<OWLClassExpression> newList = new HashSet<OWLClassExpression>();
 		Set<OWLClassExpression> L = new HashSet<OWLClassExpression>();
 		L = list;
-		int deep = 0;
+
 		while (L.size() > 0) {
 			while (iterList.hasNext()) {
 				OWLClassExpression cc = iterList.next();
@@ -58,17 +53,12 @@ public class ClassProcess {
 					newList.addAll(ccc.getSuperClasses(Om));
 				}
 			}
-			deep++;
+
 			L = newList;
 			iterList = newList.iterator();
 			newList = new HashSet<OWLClassExpression>();
 		}
 
-		// FYI: deep value now shows how many level the class has superclass
-		// System.out.println(deep);
-		if (res.size() > 1) {
-			int wadi = 0;
-		}
 		return res;
 
 	}
@@ -80,7 +70,7 @@ public class ClassProcess {
 		Set<OWLClassExpression> newList = new HashSet<OWLClassExpression>();
 		Set<OWLClassExpression> L = new HashSet<OWLClassExpression>();
 		L = list;
-		int deep = 0;
+
 		while (L.size() > 0) {
 			while (iterList.hasNext()) {
 				OWLClassExpression cc = iterList.next();
@@ -90,14 +80,12 @@ public class ClassProcess {
 					newList.addAll(ccc.getSubClasses(Om));
 				}
 			}
-			deep++;
+
 			L = newList;
 			iterList = newList.iterator();
 			newList = new HashSet<OWLClassExpression>();
 		}
 
-		// FYI: deep value now shows how many level the class has sublcass
-		// System.out.println(deep);
 		return res;
 	}
 

@@ -1,6 +1,22 @@
-//It use GMO, VDoc and SeeCOnt. we can use PBM instead of SeeCOnt, since SeeCOnt needs number of partition
-package fusion.comerger.algorithm.matcher;
 
+package fusion.comerger.algorithm.matcher;
+/* 
+ * This package is downloaded from the FALCON-AO tool, 
+ * available in http://ws.nju.edu.cn/falcon-ao/
+ * For more information of this method, please refer to
+ * Hu, W. and Qu, Y., 2008. Falcon-AO: A practical ontology matching system. Journal of web semantics, 6(3), pp.237-239.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,11 +26,8 @@ import java.io.InputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Iterator;
 import java.util.logging.Level;
-
-import javax.swing.JOptionPane;
 
 import org.apache.jena.ontology.OntDocumentManager;
 import org.apache.jena.ontology.OntModel;
@@ -23,8 +36,6 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.riot.RDFLanguages;
 import org.apache.jena.util.FileManager;
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.formats.OWLOntologyFormat;
-import org.semanticweb.owlapi.io.RDFXMLOntologyFormat;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -33,10 +44,6 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.SetOntologyID;
 
-import com.hp.hpl.jena.rdf.arp.ParseException;
-import com.hp.hpl.jena.rdf.model.Model;
-
-import fusion.comerger.algorithm.matcher.AbstractMatcher;
 import fusion.comerger.algorithm.matcher.gmo.ExternalMatch;
 import fusion.comerger.algorithm.matcher.gmo.GmoMatcher;
 import fusion.comerger.algorithm.matcher.post.Patcher;
@@ -46,14 +53,12 @@ import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.partitioner.SeeCOnt.CClustering;
 import fusion.comerger.general.cc.BuildModel;
 import fusion.comerger.general.cc.Configuration;
-import fusion.comerger.general.cc.Controller;
 import fusion.comerger.general.cc.Data;
 import fusion.comerger.general.cc.LingComp;
 import fusion.comerger.general.cc.StruComp;
 import fusion.comerger.general.gernalAnalysis.matrix.NamedMatrix;
 import fusion.comerger.general.gernalAnalysis.similarBlock.BlockMapping;
 import fusion.comerger.general.gernalAnalysis.similarBlock.FindingSimilarBlock;
-import fusion.comerger.general.gui.MatchingPanel;
 import fusion.comerger.general.output.Alignment;
 import fusion.comerger.general.output.AlignmentReader2;
 import fusion.comerger.general.output.AlignmentSelector;

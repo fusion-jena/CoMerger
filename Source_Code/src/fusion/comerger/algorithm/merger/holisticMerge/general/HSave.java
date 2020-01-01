@@ -16,22 +16,20 @@ package fusion.comerger.algorithm.merger.holisticMerge.general;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.io.File;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
 import org.semanticweb.owlapi.io.OWLXMLOntologyFormat;
 import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
@@ -59,7 +57,7 @@ public class HSave {
 		// OWLOntologyFormat format = manager.getOntologyFormat(ontology);
 		// manager.saveOntology(ontology, format, IRI.create(fl.toURI()));
 
-		// manager.saveOntology(ontology, System.out); //new uncomment samira
+		// manager.saveOntology(ontology, System.out);
 		if (MergeOutputType.equals("OWLtype")) {
 			// save in OWL/XML format
 			manager.saveOntology(ontology, new OWLXMLOntologyFormat(), IRI.create(fl.toURI()));
@@ -89,13 +87,13 @@ public class HSave {
 		String MergeOutputType = ontM.getMergeOutputType();
 		OWLOntologyManager manager = ontM.getManager();
 		// OWLDataFactory factory = manager.getOWLDataFactory();
-		 OWLOntology ontology = null;//ontM.getOwlModel();
+		OWLOntology ontology = null;// ontM.getOwlModel();
 
 		// ontM.SetManager(manager);
-//		manager = ontM.getManager();
+		// manager = ontM.getManager();
 
 		for (int i = 0; i < ontM.getClusters().size(); i++) {
-			ontology = ontM.getClusters().get(i).getOntology(); 
+			ontology = ontM.getClusters().get(i).getOntology();
 			manager = ontology.getOWLOntologyManager();
 			// ontology = ontM.getOwlModel();
 
@@ -105,14 +103,12 @@ public class HSave {
 			// OWLOntologyFormat format = manager.getOntologyFormat(ontology);
 			// manager.saveOntology(ontology, format, IRI.create(fl.toURI()));
 
-			// manager.saveOntology(ontology, System.out); //new uncomment
-			// samira
+			// manager.saveOntology(ontology, System.out);
 			if (MergeOutputType.equals("OWLtype")) {
 				// save in OWL/XML format
 				try {
 					manager.saveOntology(ontology, new OWLXMLOntologyFormat(), IRI.create(fl.toURI()));
 				} catch (OWLOntologyStorageException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -121,7 +117,6 @@ public class HSave {
 				try {
 					manager.saveOntology(ontology, IRI.create(fl.toURI()));
 				} catch (OWLOntologyStorageException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

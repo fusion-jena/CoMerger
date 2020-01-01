@@ -1,0 +1,4 @@
+<option>Retrieve all individuals </option>
+<option>Retrieve individuals of class X</option>
+<option>Count all individuals</option>
+<option>Count individuals of class X</option>

@@ -1,4 +1,29 @@
 package fusion.comerger.algorithm.merger.holisticMerge.consistency;
+/*
+ * CoMerger: Holistic Ontology Merging
+ * %%
+ * Copyright (C) 2019 Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory.
@@ -27,8 +52,8 @@ import com.clarkparsia.owlapi.explanation.BlackBoxExplanation;
 import com.clarkparsia.owlapi.explanation.HSTExplanationGenerator;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 
-import fusion.comerger.MatchingProcess;
-import fusion.comerger.MergingProcess;
+import fusion.comerger.servlets.MatchingProcess;
+import fusion.comerger.servlets.MergingProcess;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.merger.holisticMerge.general.HSave;
 import fusion.comerger.algorithm.merger.holisticMerge.general.SaveTxt;
@@ -38,14 +63,11 @@ import fusion.comerger.algorithm.merger.model.HModel;
 public class ConsistencyProcess {
 
 	public static void main(String[] args) throws Exception {
-		String directory = "C:\\LOCAL_FOLDER\\";
-		String ontList = "C:\\LOCAL_FOLDER\\cmt.owl";
-		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\conference.owl";
-		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\confOf.owl";
-	
+		String directory = "C:\\YOUR_LOCAL_FOLDER\\";
+		String ontList = "C:\\YOUR_LOCAL_FOLDER\\cmt.owl";
+		ontList = ontList + ";" + "C:\\YOUR_LOCAL_FOLDER\\conference.owl";
+		ontList = ontList + ";" + "C:\\YOUR_LOCAL_FOLDER\\confOf.owl";
 		String mappingFile = MatchingProcess.CreateMap(ontList, "1", "1", directory);
-		// HModel ontM = ModelReader.createReadModel(ontList, mappingFile,
-		// mergedOnt, "equal");
 		String[][] Rules = new String[8][2];
 		Rules[0][0] = "ClassCheck";
 		Rules[1][0] = "RealtionCheck";
@@ -81,7 +103,7 @@ public class ConsistencyProcess {
 	public static HModel DoConsistencyCheck(HModel ontM, String userConsParam)
 			throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
 		long startTimecc = System.currentTimeMillis();
-		
+
 		// User enters two parameters, parameter[0]=decision on processing all
 		// unsatisfiable classes or root classes, parameter[1]= number of
 		// explanation require for reasoner
@@ -102,7 +124,7 @@ public class ConsistencyProcess {
 		long startTime = System.currentTimeMillis();
 		// run an reasoner
 		res[0] = "Pellet"; // name of reasnoer
-		res[1] = "Pellet is one of promising reasoner"; // description
+		res[1] = "Pellet is one of promising reasoner."; // description
 		OWLReasonerFactory reasonerFactory = new PelletReasonerFactory();
 		OWLReasoner reasoner = reasonerFactory.createNonBufferingReasoner(ont);
 		if (reasoner.isConsistent()) {
@@ -126,7 +148,6 @@ public class ConsistencyProcess {
 				}
 				res[5] = "The list of unsatisfiable classes: <br>" + list;
 
-				// TODO: https://github.com/matthewhorridge/owlexplanation
 				BlackBoxExplanation bb = new BlackBoxExplanation(ont, reasonerFactory, reasoner);
 				HSTExplanationGenerator multExplanator = new HSTExplanationGenerator(bb);
 
@@ -174,7 +195,7 @@ public class ConsistencyProcess {
 				double[] jSize = getJustSize(allErrAx);
 				System.out.println(" J size: " + jSize[0] + "\t axioms size: " + jSize[1]);
 				res[8] = Double.toString(jSize[0]);
-				res[9] = "Justification is a group of axioms...";
+				res[9] = "A justification is a minimal subset of an ontology that causes it to be inconsistent.";
 				res[10] = Double.toString(jSize[1]);
 				res[11] = "Total number of axioms which caused errors";
 				long stopTimeReasoner = System.currentTimeMillis();
@@ -228,24 +249,24 @@ public class ConsistencyProcess {
 		}
 		reasoner.dispose();
 
-		SaveTxt st = new SaveTxt();
-		ontM.setConsistencyResultTxt(st.ConsistencyResultToTxt(ontM, res));
+		ontM.setConsistencyResultTxt(SaveTxt.ConsistencyResultToTxt(ontM, res));
 
 		// Save zip ontology
 		if (ontM.getOntZipName().length() < 1) {
 			HSave hs = new HSave();
-			ontM = hs.run(ontM, "RDF/XML"); // TODO: change this RDF/XML by user
-											// selected parameter
+			ontM = hs.run(ontM, ontM.getMergeOutputType());
+
 			String MergedOntZip = Zipper.zipFiles(ontM.getOntName());
 			ontM.setOntZipName(MergedOntZip);
 		}
 
 		ontM.setConsResult(res);
-	
+
 		long stopTimecc = System.currentTimeMillis();
 		long elapsedTimecc = stopTimecc - startTimecc;
-		MyLogging.log(Level.INFO,"*** done! Congratulation. Consistency test has been done successfully. Total time  " + elapsedTimecc+" ms. \n");
-		
+		MyLogging.log(Level.INFO, "*** done! Congratulation. Consistency test has been done successfully. Total time  "
+				+ elapsedTimecc + " ms. \n");
+
 		return ontM;
 	}
 
@@ -268,7 +289,7 @@ public class ConsistencyProcess {
 	public static HModel DoReviseConsistency(HModel ontM, String userPlan, String userConsParam)
 			throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
 		long startTime = System.currentTimeMillis();
-		
+
 		// This function gets the user selected plan, and applies them on the
 		// merged ontolog. At the end, again the consistency checker function
 		// will run and the result will be presented to the user.
@@ -309,17 +330,17 @@ public class ConsistencyProcess {
 		ontM = hs.run(ontM, "RDF/XML");
 		String MergedOntZip = Zipper.zipFiles(ontM.getOntName());
 		String[] tempRes = ontM.getEvalResult();
-//		if (tempRes == null) {
-//			tempRes = new String[1][1];
-//		}
-//		tempRes[0][0] = MergedOntZip;
+		// if (tempRes == null) {
+		// tempRes = new String[1][1];
+		// }
+		// tempRes[0][0] = MergedOntZip;
 		ontM.setEvalResult(tempRes);
 		ontM.setOntZipName(MergedOntZip);
 
 		res[0] = "<div style=\"background-color:#f7f7f7;\" ><span style=\"font-weight: bold;\"><br>   &nbsp; Your revised plan has been applied, and the consistency test is checked again. See the result of consistency:<br> <br></span></div>";
 		ontM.setReviseResult(res);
 		ontM = DoConsistencyCheck(ontM, userConsParam);
-		
+
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
 		MyLogging.log(Level.INFO,

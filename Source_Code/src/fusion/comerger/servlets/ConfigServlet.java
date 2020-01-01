@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 
-import fusion.comerger.algorithm.merger.holisticMerge.clique.RuleSets;
+import fusion.comerger.algorithm.merger.holisticMerge.GMR.RuleSets;
 
 public class ConfigServlet {
 	public static HttpServletRequest requestConfigMerge2(HttpServletRequest req) {

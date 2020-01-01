@@ -16,39 +16,18 @@ package fusion.comerger.algorithm.merger.holisticMerge.mapping;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
+ import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.jena.ontology.OntModel;
-import org.semanticweb.owlapi.model.OWLAnnotation;
-import org.semanticweb.owlapi.model.OWLAxiom;
-import org.semanticweb.owlapi.model.OWLClass;
-import org.semanticweb.owlapi.model.OWLDataProperty;
-import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
-import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyID;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
-
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.ClusterModel;
-import fusion.comerger.algorithm.partitioner.SeeCOnt.Cluster;
-import fusion.comerger.model.NodeList;
-import fusion.comerger.model.RBGModel;
-import fusion.comerger.model.ext.sentence.RDFSentence;
-import fusion.comerger.model.ext.sentence.RDFSentenceGraph;
 
 public class HMappedObj {
 	OWLObjectProperty refObj;

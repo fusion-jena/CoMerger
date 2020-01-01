@@ -24,12 +24,10 @@ package fusion.comerger.algorithm.merger.model;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.util.logging.Level;
 
 import fusion.comerger.algorithm.merger.holisticMerge.HBuilder;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.algorithm.merger.holisticMerge.general.HSave;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMapping;
 
 public class ModelReader {

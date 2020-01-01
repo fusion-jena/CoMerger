@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.merging;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.util.logging.Level;
 
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
@@ -37,9 +36,7 @@ public class HMergeRefine {
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		long startTime = System.currentTimeMillis();
 		MyLogging.log(Level.INFO, "Keeping a history of changes in the refinement step in following. \n ");
-		// TODO: to be faster for test i comment some of them, later, uncomment
-		// them
-
+		
 		ontM.setRefineActionOnMerge(0);
 
 		if (selectedRules == null)

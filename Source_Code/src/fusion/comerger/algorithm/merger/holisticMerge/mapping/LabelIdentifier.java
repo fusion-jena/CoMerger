@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.mapping;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.HashSet;
 import java.util.Set;
 
@@ -101,17 +100,6 @@ public class LabelIdentifier {
 
 		generatedLabels.add(commonStr);
 		return commonStr;
-	}
-
-	private static int getavgLength(String[] strArr) {
-		int L = 0, Avg = 0;
-		for (int i = 0; i < strArr.length; i++) {
-			L += strArr[i].length();
-		}
-
-		Avg = L / (strArr.length);
-		return Avg;
-
 	}
 
 	public static String createLabel(String[] sList, String type) {

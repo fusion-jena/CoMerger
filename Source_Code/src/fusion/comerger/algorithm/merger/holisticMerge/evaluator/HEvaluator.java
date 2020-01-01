@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.evaluator;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,7 +36,6 @@ import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
-import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataPropertyExpression;
 import org.semanticweb.owlapi.model.OWLDataRange;
@@ -47,7 +45,6 @@ import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
 import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.model.OWLSubDataPropertyOfAxiom;
 import org.semanticweb.owlapi.model.OWLSubObjectPropertyOfAxiom;
@@ -284,27 +281,24 @@ public class HEvaluator {
 				incorrect++;
 			} else if (res[i] != null && res[i].contains("tick")) {
 				correct++;
-			} else {
-				int w = 0;
 			}
 		}
 		if (correct > 0 && incorrect == 0) {
-			lable = "100"; // "VERYGOOD"; // 100
+			lable = "100"; // "VERYGOOD";
 		} else if (incorrect > 0 && correct == 0) {
-			lable = "20"; // "VERYBAD"; // 20
+			lable = "20"; // "VERYBAD";
 		} else if (correct > incorrect) {
-			lable = "80";// "GOOD"; // 80
+			lable = "80";// "GOOD";
 		} else if (incorrect > correct) {
-			lable = "40";// "BAD";// 40
+			lable = "40";// "BAD";
 		} else { // correct==incorrect or other cases
-			lable = "50";// "NORMAL";// 50
+			lable = "50";// "NORMAL";
 		}
 		return lable;
 	}
 
 	private String[] EvalUsabilityProfile(HModel ontM) {
 		String[] res = new String[40];
-		double sum = 0.0, ans = 0.0;
 		// Metadata availability
 		String[] temp = HMergeEvaluation.CorrectnessOntologyURI_Namespace(ontM);
 		res[0] = temp[0];
@@ -335,17 +329,6 @@ public class HEvaluator {
 		res[12] = temp[0];
 		res[13] = temp[1];
 
-		// 1- Existence of annotation
-		// String[] temp = HMergeEvaluation.ExisAnno(ontM);
-		// 2- Naming conventions
-		// temp = HMergeEvaluation.NamingConvCal(ontM);
-		// 3- Correctness of ontology URI
-		// ans = HMergeEvaluation.CorrectURI(ontM);
-
-		// 5-Ontology declaration and availability
-		// ans = HMergeEvaluation.OntDeclaration(ontM);
-		// P41: No license declared:
-
 		return res;
 	}
 
@@ -355,26 +338,24 @@ public class HEvaluator {
 		int proSize = ontM.getOwlModel().getObjectPropertiesInSignature().size();
 		proSize = proSize + ontM.getOwlModel().getDataPropertiesInSignature().size();
 		int instanceSize = ontM.getOwlModel().getIndividualsInSignature().size();
-		// int annoSize = ontM.getAllAnnotations().size();
+
 		int eqClass = findNumberOfEqCl(ontM.getEqClasses());
 		int eqPro = findNumberOfEqOpro(ontM.getEqObjProperties());
 		eqPro = eqPro + findNumberOfEqDpro(ontM.getEqDataProperties());
-		// TO DO: save sum at ontM not these arrays,+, no need to have numOnt
-		int numOnt = ontM.getInputOntNumber();
-		double sum = 0, sumCov = 0.0;
-		// Full Coverage
+
+		double sum = 0;
+
 		for (int i = 0; i < ontM.getInputClassSize().size(); i++)
 			sum = sum + ontM.getInputClassSize().get(i);
 		double temp = sum - eqClass;// - 1;
 		if (sum > 0) {
-			// temporal correctnest
+			// temporal correctness
 			if (classSize - temp == 1 || temp - classSize == 1)
 				temp = classSize;
 			double s = Math.round((classSize / temp) * 100.0) / 100.0;
 			res[1] = String.valueOf(s);
 			res[4] = "<br> ** Number of classes in input ontologies minus their equal classes is " + temp
 					+ " and number of classes in the merged ontology is " + classSize;
-			sumCov = sumCov + s;
 		} else {
 			res[1] = "-";
 			res[4] = res[4] + "<br> ** There is no class in the input ontologies!";
@@ -388,14 +369,13 @@ public class HEvaluator {
 
 		temp = sum - eqPro;// - 1;
 		if (sum > 0) {
-			// temporal correctnest
+			// temporal correctness
 			if (proSize - temp == 1 || temp - proSize == 1)
 				temp = proSize;
 			double s = Math.round((proSize / temp) * 100.0) / 100.0;
 			res[2] = String.valueOf(s);
 			res[4] = res[4] + "<br> ** Number of properties in input ontologies minus their equal properties is " + temp
 					+ " and number of classes in the merged ontology is " + proSize;
-			sumCov = sumCov + s;
 		} else {
 			res[2] = "-";
 			res[4] = res[4] + "<br> ** There is no property in the input ontologies!";
@@ -409,13 +389,11 @@ public class HEvaluator {
 			res[3] = String.valueOf(s);
 			res[4] = res[4] + "<br> ** Number of instances in input ontologies is " + sum
 					+ " and number of instances in the merged ontology is " + instanceSize;
-			sumCov = sumCov + s;
+
 		} else {
 			res[3] = "-";
 			res[4] = res[4] + "<br> ** There is no instance in the input ontologies!";
 		}
-
-		res[0] = String.valueOf((double) Math.round((sumCov / 4) * 100.0) / 100.0);
 
 		/* **************** overlap***************** */
 		double overlap = (double) (eqClass) / (double) (ontM.getInputClassSizeTotal()) * 100;
@@ -566,12 +544,6 @@ public class HEvaluator {
 		res[21] = String.valueOf((double) Math.round(instanceSize / classSize * 10000d) / 10000d);
 		res[23] = String.valueOf((double) Math.round(annoSize / classSize * 10000d) / 10000d);
 
-		// res[0] = String.valueOf((double) Math.round((double) (classSize +
-		// objectSize + dataProSiz + instanceSize + annoSize) / 5 * 10000d) /
-		// 10000d)+ "%";
-		sum = Double.parseDouble(res[9]) + Double.parseDouble(res[11]) + Double.parseDouble(res[13])
-				+ Double.parseDouble(res[15]);
-		res[0] = String.valueOf((double) Math.round((double) (sum) / 4 * 10000d) / 10000d);
 		return res;
 
 	}
@@ -585,12 +557,9 @@ public class HEvaluator {
 		res[3] = String.valueOf(eqObjPro + eqDataPro);
 		res[4] = "The number of mapped object properties is " + eqObjPro
 				+ " and the number of mapped data properties is " + eqDataPro + ".";
-		// TO DO: calculate the number of equal annotations and individuals
 		res[5] = String.valueOf(0);
-		// res[7] = String.valueOf(0);
-		// TO DO: num is-a
 		res[9] = String.valueOf(0);
-		res[11] = "1:1 Mapping"; // TO DO
+		res[11] = "1:1 Mapping";
 
 		return res;
 	}
@@ -601,6 +570,8 @@ public class HEvaluator {
 		HashSet<OWLClass> MissCl = new HashSet<OWLClass>();
 		int missClasses = 0;
 		double totalOiClass = 0.0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		Set<OWLClass> OmClasses = ontM.getOwlModel().getClassesInSignature();// ontM.getRefineClasses();
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
@@ -624,16 +595,20 @@ public class HEvaluator {
 			} else {
 				res[0] = missClasses + " cases " + cross;
 			}
+			e1 = missClasses + " classes are not preserved!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All classes are preserved. \n";
 		}
 
 		if (missClasses > 0) {
+			e2 = "These classes are not preserved:";
 			res[1] = "<span style=\"color: red;\">Missing classes are:";
 			Iterator<OWLClass> arrayIter = MissCl.iterator();
 			while (arrayIter.hasNext()) {
 				OWLClass cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.toString().replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "ClassCheck";
@@ -644,6 +619,9 @@ public class HEvaluator {
 		} else {
 			res[1] = "<span style=\"color: green;\">There is no missing classes. </span>";
 		}
+
+		eval.put("ClassPreservation", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 	// ************************************************************************
@@ -653,6 +631,8 @@ public class HEvaluator {
 		HashSet<String> MissPro = new HashSet<String>();
 		int missPro = 0;
 		double totalOiPro = 0.0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		Set<OWLObjectProperty> OmPro = ontM.getOwlModel().getObjectPropertiesInSignature();// ontM.getRefineClasses();
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
@@ -708,16 +688,20 @@ public class HEvaluator {
 			} else {
 				res[0] = missPro + " cases " + cross;
 			}
+			e1 = missPro + " properties are not preserved!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All properties are preserved. \n";
 		}
 
 		if (missPro > 0) {
+			e2 = "These properties are not preserved:";
 			res[1] = "<span style=\"color: red;\">Missing properties are:";
 			Iterator<String> arrayIter = MissPro.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "ProCheck";
@@ -727,6 +711,10 @@ public class HEvaluator {
 		} else {
 			res[1] = "<span style=\"color: green;\">There is no missing property. </span>";
 		}
+
+		eval.put("PropertyPreservation", e1 + e2);
+		ontM.setEvalHashResult(eval);
+
 		return res;
 	}
 
@@ -736,6 +724,8 @@ public class HEvaluator {
 		HashSet<String> MissArray = new HashSet<String>();
 		int missIns = 0;
 		double totalOiIns = 0.0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		Set<OWLNamedIndividual> OmIndividuals = ontM.getOwlModel().getIndividualsInSignature();
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
@@ -760,16 +750,20 @@ public class HEvaluator {
 			} else {
 				res[0] = missIns + " cases " + cross;
 			}
+			e1 = missIns + " instances are not preserved!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All instances are preserved. \n";
 		}
 
 		if (missIns > 0) {
+			e2 = "These instances are not preserved:";
 			res[1] = "<span style=\"color: red;\">Missing individual are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "InstanceCheck";
@@ -779,13 +773,15 @@ public class HEvaluator {
 		} else {
 			res[1] = "<span style=\"color: green;\">There is no missing individual.</span>";
 		}
+
+		eval.put("InstancePreservation", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
 	// ************************************************************************
 	private String[] CorrespondencePreservationEval(HModel ontM) {
 		String[] res = new String[2];
-		HashSet<String> MissArray = new HashSet<String>();
 		// we are sure that all correspondences already collapsed
 		res[0] = "-";
 		res[1] = "-";
@@ -798,7 +794,6 @@ public class HEvaluator {
 		// because of re-writing axioms, all properties of
 		// corresponding classes are already assigned to the reference classes
 		String[] res = new String[2];
-		HashSet<String> MissArray = new HashSet<String>();
 		res[0] = "-";
 		res[1] = "-";
 		StatisticTest.result.put("correspondenceProperty_preservation", String.valueOf(0));
@@ -811,11 +806,10 @@ public class HEvaluator {
 		String[] res = new String[2];
 		HashSet<String> conflictArray = new HashSet<String>();
 		int conflictType = 0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
-		String msg = "";
 		OWLOntology Om = ontM.getOwlModel();
-		OWLOntologyManager manager = ontM.getManager();
-		OWLDataFactory factory = manager.getOWLDataFactory();
 		Set<OWLObjectProperty> OmPro = Om.getObjectPropertiesInSignature();
 		// TODO: do it for object and datatype etc. property
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
@@ -856,7 +850,7 @@ public class HEvaluator {
 		for (int j = 0; j < OmEqDataPro.size(); j++) {
 			OWLDataProperty Dpro = OmEqDataPro.get(j).getRefDpro();
 			Set<OWLDataRange> dataRangeRef = Dpro.getRanges(Om);
-			Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
+//			Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
 
 			Iterator<OWLDataProperty> iter = OmEqDataPro.get(j).getMappedDpro().iterator();
 			while (iter.hasNext()) {
@@ -893,18 +887,20 @@ public class HEvaluator {
 			} else {
 				res[0] = conflictType + " cases " + cross;
 			}
+			e1 = conflictType + " values are not preserved!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All values are preserved. \n";
 		}
 
-		double totalOiDatatype = ontM.getOwlModel().getDatatypesInSignature().size();
-
 		if (conflictType > 0) {
+			e2 = "Conflicting datatypeProperty for the corressponding entities are:";
 			res[1] = "<span style=\"color: red;\">Conflicting datatypeProperty for the corressponding entities are:";
 			Iterator<String> arrayIter = conflictArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "ValueCheck";
@@ -915,6 +911,8 @@ public class HEvaluator {
 			res[1] = "<span style=\"color: green;\">All properties' value have been preserved without conflict.</span>";
 		}
 
+		eval.put("ValuePreservation", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
@@ -923,8 +921,9 @@ public class HEvaluator {
 		String[] res = new String[2];
 		int missStr = 0;
 		HashSet<String> MissArray = new HashSet<String>();
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
-		OWLOntologyManager manager = ontM.getManager();
 		Set<OWLSubClassOfAxiom> OmSubclassAxiom = ontM.getOwlModel().getAxioms(AxiomType.SUBCLASS_OF);
 		HashMap<OWLAxiom, OWLAxiom> equalAxioms = ontM.getEqAxioms();
 
@@ -955,18 +954,20 @@ public class HEvaluator {
 			} else {
 				res[0] = missStr + " cases " + cross;
 			}
+			e1 = missStr + " structures are not preserved!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All classes preserve the same structure as the input models. \n";
 		}
 
-		double classCounter = ontM.getOwlModel().getAxioms(AxiomType.SUBCLASS_OF).size();
-
 		if (missStr > 0) {
+			e2 = "The classes which do not follow the same structrue as the input ontologies' hierarchy are:";
 			res[1] = "<span style=\"color: red;\">The classes which do not follow the same structrue as the input ontologies' hierarchy are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "StrCheck";
@@ -976,43 +977,59 @@ public class HEvaluator {
 		} else {
 			res[1] = "<span style=\"color: green;\">All classes preserve the same structure as the input models.</span>";
 		}
+		eval.put("StructurePreservation", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
 	// ************************************************************************
 	private String[] ClassRedundancyEval(HModel ontM) {
-		Set<OWLClass> OmClasses = ontM.getOwlModel().getClassesInSignature();
-		// since it is a SET, so there is no repeated class inside the ontology
+
+		// since ontM.getOwlModel().getClassesInSignature() is a SET, so there
+		// is no repeated class inside the ontology
 		String[] res = new String[2];
-		HashSet<String> MissArray = new HashSet<String>();
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 		res[0] = tick;
+		e1 = "There is no redundant class. \n";
 		res[1] = "<span style=\"color: green;\">There is no redundant class in the merged ontology.</span>";
 		StatisticTest.result.put("class_redundancy", String.valueOf(0));
+		eval.put("ClassRedundancy", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
 	// ************************************************************************
 
 	private String[] PropertyRedundancyEval(HModel ontM) {
-		Set<OWLObjectProperty> OmPro = ontM.getOwlModel().getObjectPropertiesInSignature();
-		// since it is a SET, so there is no repeated class inside the ontology
+
+		// since ontM.getOwlModel().getObjectPropertiesInSignature() is a SET,
+		// so there is no repeated class inside the ontology
 		String[] res = new String[2];
-		HashSet<String> MissArray = new HashSet<String>();
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 		res[0] = tick;
+		e1 = "There is no redundant property. \n";
 		res[1] = "<span style=\"color: green;\">There is no redundant property in the merged ontology.</span>";
 		StatisticTest.result.put("property_redundancy", String.valueOf(0));
+		eval.put("PropertyRedundancy", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
 	// ************************************************************************
 	private String[] InstanceRedundancyEval(HModel ontM) {
-		Set<OWLNamedIndividual> OmIns = ontM.getOwlModel().getIndividualsInSignature();
-		// since it is a SET, so there is no repeated class inside the ontology
+		// since ontM.getOwlModel().getIndividualsInSignature() is a SET, so
+		// there is no repeated class inside the ontology
 		String[] res = new String[2];
-		HashSet<String> MissArray = new HashSet<String>();
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 		res[0] = tick;
+		e1 = "There is no redundant instance. \n";
 		res[1] = "<span style=\"color: green;\">There is no redundant instance in the merged ontology.</span>";
 		StatisticTest.result.put("instance_redundancy", String.valueOf(0));
+		eval.put("InstanceRedundancy", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
@@ -1020,14 +1037,12 @@ public class HEvaluator {
 	private String[] ExtraneousEntityProhibitionEval(HModel ontM) {
 		String[] res = new String[2];
 		HashSet<String> extraEntity = new HashSet<String>();
-		double ratioClass = 1.0, ratioObjPro = 1.0, ratioDPro = 1.0, ratioIns = 1.0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		// Step 1 : Check for classes
 		HashSet<String> extraClass = findExtraClasses(ontM);
 		extraEntity.addAll(extraClass);
-		double totalCl = ontM.getOwlModel().getClassesInSignature().size();
-		if (totalCl != 0)
-			ratioClass = 1 - (extraClass.size() / totalCl);
 
 		// Step 2: Check for object properties and datatype properties
 		HashSet<String> extraObjPro = findExtraObjectProperty(ontM);
@@ -1035,21 +1050,9 @@ public class HEvaluator {
 		extraEntity.addAll(extraObjPro);
 		extraEntity.addAll(extraDPro);
 
-		double totalObjPro = ontM.getOwlModel().getObjectPropertiesInSignature().size();
-		if (totalObjPro != 0)
-			ratioObjPro = 1 - (extraObjPro.size() / totalObjPro);
-
-		double totalDPro = ontM.getOwlModel().getDataPropertiesInSignature().size();
-		if (totalDPro != 0)
-			ratioDPro = 1 - (extraDPro.size() / totalDPro);
-
 		// Step 3: check for instances
 		HashSet<String> extraInst = findExtraInstances(ontM);
 		extraEntity.addAll(extraInst);
-
-		double totalIns = ontM.getOwlModel().getDataPropertiesInSignature().size();
-		if (totalIns != 0)
-			ratioIns = 1 - (extraInst.size() / totalIns);
 
 		if (extraEntity.size() > 0) {
 			if (extraEntity.size() == 1) {
@@ -1057,16 +1060,20 @@ public class HEvaluator {
 			} else {
 				res[0] = extraEntity.size() + " cases " + cross;
 			}
+			e1 = extraEntity + " extra entities exist!\n";
 		} else {
 			res[0] = tick;
+			e1 = "There is no extra entity. \n";
 		}
 
 		if (extraEntity.size() > 0) {
+			e2 = "Extra entities are:";
 			res[1] = "<span style=\"color: red;\">Extra entities are:";
 			Iterator<String> arrayIter = extraEntity.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "ExtCheck";
@@ -1079,6 +1086,8 @@ public class HEvaluator {
 
 		StatisticTest.result.put("extraneous_prohibition", String.valueOf(extraEntity.size()));
 
+		eval.put("ExtraneousEntityProhibition", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
@@ -1089,6 +1098,8 @@ public class HEvaluator {
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		Iterator<OWLClass> cl = Om.getClassesInSignature().iterator();
 
@@ -1137,16 +1148,20 @@ public class HEvaluator {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
+			e1 = counter + " cycle in class hierarchy are not preserved!\n";
 		} else {
 			res[0] = tick;
+			e1 = "There is no cycle in the class hierarchy. \n";
 		}
 
 		if (counter > 0) {
+			e2 = "Classes that cause a cycle:";
 			res[1] = "<span style=\"color: red;\">Classes that cause a cycle:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc;
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "AcyClCheck";
@@ -1154,9 +1169,10 @@ public class HEvaluator {
 					+ ">" + msgCorrectness + "</u></b></p>";
 			res[1] = res[1] + correctIt;
 		} else {
-			res[1] = "<span style=\"color: green;\">There is no cycle in the class hirerachy.</span>";
+			res[1] = "<span style=\"color: green;\">There is no cycle in the class hierarchy.</span>";
 		}
-
+		eval.put("ClassAcyclicity", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
@@ -1165,6 +1181,8 @@ public class HEvaluator {
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		Iterator<OWLSubObjectPropertyOfAxiom> axObjPro = ontM.getOwlModel().getAxioms(AxiomType.SUB_OBJECT_PROPERTY)
 				.iterator();
@@ -1200,16 +1218,20 @@ public class HEvaluator {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
+			e1 = counter + " cycles in the property hierarchy exist!\n";
 		} else {
 			res[0] = tick;
+			e1 = "There is no cycle in the property hierarchy. \n";
 		}
 
 		if (counter > 0) {
+			e2 = "Properties that cause a cycle:";
 			res[1] = "<span style=\"color: red;\">Properties that cause a cycle are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replace("<", "").replace(">", "");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "AcyProCheck";
@@ -1217,9 +1239,10 @@ public class HEvaluator {
 					+ ">" + msgCorrectness + "</u></b></p>";
 			res[1] = res[1] + correctIt;
 		} else {
-			res[1] = "<span style=\"color: green;\">There is no cycle in the property hirerchy.</span>";
+			res[1] = "<span style=\"color: green;\">There is no cycle in the property hierarchy.</span>";
 		}
-
+		eval.put("PropertyAcyclicity", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
@@ -1228,6 +1251,8 @@ public class HEvaluator {
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		Iterator<OWLInverseObjectPropertiesAxiom> ax = ontM.getOwlModel().getAxioms(AxiomType.INVERSE_OBJECT_PROPERTIES)
 				.iterator();
@@ -1250,16 +1275,20 @@ public class HEvaluator {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
+			e1 = counter + " inverse properties exist!\n";
 		} else {
 			res[0] = tick;
+			e1 = "There is no inverse property. \n";
 		}
 
 		if (counter > 0) {
+			e2 = "Properties with iverse of themselves are:";
 			res[1] = "<span style=\"color: red;\">Properties with iverse of themselves are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replace("<", "").replace(">", "");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "RecProCheck";
@@ -1269,7 +1298,8 @@ public class HEvaluator {
 		} else {
 			res[1] = "<span style=\"color: green;\">There is no inverse propertiy themselves.</span>";
 		}
-
+		eval.put("InversePropertyProhibition", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
@@ -1278,6 +1308,9 @@ public class HEvaluator {
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
+
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		OWLOntology Om = ontM.getOwlModel();
 		Iterator<OWLClass> lis = Om.getClassesInSignature().iterator();
@@ -1311,17 +1344,20 @@ public class HEvaluator {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
-
+			e1 = counter + " unconnceted classes exist!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All classes are connected. \n";
 		}
 
 		if (counter > 0) {
+			e2 = "Unconnected classes are:";
 			res[1] = "<span style=\"color: red;\">Unconnected classes are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc;
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "UnconnClCheck";
@@ -1332,17 +1368,19 @@ public class HEvaluator {
 		} else {
 			res[1] = "<span style=\"color: green;\">There is no unconnceted class.</span>";
 		}
-
+		eval.put("UnconnectedClassProhibition", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
 	// ************************************************************************
 	private String[] UnconnectedPropertyProhibitionEval(HModel ontM) {
-		// TODO correct it
+		// TODO check it again
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
-		double total = 0.0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
 
 		OWLOntology Om = ontM.getOwlModel();
 		// OWLOntologyManager manager = ontM.getManager();
@@ -1383,16 +1421,20 @@ public class HEvaluator {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
+			e1 = counter + " unconnected properties exist!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All properties are connected. \n";
 		}
 
 		if (counter > 0) {
+			e2 = "Unconnected properties are:";
 			res[1] = "<span style=\"color: red;\">Unconnected properties are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc;
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "UnconnProCheck";
@@ -1403,12 +1445,17 @@ public class HEvaluator {
 			res[1] = "<span style=\"color: green;\">There is no unconnected property.</span>";
 		}
 
+		eval.put("UnconnectedPropertyProhibition", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 
 	// ************************************************************************
 	private String[] EntailmentSatisfactionEval(HModel ontM) {
 		String[] res = new String[4];
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
+
 		int[] ans = Entailmenter.isEntailed(ontM, ontM.getOwlModel(), ontM.getInputOwlOntModel());
 
 		if (ans[0] == -1) {
@@ -1424,11 +1471,19 @@ public class HEvaluator {
 			} else {
 				res[0] = totalFalse + " cases " + cross;
 			}
+			e1 = totalFalse + " entailments failed!\n";
 		} else {
 			res[0] = tick;
+			e1 = "All entailment are satisfied. \n";
 		}
 
 		if (totalFalse > 0) {
+			e2 = "The merged ontology's entailment is not same as the input ontologies' entailments: "
+					+ "The number of true subsumption entilment is " + ans[0]
+					+ " and the number of false subsumption entailment is " + ans[1]
+					+ "\n The number of true equivalence entilment is " + ans[2]
+					+ " and the number of false equivalence entailment is " + ans[3];
+
 			res[1] = "<span style=\"color: red;\">The merged ontology's entailment is not same as the input ontologies' entailments:";
 			res[1] = res[1] + "<br> -> The number of true subsumption entilment is " + ans[0]
 					+ " and the number of false subsumption entailment is " + ans[1]
@@ -1441,6 +1496,8 @@ public class HEvaluator {
 
 		StatisticTest.result.put("entailment", String.valueOf(totalFalse));// falseAnswer
 
+		eval.put("EntailmentSatisfaction", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 

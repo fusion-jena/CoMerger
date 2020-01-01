@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.mapping;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,18 +51,12 @@ import fusion.comerger.algorithm.merger.model.HModel;
 
 public class HMapping {
 	public static void main(String[] args) throws Exception {
-		String ontList = "C:\\LOCAL_FOLDER\\cmt.owl";
-		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\conference.owl";
-		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\confOf.owl";
-		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\edas.owl";
-		
+		String ontList = "C:\\YOUR_LOCAL_FOLDER\\cmt.owl";
+		ontList = ontList + ";" + "C:\\YOUR_LOCAL_FOLDER\\conference.owl";
+		ontList = ontList + ";" + "C:\\YOUR_LOCAL_FOLDER\\confOf.owl";
 
-		String mapList = "C:\\LOCAL_FOLDER\\cmt-conference.rdf";
-		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\cmt-confOf.rdf";
-		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\cmt-edas.rdf";
-		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\conference-confof.rdf";
-		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\conference-edas.rdf";
-		mapList = mapList + ";" + "C:\\LOCAL_FOLDER\\confOf-edas.rdf";
+		String mapList = "C:\\YOUR_LOCAL_FOLDER\\cmt-conference.rdf";
+		mapList = mapList + ";" + "C:\\YOUR_LOCAL_FOLDER\\cmt-confOf.rdf";
 
 		HModel ontM = new HModel();
 		HMapping om = new HMapping();
@@ -115,7 +108,7 @@ public class HMapping {
 							String s1 = cell.element("entity1").attributeValue("resource");
 							String s2 = cell.element("entity2").attributeValue("resource");
 
-							// TO DO: delete this condition
+							// TODO: delete this condition
 							if (ontology.containsClassInSignature(IRI.create(s1))
 									&& ontology.containsClassInSignature(IRI.create(s2))) {
 								OWLClass cls1 = factory.getOWLClass(IRI.create(s1));
@@ -214,10 +207,7 @@ public class HMapping {
 									HtempDataPro.setLenDpro(HtempClass.getMappedCalss().size());
 									RefDataPro.add(RefDataPro.size(), HtempDataPro);
 								}
-							} else {
-								int w = 0;// other type
-							}
-
+							} 
 						}
 
 					} catch (DocumentException e) {
@@ -233,9 +223,8 @@ public class HMapping {
 		ontM = determineRefClass(ontM, RefClass);
 		ontM = determineRefObjPro(ontM, RefObjPro);
 		ontM = determineRefDataPro(ontM, RefDataPro);
-		//TODO: correct labeling;
-//		SKOSVocabulary.ALTLABEL.getIRI()
-		
+		// TODO: correct labeling;
+		// SKOSVocabulary.ALTLABEL.getIRI()
 
 		ontM.SetEqClasses(RefClass);
 		ontM.SetEqObjProperties(RefObjPro);
@@ -266,48 +255,7 @@ public class HMapping {
 
 	}
 
-	private HashMap<OWLClass, OWLClass> createKeyValueClasses(ArrayList<HMappedClass> refSet) {
-		HashMap<OWLClass, OWLClass> res = new HashMap<OWLClass, OWLClass>();
-		for (int i = 0; i < refSet.size(); i++) {
-			HMappedClass s = refSet.get(i);
-			Iterator<OWLClass> iter = s.getMappedCalss().iterator();
-			while (iter.hasNext()) {
-				OWLClass c = iter.next();
-				res.put(c, s.getRefClass());
-			}
-		}
-
-		return res;
-	}
-
-	private HashMap<OWLObjectProperty, OWLObjectProperty> createKeyValueObj(ArrayList<HMappedObj> refSet) {
-		HashMap<OWLObjectProperty, OWLObjectProperty> res = new HashMap<OWLObjectProperty, OWLObjectProperty>();
-		for (int i = 0; i < refSet.size(); i++) {
-			HMappedObj s = refSet.get(i);
-			Iterator<OWLObjectProperty> iter = s.getMappedObj().iterator();
-			while (iter.hasNext()) {
-				OWLObjectProperty c = iter.next();
-				res.put(c, s.getRefObj());
-			}
-		}
-
-		return res;
-	}
-
-	private HashMap<OWLDataProperty, OWLDataProperty> createKeyValueDpro(ArrayList<HMappedDpro> refSet) {
-		HashMap<OWLDataProperty, OWLDataProperty> res = new HashMap<OWLDataProperty, OWLDataProperty>();
-		for (int i = 0; i < refSet.size(); i++) {
-			HMappedDpro s = refSet.get(i);
-			Iterator<OWLDataProperty> iter = s.getMappedDpro().iterator();
-			while (iter.hasNext()) {
-				OWLDataProperty c = iter.next();
-				res.put(c, s.getRefDpro());
-			}
-		}
-
-		return res;
-	}
-
+	
 	private HModel determineRefDataPro(HModel ontM, ArrayList<HMappedDpro> cList) {
 		HashMap<OWLDataProperty, OWLDataProperty> keyValue = new HashMap<OWLDataProperty, OWLDataProperty>();
 		for (int i = 0; i < cList.size(); i++) {

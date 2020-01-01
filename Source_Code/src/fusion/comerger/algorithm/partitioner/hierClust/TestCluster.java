@@ -65,7 +65,6 @@ public class TestCluster {
 			 ont1 = m.loadOntologyFromOntologyDocument(testFileIn1);
 			 ont2=m.loadOntologyFromOntologyDocument(testFileIn2);
 		} catch (OWLOntologyCreationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
        

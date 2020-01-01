@@ -16,16 +16,16 @@ package fusion.comerger.algorithm.merger.holisticMerge.evaluator;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -62,10 +62,12 @@ public class ConstraintEval {
 
 	// ************************************************************************
 	public static String[] OneTypeRestrictionEval(HModel ontM) {
-		// TODO correct it
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
+		
 		int counter = 0;
 		ArrayList<HMappedDpro> eqDpro = ontM.getEqDataProperties();
 		for (int i = 0; i < eqDpro.size(); i++) {
@@ -95,9 +97,42 @@ public class ConstraintEval {
 			}
 		}
 
-		res[0] = "-";
-		res[1] = "-";
-		StatisticTest.result.put("oneType_restriction", String.valueOf(0));
+		// Report the result
+		counter = MissArray.size();
+		if (counter > 0) {
+			if (counter == 1) {
+				res[0] = counter + " case " + cross;
+			} else {
+				res[0] = counter + " cases " + cross;
+			}
+			e1 = counter + " properties exist with several types!\n";
+		} else {
+			res[0] = tick;
+			e1 = "All properties have one type. \n";
+		}
+
+		if (counter > 0) {
+			e2 ="Properties with several types are:";
+			res[1] = "<span style=\"color: red;\">Properties with several types are:";
+			Iterator<String> arrayIter = MissArray.iterator();
+			while (arrayIter.hasNext()) {
+				String cc = arrayIter.next();
+				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
+			}
+			res[1] = res[1] + "</span>";
+			String id = "TypeCheck";
+			String correctIt = "<br> <br> <p><b><u><input type=\"checkbox\" name=\"repairs\" value=\"" + id + "\" "
+					+ ">" + msgCorrectness + "</u></b></p>";
+			res[1] = res[1] + correctIt;
+		} else {
+			res[1] = "<span style=\"color: green;\">There is no conflict on oneType_restriction.</span>";
+		}
+
+		eval.put("OneTypeRestriction", e1 + e2);
+		ontM.setEvalHashResult(eval);
+		
+		StatisticTest.result.put("oneType_restriction", String.valueOf(counter));
 		return res;
 	}
 
@@ -107,6 +142,9 @@ public class ConstraintEval {
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
 
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
+		
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
 			Iterator<OWLSubClassOfAxiom> axIter = ontM.getInputOwlOntModel().get(i).getAxioms(AxiomType.SUBCLASS_OF)
 					.iterator();
@@ -347,16 +385,20 @@ public class ConstraintEval {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
+			e1 = counter + " properties with conflict on their contraints exist!\n";
 		} else {
 			res[0] = tick;
+			e1="There is no property with conflict constraint.\n";
 		}
 
 		if (counter > 0) {
-			res[1] = "<span style=\"color: red;\">Properties ith conflict on their contraints are:";
+			e2="Properties with conflict on their contraints are:";
+			res[1] = "<span style=\"color: red;\">Properties with conflict on their contraints are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "ConstValCheck";
@@ -367,6 +409,9 @@ public class ConstraintEval {
 			res[1] = "<span style=\"color: green;\">There is no property with conflict constraint.</span>";
 		}
 
+		eval.put("ValueConstraint", e1 + e2);
+		ontM.setEvalHashResult(eval);
+		
 		StatisticTest.result.put("value_constraint", String.valueOf(counter));
 		return res;
 	}
@@ -390,8 +435,11 @@ public class ConstraintEval {
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
+		
 		OWLOntology Om = ontM.getOwlModel();
-		double total = Om.getObjectPropertiesInSignature().size();
+		
 		Iterator<OWLObjectProperty> iter = Om.getObjectPropertiesInSignature().iterator();
 		while (iter.hasNext()) {
 			OWLObjectProperty obj = iter.next();
@@ -418,16 +466,20 @@ public class ConstraintEval {
 			} else {
 				res[0] = counter + " cases " + cross;
 			}
+			e1 = counter + " properties with multiple domains or range exist!\n";
 		} else {
 			res[0] = tick;
+			e1="All properties have unique domain and range.";
 		}
 
 		if (counter > 0) {
+			e2="Properties with multiple domains or ranges are:";
 			res[1] = "<span style=\"color: red;\">Properties with multiple domains or ranges are:";
 			Iterator<String> arrayIter = MissArray.iterator();
 			while (arrayIter.hasNext()) {
 				String cc = arrayIter.next();
 				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
 			}
 			res[1] = res[1] + "</span>";
 			String id = "DomRangMinCheck";
@@ -438,6 +490,8 @@ public class ConstraintEval {
 			res[1] = "<span style=\"color: green;\">All properties have unique domain and range.</span>";
 		}
 
+		eval.put("DomainRangeMinimality", e1 + e2);
+		ontM.setEvalHashResult(eval);
 		return res;
 	}
 }

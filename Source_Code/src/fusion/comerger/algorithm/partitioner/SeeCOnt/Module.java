@@ -1,5 +1,4 @@
 package fusion.comerger.algorithm.partitioner.SeeCOnt;
-
 /* 
 * Please refer to https://github.com/fusion-jena/OAPT
 * Algergawy, Alsayed, Samira Babalou, Mohammad J. Kargar, and S. Hashem Davarpanah. "SeeCOnt: A new seeding-based clustering approach for ontology matching." In East European Conference on Advances in Databases and Information Systems, pp. 245-258. Springer, Cham, 2015.
@@ -15,7 +14,6 @@ package fusion.comerger.algorithm.partitioner.SeeCOnt;
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
 import fusion.comerger.model.Node;
 import fusion.comerger.model.NodeList;
 

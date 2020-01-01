@@ -14,7 +14,6 @@ package fusion.comerger.algorithm.partitioner.pbm;
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
 public class Parameters
 {
     public static double anchorCutoff = 0.85;

@@ -16,7 +16,6 @@ package fusion.comerger.algorithm.partitioner.hierClust;
 */
 
 
-
 import java.util.*;
 
 import org.semanticweb.owlapi.model.OWLClass;

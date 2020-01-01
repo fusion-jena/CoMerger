@@ -1,0 +1,10 @@
+<option>Retrieve all classes</option>
+<option>Retrieve all disjoin classes</option>
+<option>Retrieve all equivalent classes</option>
+<option>Retrieve subclass of class X</option>
+<option>Retrieve superclass of class X</option>
+<option>Count all classes</option>
+<option>Count all disjoin classes</option>
+<option>Count all equivalent classes</option>
+<option>Count subclass of class X</option>
+<option>Count superclass of class X</option>

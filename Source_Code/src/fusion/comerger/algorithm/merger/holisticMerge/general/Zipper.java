@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.general;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -45,10 +44,7 @@ import fusion.comerger.algorithm.merger.model.HModel;
 
 public class Zipper {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 	public static String unzip(String zipFilePath) throws IOException {
 		Path p = Paths.get(zipFilePath);
 		Path folder = p.getParent();

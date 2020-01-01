@@ -1,5 +1,5 @@
-package fusion.comerger.algorithm.merger.holisticMerge.merging;
 
+package fusion.comerger.algorithm.merger.holisticMerge.merging;
 /*
  * CoMerger: Holistic Ontology Merging
  * %%
@@ -17,15 +17,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.merging;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -78,7 +77,7 @@ import org.semanticweb.owlapi.util.OWLEntityRemover;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.ClusterShareFunc;
+import fusion.comerger.algorithm.merger.holisticMerge.divideConquer.BlockShareFunc;
 import fusion.comerger.algorithm.merger.holisticMerge.general.ShareMergeFunction;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedClass;
@@ -98,8 +97,6 @@ public class HRefinePacket {
 		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> listParent = new HashMap<OWLClassExpression, HashSet<OWLClassExpression>>();
 		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> listChild = new HashMap<OWLClassExpression, HashSet<OWLClassExpression>>();
 
-		OWLOntology ont = ontM.getOwlModel();
-
 		if (ontM.getAlterStatus() == false) {
 			// create
 			listParent = ShareMergeFunction.createParentList(ontM.getOwlModel());
@@ -115,8 +112,6 @@ public class HRefinePacket {
 			listChild = ontM.getChildList();
 		}
 
-		// %TODO: this should start from root and add the
-		// classes
 		// check is there any classes from Oi which is not in Om
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
@@ -264,27 +259,6 @@ public class HRefinePacket {
 		}
 		return res;
 	}
-
-	private static void printHierarchy(OWLReasoner reasoner, OWLClass clazz) {
-		// This function should retunr the class hirerchy via reasoner strating
-		// from top
-		/*
-		 * Only print satisfiable classes -- otherwise we end up with bottom
-		 * everywhere
-		 */
-		// if (reasoner.isSatisfiable(clazz)) {
-		System.out.println(clazz);
-		/* Find the children and recurse */
-
-		for (OWLClass child : reasoner.getSubClasses(clazz, true).getFlattened()) {
-			if (!child.equals(clazz)) {
-				printHierarchy(reasoner, child);
-			}
-		}
-		// }
-
-	}
-
 	// *********************************************************************************************************
 	public static HModel PropertiesPreservation(HModel ontM) {
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
@@ -663,7 +637,7 @@ public class HRefinePacket {
 
 	// *********************************************************************************************************
 	public static HModel CorrespondencesPreservation(HModel ontM) {
-		// TODO because of re-writing axioms, all corresponding
+		// because of re-writing axioms, all corresponding
 		// classes are already assigned to the reference classes
 		long startTime = System.currentTimeMillis();
 
@@ -678,7 +652,7 @@ public class HRefinePacket {
 
 	// *********************************************************************************************************
 	public static HModel CorrespondPropertyPreservation(HModel ontM) {
-		// TODO because of re-writing axioms, all properties of
+		// because of re-writing axioms, all properties of
 		// corresponding classes are already assigned to the reference classes
 
 		long startTime = System.currentTimeMillis();
@@ -708,7 +682,6 @@ public class HRefinePacket {
 		String msg = "";
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
-		OWLDataFactory factory = manager.getOWLDataFactory();
 		Set<OWLObjectProperty> OmPro = Om.getObjectPropertiesInSignature();
 		// TODO: do it for object and datatype etc. property
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
@@ -752,7 +725,7 @@ public class HRefinePacket {
 		for (int j = 0; j < OmEqDataPro.size(); j++) {
 			OWLDataProperty Dpro = OmEqDataPro.get(j).getRefDpro();
 			Set<OWLDataRange> dataRangeRef = Dpro.getRanges(Om);
-			Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
+			// Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
 
 			Iterator<OWLDataProperty> iter = OmEqDataPro.get(j).getMappedDpro().iterator();
 			while (iter.hasNext()) {
@@ -936,7 +909,7 @@ public class HRefinePacket {
 
 						}
 					} else if (superCi != null && superCm != null) {
-						equality = ClusterShareFunc.compareEquality(superCi, superCm, ontM);
+						equality = BlockShareFunc.compareEquality(superCi, superCm, ontM);
 
 						Iterator<OWLClassExpression> addedAxioms = equality.iterator();
 						while (addedAxioms.hasNext()) {
@@ -975,9 +948,8 @@ public class HRefinePacket {
 	// *********************************************************************************************************
 	public static HModel ClassRedundancyProhibition(HModel ontM) {
 		long startTime = System.currentTimeMillis();
-
-		Set<OWLClass> OmClasses = ontM.getOwlModel().getClassesInSignature();
-		// since it is a SET, so there is no repeated class inside the ontology
+		// since ontM.getOwlModel().getClassesInSignature() is a SET, so there
+		// is no repeated class inside the ontology
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
@@ -991,8 +963,8 @@ public class HRefinePacket {
 	public static HModel PropertyRedundancyProhibition(HModel ontM) {
 		long startTime = System.currentTimeMillis();
 
-		Set<OWLObjectProperty> OmProperties = ontM.getOwlModel().getObjectPropertiesInSignature();
-		// since it is a SET, so there is no repeated class inside the ontology
+		// since ontM.getOwlModel().getObjectPropertiesInSignature() is a SET,
+		// so there is no repeated class inside the ontology
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
@@ -1005,8 +977,9 @@ public class HRefinePacket {
 
 	public static HModel InstanceRedundancyProhibition(HModel ontM) {
 		long startTime = System.currentTimeMillis();
-		Set<OWLNamedIndividual> a = ontM.getOwlModel().getIndividualsInSignature();
-		// since it is a SET, so there is no repeated class inside the ontology
+
+		// since ontM.getOwlModel().getIndividualsInSignature() is a SET, so
+		// there is no repeated class inside the ontology
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
@@ -1419,18 +1392,17 @@ public class HRefinePacket {
 						Iterator<OWLSubClassOfAxiom> list = Om.getSubClassAxiomsForSuperClass(key).iterator();
 						while (list.hasNext()) {
 							OWLSubClassOfAxiom cc = list.next();
-							OWLClassExpression R = cc.getSuperClass();
+							// OWLClassExpression R = cc.getSuperClass();
 							OWLClassExpression D = cc.getSubClass();
 							if (c.equals((OWLClass) D)) {
-								// means cycle
-								// TODO: self cycle
+								// means self cycle
 								findCycle = true;
 								res.add(cc);
 								manager.removeAxiom(Om, cc);
 								break;
 							}
 							if (existinList(tempParent, (OWLClass) D) == false) {
-								// TODO: maybe here if it is true means cycle?
+								// here if it is true means cycle?
 								CycleSt ee = new CycleSt();
 								ee.SetObject((OWLClass) D);
 								ee.SetValue(false);
@@ -1592,7 +1564,6 @@ public class HRefinePacket {
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		long startTime = System.currentTimeMillis();
 
-		ArrayList<OWLClass> res = new ArrayList<OWLClass>();
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
 		OWLDataFactory factory = manager.getOWLDataFactory();
@@ -1771,7 +1742,7 @@ public class HRefinePacket {
 
 	public static HModel UnconnectedPropertyProhibition(HModel ontM) {
 		long startTime = System.currentTimeMillis();
-		// TODO correct it
+		// TODO check it again
 		// every property that had some connection before the merging, should
 		// have some connection after
 		// Properties should not be unconnected- means it should be connected to
@@ -1780,7 +1751,7 @@ public class HRefinePacket {
 		// ArrayList<OWLClass> res = new ArrayList<OWLClass>();
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
-		OWLDataFactory factory = manager.getOWLDataFactory();
+		
 		String changes = "";
 		OWLEntityRemover remover = new OWLEntityRemover(manager, Collections.singleton(Om));
 		// For Objectproperties
@@ -1837,148 +1808,6 @@ public class HRefinePacket {
 						+ elapsedTime + " ms. \n");
 		return ontM;
 	}
-
-	public static HModel NullDomainRangeProhinition(HModel ontM) { // DanglingReferenceProhibition
-		OWLOntology Om = ontM.getOwlModel();
-		OWLOntologyManager manager = ontM.getManager();
-		OWLDataFactory factory = manager.getOWLDataFactory();
-		Iterator<OWLObjectProperty> iter = Om.getObjectPropertiesInSignature().iterator();
-		while (iter.hasNext()) {
-			OWLObjectProperty obj = iter.next();
-			Set<OWLClassExpression> domain = obj.getDomains(Om);
-			if (domain.size() == 0) {
-				Set<OWLClassExpression> domOi = findDomaininOi(obj, ontM);
-				if (domOi != null && domOi.size() > 1) {
-					// it means the domain of proerty exist in Oi but does not
-					// exist in Om
-					// TODO: should we force this function to add missed
-					// classes? or we should conncet them to root or other
-					// parent of the missed class
-					// TODO correct it do not need to add domain into om
-					// first add domOi in Om
-					OWLClassExpression newDomain = domOi.iterator().next();
-
-					// add domain to Om
-					OWLOntology Oi = findOiofDomain(ontM, newDomain);
-					if (Oi != null) {
-						Set<OWLClassExpression> superC = newDomain.asOWLClass().getSuperClasses(Oi);
-						if (superC != null) {
-							// select the first parent
-							OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(newDomain, superC.iterator().next());
-							manager.addAxiom(Om, newAxiom);
-							int r = ontM.getRefineActionOnMerge();
-							ontM.setRefineActionOnMerge(r + 1);
-						} else {
-							Set<OWLClassExpression> subC = newDomain.asOWLClass().getSubClasses(Oi);
-							if (subC != null) {
-								// select the first child
-								OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(superC.iterator().next(), newDomain);
-								manager.addAxiom(Om, newAxiom);
-								int r = ontM.getRefineActionOnMerge();
-								ontM.setRefineActionOnMerge(r + 1);
-							} else {
-								// if there is no sub or superclass, add c
-								// to root
-								OWLClass root = factory.getOWLThing();
-								OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(newDomain, root);
-								manager.addAxiom(Om, newAxiom);
-								int r = ontM.getRefineActionOnMerge();
-								ontM.setRefineActionOnMerge(r + 1);
-							}
-						}
-					} else {
-						// add to root
-						OWLClass root = factory.getOWLThing();
-						OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(newDomain, root);
-						manager.addAxiom(Om, newAxiom);
-						int r = ontM.getRefineActionOnMerge();
-						ontM.setRefineActionOnMerge(r + 1);
-					}
-					// finish adding c to Om
-
-					// then add this property to domOi(the first domain)
-					OWLAxiom newAxiom = factory.getOWLObjectPropertyDomainAxiom(obj, newDomain);
-					manager.addAxiom(Om, newAxiom);
-					int r = ontM.getRefineActionOnMerge();
-					ontM.setRefineActionOnMerge(r + 1);
-				} else {
-					// create new class and add this obj to this new class
-					OWLClass cNew = factory
-							.getOWLClass(IRI.create("http://merged#ExtraClasses_" + obj.getIRI().getShortForm()));
-					OWLAxiom newAxiom = factory.getOWLObjectPropertyDomainAxiom(obj, cNew);
-					manager.addAxiom(Om, newAxiom);
-					int r = ontM.getRefineActionOnMerge();
-					ontM.setRefineActionOnMerge(r + 1);
-				}
-			}
-			// do all this process for range
-
-			Set<OWLClassExpression> range = obj.getRanges(Om);
-			if (range.size() == 0) {
-				Set<OWLClassExpression> rangeOi = findRangeinOi(obj, ontM);
-				if (rangeOi != null && rangeOi.size() > 1) {
-					// first add domOi in Om
-					OWLClassExpression newRange = rangeOi.iterator().next();
-					// add range to Om
-					OWLOntology Oi = findOiofDomain(ontM, newRange);
-					if (Oi != null) {
-						Set<OWLClassExpression> superC = newRange.asOWLClass().getSuperClasses(Oi);
-						if (superC != null) {
-							// select the first parent
-							OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(newRange, superC.iterator().next());
-							manager.addAxiom(Om, newAxiom);
-							int r = ontM.getRefineActionOnMerge();
-							ontM.setRefineActionOnMerge(r + 1);
-						} else {
-							Set<OWLClassExpression> subC = newRange.asOWLClass().getSubClasses(Oi);
-							if (subC != null) {
-								// select the first child
-								OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(superC.iterator().next(), newRange);
-								manager.addAxiom(Om, newAxiom);
-								int r = ontM.getRefineActionOnMerge();
-								ontM.setRefineActionOnMerge(r + 1);
-							} else {
-								// if there is no sub or superclass, add c
-								// to root
-								OWLClass root = factory.getOWLThing();
-								OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(newRange, root);
-								manager.addAxiom(Om, newAxiom);
-								int r = ontM.getRefineActionOnMerge();
-								ontM.setRefineActionOnMerge(r + 1);
-							}
-						}
-					} else {
-						// add to root
-						OWLClass root = factory.getOWLThing();
-						OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(newRange, root);
-						manager.addAxiom(Om, newAxiom);
-						int r = ontM.getRefineActionOnMerge();
-						ontM.setRefineActionOnMerge(r + 1);
-					}
-					// finish adding c to Om
-
-					// then add this property to domOi(the first range)
-					OWLAxiom newAxiom = factory.getOWLObjectPropertyRangeAxiom(obj, newRange);
-					manager.addAxiom(Om, newAxiom);
-					int r = ontM.getRefineActionOnMerge();
-					ontM.setRefineActionOnMerge(r + 1);
-				} else {
-					// create new class and add this obj to this new class
-					OWLClass cNew = factory
-							.getOWLClass(IRI.create("http://merged#ExtraClasses_" + obj.getIRI().getShortForm()));
-					OWLAxiom newAxiom = factory.getOWLObjectPropertyRangeAxiom(obj, cNew);
-					manager.addAxiom(Om, newAxiom);
-					int r = ontM.getRefineActionOnMerge();
-					ontM.setRefineActionOnMerge(r + 1);
-				}
-			}
-		}
-
-		ontM.SetOwlModel(Om);
-		ontM.SetManager(manager);
-		return ontM;
-	}
-
 	// *********************************************************************************************************
 
 	public static HModel EntailmentSatisfaction(HModel ontM) {
@@ -2147,21 +1976,21 @@ public class HRefinePacket {
 
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
-		OWLDataFactory factory = manager.getOWLDataFactory();
 		ArrayList<HMappedDpro> OmEqDataPro = ontM.getEqDataProperties();
 
-		Iterator<OWLDataProperty> iterr = ontM.getOwlModel().getDataPropertiesInSignature().iterator();
-		while (iterr.hasNext()) {
-			OWLDataProperty dp = iterr.next();
-			Set<OWLDatatype> dataType = dp.getDatatypesInSignature();
-		}
+		// Iterator<OWLDataProperty> iterr =
+		// ontM.getOwlModel().getDataPropertiesInSignature().iterator();
+		// while (iterr.hasNext()) {
+		// OWLDataProperty dp = iterr.next();
+		// Set<OWLDatatype> dataType = dp.getDatatypesInSignature();
+		// }
 		// TODO:error :How to get type of datatypeproperties in OWL?
 		for (int j = 0; j < OmEqDataPro.size(); j++) {
 			OWLDataProperty Dpro = OmEqDataPro.get(j).getRefDpro();
 			Set<OWLDatatype> dataTypeRef = Dpro.getDatatypesInSignature();
 
 			Set<OWLDataRange> dataRangeRef = Dpro.getRanges(Om);
-			Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
+			// Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
 
 			Iterator<OWLDataProperty> iter = OmEqDataPro.get(j).getMappedDpro().iterator();
 			while (iter.hasNext()) {
@@ -2215,7 +2044,7 @@ public class HRefinePacket {
 	// *********************************************************************************************************
 
 	public static HModel ValueConstraint(HModel ontM) {
-		// TODO correct it
+		// TODO check it again
 		long startTime = System.currentTimeMillis();
 		String changes = "";
 		OWLOntology Om = ontM.getOwlModel();

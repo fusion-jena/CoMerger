@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.model;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -41,7 +40,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyID;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.ClusterModel;
+import fusion.comerger.algorithm.merger.holisticMerge.divideConquer.BlockModel;
 import fusion.comerger.algorithm.merger.holisticMerge.consistency.ErrornousAxioms;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedClass;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedDpro;
@@ -50,7 +49,7 @@ import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedObj;
 public class HModel {
 
 	OWLOntology OwlOnt = null;
-	ArrayList<ClusterModel> clusterList;
+	ArrayList<BlockModel> clusterList;
 	OWLOntologyManager MergedManager;
 	OWLOntologyID currentOntologyID;
 	ArrayList<HMappedClass> EqClass;
@@ -98,6 +97,7 @@ public class HModel {
 	ArrayList<String> subOnt;
 	String subOntZip;
 	String dimensionLabel;
+	HashMap<String, String> evalHash;
 
 	public int getInputClassSizeTotal() {
 		return inputClassSize;
@@ -275,11 +275,11 @@ public class HModel {
 		return MergedManager;
 	}
 
-	public void SetClusters(ArrayList<ClusterModel> cl) {
+	public void SetClusters(ArrayList<BlockModel> cl) {
 		clusterList = cl;
 	}
 
-	public ArrayList<ClusterModel> getClusters() {
+	public ArrayList<BlockModel> getClusters() {
 		return clusterList;
 	}
 
@@ -491,5 +491,13 @@ public class HModel {
 
 	public String getEvalTotalLabel() {
 		return dimensionLabel;
+	}
+
+	public void setEvalHashResult( HashMap<String, String> e) {
+		 evalHash = e;
+	}
+	
+	public HashMap<String, String> getEvalHashResult() {
+		return evalHash;
 	}
 }

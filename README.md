@@ -21,7 +21,54 @@ This repository dedicated to CoMerger packages, inculding source codes and datas
 * Holistic merge dataset
 * Merge evaluation dataset
 
+# Run
+* To run the merge operation:
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge
+	2. set the set the required parameters in the main function of HolisticMerger.java
+	3. run the main function as java application
 
+* To run the eveluation operation:
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.evaluator
+	2. set the parameters in the main funtion of LocalRun_Eval.java
+	3. run the main function as java application
 
+* To run the compatibility checker:
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.GMR
+	2. set the required parameters in the main function of LocalRun_CompatibilityChecker.java
+	3. run the main function as java application
 
+* To run the consistency checker:
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.consistency
+	2. set the required parameters in the main function of LocalRun_Consistency.java
+	3. run the main function as java application
 
+* To run queries on the merged and input ontologies
+	1. go to package fusion.comerger.algorithm.merger.query
+	2. set the required parameters in the main function of LocalRun_Query.java
+	3. run the main function as java application
+
+* To run the merge funtion for a set of files in a set of folders in six version of holistic methods (see [5]):
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.localTest.batch;
+	2. set the required parameters in the main function of HolisticSixVersion.java
+	3. run the main function as java application
+	
+* To run binary ladder for a set of files in a set of folders
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.localTest.batch;
+	2. set the required parameters in the main function of BinaryLadder.java
+	3. run the main function as java application
+	
+* To run binary balanced for a set of files in a set of folders
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.localTest.batch;
+	2. set the required parameters in the main function of BinaryBalance.java
+	3. run the main function as java application
+	
+* To run the evaluation metrics for a set of files in a set of folders:
+	1. go to package fusion.comerger.algorithm.merger.holisticMerge.localTest.batch;
+	2. set the required parameters in the main function of EvalStatisticTest.java
+	3. run the main function as java application
+
+* To run the web-based application:
+	1. set a Tomcat server on your machine
+	2. go to WebContent folder
+	3. run index.jsp on Tomcat server
+	

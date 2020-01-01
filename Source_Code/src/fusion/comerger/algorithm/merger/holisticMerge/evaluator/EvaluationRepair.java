@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.evaluator;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import fusion.comerger.algorithm.merger.holisticMerge.merging.HRefinePacket;
 import fusion.comerger.algorithm.merger.model.HModel;
 

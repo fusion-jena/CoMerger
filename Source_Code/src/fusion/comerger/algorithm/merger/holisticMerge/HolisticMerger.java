@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -43,7 +42,7 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
-import fusion.comerger.algorithm.merger.holisticMerge.clustering.HClustering;
+import fusion.comerger.algorithm.merger.holisticMerge.divideConquer.BlockShareFunc;
 import fusion.comerger.algorithm.merger.holisticMerge.divideConquer.HDivideConquer;
 import fusion.comerger.algorithm.merger.holisticMerge.general.HSave;
 import fusion.comerger.algorithm.merger.holisticMerge.general.SaveTxt;
@@ -89,12 +88,11 @@ public class HolisticMerger {
 		HMapping hp = new HMapping();
 		ontM = hp.run(ontM, alignFile);
 
-		// collapse! transalte the axioms with their equal elements
-		HMerging hmm = new HMerging();
-		ontM = hmm.equalProcess(ontM);
+		// collapse! translate the axioms with their equal elements
+		ontM = HMerging.equalProcess(ontM);
 
-		HClustering hc = new HClustering();
-		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> adjacentList = hc.createAdjacentClassesList(ontM);
+		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> adjacentList = BlockShareFunc
+				.createAdjacentClassesList(ontM);
 
 		// 3 -- divide and conquer
 		HDivideConquer dc = new HDivideConquer();
@@ -119,48 +117,6 @@ public class HolisticMerger {
 		long actualMemUsed = afterUsedMem - beforeUsedMem;
 		StatisticTest.result.put("MU_TotalMerge", String.valueOf(actualMemUsed));
 		return ontM;
-
-	}
-
-	public static void main(String[] args) throws Exception {
-		String ontList = "C:\\LOCAL_FOLDER\\cmt.owl";
-		ontList = ontList + ";" + "C:\\LOCAL_FOLDER\\conference.owl";
-		String UPLOAD_DIRECTORY = "C:\\LOCAL_FOLDER\\";
-		String mappingFile = "C:\\LOCAL_FOLDER\\cmt-conference.rdf";
-
-		HolisticMerger MA = new HolisticMerger();
-
-		String Rules = new String();
-		Rules = "ClassCheck";
-		Rules = Rules + "," + "ProCheck";
-		Rules = Rules + "," + "InstanceCheck";
-		Rules = Rules + "," + "CorresCheck";
-		Rules = Rules + "," + "CorssPropCheck";
-		Rules = Rules + "," + "ValueCheck";
-		Rules = Rules + "," + "StrCheck";
-		Rules = Rules + "," + "ClRedCheck";
-		Rules = Rules + "," + "ProRedCheck";
-		Rules = Rules + "," + "InstRedCheck";
-		Rules = Rules + "," + "PathRedCheck";
-		Rules = Rules + "," + "ExtCheck";
-		Rules = Rules + "," + "DomRangMinCheck";
-		Rules = Rules + "," + "AcyClCheck";
-		Rules = Rules + "," + "AcyProCheck";
-		Rules = Rules + "," + "RecProCheck";
-		Rules = Rules + "," + "UnconnClCheck";
-		Rules = Rules + "," + "UnconnProCheck";
-		Rules = Rules + "," + "EntCheck";
-		Rules = Rules + "," + "TypeCheck";
-		Rules = Rules + "," + "ConstValCheck";
-		Rules = Rules + "," + "CardCheck";
-
-		String prefferdOnt = "equal";
-
-		StatisticTest.result = new HashMap<String, String>();
-
-		MA.run(ontList, mappingFile, UPLOAD_DIRECTORY, Rules, prefferdOnt, "RDFtype");
-
-		System.out.println("Done!");
 
 	}
 
@@ -191,8 +147,8 @@ public class HolisticMerger {
 
 		HBuilder.printTAbox(ontM.getOntName(), ontM.getOwlModel());
 
-		SaveTxt st = new SaveTxt();
-		String txtFileName = st.ConvertEvalResultToTxt(ontM, result);
+		
+		String txtFileName = SaveTxt.ConvertEvalResultToTxt(ontM);
 		ontM.setEvalResultTxt(txtFileName);
 
 		ontM.setEvalResult(result);

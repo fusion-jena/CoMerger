@@ -16,15 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.evaluator;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -35,7 +34,6 @@ import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
-import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyFormat;
@@ -51,8 +49,7 @@ public class HMergeEvaluation {
 	/* ******************************************************************** */
 	public static String[] CorrectnessOntologyURI_Namespace(HModel ontM) {
 		String[] res = new String[4];
-		// res [0] and res[1] are related to ONTOLOGY URI
-		// res [2] and res[3] are related to ONTOLOGY NAMESPACE
+
 		boolean existNS = false, existPre = false;
 		int errorNS = 0, errorPre = 0;
 		OWLOntologyManager m = OWLManager.createOWLOntologyManager();
@@ -215,11 +212,6 @@ public class HMergeEvaluation {
 				line++;
 
 			if (Character.isUpperCase(pName.charAt(0)))
-				// TODO: it is not
-				// correct, for
-				// bioportal ontologies,
-				// pname is
-				// Optional.of(xxx)
 				uppercase++;
 			if (Character.isLowerCase(pName.charAt(0)))
 				lowercase++;
@@ -240,9 +232,6 @@ public class HMergeEvaluation {
 			sum = sum + 1;
 		}
 
-		// Till now, two functions works, so it divided by two
-		// sum = Math.round(((double) sum / 2) * 1000.0) / 1000.0;
-		// res[0] = String.valueOf(sum);
 		if (sum > 0) {
 			if (sum == 1) {
 				res[0] = sum + " case " + cross;
@@ -269,14 +258,7 @@ public class HMergeEvaluation {
 		res[1] = "";
 		OWLOntology ont = ontM.getOwlModel();
 		double decCount = 0.0;
-		double Csize = (double) ont.getClassesInSignature().size();
-		double Psize = (double) ont.getObjectPropertiesInSignature().size();
-		Psize = Psize + (double) ont.getDataPropertiesInSignature().size();
-		double Insize = (double) ont.getIndividualsInSignature().size();
-		double Asize = (double) ont.getAnnotations().size();
-		Asize = Asize + (double) ont.getAnnotationPropertiesInSignature().size();
 
-		Set<OWLEntity> temp = new HashSet<OWLEntity>();
 		Set<OWLDeclarationAxiom> AllAxDec = ont.getAxioms(AxiomType.DECLARATION);
 		decCount = AllAxDec.size();
 
@@ -286,8 +268,6 @@ public class HMergeEvaluation {
 		} else {
 			res[0] = tick;
 			res[1] = "Enitiies are declraed!<br>";
-			// TODO: Correct it, we should find which entity does not have
-			// declaration
 		}
 
 		StatisticTest.result.put("Entity_Type_Declaration", res[0]);

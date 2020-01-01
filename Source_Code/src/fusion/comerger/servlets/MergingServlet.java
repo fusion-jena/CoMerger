@@ -16,15 +16,14 @@ package fusion.comerger.servlets;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -48,11 +47,10 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
 import org.json.JSONObject;
 
-import fusion.comerger.MatchingProcess;
-import fusion.comerger.MergingProcess;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.merger.holisticMerge.Parameter;
-import fusion.comerger.algorithm.merger.holisticMerge.clique.RuleSets;
+import fusion.comerger.algorithm.merger.holisticMerge.GMR.CompatibilityChecker;
+import fusion.comerger.algorithm.merger.holisticMerge.GMR.RuleSets;
 import fusion.comerger.algorithm.merger.holisticMerge.consistency.ConsistencyProcess;
 import fusion.comerger.algorithm.merger.holisticMerge.evaluator.EvaluationRepair;
 import fusion.comerger.algorithm.merger.holisticMerge.general.Zipper;
@@ -73,7 +71,7 @@ public class MergingServlet extends HttpServlet {
 	public static HModel mergedModel = null;
 	public static String mergedOnt = new String();
 	public static RuleSets RSets = new RuleSets();
-	private static final String secretKey = "MYKEY";
+	private static final String secretKey = "6Lc5rrUUAAAAAJN7DNL0lLcdrDt68Bjby2MSrv10";
 	String previousUserItem;
 
 	/**
@@ -100,12 +98,14 @@ public class MergingServlet extends HttpServlet {
 			String UPLOAD_DIRECTORY = getServletContext().getRealPath("/") + "uploads\\";
 			Parameter.setFilePathDirectory(UPLOAD_DIRECTORY);
 
-			String submitType = "", mergeType = "", MergeOutputType = "", preferedOnt = "equal", 
-					  queryStringAll = "", ListOntsQ = "", queryStringM = "",
-					queryStringO = "", resultQueryM = "", resultQueryO = "", selectedRepair = "", selectedUserItem = "",
-					selectedUserPlan = "", userConsParam = "", SelOntQ = "", gRecaptchaResponse = "",
-					uploadedInputFiles = null, uploadedmapFiles = null, uploadedMergeFile = null;
+			String submitType = "", mergeType = "", MergeOutputType = "", preferedOnt = "equal", queryStringAll = "",
+					ListOntsQ = "", queryStringM = "", queryStringO = "", resultQueryM = "", resultQueryO = "",
+					selectedRepair = "", selectedUserItem = "", selectedUserPlan = "", userConsParam = "", SelOntQ = "",
+					gRecaptchaResponse = "", uploadedInputFiles = null, uploadedmapFiles = null,
+					uploadedMergeFile = null;
 			int numSuggestion = 5;
+			String captcahMsg = "<div	style=\"height:50px; background-color:#f9dbdb; font-weight:bold; color:red;\">	<span style=\"margin:150px;\">Sorry. Google Captcha did not validate you! Please try it again.</span>  </div>";
+
 			StatisticTest.result = new HashMap<String, String>();
 			List<FileItem> multiFiles = new ServletFileUpload(new DiskFileItemFactory())
 					.parseRequest(new ServletRequestContext(request));
@@ -224,69 +224,66 @@ public class MergingServlet extends HttpServlet {
 				MyLogging.log(Level.INFO, "Starting doing: " + submitType);
 			}
 
-			boolean success = isCaptchaValid(gRecaptchaResponse);
-
-			if (success == false) {
-
-				String errorMsg = "<div	style=\"height:50px; background-color:#f9dbdb; font-weight:bold; color:red;\">	<span style=\"margin:150px;\">Sorry. Google Captcha did not validate you! Please try it again.</span>  </div>";
-				request.setAttribute("error", errorMsg);
-				request.getRequestDispatcher("/index.jsp").forward(request, response);
-			}
-
 			switch (submitType) {
 
 			case "DoMerge":
-				if (inputOnts.length() < 1 && uploadedInputFiles != null)
-					inputOnts = uploadedInputFiles;
-				if (mapOnts.length() < 1 && uploadedmapFiles != null)
-					mapOnts = uploadedmapFiles;
-				if (inputOnts.length() < 1) {
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					String msg = "The input ontologies are null.";
-					MyLogging.log(Level.WARNING, "The input ontologies are null. \n");
-					String logZip = Zipper.zipFiles(Parameter.getLogFile());
-					String logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.setAttribute("msg", msg);
-					request = ConfigServlet.requestConfigMerge(request, mergeType, MergeOutputType, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					request.getRequestDispatcher("/merging.jsp").forward(request, response);
+				if (isCaptchaValid(gRecaptchaResponse) == false) {
+					request.setAttribute("error", captcahMsg);
+					request.getRequestDispatcher("/index.jsp").forward(request, response);
 				} else {
-					if (mapOnts.length() < 1) {
-						String ch1 = "1", ch2 = "1"; // TODO:correct it
-						mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+
+					if (inputOnts.length() < 1 && uploadedInputFiles != null)
+						inputOnts = uploadedInputFiles;
+					if (mapOnts.length() < 1 && uploadedmapFiles != null)
+						mapOnts = uploadedmapFiles;
+					if (inputOnts.length() < 1) {
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						String msg = "The input ontologies are null.";
+						MyLogging.log(Level.WARNING, "The input ontologies are null. \n");
+						String logZip = Zipper.zipFiles(Parameter.getLogFile());
+						String logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.setAttribute("msg", msg);
+						request = ConfigServlet.requestConfigMerge(request, mergeType, MergeOutputType,
+								selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						request.getRequestDispatcher("/merging.jsp").forward(request, response);
+					} else {
+						if (mapOnts.length() < 1) {
+							String ch1 = "1", ch2 = "1"; // TODO:correct it
+							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+						}
+						mergedModel = MergingProcess.DoMerge(inputOnts, mapOnts, UPLOAD_DIRECTORY, mergeType,
+								selectedUserItem, preferedOnt, MergeOutputType);
+
+						mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
+						previousUserItem = selectedUserItem;
+						String[] result = mergedModel.getEvalResult();
+						for (int i = 0; i < 14; i++)
+							request.setAttribute("res" + i, result[i]);
+
+						String chartInfo = mergedModel.getEvalTotalLabel();
+						request.setAttribute("chartInfo", chartInfo);
+						String MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
+						request.setAttribute("MergedOntZip", MergedOntZip);
+						String MergedSubOntZip = "/uploads/" + new File(mergedModel.getSubMergedOntZipName()).getName();
+						request.setAttribute("MergedSubOntZip", MergedSubOntZip);
+						request.setAttribute("SavedPreferedOnt", preferedOnt);
+						request.setAttribute("inputFile", inputOnts);
+						String mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
+						request.setAttribute("zipResultTxt", mergeEvalTxt);
+						request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
+						String logZip = Zipper.zipFiles(Parameter.getLogFile());
+						String logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergeResult.jsp").forward(request, response);
+						// clear();
 					}
-					mergedModel = MergingProcess.DoMerge(inputOnts, mapOnts, UPLOAD_DIRECTORY, mergeType,
-							selectedUserItem, preferedOnt, MergeOutputType);
-
-					mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
-					previousUserItem = selectedUserItem;
-					String[] result = mergedModel.getEvalResult();
-					for (int i = 0; i < 14; i++) 
-						request.setAttribute("res" + i, result[i]);
-					
-					String chartInfo = mergedModel.getEvalTotalLabel();
-					request.setAttribute("chartInfo", chartInfo);
-					String MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
-					request.setAttribute("MergedOntZip", MergedOntZip);
-					String MergedSubOntZip = "/uploads/" + new File(mergedModel.getSubMergedOntZipName()).getName();
-					request.setAttribute("MergedSubOntZip", MergedSubOntZip);
-					request.setAttribute("SavedPreferedOnt", preferedOnt);
-					request.setAttribute("inputFile", inputOnts);
-					String mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
-					request.setAttribute("zipResultTxt", mergeEvalTxt);
-					request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
-					String logZip = Zipper.zipFiles(Parameter.getLogFile());
-					String logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergeResult.jsp").forward(request, response);
-					// clear();
 				}
-
 				break;
 
 			case "DoCompatibilityCheck":
-				RSets = MergingProcess.RuleConflict(selectedUserItem, numSuggestion);
+				RSets = CompatibilityChecker.RuleConflict(selectedUserItem, numSuggestion);
 
 				String guidline = "<font color=\"green\">green</font>: your compatible GMRs, <font color=\"red\">red</font>:your incompatible GMRs, <font	color=\"orange\">orange</font>: extra compatible GMRs";
 				request.setAttribute("guidline", guidline);
@@ -304,7 +301,7 @@ public class MergingServlet extends HttpServlet {
 				break;
 
 			case "DoCompatibilityCheckAfterMerge":
-				RSets = MergingProcess.RuleConflict(selectedUserItem, numSuggestion);
+				RSets = CompatibilityChecker.RuleConflict(selectedUserItem, numSuggestion);
 				guidline = "<font color=\"green\">green</font>: your compatible GMRs, <font color=\"red\">red</font>:your incompatible GMRs, <font	color=\"orange\">orange</font>: extra compatible GMRs";
 				request.setAttribute("guidline", guidline);
 				request.setAttribute("uploadedmapFiles", mapOnts);
@@ -324,65 +321,70 @@ public class MergingServlet extends HttpServlet {
 				break;
 
 			case "DoMergeEval":
-				if (inputOnts.length() < 1 && uploadedInputFiles != null)
-					inputOnts = uploadedInputFiles;
-				if (mapOnts.length() < 1 && uploadedmapFiles != null)
-					mapOnts = uploadedmapFiles;
-				if (mergedOnt.length() < 1 && uploadedMergeFile != null)
-					mergedOnt = uploadedMergeFile;
-
-				if (inputOnts.length() < 1) {
-					String msg = "The input ontologies are empty.<br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedMergeFile", mergedOnt);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
-
-				} else if (mergedOnt.length() < 1) {
-					String msg = "The merged ontology is empty. <br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
-
+				if (isCaptchaValid(gRecaptchaResponse) == false) {
+					request.setAttribute("error", captcahMsg);
+					request.getRequestDispatcher("/index.jsp").forward(request, response);
 				} else {
-					if (mapOnts.length() < 1) {
-						String ch1 = "1", ch2 = "1";
-						mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+					if (inputOnts.length() < 1 && uploadedInputFiles != null)
+						inputOnts = uploadedInputFiles;
+					if (mapOnts.length() < 1 && uploadedmapFiles != null)
+						mapOnts = uploadedmapFiles;
+					if (mergedOnt.length() < 1 && uploadedMergeFile != null)
+						mergedOnt = uploadedMergeFile;
+
+					if (inputOnts.length() < 1) {
+						String msg = "The input ontologies are empty.<br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+
+					} else if (mergedOnt.length() < 1) {
+						String msg = "The merged ontology is empty. <br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+
+					} else {
+						if (mapOnts.length() < 1) {
+							String ch1 = "1", ch2 = "1";
+							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+						}
+						mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt);
+						mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
+						previousUserItem = selectedUserItem;
+						String[] result = mergedModel.getEvalResult();
+						for (int i = 0; i < 13; i++)
+							request.setAttribute("res" + i, result[i]);
+						chartInfo = mergedModel.getEvalTotalLabel();
+						request.setAttribute("chartInfo", chartInfo);
+						String MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
+						request.setAttribute("MergedOntZip", MergedOntZip);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedMergeFile", mergedOnt);// result[9][0]);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request.setAttribute("SecDW", "hide");
+						String mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
+						request.setAttribute("zipResultTxt", mergeEvalTxt);
+						request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergeResult.jsp").forward(request, response);
 					}
-					mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt);
-					mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
-					previousUserItem = selectedUserItem;
-					String[] result = mergedModel.getEvalResult();
-					for (int i = 0; i < 13; i++)
-						request.setAttribute("res" + i, result[i]);
-					chartInfo = mergedModel.getEvalTotalLabel();
-					request.setAttribute("chartInfo", chartInfo);
-					String MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
-					request.setAttribute("MergedOntZip", MergedOntZip);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedMergeFile", mergedOnt);// result[9][0]);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request.setAttribute("SecDW", "hide");
-					String mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
-					request.setAttribute("zipResultTxt", mergeEvalTxt);
-					request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergeResult.jsp").forward(request, response);
 				}
 				break;
 
@@ -422,7 +424,7 @@ public class MergingServlet extends HttpServlet {
 				result = mergedModel.getEvalResult();
 				for (int i = 0; i < 13; i++)
 					request.setAttribute("res" + i, result[i]);
-				
+
 				chartInfo = mergedModel.getEvalTotalLabel();
 				request.setAttribute("chartInfo", chartInfo);
 				MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
@@ -448,7 +450,6 @@ public class MergingServlet extends HttpServlet {
 				String[] resultEval = mergedModel.getEvalResult();
 				for (int i = 0; i < 14; i++)
 					request.setAttribute("res" + i, resultEval[i]);
-				
 
 				chartInfo = mergedModel.getEvalTotalLabel();
 				request.setAttribute("chartInfo", chartInfo);
@@ -467,55 +468,60 @@ public class MergingServlet extends HttpServlet {
 				break;
 
 			case "DoDirectConsistency":
-				if (inputOnts.length() < 1 && uploadedInputFiles != null)
-					inputOnts = uploadedInputFiles;
-				if (mapOnts.length() < 1 && uploadedmapFiles != null)
-					mapOnts = uploadedmapFiles;
-				if (mergedOnt.length() < 1 && uploadedMergeFile != null)
-					mergedOnt = uploadedMergeFile;
-				if (inputOnts.length() < 1) {
-					String msg = "The input ontologies are empty.<br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedMergeFile", mergedOnt);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
-
-				} else if (mergedOnt.length() < 1) {
-					String msg = "The merged ontology is empty. <br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+				if (isCaptchaValid(gRecaptchaResponse) == false) {
+					request.setAttribute("error", captcahMsg);
+					request.getRequestDispatcher("/index.jsp").forward(request, response);
 				} else {
-					if (mapOnts.length() < 1) {
-						String ch1 = "1", ch2 = "1";
-						mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+					if (inputOnts.length() < 1 && uploadedInputFiles != null)
+						inputOnts = uploadedInputFiles;
+					if (mapOnts.length() < 1 && uploadedmapFiles != null)
+						mapOnts = uploadedmapFiles;
+					if (mergedOnt.length() < 1 && uploadedMergeFile != null)
+						mergedOnt = uploadedMergeFile;
+					if (inputOnts.length() < 1) {
+						String msg = "The input ontologies are empty.<br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+
+					} else if (mergedOnt.length() < 1) {
+						String msg = "The merged ontology is empty. <br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+					} else {
+						if (mapOnts.length() < 1) {
+							String ch1 = "1", ch2 = "1";
+							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+						}
+						mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt);
+						mergedModel = ConsistencyProcess.DoConsistencyCheck(mergedModel, userConsParam);
+						String[] resultC = mergedModel.getConsResult();
+						for (int i = 0; i < resultC.length; i++)
+							request.setAttribute("res" + i, resultC[i]);
+						MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
+						request.setAttribute("MergedOntZip", MergedOntZip);
+						String consistencyTxt = "/uploads/" + new File(mergedModel.getConsistencyResultTxt()).getName();
+						request.setAttribute("zipResultTxt", consistencyTxt);
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/consistencyResult.jsp").forward(request, response);
 					}
-					mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt);
-					mergedModel = ConsistencyProcess.DoConsistencyCheck(mergedModel, userConsParam);
-					String[] resultC = mergedModel.getConsResult();
-					for (int i = 0; i < resultC.length; i++)
-						request.setAttribute("res" + i, resultC[i]);
-					MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
-					request.setAttribute("MergedOntZip", MergedOntZip);
-					String consistencyTxt = "/uploads/" + new File(mergedModel.getConsistencyResultTxt()).getName();
-					request.setAttribute("zipResultTxt", consistencyTxt);
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/consistencyResult.jsp").forward(request, response);
 				}
 				break;
 
@@ -561,101 +567,112 @@ public class MergingServlet extends HttpServlet {
 				break;
 			///////////////////// Begin-QUERY********************************************************************
 			case "GoQuerySeveral":
-				if (inputOnts.length() < 1 && uploadedInputFiles != null)
-					inputOnts = uploadedInputFiles;
-				if (mapOnts.length() < 1 && uploadedmapFiles != null)
-					mapOnts = uploadedmapFiles;
-				if (mergedOnt.length() < 1 && uploadedMergeFile != null)
-					mergedOnt = uploadedMergeFile;
-				if (mergedOnt.length() < 1 && mergedModel != null)
-					mergedOnt = mergedModel.getOntName();
-
-				if (inputOnts.length() < 1) {
-					String msg = "The input ontologies are empty.<br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedMergeFile", mergedOnt);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
-
-				} else if (mergedOnt.length() < 1) {
-					String msg = "The merged ontology is empty. <br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+				if (isCaptchaValid(gRecaptchaResponse) == false) {
+					request.setAttribute("error", captcahMsg);
+					request.getRequestDispatcher("/index.jsp").forward(request, response);
 				} else {
-					String[] fileName = inputOnts.split(";");
-					String ListOnts = null;
-					for (int i = 0; i < fileName.length; i++) {
-						if (ListOnts == null) {
-							ListOnts = "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + i + "</option>";
-						} else {
-							ListOnts = ListOnts + "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + i
-									+ "</option>";
-						}
-					}
+					if (inputOnts.length() < 1 && uploadedInputFiles != null)
+						inputOnts = uploadedInputFiles;
+					if (mapOnts.length() < 1 && uploadedmapFiles != null)
+						mapOnts = uploadedmapFiles;
+					if (mergedOnt.length() < 1 && uploadedMergeFile != null)
+						mergedOnt = uploadedMergeFile;
+					if (mergedOnt.length() < 1 && mergedModel != null)
+						mergedOnt = mergedModel.getOntName();
 
-					request.setAttribute("ListOntsQ", ListOnts);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedMergeFile", mergedOnt);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request.getRequestDispatcher("/query2.jsp").forward(request, response);
+					if (inputOnts.length() < 1) {
+						String msg = "The input ontologies are empty.<br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+
+					} else if (mergedOnt.length() < 1) {
+						String msg = "The merged ontology is empty. <br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+					} else {
+						String[] fileName = inputOnts.split(";");
+						String ListOnts = null;
+						for (int i = 0; i < fileName.length; i++) {
+							if (ListOnts == null) {
+								ListOnts = "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + i + "</option>";
+							} else {
+								ListOnts = ListOnts + "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + i
+										+ "</option>";
+							}
+						}
+
+						request.setAttribute("ListOntsQ", ListOnts);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request.getRequestDispatcher("/query2.jsp").forward(request, response);
+					}
 				}
 				break;
 
 			case "GoQueryOne":
-				if (inputOnts.length() < 1 && uploadedInputFiles != null)
-					inputOnts = uploadedInputFiles;
-				if (mapOnts.length() < 1 && uploadedmapFiles != null)
-					mapOnts = uploadedmapFiles;
-				if (mergedOnt.length() < 1 && uploadedMergeFile != null)
-					mergedOnt = uploadedMergeFile;
-				if (mergedOnt.length() < 1 && mergedModel != null)
-					mergedOnt = mergedModel.getOntName();
-
-				if (inputOnts.length() < 1) {
-					String msg = "The input ontologies are empty.<br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedMergeFile", mergedOnt);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
-
-				} else if (mergedOnt.length() < 1) {
-					String msg = "The merged ontology is empty. <br>";
-					request.setAttribute("msg", msg);
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
-					request.setAttribute("NumPrefOnt", preferedOnt);
-					MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
-					logZip = Zipper.zipFiles(Parameter.getLogFile());
-					logFile = "/uploads/" + new File(logZip).getName();
-					request.setAttribute("logFile", logFile);
-					request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+				if (isCaptchaValid(gRecaptchaResponse) == false) {
+					request.setAttribute("error", captcahMsg);
+					request.getRequestDispatcher("/index.jsp").forward(request, response);
 				} else {
 
-					request.setAttribute("uploadedmapFiles", mapOnts);
-					request.setAttribute("uploadedMergeFile", mergedOnt);
-					request.setAttribute("uploadedInputFiles", inputOnts);
-					request.getRequestDispatcher("/query3.jsp").forward(request, response);
+					if (inputOnts.length() < 1 && uploadedInputFiles != null)
+						inputOnts = uploadedInputFiles;
+					if (mapOnts.length() < 1 && uploadedmapFiles != null)
+						mapOnts = uploadedmapFiles;
+					if (mergedOnt.length() < 1 && uploadedMergeFile != null)
+						mergedOnt = uploadedMergeFile;
+					if (mergedOnt.length() < 1 && mergedModel != null)
+						mergedOnt = mergedModel.getOntName();
+
+					if (inputOnts.length() < 1) {
+						String msg = "The input ontologies are empty.<br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The input ontologies are empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+
+					} else if (mergedOnt.length() < 1) {
+						String msg = "The merged ontology is empty. <br>";
+						request.setAttribute("msg", msg);
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request = ConfigServlet.requestConfigMergeEval(request, selectedUserItem);
+						request.setAttribute("NumPrefOnt", preferedOnt);
+						MyLogging.log(Level.WARNING, "The merged ontology is empty. \n");
+						logZip = Zipper.zipFiles(Parameter.getLogFile());
+						logFile = "/uploads/" + new File(logZip).getName();
+						request.setAttribute("logFile", logFile);
+						request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+					} else {
+
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
+						request.setAttribute("uploadedInputFiles", inputOnts);
+						request.getRequestDispatcher("/query3.jsp").forward(request, response);
+					}
 				}
 				break;
 

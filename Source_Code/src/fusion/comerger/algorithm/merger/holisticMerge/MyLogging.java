@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.io.IOException;
 import java.util.Random;
 import java.util.logging.FileHandler;

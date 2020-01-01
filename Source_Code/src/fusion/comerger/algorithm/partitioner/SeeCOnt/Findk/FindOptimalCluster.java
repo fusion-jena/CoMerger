@@ -1,3 +1,4 @@
+
 package fusion.comerger.algorithm.partitioner.SeeCOnt.Findk;
 /* 
 * Please refer to https://github.com/fusion-jena/OAPT
@@ -14,7 +15,6 @@ package fusion.comerger.algorithm.partitioner.SeeCOnt.Findk;
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 

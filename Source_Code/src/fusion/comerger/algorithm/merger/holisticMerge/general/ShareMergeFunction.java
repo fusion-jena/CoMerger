@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.general;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

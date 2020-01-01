@@ -1,0 +1,18 @@
+<option>Retrieve all properties</option>
+<option>Retrieve all object properties</option>
+<option>Retrieve all functional properties</option>
+<option>Retrieve all datatype properties</option>
+<option>Retrieve all inversOf properties</option>
+<option>Retrieve all equivalent properties</option>
+<option>Retrieve object properties of class X</option>
+<option>Retrieve datatype properties of class X</option>
+<option>Retrieve functional properties of class X</option>
+<option>Count all properties</option>
+<option>Count all object properties</option>
+<option>Count all functional properties</option>
+<option>Count all datatype properties</option>
+<option>Count all inversOf properties</option>
+<option>Count all equivalent properties</option>
+<option>Count object properties of class X</option>
+<option>Count datatype properties of class X</option>
+<option>Count functional properties of class X</option>

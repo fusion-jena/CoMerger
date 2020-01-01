@@ -14,7 +14,6 @@ package fusion.comerger.algorithm.partitioner.pbm;
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
 public class Link
 {
     private String uri1 = null,  uri2 = null;

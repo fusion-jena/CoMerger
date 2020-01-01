@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 public class Parameter {
 	static int theta = 1; // for determining cores
 	static String filePathDirectory;

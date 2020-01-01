@@ -16,29 +16,24 @@ package fusion.comerger.algorithm.merger.holisticMerge.evaluator;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
- 
-import java.io.File;
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.ArrayList;
 import java.util.Set;
 
 import org.junit.Assert;
-import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentDataPropertiesAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentObjectPropertiesAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.reasoner.InconsistentOntologyException;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
@@ -49,37 +44,6 @@ import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 import fusion.comerger.algorithm.merger.model.HModel;
 
 public class Entailmenter {
-
-	public static void main(String[] args) {
-
-		String OntName1 = "C:\\LOCAL_FOLDER\\cmt.owl";
-		String OntName2 = "C:\\LOCAL_FOLDER\\conference.owl";
-		String OntM = "C:\\LOCAL_FOLDER\\MergedOnt652.owl";
-		File file1 = new File(OntName1);
-		File file2 = new File(OntName2);
-		File fileM = new File(OntM);
-
-		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-		OWLOntology ont1 = null, ont2 = null, ontM = null;
-
-		try {
-			ont1 = manager.loadOntologyFromOntologyDocument(file1);
-		} catch (OWLOntologyCreationException e) {
-			e.printStackTrace();
-		}
-		try {
-			ont2 = manager.loadOntologyFromOntologyDocument(file2);
-		} catch (OWLOntologyCreationException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			ontM = manager.loadOntologyFromOntologyDocument(fileM);
-		} catch (OWLOntologyCreationException e) {
-			e.printStackTrace();
-		}
-
-	}
 
 	public static int[] isEntailed(HModel ontM, OWLOntology OM, ArrayList<OWLOntology> AllOi) {
 		int[] result = new int[4];

@@ -24,7 +24,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.merging;
  * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
  * Date: 17/12/2019
  */
- 
 import org.semanticweb.owlapi.model.OWLClass;
 
 public class CycleSt {

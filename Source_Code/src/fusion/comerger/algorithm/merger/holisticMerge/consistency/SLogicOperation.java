@@ -1,4 +1,29 @@
 package fusion.comerger.algorithm.merger.holisticMerge.consistency;
+/*
+ * CoMerger: Holistic Ontology Merging
+ * %%
+ * Copyright (C) 2019 Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 /**
  * CoMerger: Holistic Multiple Ontology Merger.
  * Consistency checker sub package based on the Subjective Logic theory
@@ -11,42 +36,25 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLAnnotation;
-import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
-import org.semanticweb.owlapi.model.OWLAnnotationProperty;
-import org.semanticweb.owlapi.model.OWLAnnotationSubject;
-import org.semanticweb.owlapi.model.OWLAnnotationValue;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLClassExpression;
-import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataPropertyDomainAxiom;
-import org.semanticweb.owlapi.model.OWLDataPropertyExpression;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
-import org.semanticweb.owlapi.model.OWLFunctionalDataPropertyAxiom;
-import org.semanticweb.owlapi.model.OWLFunctionalObjectPropertyAxiom;
-import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLObjectAllValuesFrom;
 import org.semanticweb.owlapi.model.OWLObjectIntersectionOf;
-import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLObjectPropertyDomainAxiom;
-import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
 import org.semanticweb.owlapi.model.OWLObjectPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLObjectSomeValuesFrom;
 import org.semanticweb.owlapi.model.OWLObjectUnionOf;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
-import org.semanticweb.owlapi.model.OWLSubObjectPropertyOfAxiom;
-import org.semanticweb.owlapi.model.OWLSymmetricObjectPropertyAxiom;
-import org.semanticweb.owlapi.model.OWLTransitiveObjectPropertyAxiom;
 
 import fusion.comerger.algorithm.merger.holisticMerge.general.ClassProcess;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedClass;
 import fusion.comerger.algorithm.merger.model.HModel;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
-import uk.ac.manchester.cs.owl.owlapi.OWLObjectSomeValuesFromImpl;
 
 public class SLogicOperation {
 
@@ -59,224 +67,266 @@ public class SLogicOperation {
 		return res;
 	}
 
-	private Set<OWLAnnotation> findAnno(Set<OWLClass> axElem, int ontId, HModel ontM) {
-		Set<OWLAnnotation> Anno = new HashSet<OWLAnnotation>();
-		OWLOntology oi = ontM.getInputOwlOntModel().get(ontId);
-		Iterator<OWLClass> iterE = axElem.iterator();
-		while (iterE.hasNext()) {
-			OWLClass cl = iterE.next();
-			Set<OWLAnnotation> an = cl.getAnnotations(oi);
-			Anno.addAll(an);
-		}
-		return Anno;
-
-	}
-
-	private Set<OWLIndividual> findInstances(Set<OWLClass> axElem, int ontId, HModel ontM) {
-		Set<OWLIndividual> ins = new HashSet<OWLIndividual>();
-		Iterator<OWLClass> iterE = axElem.iterator();
-		while (iterE.hasNext()) {
-			OWLClass cl = iterE.next();
-			ins.addAll(cl.getIndividuals(ontM.getInputOwlOntModel().get(ontId)));
-		}
-		return ins;
-	}
-
 	public Set<OWLClass> findAxiomElements(OWLAxiom currentAxiom, int ontId, HModel ontM) {
 		Set<OWLClass> elm = new HashSet<OWLClass>();
 		String axiomType = currentAxiom.getAxiomType().toString();
 
 		switch (axiomType) {
 		case "SubClassOf":
-			OWLClassExpression SuperClass = ((OWLSubClassOfAxiom) currentAxiom).getSuperClass();
-			OWLClassExpression SubClass = ((OWLSubClassOfAxiom) currentAxiom).getSubClass();
-			if (SuperClass instanceof OWLClassImpl) {
-				elm.add(SuperClass.asOWLClass());
-			} else {
-
-			}
-			if (SubClass instanceof OWLClassImpl) {
-				elm.add(SubClass.asOWLClass());
-			} else {
-
-			}
-
+			elm.addAll(SubClassElm(currentAxiom));
 			break;
+
 		case "ObjectPropertyRange":
-			OWLObjectPropertyExpression pro = ((OWLObjectPropertyRangeAxiom) currentAxiom).getProperty();
-			OWLClassExpression rang = ((OWLObjectPropertyRangeAxiom) currentAxiom).getRange();
-
-			if (rang instanceof OWLClassImpl) {
-				elm.add(rang.asOWLClass());
-			} else {
-			}
-
+			elm.addAll(ObjectProperrtRangeElm(currentAxiom));
 			break;
 
 		case "EquivalentClasses":
-			Iterator<OWLClassExpression> a = ((OWLEquivalentClassesAxiom) currentAxiom).getClassExpressions()
-					.iterator();
-			while (a.hasNext()) {
-				OWLClassExpression c1 = a.next();
-
-				if (c1 instanceof OWLClassImpl) {
-					elm.add(c1.asOWLClass());
-				} else if (c1 instanceof OWLObjectSomeValuesFromImpl) {
-					Iterator<OWLClass> ac = ((OWLObjectSomeValuesFrom) c1).getClassesInSignature().iterator();
-					while (ac.hasNext()) {
-						elm.add(ac.next());
-					}
-				} else if (c1 instanceof OWLObjectIntersectionOf) {
-					Iterator<OWLClass> cl = ((OWLObjectIntersectionOf) c1).getClassesInSignature().iterator();
-					while (cl.hasNext()) {
-						elm.add(cl.next());
-					}
-				} else if (c1 instanceof OWLObjectUnionOf) {
-					Iterator<OWLClassExpression> cf = ((OWLObjectUnionOf) c1).getOperands().iterator();
-					while (cf.hasNext()) {
-						elm.add(cf.next().asOWLClass());
-					}
-				}
-			}
-
+			elm.addAll(EquivalentClassesElm(currentAxiom));
 			break;
 
 		case "ObjectPropertyDomain":
-			OWLObjectPropertyExpression pro2 = ((OWLObjectPropertyDomainAxiom) currentAxiom).getProperty();
-			OWLClassExpression dom = ((OWLObjectPropertyDomainAxiom) currentAxiom).getDomain();
-			if (dom instanceof OWLClassImpl) {
-				elm.add(dom.asOWLClass());
-			} else {
-
-			}
+			elm.addAll(ObjectPropertyDomainElm(currentAxiom));
 
 			break;
 
 		case "InverseObjectProperties":
-			Iterator<OWLObjectProperty> iter = currentAxiom.getObjectPropertiesInSignature().iterator();
-			// TODO: find a new plan
+			// it does not have OWLClass axiom
 			break;
 
 		case "InverseFunctionalObjectProperty":
-			Iterator<OWLObjectProperty> iter3 = currentAxiom.getObjectPropertiesInSignature().iterator();
-			// TODO: find a new plan
+			// it does not have OWLClass axiom
 			break;
 
 		case "SubObjectPropertyOf":
-			OWLObjectPropertyExpression subProperty = ((OWLSubObjectPropertyOfAxiom) currentAxiom).getSubProperty();
-			OWLObjectPropertyExpression superProperty = ((OWLSubObjectPropertyOfAxiom) currentAxiom).getSuperProperty();
-			// TODO: find a new plan
+			// it does not have OWLClass axiom
 			break;
 
 		case "FunctionalDataProperty":
-			OWLDataPropertyExpression pro4 = ((OWLFunctionalDataPropertyAxiom) currentAxiom).getProperty();
-			// elm.add(pro4.asOWLObjectProperty());//TODO:correct it
+			// it does not have OWLClass axiom
 			break;
 
 		case "FunctionalObjectProperty":
-			OWLObjectPropertyExpression pro3 = ((OWLFunctionalObjectPropertyAxiom) currentAxiom).getProperty();
-			// elm.add(pro3.asOWLObjectProperty());//TODO:correct it
+			// it does not have OWLClass axiom
 			break;
 
 		case "DisjointClasses":
-			Iterator<OWLClass> clist = currentAxiom.getClassesInSignature().iterator();
-			OWLClass cls1 = clist.next();
-			OWLClass cls2 = clist.next();
-			if (cls1 instanceof OWLClassImpl) {
-				elm.add(cls1.asOWLClass());
-			} else {
-
-			}
-			if (cls2 instanceof OWLClassImpl) {
-				elm.add(cls2.asOWLClass());
-			} else {
-
-			}
-
+			elm.addAll(DisjointClassesElm(currentAxiom));
 			break;
 
 		case "DataPropertyDomain":
-			Iterator<OWLDataProperty> pro33 = currentAxiom.getDataPropertiesInSignature().iterator();
-			OWLDataProperty prop = pro33.next();
-			OWLClassExpression dom3 = ((OWLDataPropertyDomainAxiom) currentAxiom).getDomain();
-			if (dom3 instanceof OWLClassImpl) {
-				elm.add(dom3.asOWLClass());
-			} else {
-
-			}
-
+			elm.addAll(DataPropertyDomainElm(currentAxiom));
 			break;
 
 		case "DataPropertyRange":
-			Iterator<OWLDataProperty> iter33 = currentAxiom.getDataPropertiesInSignature().iterator();
-			while (iter33.hasNext()) {
-				OWLDataProperty obj = iter33.next();
-				// elm.add(obj);//TODO: correct it
-			}
+			// it does not have OWLClass axiom
 			break;
 
 		case "AnnotationAssertion":
-			OWLAnnotationProperty property = ((OWLAnnotationAssertionAxiom) currentAxiom).getProperty();
-			OWLAnnotationSubject subject = ((OWLAnnotationAssertionAxiom) currentAxiom).getSubject();
-			OWLAnnotationValue value = ((OWLAnnotationAssertionAxiom) currentAxiom).getValue();
-			if (subject instanceof IRI) {
-				OWLDataFactory df = ontM.getManager().getOWLDataFactory();
-				OWLClass cl = df.getOWLClass((IRI) subject);
-				if (cl != null) {
-					elm.add(cl);
-				}
-			}
+			// it does not have OWLClass axiom
+			// OWLAnnotationProperty property = ((OWLAnnotationAssertionAxiom)
+			// currentAxiom).getProperty();
+			// OWLAnnotationSubject subject = ((OWLAnnotationAssertionAxiom)
+			// currentAxiom).getSubject();
+			// OWLAnnotationValue value = ((OWLAnnotationAssertionAxiom)
+			// currentAxiom).getValue();
+			// if (subject instanceof IRI) {
+			// OWLDataFactory df = ontM.getManager().getOWLDataFactory();
+			// OWLClass cl = df.getOWLClass((IRI) subject);
+			// if (cl != null) {
+			// elm.add(cl);
+			// }
+			// }
 			break;
 
 		case "ClassAssertion":
-			OWLClassAssertionAxiom axx = (OWLClassAssertionAxiom) currentAxiom;
-			OWLClassExpression c = ((OWLClassAssertionAxiom) currentAxiom).getClassExpression();
-			OWLIndividual ind = axx.getIndividual();
-			OWLClass cc = c.asOWLClass();
-			if (cc instanceof OWLClass) {
-				elm.add(cc);// TODO: should add individula also to this
-							// list?
-			} else if (cc instanceof OWLObjectSomeValuesFrom) {
-				System.out.println("unprocess axioms:" + currentAxiom);
-			}
+			elm.addAll(ClassAssertionElm(currentAxiom));
 			break;
 
 		case "DifferentIndividuals":
+			elm.addAll(DifferentIndividualsElm(currentAxiom));
 			break;
 
 		case "TransitiveObjectProperty":
-			OWLObjectPropertyExpression sub3Property = ((OWLTransitiveObjectPropertyAxiom) currentAxiom).getProperty();
-			// elm.add(subProperty.asOWLObjectProperty()));//TODO:correct it
+			// it does not have OWLClass axiom
 			break;
 
 		case "SymmetricObjectProperty":
-			OWLObjectPropertyExpression pr3operty = ((OWLSymmetricObjectPropertyAxiom) currentAxiom).getProperty();
-			// elm.add(property);//TODO: correct it
+			// it does not have OWLClass axiom
 			break;
 
-		default:// DataPropertyDomain
-			// TODO
+		default:
 		}
 
 		elm = addEqualElements(elm, ontId, ontM);
 		return elm;
 	}
 
-//	private Set<OWLAxiom> getAllEqaxioms(OWLAxiom myAxiom, HModel ontM) {
-//		Set<OWLAxiom> res = new HashSet<OWLAxiom>();
-//		ArrayList<ArrayList<OWLAxiom>> ax = ontM.getEqAxioms();
-//		for (int i = 0; i < ax.size(); i++) {
-//			ArrayList<OWLAxiom> axx = ax.get(i);
-//			for (int j = 0; j < axx.size(); j++) {
-//				if (axx.get(j).equals(myAxiom)) {
-//					res.addAll(axx);
-//					return res;
-//				}
-//			}
-//		}
-//		res.add(myAxiom);
-//		return res;
-//	}
+	private Set<OWLClass> ClassAssertionElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+		OWLClassExpression c = ((OWLClassAssertionAxiom) ax).getClassExpression();
+		if (c instanceof OWLClass) {
+			elm.add(c.asOWLClass());
+
+		}
+
+		return elm;
+	}
+
+	private Set<OWLClass> DifferentIndividualsElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+		// TODO
+		return elm;
+	}
+
+	private Set<OWLClass> DataPropertyDomainElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+
+		OWLClassExpression dom = ((OWLDataPropertyDomainAxiom) ax).getDomain();
+		if (dom instanceof OWLClassImpl) {
+			elm.add(dom.asOWLClass());
+
+		} else if (dom instanceof OWLObjectUnionOf) {
+
+			Iterator<OWLClassExpression> rangExist = ((OWLObjectUnionOf) dom).getOperands().iterator();
+			while (rangExist.hasNext()) {
+				OWLClassExpression ex = rangExist.next();
+				if (ex instanceof OWLClassImpl) {
+					elm.add(ex.asOWLClass());
+				}
+			}
+		}
+		return elm;
+	}
+
+	private Set<OWLClass> DisjointClassesElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+		elm.addAll(ax.getClassesInSignature());
+		return elm;
+	}
+
+	private Set<OWLClass> ObjectPropertyDomainElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+
+		OWLClassExpression dom = ((OWLObjectPropertyDomainAxiom) ax).getDomain();
+		if (dom instanceof OWLClassImpl) {
+			elm.add(dom.asOWLClass());
+
+		} else if (dom instanceof OWLObjectUnionOf) {
+			Iterator<OWLClassExpression> rangExist = ((OWLObjectUnionOf) dom).getOperands().iterator();
+			while (rangExist.hasNext()) {
+				OWLClassExpression ex = rangExist.next();
+				if (ex instanceof OWLClassImpl)
+					elm.add(ex.asOWLClass());
+			}
+		}
+
+		return elm;
+	}
+
+	private Set<OWLClass> EquivalentClassesElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+
+		for (OWLClassExpression cls : ((OWLEquivalentClassesAxiom) ax).getClassExpressions()) {
+			if (cls != null) {
+				if (cls instanceof OWLClassImpl) {
+					elm.add(cls.asOWLClass());
+				} else if (cls instanceof OWLObjectUnionOf) {
+					elm.addAll(cls.getClassesInSignature());
+				} else if (cls instanceof OWLObjectSomeValuesFrom) {
+					OWLClassExpression rang = ((OWLObjectSomeValuesFrom) cls).getFiller();
+					elm.add(rang.asOWLClass());
+					elm.addAll(((OWLObjectSomeValuesFrom) cls).getClassesInSignature());
+					if (rang instanceof OWLObjectUnionOf)
+						elm.addAll(rang.getClassesInSignature());
+
+				} else if (cls instanceof OWLObjectIntersectionOf) {
+
+					elm.addAll(((OWLObjectIntersectionOf) cls).getClassesInSignature());
+					Iterator<OWLClassExpression> cll = ((OWLObjectIntersectionOf) cls).getOperands().iterator();
+
+					while (cll.hasNext()) {
+						OWLClassExpression c = cll.next();
+						if (c instanceof OWLClassImpl) {
+							elm.add(c.asOWLClass());
+						} else if (c instanceof OWLObjectUnionOf) {
+							Iterator<OWLClassExpression> rangExist = ((OWLObjectUnionOf) c).getOperands().iterator();
+							while (rangExist.hasNext()) {
+								OWLClassExpression ex = rangExist.next();
+								if (ex instanceof OWLClassImpl)
+									elm.add(ex.asOWLClass());
+							}
+
+						} else if (c instanceof OWLObjectSomeValuesFrom) {
+
+							Iterator<OWLClass> ac = ((OWLObjectSomeValuesFrom) c).getClassesInSignature().iterator();
+
+							while (ac.hasNext()) {
+								OWLClass acl = ac.next();
+
+								if (acl instanceof OWLClassImpl)
+									elm.add(acl.asOWLClass());
+							}
+
+						}
+					}
+
+				}
+			}
+		}
+
+		return elm;
+	}
+
+	private Set<OWLClass> ObjectProperrtRangeElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+		OWLClassExpression rang = ((OWLObjectPropertyRangeAxiom) ax).getRange();
+		if (rang instanceof OWLClassImpl) {
+			elm.add(rang.asOWLClass());
+		} else if (rang instanceof OWLObjectUnionOf) {
+
+			Iterator<OWLClassExpression> rangExist = ((OWLObjectUnionOf) rang).getOperands().iterator();
+			while (rangExist.hasNext()) {
+				OWLClassExpression c = rangExist.next();
+				if (c instanceof OWLClassImpl)
+					elm.add(c.asOWLClass());
+			}
+
+		}
+		return elm;
+	}
+
+	private Set<OWLClass> SubClassElm(OWLAxiom ax) {
+		Set<OWLClass> elm = new HashSet<OWLClass>();
+		OWLClassExpression SuperClass = ((OWLSubClassOfAxiom) ax).getSuperClass();
+		OWLClassExpression SubClass = ((OWLSubClassOfAxiom) ax).getSubClass();
+
+		if (SuperClass instanceof OWLClassImpl && SubClass instanceof OWLClassImpl) {
+			elm.add(SuperClass.asOWLClass());
+			elm.add(SubClass.asOWLClass());
+
+		} else if (SuperClass instanceof OWLObjectUnionOf && SubClass instanceof OWLClassImpl) {
+			elm.add(SubClass.asOWLClass());
+			Iterator<OWLClassExpression> r = ((OWLObjectUnionOf) SuperClass).getOperands().iterator();
+			while (r.hasNext()) {
+				OWLClassExpression c = r.next();
+				if (c instanceof OWLClassImpl)
+					elm.add(c.asOWLClass());
+			}
+
+		} else if (SuperClass instanceof OWLObjectSomeValuesFrom && SubClass instanceof OWLClassImpl) {
+			elm.add(SubClass.asOWLClass());
+			elm.addAll(((OWLObjectSomeValuesFrom) SuperClass).getClassesInSignature());
+
+		} else if (SuperClass instanceof OWLObjectAllValuesFrom && SubClass instanceof OWLClassImpl) {
+			elm.add(SubClass.asOWLClass());
+			elm.addAll(((OWLObjectAllValuesFrom) SuperClass).getClassesInSignature());
+
+		} else if (SubClass instanceof OWLClassImpl) {
+			elm.add(SubClass.asOWLClass());
+
+		}
+		return elm;
+	}
 
 	private Set<OWLClass> addEqualElements(Set<OWLClass> elm, int ontId, HModel ontM) {
 		Set<OWLClass> res = new HashSet<OWLClass>();
@@ -310,19 +360,6 @@ public class SLogicOperation {
 		return res;
 	}
 
-	private static double findRefferedOnt(HModel ontM, OWLClassExpression cl) {
-		if (cl instanceof OWLClassImpl) {
-			String irCL = ((OWLClass) cl).getIRI().getNamespace();
-			if (irCL.equals(ontM.getOntIRI().toString())) {
-				for (HMappedClass eqList : ontM.getEqClasses()) {
-					double num = eqList.getLenClass();
-					return num;
-				}
-			}
-		}
-		return 1.0f;
-	}
-
 	public double CalUncertainty(double r, double s) {
 		double res = 0.0;
 		res = 2 / (r + s + 2);
@@ -333,18 +370,18 @@ public class SLogicOperation {
 		if (axList.contains(ax))
 			return true;
 
-		if (ontM.getEqAxioms().get(ax)!= null)
+		if (ontM.getEqAxioms().get(ax) != null)
 			return true;
-//		ArrayList<ArrayList<OWLAxiom>> eqAx = ontM.getEqAxioms();
-//		for (int i = 0; i < eqAx.size(); i++) {
-//			ArrayList<OWLAxiom> eqAxx = eqAx.get(i);
-//			if (eqAxx.contains(ax)) {
-//				for (int j = 0; j < eqAxx.size(); j++) {
-//					if (oi.getAxioms().contains(eqAxx.get(j)))
-//						return true;
-//				}
-//			}
-//		}
+		// ArrayList<ArrayList<OWLAxiom>> eqAx = ontM.getEqAxioms();
+		// for (int i = 0; i < eqAx.size(); i++) {
+		// ArrayList<OWLAxiom> eqAxx = eqAx.get(i);
+		// if (eqAxx.contains(ax)) {
+		// for (int j = 0; j < eqAxx.size(); j++) {
+		// if (oi.getAxioms().contains(eqAxx.get(j)))
+		// return true;
+		// }
+		// }
+		// }
 
 		return false;
 	}
@@ -451,19 +488,6 @@ public class SLogicOperation {
 		}
 
 		return counter;
-	}
-
-	private ArrayList<OWLAxiom> findEqAx(ArrayList<ArrayList<OWLAxiom>> eqAx, OWLAxiom axiom) {
-		ArrayList<OWLAxiom> res = new ArrayList<OWLAxiom>();
-		for (int i = 0; i < eqAx.size(); i++) {
-			ArrayList<OWLAxiom> ax = eqAx.get(i);
-			for (int j = 0; j < ax.size(); j++) {
-				OWLAxiom a = ax.get(j);
-				if (a.equals(axiom))
-					res.addAll(ax);
-			}
-		}
-		return res;
 	}
 
 	public double CalDisbelieve(double r, double s) {
