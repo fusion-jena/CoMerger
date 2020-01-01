@@ -71,7 +71,7 @@ public class MergingServlet extends HttpServlet {
 	public static HModel mergedModel = null;
 	public static String mergedOnt = new String();
 	public static RuleSets RSets = new RuleSets();
-	private static final String secretKey = "6Lc5rrUUAAAAAJN7DNL0lLcdrDt68Bjby2MSrv10";
+	private static final String secretKey = "MYKEY";
 	String previousUserItem;
 
 	/**
