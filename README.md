@@ -4,12 +4,12 @@
 CoMerger is a Holistic Multiple Ontologies Merging tool, available at http://comerger.uni-jena.de/.
 
 # Publications:
-1. Babalou, Samira, and Birgitta König-Ries. "A Subjective Logic Based Approach to Handling Inconsistencies in Ontology Merging." OTM Confederated International Conferences" On the Move to Meaningful Internet Systems". Springer, Cham, 2019.
-2. Babalou, Samira, and Birgitta König-Ries. "On using subjective logic to build consistent merged ontologies." Proceedings of the SEMANTICS, Poster and Demo tracks (2019).
-3. Babalou, Samira, and Birgitta König-Ries. "GMRs: Reconciliation of Generic Merge Requirements in Ontology Integration." Proceedings of the SEMANTICS, Poster and Demo tracks (2019)
-4. Babalou, Samira. "Holistic Multiple Ontologies Merging." EKAW (Doctoral Consortium). 2018.
-5. Babalou, Samira, and Birgitta König-Ries. "Holistic Knowledge Integration with {C}o{M}erger: A divide-and-conquer approach" Submitted to ESWC2020.
-6. Babalou, Samira, and Birgitta König-Ries. "How good is this merged ontology? Towards a customizable quality evaluation" Submitted to ESWC2020.
+1. Babalou, Samira, and Birgitta König-Ries. "*A Subjective Logic Based Approach to Handling Inconsistencies in Ontology Merging*." OTM Confederated International Conferences" On the Move to Meaningful Internet Systems". Springer, Cham, 2019.
+2. Babalou, Samira, and Birgitta König-Ries. "*On using subjective logic to build consistent merged ontologies*." Proceedings of the SEMANTICS, Poster and Demo tracks (2019).
+3. Babalou, Samira, and Birgitta König-Ries. "*GMRs: Reconciliation of Generic Merge Requirements in Ontology Integration*." Proceedings of the SEMANTICS, Poster and Demo tracks (2019)
+4. Babalou, Samira. "*Holistic Multiple Ontologies Merging*." EKAW (Doctoral Consortium). 2018.
+5. Babalou, Samira, and Birgitta König-Ries. "*Holistic Knowledge Integration with {C}o{M}erger: A divide-and-conquer approach*." Submitted to ESWC2020.
+6. Babalou, Samira, and Birgitta König-Ries. "*How good is this merged ontology? Towards a customizable quality evaluation*." Submitted to ESWC2020.
 
 # Repository's files:
 This repository dedicated to CoMerger packages, inculding source codes and datasets:
