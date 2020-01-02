@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3580593.svg)](https://doi.org/10.5281/zenodo.3580593)
 
 # CoMerger
-CoMerger is a Holistic Multiple Ontologies Merging tool, available at http://comerger.uni-jena.de/.
+CoMerger is a holistic multiple ontologies merging tool, available at http://comerger.uni-jena.de/.
 
 # Publications:
 1. Babalou, Samira, and Birgitta König-Ries. "*A Subjective Logic Based Approach to Handling Inconsistencies in Ontology Merging*." OTM Confederated International Conferences" On the Move to Meaningful Internet Systems". Springer, Cham, 2019.
