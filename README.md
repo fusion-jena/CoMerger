@@ -71,4 +71,7 @@ This repository dedicated to CoMerger packages, inculding source codes and datas
 	1. set a Tomcat server on your machine (version 7.0 or higher)
 	2. go to `WebContent` folder
 	3. run `index.jsp` on Tomcat server
-	
+* To **replace another alignment function** before running merge:
+	1. Import the alignment tool in the project
+	2. Call the function of the new alignment tool instead of `MatchingProcess.CreateMap()` in `MergingServlet.java` from `package fusion.comerger.servlets`
+
