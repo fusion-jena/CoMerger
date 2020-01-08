@@ -71,7 +71,7 @@ public class MergingServlet extends HttpServlet {
 	public static HModel mergedModel = null;
 	public static String mergedOnt = new String();
 	public static RuleSets RSets = new RuleSets();
-	private static final String secretKey = "MYKEY";
+	private static final String secretKey = "";
 	String previousUserItem;
 
 	/**
@@ -250,7 +250,7 @@ public class MergingServlet extends HttpServlet {
 						request.getRequestDispatcher("/merging.jsp").forward(request, response);
 					} else {
 						if (mapOnts.length() < 1) {
-							String ch1 = "1", ch2 = "1"; // TODO:correct it
+							String ch1 = "1", ch2 = "1"; 
 							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
 						}
 						mergedModel = MergingProcess.DoMerge(inputOnts, mapOnts, UPLOAD_DIRECTORY, mergeType,

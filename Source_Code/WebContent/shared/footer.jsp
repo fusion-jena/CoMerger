@@ -27,11 +27,11 @@
 					Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain
 						Name</a>
 				</p>-->
-				<p>Latest revision December 2019</p>
+				<p>Latest revision January 2020</p>
 			</div>
 			<p class="font-xs">
 					Template by <a target="_blank" href="http://www.os-templates.com/"
-						title="Free Website Templates">OS Templates</a> | <a href="${pageContext.request.contextPath}/aboutUs.jsp">Impressum</a></p>
+						title="Free Website Templates">OS Templates</a> | <a href="${pageContext.request.contextPath}/impressum.jsp">Impressum</a></p>
 			<!-- ################################################################################################ -->
 		</footer>
 	</div>

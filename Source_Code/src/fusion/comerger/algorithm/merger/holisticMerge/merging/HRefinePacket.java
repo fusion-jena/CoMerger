@@ -699,7 +699,7 @@ public class HRefinePacket {
 
 					Set<OWLDataProperty> dpro = pOi.getDataPropertiesInSignature();
 					Set<OWLDataProperty> dproRef = pOiRef.getDataPropertiesInSignature();
-					System.out.println("OWLDataProperty:" + dpro + "\t" + dproRef);
+					
 					if (!dpro.equals(dproRef)) {
 						msg = "The dataproperty: " + " of property: "
 								+ pOi.toString().replace("<", "[").replace(">", "]")
@@ -708,7 +708,7 @@ public class HRefinePacket {
 
 					Set<OWLDatatype> dt = pOi.getDatatypesInSignature();
 					Set<OWLDatatype> dtRef = pOiRef.getDatatypesInSignature();
-					System.out.println("OWLDatatype:" + dt + "\t" + dtRef);
+			
 					if (!dt.equals(dtRef)) {
 						msg = "The datatype: " + " of property: " + pOi.toString().replace("<", "[").replace(">", "]")
 								+ " is skiped, and only the datatype of the reference equal entity is keeped.\n";

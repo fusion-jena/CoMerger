@@ -220,10 +220,9 @@ Licence URI: http://www.os-templates.com/template-terms
 			<br> <br> Save your consistncy result <a
 				href="${zipResultTxt}"> Download </a> <br> Your merged
 			ontology: <a href="${MergedOntZip}"> Download </a> Your log file: <a
-				href="${logFile}"> Download </a> <br> See your ontology in a
-			visualization tool: <a href="http://www.visualdataweb.de/webvowl"
-				target="_blank" style="target-new: tab;"
-				title="Upload your ontology in WebVoWL"> WebVoWL </a> <br> <br>
+				href="${logFile}"> Download </a> <br> 
+			
+				<br>
 			<h4>References:</h4>
 			<ul>
 				<li><b>On Using Subjective Logic to Build Consistent Merged

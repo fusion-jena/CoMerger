@@ -95,10 +95,8 @@ Licence URI: http://www.os-templates.com/template-terms
 			enctype="multipart/form-data" onsubmit='showLoading();'>
 			<input type="hidden" id="g-recaptcha-response"
 				name="g-recaptcha-response"> <input type="hidden"
-				name="action" value="validate_captcha"> 
-				<input type="hidden"
-				name="selectedRepair" id="selectedRepair" />
-				<input type="hidden"
+				name="action" value="validate_captcha"> <input type="hidden"
+				name="selectedRepair" id="selectedRepair" /> <input type="hidden"
 				name="selectedUserItem" id="selectedUserItem" /> <input
 				type="hidden" name="SecGMR" id="SecGMR" /> <input type="hidden"
 				name="SecEval" id="SecEval" /> <input type="hidden"
@@ -109,11 +107,12 @@ Licence URI: http://www.os-templates.com/template-terms
 			<section id="idSecDW" style="width: 100%;">
 
 				<h2>Merging Result</h2>
-				Your merged ontology: <a href="${MergedOntZip}"> Download </a> <br>Your
-				log file: <a href="${logFile}"> Download </a>
-
-				<input name="SavedPreferedOnt" id="SavedPreferedOnt" type="text"
-					value="${SavedPreferedOnt}" style="display: none;">
+				Your merged ontology: <a href="${MergedOntZip}"> Download </a> <br>
+				The sub-merged ontologies: <a href="${MergedSubOntZip}">Download</a>
+				<br> Save your evaluation result <a href="${zipResultTxt}">
+					Download </a> <br>Your log file: <a href="${logFile}">
+					Download </a> <input name="SavedPreferedOnt" id="SavedPreferedOnt"
+					type="text" value="${SavedPreferedOnt}" style="display: none;">
 
 			</section>
 			<!-- ###################################################################################################################### -->
@@ -387,9 +386,9 @@ Licence URI: http://www.os-templates.com/template-terms
 							</td>
 						</tr>
 						<tr>
-							<td align="center"><button class="btn medium" type="submit" name="submit"
-									value="DoConsistencyChecker" onClick="readConsParam()">Test
-									consistency!</button></td>
+							<td align="center"><button class="btn medium" type="submit"
+									name="submit" value="DoConsistencyChecker"
+									onClick="readConsParam()">Test consistency!</button></td>
 						</tr>
 						<tr>
 							<td><br></td>
@@ -410,7 +409,7 @@ Licence URI: http://www.os-templates.com/template-terms
 						value="GoQueryOne">Test with single query!</button>
 					<button class="btn medium" type="submit" name="submit"
 						value="GoQuerySeveral">Test with several queries!</button>
-				<br>
+					<br>
 				</div>
 			</div>
 			<!-- ###################################################################################################################### -->
@@ -451,16 +450,9 @@ Licence URI: http://www.os-templates.com/template-terms
 					value="DoEvalRepairErrors" onClick="processRepairPlan()">Repair
 					Errors</button>
 			</div>
-			<!-- <input
-				class="btn medium" type="submit" name="GoObjectivity"
-				value="Evaluate Objectivity!"> -->
-			<br> <br> Save your evaluation result <a
-				href="${zipResultTxt}"> Download </a> <br> See your ontology in
-			a visualization tool: <a href="http://www.visualdataweb.de/webvowl"
-				target="_blank" style="target-new: tab;"
-				title="Upload your ontology in WebVoWL"> WebVoWL </a> <span><br>
-				<sup>-</sup> means it is not implemented yet within the system</span> <br>
-			<br>
+			<br> 
+			<br> <span><br> <sup>-</sup> means it is not
+				implemented yet within the system</span> <br> <br>
 			<div id="SecReference" style="font-size: 12px;">
 				<span><hh>References:</hh> <br>[1] F. Duchateau, and Z.
 					Bellahsene. <i>Measuring the quality of an integrated schema.</i>
