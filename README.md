@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3580593.svg)](https://doi.org/10.5281/zenodo.3580593)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3601124.svg)](https://doi.org/10.5281/zenodo.3601124)
 
 # CoMerger
 CoMerger is a holistic multiple ontologies merging tool, available at http://comerger.uni-jena.de/.
@@ -71,6 +71,7 @@ This repository dedicated to CoMerger packages, inculding source codes and datas
 	1. set a Tomcat server on your machine (version 7.0 or higher)
 	2. go to `WebContent` folder
 	3. run `index.jsp` on Tomcat server
+
 * To **replace another alignment function** before running merge:
 	1. Import the alignment tool in the project
 	2. Call the function of the new alignment tool instead of `MatchingProcess.CreateMap()` in `MergingServlet.java` from `package fusion.comerger.servlets`
