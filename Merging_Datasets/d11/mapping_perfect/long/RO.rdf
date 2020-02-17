@@ -1,0 +1,695 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/RNU0"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Volume"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000123"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Radian"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/P8W0"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#frequency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000616"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/9LZ9"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ebi.ac.uk/swo/maturity/SWO_9000066"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ico.owl/ICO_0000321"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://usefulinc.com/ns/doap#Version"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/P267"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Person"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://rs.tdwg.org/dwc/terms/Event"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T051"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000016"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Millimeter"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://vivoweb.org/ontology/core#License"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/P242"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000105"/>
+        <entity2 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#frequency_unit"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T051"/>
+        <entity2 rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Event"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16809"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Magnetic_resonance_imaging_(MRI)"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Centimeter"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/UO_0000015"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <entity2 rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Entity"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Unit"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000008"/>
+        <entity2 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#meter"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#centimeter"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/UO_0000015"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Computed_tomography_(CT)"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17204"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25664"/>
+        <entity2 rdf:resource="http://mmisw.org/ont/Technology/ComputerNetworks/Scale"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/O567"/>
+        <entity2 rdf:resource="http://purl.org/ontology/bibo/Manual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/BiodiversityOntologyFull.owl#Person"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <entity2 rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Entity"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#scale"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25664"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/FBbi_00001005"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17204"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bootstrep.eu/ontology/GRO#Orientation"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/JAJH"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#volume"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/RNU0"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+        <entity2 rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000044"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/P8W0"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Entity"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://vivoweb.org/ontology/core#Translation"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/KCS2"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bootstrep.eu/ontology/GRO#Elongation"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/Q3CK"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
+        <entity2 rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/N8CA"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Energy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T051"/>
+        <entity2 rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T051"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/EKBE_0000048"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000106"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Hertz"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000918"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/RNU0"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://www.bootstrep.eu/ontology/GRO#Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.bootstrep.eu/ontology/GRO#Direction"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/3I4E"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Frequency"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/P8W0"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Process"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/EKBE_0000047"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Person"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://www.ebi.ac.uk/efo/medo/MEDO_0000092"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T051"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#event"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T051"/>
+        <entity2 rdf:resource="http://purl.org/biotop/biotop.owl#Event"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/98J3"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#volume_fraction"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Process"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2010/10/BPO.owl#person"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
+        <entity2 rdf:resource="http://www.neomark.eu/ontologies/Patient"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#volume_unit"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/UO_0000095"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/STY/T072"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/EKB_0000008"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
+        <entity2 rdf:resource="http://purl.org/autism-ontology/1.0/autism-core.owl#AUTISMC100006"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/KCS2"/>
+        <entity2 rdf:resource="http://mmisw.org/ont/Technology/ComputerNetworks/Translation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://bhi.washington.edu/OPB#OPB_01494"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/N8CA"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000191"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/1OBQ"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/P8W0"/>
+        <entity2 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#Frequency"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/6YIO"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/B8467_0000257"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ERO_0000071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000106"/>
+        <entity2 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#hertz"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://purl.org/biotop/biotop.owl#Process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/dco/v1#length_unit"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/schra/ontologies/2017/4/PRIME_NewOntology#Patient"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000016"/>
+        <entity2 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1435740495.owl#Entity"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/STY/T071"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000008"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Meter"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#length_unit"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/KCS2"/>
+        <entity2 rdf:resource="http://www.bootstrep.eu/ontology/GRO#Translation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#fraction"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/1OBQ"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000185"/>
+        <entity2 rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Degree"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <entity2 rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000096"/>
+        <entity2 rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#cubic_meter"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://bhi.washington.edu/OPB#OPB_01043"/>
+        <entity2 rdf:resource="http://www.radiomics.org/RO/C0JK"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.radiomics.org/RO/Process"/>
+        <entity2 rdf:resource="http://knoesis.wright.edu/provenir/provenir.owl#process"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

@@ -1,0 +1,1416 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:REPO="http://purl.bioontology.org/ontology/REPO.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/REPO.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntervalParturitionAndFirstService">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ParturitionInterval"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between calving and first insemination</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between calving and first service</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >postpartum interval</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Interval between parturition and first service</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >days to first service</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The time in days it takes for a animal to reach its first estrus after giving parturition.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000076</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >service interval</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >postpartum period</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Pressing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pressing</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000028</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#FoetalLethality">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The death of the foetus prior to complete expulsion or extraction from the dam.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >fetal mortality</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID: 5023990</dc:source>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#PerinatalLethality"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >foetal death</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000055</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >fetal death</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >foetal lethality</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >stillbirth</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReducedFemaleFertility">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReducedFertility"/>
+    </rdfs:subClassOf>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0001923</REPO:hasDbXref>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Reduced ability of female to produce live offspring.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reduced female fertility</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000042</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveBehavior">
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GO:0019098</REPO:hasDbXref>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000001</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive behavior</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The specific actions or reactions of an organism that are associated with reproduction.</dc:description>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Gene Ontology (GO; GOC:j)l</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive behaviour</REPO:hasSynonym>
+    <REPO:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://purl.org/obo/owl/GO#GO_0019098</REPO:hasURI>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SexualReceptivity">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sexual receptivity</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:00000012</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AcceptiveBehavior"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Willingness of a female to engage in mating interaction with a sexual partner. The period of sexual receptivity in farm animals occurs typically during estrus. Reliable behavioral signs of sexual receptivity are display of cooperative postures and standing while mounted.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#GestationPeriod">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000072</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gestation length</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pregnancy duration</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pregnancy period</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gestation period</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Length of time from conception to birth of the fetus.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ParturitionInterval"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Abortion">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Expulsion before full term of a conceptus which is incapable of independent life.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abortion</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >miscarriage</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID: 5023990</dc:source>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000056</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#FoetalLethality"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MateSelection">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The situation where an animal (generally a female) select as a mate a specific individual from a small group within the species.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mate selection</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MatingBehavior"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mate choice</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000008</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#FlehmenBehavior">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A particular type of curling of the upper lip in ungulates, felids, and many other mammals, which facilitates the transfer of pheromones and other scents into the vomeronasal organ.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000018</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen behavior</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lip-curling</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmening</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >wikipedia</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen behaviour</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen response</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen position</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehming</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen reaction</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#LateNeonatalLethality">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#NeonatalLethality"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >posthebdomadal mortality</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000062</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >late neonatal lethality</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death of a newborn after 7 days and before 29 days completed days of live.</dc:description>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID: 5023990</dc:source>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#InfertileRate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >infertile rate</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000083</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage eligible animals inable to contribute to conception.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#PerinatalLethality">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >perinatal lethality</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000054</dc:identifier>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID: 5023990</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >perinatal death</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#LethalityEmbryonicPerinatal"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death of foetuses and newborns occurring before or during birth, or in the first 28 days of live.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SexualLicking">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An action whereby the tongue is slib over the surface of an object. Sexual licking consists of social licking (an animal licks another animal), also called allolicking, which occurs predominantly during courtship and estrus.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >licking</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SniffingAndLicking"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000032</dc:identifier>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sexual licking</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Restlessness">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000030</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >restlessness</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A behavioral state characterized by sustained arousal and motor activity. Typical actions include short and repeated periods of pacing, scratching, ground scratching, head tossing or jerking, grooming or preening, higher occurrence of urination, requnet alteration between standing and lying, and increased ambulation.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >high activity</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hyperactive</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Butting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >butting</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >butting heads in mock fighting</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000015</dc:identifier>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hitting an object or another organism with the forehead or horns. Butting is commonly displayed during aggression or as displacement behavior when directed toward some object other than an adversary. A mild form of butting may also observed as a part of courtship activities. Butting during nursing (nusing butts) conducted by a suckling offspring is most common in bovines.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive rate</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A number that quantifies the occurrence of an event as a fraction, a percentage or a proportion of a whole per unit of time.</rdfs:comment>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000079</dc:identifier>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PATO:0000161</REPO:hasDbXref>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A monadic quality of occurrent that is the occurrence of a process per unit time.</dc:description>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Phenotypic quality  ontology (PATO)</dc:source>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntrapartumDeath">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death during parturition.</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#Abortion"/>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >intranatal death</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000058</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >intrapartum death</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Mounting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The act of an animal rasing the anterior part of its body gennerally onto the posterior part of another animal. Mounting, while typically performed by a male as part of copulatory behavior, is also common in sexually homogeneous groups of animals. Mounting among females is usually a reliable sign of estrus.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000022</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MatingBehavior">
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GO:0007617</REPO:hasDbXref>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mating behavior</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mating</REPO:hasSynonym>
+    <REPO:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://purl.org/obo/owl/GO#GO_0007617</REPO:hasURI>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000006</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mating behaviour</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.</dc:description>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GOC:ai, GOC:dph</dc:source>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AcceptiveBehavior"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#EstrousCycle">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >estrous cycle</rdfs:label>
+    <REPO:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://purl.org/obo/owl/GO#GO_0042698</REPO:hasURI>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN:0387520546</dc:source>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The type of sexual cycle seen in female mammals, with physiologic changes in the endometrium that recur at regular intervals during the reproductive years. The presence and regularity of the estrous cycle can been seen as indication for fertility.</dc:description>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GO:0042698</REPO:hasDbXref>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000070</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oestrous cycle</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#LongGestationPeriod">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Increase in the average duration of a pregnancy.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >long gestation period</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0002293</REPO:hasDbXref>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000044</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalGestationalLength"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#D.100-DayInCalfRate">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >100 day in calf rate</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000081</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of cows in the herd that become pregnant by 100 days after calving.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ConceptionRateAllServices">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of animal conceiving at services after parturition.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ConceptionRate"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000087</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >conception rate all services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbortionRate">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of induced abortions.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abortion rate</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000080</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#D.200-DayNotInCalfRate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#DecreasedLitterSiize">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reduced litter size</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >small litter size</REPO:hasSynonym>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0001935</REPO:hasDbXref>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalFertility"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fewer live born pups in a litter compared to average.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000036</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >decreased litter size</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingWithStanding">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >be mounted by other animals</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting other animals</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >To be mounted by a male or a female.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting with standing</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingBehavior"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000025</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ConceptionRate">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000086</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percent of animals that become pregnant as a result of one or specified number of services.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >conception rate</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Pregnancy rate per artificial insemination</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#PregnancyRate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#FemaleSexualBehavior">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >estrous behaviour</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveBehavior"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female sexual behavior</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Activities related to sexual sensation, sexual arousal, and sexual gratification of a female.</dc:description>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >heat activity</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oestrous behaviour</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female reproductive behaviour</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000004</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >estrous behavior</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female sexual behaviour</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oestrous behavior</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oestrous activity</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >estrus activity</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ChinPressing">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >chin resting on the back</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >chin rubbing</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >chin resting and back rubbing</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000029</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >rubbing</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >chin pressing</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Positioning of the chin on the dorsal area of a peer. Chin pressing is performed most frequently by bovine males during precopulatory behavior but also by estrus and periestrous cows. Chin pressing usually oriented toward the withers and the rump. Chin pressing also may be performed as chin rubbing.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SilentEstrus">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >suboestrus</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000048</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >silent heat</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >silent estrus</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Anestrus"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Reproductive cyclicity without behavioural signs.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >silent oestrus</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >quiet ovulation</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >undetected oestrus</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#CalfCrop">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000067</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The number or percentage of calves produced within a herd in a given year relative to the number of cows and heifers exposed to breeding.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >calf crop</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.brangusworld.com/documents/Agricultural%20publication%20G2030.pdf</dc:source>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AttemptedMounts">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingBehavior"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >One female animal attempted to mount another without the recipient standing.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000023</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >attempted mounts</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Sniffing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sniffing</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A series of brief inhalations of air occurring during olfactory investigation.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000033</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sniffing genitalia</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SniffingAndLicking"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Dystocia">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalParturition"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Slow or difficult delivery of offspring and/or placenta.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >dystocia</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0004514</REPO:hasDbXref>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >calving difficulty</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000051</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AgeAtFirstService">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first service</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Age at first service.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000065</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first breeding</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first insemination</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first mating</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalFertility">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0002161</REPO:hasDbXref>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveFailure"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal fertility/fecundity</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal fecundity</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000035</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anomaly in the reproductive capability of an organism or population to produce live offspring.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntervalFirstAndLastService">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000074</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The time between first and last service.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between first and last insemination</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ParturitionInterval"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between first and last service</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Congregating">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >grouping together</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000017</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >congregating</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Come together in a group.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SolicitationBehavior">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000034</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >solicitation behavior</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >solicitation behaviour</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveFailure">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000002</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The loss of the ability to produce offspring normally.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive failure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Bellowing">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bellowing</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A general term for loud, repeated voculizations of cattle. Bellowing may be an indication of excitement or distress (e.g. when expecting feed or water, when separated from group members, when in estrus) or a warning signal. High incidence of bellowing may be associated with nymphomania or disease (e.g. rabies).</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000014</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >bawling</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#FemaleInfertility">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Infertility"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000039</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female infertile</REPO:hasSynonym>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0001926</REPO:hasDbXref>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female sterility</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female infertility</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >female sterile</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Inability of female to produce live offspring.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingWithoutStanding">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingBehavior"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000026</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mounting without standing.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting without standing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReducedFertility">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reduced fertility</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0001921</REPO:hasDbXref>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sub-fertile</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000041</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hypofertile</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >semi-sterile</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Diminished ability to produce live offspring.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >decreased fecundity</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalFertility"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#EaseOfParturition">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ease of parturition</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000069</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The ease of giving birth to a newborn.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >calving ease</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ease of birthing</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#DelayedFertility">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Ability to produce live offspring occurring at a later than expected age.</dc:description>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0002683</REPO:hasDbXref>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000037</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >delayed puberty</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalFertility"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >delayed fertility</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#EmbryonicLethality">
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0008762</REPO:hasDbXref>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death anytime between fertilization and birth.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#LethalityEmbryonicPerinatal"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >embryonic death</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >prenatal lethality</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >embryonic lethality</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000053</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >proceptive behavior</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >courting</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >courtship</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >proceptive behaviour</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#FemaleSexualBehavior"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000013</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Solicitation of a male's attention by a sexually receptive female.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ParturitionRate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parturition rate</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >calving rate</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000084</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of bred females that gave birth.</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntolerantOfMountingAttempts">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingBehavior"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000027</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Not tolerate attempts to being mounted by another animal.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Intolerant of mounting attempts</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#PregnancyRate">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000085</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pregnancy rate</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of bred females that became pregnant.</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveIndex">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Integrated index of reproductive performance, obtained from records on, for example, days open, days to first service and parturition interval.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive index</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000092</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Pseudopregnancy">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalFertility"/>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >false pregnancy</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000040</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pseudopregnancy</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A state resembling pregnancy that can occur in mammals following an infertile copulation.</dc:description>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BioProcess international</dc:source>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AgeAtFirstConception">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000063</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first conception</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Age at first conception.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SubmissionRate">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000091</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >submission rate</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of females submitted for insemination or mating.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalEstrousCycle">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Failure of or aberrant timing of the sexual cycle of female animals.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal oestrous cycle</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal estrous cycle</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal estrus cycle</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >irregular oestrous cycle</REPO:hasSynonym>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0001927</REPO:hasDbXref>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveFailure"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000046</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >irregular heat cycle</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#EarlyNeonatalLethality">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID: 5023990</dc:source>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >early neonatal lethality</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000061</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death of a newborn within the first seven days of live.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#NeonatalLethality"/>
+    </rdfs:subClassOf>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hebdomadal mortality</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#VoluntaryWatingPeriod">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fixed period following parturition before attempting to breed animal. This term in part reflects the reproductive performance of the female, but obviously also depends on farmers's preference and reproductive protocol used on the farm.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000094</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Voluntary waiting period</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AcceptiveBehavior">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000005</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#FemaleSexualBehavior"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >acceptive behavior</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >acceptive behaviour</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Behavior that expresses the female sexual receptivity and allows copulation.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ShortGestationPeriod">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalGestationalLength"/>
+    </rdfs:subClassOf>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0002294</REPO:hasDbXref>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000045</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >short gestation period</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Decrease in the average duration of a pregnancy.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Mount">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000024</dc:identifier>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An event of mounting.</dc:description>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mount</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#CirclingDisplay">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >circling display</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000016</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >circling</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >standing head to tail and circling</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Circular movement of sexual partners in a synchronized head-to-back position; considered to be a courtship activity.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#D.200-DayNotInCalfRate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >200 days not in calf rate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000082</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of cows not pregnant by 200 days after calving.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MountingBehavior">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000021</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mount</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting behaviour</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mounting behavior</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A female that is ovulating will typically stand still and allow herself to be mounted.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Mating">
+    <REPO:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://purl.org/obo/owl/GO#GO_0007618</REPO:hasURI>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+    </rdfs:subClassOf>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GO:0007618</REPO:hasDbXref>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN:0387520546</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >copulation</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sexual intercourse</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000009</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The pairwise union of individuals for the purpose of sexual reproduction, ultimately resulting in the formation of zygotes.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mating</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ConceptionRateFirstService">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000088</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ConceptionRate"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >conception rate after first service</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Conception rate after first insemination</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of animal conceiving at first insemination after parturition.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ParturitionInterval">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >calving interval</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The time interval between one parturition and the next.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000071</dc:identifier>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parturition interval</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#SniffingAndLicking">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >licking back</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sniffing and licking</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sniffing and licking.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000031</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MatingFrequency">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mating frequency</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#MatingBehavior"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000010</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The number of pairs of individuals which mated in a given time period.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#MatingStance">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >squatting stance</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mating stance</rdfs:label>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#MatingBehavior"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:00000011</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Posture of a female indicative of sexual receptivity. Most common characteristics of this stance in four-legged animals are slightly spread hind legs, extended neck with slightly lowered head and laterally displayed tail.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalGestationalLength">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveFailure"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000043</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >prolonged gestation</REPO:hasSynonym>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0002292</REPO:hasDbXref>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal gestational length</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anomaly in the usual duration of time between when a fertilized egg implants in the wall of the uterus and the birth of offspring.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Flehmen">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ProceptiveBehavior"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen behaviour</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen position</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen behavior</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A response to pheromones, manifested by inhallation followed by distinct upward curling of the upper lip and dorsiflexion of the neck. Lip-curling is most noticeable in male ungulates when proximity to estrous females or when examining their genitalia, urine, or urine marking but may also be exhibited by female bovines when close to estrus peers.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen response</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 0-8138-2464-8</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehming</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000019</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen reaction</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lip-curling</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AbnormalParturition">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000050</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >abnormal parturition</rdfs:label>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0002907</REPO:hasDbXref>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveFailure"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Defect in the process of labor and delivery in female animals.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Infertility">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sterility</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalFertility"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000038</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >infertility</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >failure to conceive</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Inability to produce live offspring.</dc:description>
+    <REPO:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MP:0001924</REPO:hasDbXref>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >infertile</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sterile</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mammalian Phenotype Ontology (MP).</dc:source>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#FlehmenResponse">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000020</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehming</REPO:hasSynonym>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Wikipedia</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen reaction</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen response</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The flehmen response is a particular type of curling of the upper lip in ungulates, felids, and many other mammals, which facilitates the transfer of pheromones and other scents into the vomeronasal organ.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmening</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >flehmen position</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AgeAtPuberty">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The age at first ovulation, when regular estrous cycles start and make reproduction
+possible. [J. Anim. Sci. 1999. 77:1329–1334].</rdfs:comment>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first oestrus</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at puberty</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first estrus</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >puberty age</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The age at which reproductive function is initiated in animals.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first ovulation</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000066</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first heat</REPO:hasSynonym>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >breeding performance</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive ability</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive capacity</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive efficiency</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The final outcome of all processes involved in 1) quality and quantity of gametes of both sexes 2) pregnancy rates 3) survival rates of embryo, foetus and newborn</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive performance</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000003</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#obsolete">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >obsolete</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ServicesPerConception">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000093</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the number of inseminations per conception</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >services per conception</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The number of services required to obtain a pregnancy. Services per conception is equal to 1 divided by the conception rate</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ServiceRate">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >estrous detection rate</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >heat detection rate</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oestrous detection rate</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >service rate</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000090</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#Anestrus">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000047</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >anoestrus</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lack of heat</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The female animal is not observed in oestrus because she has not come into oestrus (non-cyclic female animal) or because the estrus was not detected (cyclic female animal).</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >anestrus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalEstrousCycle"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#RepeatBreeder">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >repeat breeder</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000049</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A normally cyclic animal, without clinical abnormalities, that did not conceive after at least two successive services or inseminations.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >rebred</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalEstrousCycle"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntervalParturitionAndConception">
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >service period</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >days open</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >non pregnant period</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The time from parturition until the establishment of the next pregnancy.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000073</dc:identifier>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ISBN 9781405115452</dc:source>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >open</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between parturition and conception</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ParturitionInterval"/>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >days dry</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between calving and conception</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#NeonatalLethality">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >neonatal lethality</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000060</dc:identifier>
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PMID: 5023990</dc:source>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death of newborn within the first 28 days of live.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >neonatal death</REPO:hasSynonym>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#PerinatalLethality"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AntepartumDeath">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000057</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#Abortion"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Death prior to parturition.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >antepartum death</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >antenatal death</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#PrematureDelivery">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000059</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#AbnormalParturition"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >premature delivery</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >preterm</REPO:hasSynonym>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Delivery before a certain time gestation.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntervalParturitionAndFirstEstrus">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#IntervalParturitionAndFirstService"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Interval between parturition and first oestrus.</dc:description>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLA: Commence of luteal activity</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between parturition and first heat</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between parturition and first ovulation</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between parturition and first oestrus</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000077</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between parturition and first estrus</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#FailureToConceiveCullingRate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveCullingRate"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Failure to conceive culling rate</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000068</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of animals that fail to get back in pregnant within a specific serving period and are consequently culled.</dc:description>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#AgeAtFirstParturition">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first parturition</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Age at first parturition of a female animal, i.e. the time when the animal gives birth to its first off-spring.</dc:description>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000064</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >age at first calving</REPO:hasSynonym>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveCullingRate">
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000089</dc:identifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >reproductive culling rate</rdfs:label>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The percentage of animals that is culled because of reproductive failure.</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveRate"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#CalvingIndex">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Totalling up all the calving intervals and dividing by the number of cows involved will give the calving index for the herd.</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >calving index</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000068</dc:identifier>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#ParturitionPercentage">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parturition percentage</rdfs:label>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000078</dc:identifier>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The number of services given to a defined group of animals or over a specified period which result in a parturition, expressed as a percentage of the total number of services.</dc:description>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductivePerformance"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#LethalityEmbryonicPerinatal">
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ReproductiveFailure"/>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000052</dc:identifier>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lethality/embryonic-perinatal</REPO:hasSynonym>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >survival</REPO:hasSynonym>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lethality-embryonic/perinatal</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntervalFirstServiceAndConception">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Time between first service and conception.</dc:description>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval between first service and conception</rdfs:label>
+    <REPO:hasSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >interval first insemination and conception</REPO:hasSynonym>
+    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REPO:0000075</dc:identifier>
+    <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/REPO.owl#ParturitionInterval"/>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/REPO.owl#hasDefinition"/>
+  <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/REPO.owl#hasIdentifier"/>
+  <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/REPO.owl#hasDbXref"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+  <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/REPO.owl#hasSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+  <rdf:Description rdf:about="http://purl.bioontology.org/ontology/REPO.owl#IntervalParturitionAndFirstOestrus">
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Interval between parturition and first estrus.</dc:description>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.bioontology.org/ontology/REPO.owl#hasURI"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.7, Build 620)  http://protege.stanford.edu -->

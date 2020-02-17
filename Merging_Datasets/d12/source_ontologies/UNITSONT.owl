@@ -1,0 +1,898 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY unit "http://mimi.case.edu/ontologies/2009/1/UnitsOntology#" >
+]>
+
+
+<rdf:RDF xmlns="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#"
+     xml:base="http://mimi.case.edu/ontologies/2009/1/UnitsOntology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:unit="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="&skos;">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment>This is a subset of the measurement units needed for the Sleep Domain Ontology.</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <dc:creator>Sivaram Arabandi</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="#formula"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&skos;altLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#SI_system -->
+
+    <owl:Class rdf:about="#SI_system">
+        <rdfs:label>SI system (le Syst&#232;me international d&#39;unit&#233;s)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#metric_system"/>
+        <rdfs:comment>modern form of the metric system and is generally a system devised around the convenience of the number ten. [http://en.wikipedia.org/wiki/International_System_of_Units]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#Non-SI_unit -->
+
+    <owl:Class rdf:about="#Non-SI_unit">
+        <rdfs:label>Non-SI unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#metric_system"/>
+        <rdfs:comment>Certain units that are not part of the International System of Units, i.e., they are outside the SI, but are important and widely used.
+        [http://physics.nist.gov/cuu/Units/outside.html]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#US_length_unit -->
+
+    <owl:Class rdf:about="#US_length_unit">
+        <rdfs:label>US length unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#united_states_customary_units"/>
+        <rdfs:comment
+            >The system for measuring length in the United States customary system is based on the inch, foot, yard, and mile, which are the only four customary length measurements in everyday use. Since July 1, 1959, these have been defined on the basis of 1 yard = 0.9144 meters except for some applications in surveying. 
+[http://en.wikipedia.org/wiki/United_States_customary_units#Units_of_length]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#US_mass_unit -->
+
+    <owl:Class rdf:about="#US_mass_unit">
+        <rdfs:label>US mass unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#united_states_customary_units"/>
+        <rdfs:comment
+            >There have historically been five different English systems of mass: tower, apothecaries&#39;, troy, avoirdupois, and metric. Of these, it is the avoirdupois system which is the most common system of weights in the U.S., although Troy weight is still used to weigh precious metals.
+The avoirdupois (pronounced /&#716;&#230;v&#601;rd&#601;&#712;p&#596;&#618;z/; French pronunciation: [avwa&#640;dypw&#593;]) system is a system of weights (or, properly, mass) based on a pound of sixteen ounces.
+[http://en.wikipedia.org/wiki/United_States_customary_units#Units_of_mass]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#US_ounce -->
+
+    <owl:Class rdf:about="#US_ounce">
+        <rdfs:label>ounce (oz)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#US_mass_unit"/>
+        <formula
+            >(unit:gram / 28.34952)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#US_pound -->
+
+    <owl:Class rdf:about="#US_pound">
+        <rdfs:label>pound (lb)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#US_mass_unit"/>
+        <formula
+            >(unit:gram / 453.59237)</formula>
+        <formula
+            >(unit:US_ounce / 16)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#area_density_unit -->
+
+    <owl:Class rdf:about="#area_density_unit">
+        <rdfs:label
+            >area density unit</rdfs:label>
+        <skos:altLabel>mass per unit area unit</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#density_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000054</dc:source>
+        <rdfs:comment
+            >Definition: A density unit which is a standard measure of the mass exerting an influence on a given area. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#base_unit -->
+
+    <owl:Class rdf:about="#base_unit">
+        <rdfs:label>base unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SI_system"/>
+        <rdfs:comment
+            >Definition: A unit which is one of a particular measure to which all measures of that type can be related. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000045</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#centimeter -->
+
+    <owl:Class rdf:about="#centimeter">
+        <rdfs:label>centimeter</rdfs:label>
+        <skos:altLabel>cm</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#length_unit"/>
+        <formula
+            >(unit:meter * 100)</formula>
+        <rdfs:comment
+            >Definition: A length unit which is equal to one hundredth of a meter or 10^[-2] m. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000015</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#count -->
+
+    <owl:Class rdf:about="#count">
+        <skos:altLabel>tally</skos:altLabel>
+        <skos:altLabel>score</skos:altLabel>
+        <rdfs:label>count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#dimensionless_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000189</dc:source>
+        <rdfs:comment
+            >Definition: A dimensionless unit which denotes a simple count of things. [MGED]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#cubic_meter -->
+
+    <owl:Class rdf:about="#cubic_meter">
+        <skos:altLabel>m^[3]</skos:altLabel>
+        <rdfs:label>cubic meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#volume_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000096</dc:source>
+        <formula
+            >(unit:liter / 1000)</formula>
+        <rdfs:comment
+            >Definition: A volume unit which is equal to the volume of a cube with edges one meter in length. One cubic meter equals to 1000 liter.s [NIST]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#day -->
+
+    <owl:Class rdf:about="#day">
+        <rdfs:label>day</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <rdfs:comment
+            >Definition: A time unit which is equal to 24 hours. [Wikipedia]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000033</dc:source>
+        <formula
+            >(unit:hour / 24)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#decibel -->
+
+    <owl:Class rdf:about="#decibel">
+        <skos:altLabel>dB</skos:altLabel>
+        <rdfs:label>decibel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#named_ratio"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000259</dc:source>
+        <rdfs:comment
+            >Definition: The decibel (dB) is a logarithmic unit of measurement that expresses the magnitude of a physical quantity (usually power or intensity) relative to a specified or implied reference level. Since it expresses a ratio of two quantities with the same unit, it is a dimensionless unit. A decibel is one tenth of a bel, a seldom-used unit. [Wikipedia]
+
+An ratio unit which is an indicator of sound power per unit area. [techtarget]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#density_unit -->
+
+    <owl:Class rdf:about="#density_unit">
+        <rdfs:label>density unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#derived_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000182</dc:source>
+        <rdfs:comment
+            >Definition: A derived unit which is a standard measure of the influence exerted by some mass. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#pressure_unit -->
+
+    <owl:Class rdf:about="#pressure_unit">
+        <rdfs:label>pressure unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#derived_unit"/>
+        <dc:source>http://purl.org/obo/owl/UO#UO_0000109</dc:source>
+        <rdfs:comment>Definition: A derived unit which is a standard measure of the force applied to a given area.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#pascal -->
+
+    <owl:Class rdf:about="#pascal">
+        <rdfs:label>pascal</rdfs:label>
+        <skos:altLabel>Pa</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#pressure_unit"/>
+        <dc:source>http://purl.org/obo/owl/UO#UO_0000110</dc:source>
+        <rdfs:comment>Definition: A pressure unit which is equal to the pressure or stress on a surface caused by a force of 1 newton spread over a surface of 1 m^[2].</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#non-SI_pressure_unit -->
+
+    <owl:Class rdf:about="#non-SI_pressure_unit">
+        <rdfs:label>non-SI pressure unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Non-SI_unit"/>
+        <rdfs:comment>Pressure units that are not part of the SI system but are widely used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeters_of_mercury -->
+
+    <owl:Class rdf:about="#millimeters_of_mercury">
+        <rdfs:label>millimeters of mercury</rdfs:label>
+        <skos:prefLabel>Millimeters of Mercury</skos:prefLabel>
+        <skos:altLabel>mm Hg</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#non-SI_pressure_unit"/>
+        <rdfs:comment>Pressure exerted by a column of mercury.
+        One mmHg (millimeter of mercury) is equal to one torr (133.322 Pa).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#derived_unit -->
+
+    <owl:Class rdf:about="#derived_unit">
+        <rdfs:label>derived unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SI_system"/>
+        <rdfs:comment
+            >Definition: A unit which is derived from base units. [Wikipedia]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000046</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#dimensionless_unit -->
+
+    <owl:Class rdf:about="#dimensionless_unit">
+        <rdfs:label
+            >dimensionless unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#derived_unit"/>
+        <rdfs:comment
+            >Definition: A derived unit which is a standard measure of physical quantity consisting of only a numerical number without any units. [Wikipedia]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000186</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#english_system -->
+
+    <owl:Class rdf:about="#english_system">
+        <rdfs:label
+            >English system of measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#unit"/>
+        <rdfs:comment
+            >refers to the historical units of measurement in medieval England, which evolved as a combination of the Anglo-Saxon and Roman systems of units. [http://en.wikipedia.org/wiki/English_unit]
+
+types of English system:
+Imperial system:  is a system of units, first defined in the British Weights and Measures Act of 1824, later refined (until 1959) and reduced. [http://en.wikipedia.org/wiki/Imperial_unit]
+
+United States customary units:  most commonly used system of measurement in the United States. It is similar but not identical to the British Imperial units. The vast majority of U.S. customary units have been defined in terms of the meter and the kilogram since the Mendenhall Order of 1893 (and, in practice, for many years before that date).
+[http://en.wikipedia.org/wiki/United_States_customary_units]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#event_count -->
+
+    <owl:Class rdf:about="#event_count">
+        <skos:altLabel>number of events</skos:altLabel>
+        <rdfs:label>event count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#count"/>
+        <rdfs:comment
+            >Definition: A dimensionless count unit which denotes the number of occurrences of an event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#event_frequency -->
+
+    <owl:Class rdf:about="#event_frequency">
+        <rdfs:label>Event frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#frequency_unit"/>
+        <rdfs:comment
+            >Definition: the number of occurrences of an event within a fixed time interval. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_second -->
+
+    <owl:Class rdf:about="#events_per_second">
+        <rdfs:label>Events per second</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 second.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_minute -->
+
+    <owl:Class rdf:about="#events_per_minute">
+        <rdfs:label>Events per minute</rdfs:label>
+        <formula>(unit:events_per_second * 60)</formula>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 minute.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_hour -->
+
+    <owl:Class rdf:about="#events_per_hour">
+        <rdfs:label>Events per hour</rdfs:label>
+        <formula>(unit:events_per_minute * 60)</formula>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 hour.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_day -->
+
+    <owl:Class rdf:about="#events_per_day">
+        <rdfs:label>Events per day</rdfs:label>
+        <formula>(unit:events_per_hour * 24)</formula>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 day.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_week -->
+
+    <owl:Class rdf:about="#events_per_week">
+        <rdfs:label>Events per week</rdfs:label>
+        <formula>(unit:events_per_day * 7)</formula>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 week.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_month -->
+
+    <owl:Class rdf:about="#events_per_month">
+        <rdfs:label>Events per month</rdfs:label>
+        <formula>(unit:events_per_day * 30)</formula>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 month.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#events_per_year -->
+
+    <owl:Class rdf:about="#events_per_year">
+        <rdfs:label>Events per year</rdfs:label>
+        <formula>(unit:events_per_day * 365.25)</formula>
+        <rdfs:subClassOf rdf:resource="#event_frequency"/>
+        <rdfs:comment>Definition: number of events occurring in 1 year.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#foot -->
+
+    <owl:Class rdf:about="#foot">
+        <rdfs:label>foot (ft)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#US_length_unit"/>
+        <formula
+            >(unit:inch / 12)</formula>
+        <formula
+            >(unit:meter / 0.3048)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#fraction -->
+
+    <owl:Class rdf:about="#fraction">
+        <rdfs:label>fraction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ratio"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000191</dc:source>
+        <rdfs:comment
+            >Definition: A dimensionless ratio unit which relates the part (the numerator) to the whole (the denominator). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#frequency_unit -->
+
+    <owl:Class rdf:about="#frequency_unit">
+        <rdfs:label>frequency unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#derived_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000105</dc:source>
+        <rdfs:comment
+            >Definition: A derived unit which is a standard measure of the number of repetitive actions in a particular time. [NIST]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#gram -->
+
+    <owl:Class rdf:about="#gram">
+        <skos:altLabel>g</skos:altLabel>
+        <rdfs:label>gram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#mass_unit"/>
+        <formula
+            >(unit:kilogram * 1000)</formula>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000021</dc:source>
+        <rdfs:comment
+            >Definition: A mass unit which is equal to one thousandth of a kilogram or 10^[-3] kg. [NIST]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#hertz -->
+
+    <owl:Class rdf:about="#hertz">
+        <skos:altLabel>Hz</skos:altLabel>
+        <rdfs:label>hertz</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#frequency_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000106</dc:source>
+        <rdfs:comment
+            >Definition: A frequency unit which is equal to 1 complete cycle of a recurring phenomenon in 1 second. [NIST]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#hour -->
+
+    <owl:Class rdf:about="#hour">
+        <skos:altLabel>h</skos:altLabel>
+        <rdfs:label>hour</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <rdfs:comment
+            >Definition: A time unit which is equal to 3600 seconds or 60 minutes. [Wikipedia]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000032</dc:source>
+        <formula
+            >(unit:minute / 60)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#inch -->
+
+    <owl:Class rdf:about="#inch">
+        <rdfs:label>inch (in)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#US_length_unit"/>
+        <formula
+            >(unit:millimeter / 25.4)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#kilogram -->
+
+    <owl:Class rdf:about="#kilogram">
+        <rdfs:label>kilogram</rdfs:label>
+        <skos:altLabel>kg</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#mass_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000009</dc:source>
+        <rdfs:comment
+            >Definition: A mass unit which is equal to the mass of the International Prototype Kilogram kept by the BIPM at Svres, France. [NIST]</rdfs:comment>
+    </owl:Class>
+    
+    
+    <owl:Thing rdf:about="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#kilogram">
+        <rdfs:label>kilogram</rdfs:label>
+    </owl:Thing>
+
+    
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#kilogram_per_square_meter -->
+
+    <owl:Class rdf:about="#kilogram_per_square_meter">
+        <rdfs:label
+            >kilogram per square meter</rdfs:label>
+        <skos:altLabel>kg/m^[2]</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#area_density_unit"/>
+        <rdfs:comment
+            >Definition: An area density unit which is equal to the mass of an object in kilograms divided by the surface area in meters squared. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000086</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#length_unit -->
+
+    <owl:Class rdf:about="#length_unit">
+        <rdfs:label>length unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#base_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000001</dc:source>
+        <rdfs:comment
+            >Definition: A base unit which is a standard measure of the distance between two points. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#liter -->
+
+    <owl:Class rdf:about="#liter">
+        <rdfs:label>liter</rdfs:label>
+        <skos:altLabel>L</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#volume_unit"/>
+        <rdfs:comment
+            >Definition: A volume unit which is equal to one thousandth of a cubic meter or 10^[-3] m^[3], or to 1 decimeter. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000099</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#liter_per_minute -->
+
+    <owl:Class rdf:about="#liter_per_minute">
+        <skos:altLabel>l/m</skos:altLabel>
+        <skos:altLabel>liter/min</skos:altLabel>
+        <rdfs:label
+            >liter per minute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#volume_flow_unit"/>
+        <rdfs:comment>Definition:</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#mass_unit -->
+
+    <owl:Class rdf:about="#mass_unit">
+        <rdfs:label xml:lang="en">mass unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#base_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000002</dc:source>
+        <rdfs:comment
+            >Definition: A base unit which is a standard measure of the amount of matter/energy of a physical object. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#meter -->
+
+    <owl:Class rdf:about="#meter">
+        <skos:altLabel>m</skos:altLabel>
+        <rdfs:label>meter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#length_unit"/>
+        <rdfs:comment
+            >Definition: A length unit which is equal to the length of the path traveled by light in vacuum during a time interval of 1/299 792 458 of a second. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000008</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#metric_system -->
+
+    <owl:Class rdf:about="#metric_system">
+        <rdfs:label
+            >Metric system of measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#unit"/>
+        <rdfs:comment
+            >an international decimalised system of measurement. [http://en.wikipedia.org/wiki/Metric_system]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#mile -->
+
+    <owl:Class rdf:about="#mile">
+        <rdfs:label>mile (mi)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#US_length_unit"/>
+        <formula
+            >(unit:meter / 1609.344)</formula>
+        <formula
+            >(unit:yard / 1760)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#milligram -->
+
+    <owl:Class rdf:about="#milligram">
+        <rdfs:label>milligram</rdfs:label>
+        <skos:altLabel>mg</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#mass_unit"/>
+        <rdfs:comment
+            >Definition: A mass unit which is equal to one thousandth of a gram or 10^[-3] g. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000022</dc:source>
+        <formula
+            >(unit:gram * 1000)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter -->
+
+    <owl:Class rdf:about="#millimeter">
+        <rdfs:label>millimeter</rdfs:label>
+        <skos:altLabel>mm</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#length_unit"/>
+        <rdfs:comment
+            >Definition: A length unit which is equal to one thousandth of a meter or 10^[-3] m. [NIST]</rdfs:comment>
+        <formula
+            >(unit:meter * 1000)</formula>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000016</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#minute -->
+
+    <owl:Class rdf:about="#minute">
+        <rdfs:label>minute</rdfs:label>
+        <skos:altLabel>min</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000031</dc:source>
+        <rdfs:comment
+            >Definition: A time unit which is equal to 60 seconds. [Wikipedia]</rdfs:comment>
+        <formula
+            >(unit:second / 60)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#month -->
+
+    <owl:Class rdf:about="#month">
+        <rdfs:label>month</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000035</dc:source>
+        <rdfs:comment
+            >Definition: A time unit which is approximately equal to the length of time of one of cycle of the moon&#39;s phases which is science is taken to be equal to 30 days. [Wikipedia]</rdfs:comment>
+        <formula>(unit:day / 30)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#named_ratio -->
+
+    <owl:Class rdf:about="#named_ratio">
+        <rdfs:subClassOf rdf:resource="#ratio"/>
+        <rdfs:comment
+            >grouping for some special types of ratios</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#percent -->
+
+    <owl:Class rdf:about="#percent">
+        <rdfs:label>percent</rdfs:label>
+        <skos:altLabel>%</skos:altLabel>
+        <formula>(unit:fraction * 100)</formula>
+        <rdfs:subClassOf rdf:resource="#ratio"/>
+        <dc:source>http://purl.org/obo/owl/UO#UO_0000187</dc:source>
+        <rdfs:comment>Definition: A dimensionless ratio unit which denotes numbers as fractions of 100. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#ratio -->
+
+    <owl:Class rdf:about="#ratio">
+        <rdfs:label>ratio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#dimensionless_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000190</dc:source>
+        <rdfs:comment
+            >Definition: A dimensionless unit which denotes an amount or magnitude of one quantity relative to another. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#scale -->
+
+    <owl:Class rdf:about="#scale">
+        <rdfs:label>scale</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ratio"/>
+        <rdfs:comment
+            >Definition: A dimensionless ratio unit which relates the part (the numerator) to a specified, fixed whole (the denominator).
+E.g. in a map, a scale of 1:10,000 may mean something like 1 centimeter on the map is equivalent to 100 meters on the ground.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#second -->
+
+    <owl:Class rdf:about="#second">
+        <skos:altLabel>s</skos:altLabel>
+        <rdfs:label>second</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000010</dc:source>
+        <rdfs:comment
+            >Definition: A time unit which is equal to the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom. [NIST]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#time_unit -->
+
+    <owl:Class rdf:about="#time_unit">
+        <rdfs:label>time unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#base_unit"/>
+        <rdfs:comment
+            >Definition: A base unit which is a standard measure of the dimension in which events occur in sequence. [Wikipedia]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000003</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#unit -->
+
+    <owl:Class rdf:about="#unit">
+        <rdfs:label
+            >Unit of measurement</rdfs:label>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000000</dc:source>
+        <rdfs:comment
+            >Definition: A unit of measurement is a standardized quantity of a physical quality. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#united_states_customary_units -->
+
+    <owl:Class rdf:about="#united_states_customary_units">
+        <rdfs:label
+            >United States customary units</rdfs:label>
+        <skos:altLabel>American system</skos:altLabel>
+        <skos:altLabel>English units</skos:altLabel>
+        <rdfs:subClassOf rdf:resource="#english_system"/>
+        <rdfs:comment
+            >most commonly used system of measurement in the United States. It is similar but not identical to the British Imperial units. The vast majority of U.S. customary units have been defined in terms of the meter and the kilogram since the Mendenhall Order of 1893 (and, in practice, for many years before that date).
+[http://en.wikipedia.org/wiki/United_States_customary_units]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#volume_flow_unit -->
+
+    <owl:Class rdf:about="#volume_flow_unit">
+        <rdfs:label
+            >volume flow unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#derived_unit"/>
+        <rdfs:comment
+            >Definition: the volume of fluid which passes through a given surface per unit time. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#volume_unit -->
+
+    <owl:Class rdf:about="#volume_unit">
+        <rdfs:label>volume unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#derived_unit"/>
+        <rdfs:comment
+            >Definition: A derived unit which is a standard measure of the amount of space occupied by any substance, whether solid, liquid, or gas. [NIST]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000095</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#week -->
+
+    <owl:Class rdf:about="#week">
+        <rdfs:label>week</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <rdfs:comment
+            >Definition: A time unit which is equal to 7 days. [Wikipedia]</rdfs:comment>
+        <formula>(unit:day / 7)</formula>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000034</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#yard -->
+
+    <owl:Class rdf:about="#yard">
+        <rdfs:label>yard (yd)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#US_length_unit"/>
+        <formula
+            >(unit:meter / 0.9144)</formula>
+        <formula>(unit:foot / 3)</formula>
+    </owl:Class>
+    
+
+
+    <!-- http://mimi.case.edu/ontologies/2009/1/UnitsOntology#year -->
+
+    <owl:Class rdf:about="#year">
+        <rdfs:label>year</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#time_unit"/>
+        <formula
+            >(unit:day / 365.25)</formula>
+        <rdfs:comment
+            >Definition: A time unit which is equal to 12 months which is science is taken to be equal to 365.25 days. [Wikipedia]</rdfs:comment>
+        <dc:source
+            >http://purl.org/obo/owl/UO#UO_0000036</dc:source>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

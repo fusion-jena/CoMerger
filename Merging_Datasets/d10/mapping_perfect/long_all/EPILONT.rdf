@@ -1,0 +1,4063 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://dbpedia.org/ontology/Thing"/>
+        <entity2 rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/C-F2730"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/95250069e5de2f0a6d289fcc000adf6f93f1686f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/e79981ac745d2bee200fb916fbcb197f4b4d17ab"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X7A0c"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0014544"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12351"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/BTO_0000231"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/XM010"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Hemiclonic_Seizure"/>
+        <entity2 rdf:resource="http://www.case.edu/EpSO.owl#HemiClonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0228174"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/5/Ontology1338526551855.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906079800276081"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://d-nb.info/gnd/4003657-1"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#G07.610.240.670"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/ClinicalEvaluation.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DOID_1825"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/HP_0100021"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/MB45.1"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://dicom.nema.org/resources/ontology/DCM/MS"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ictal"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/PATO#PATO_0001913"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000268"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICD10/G40"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X70pc"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906094827824276"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ictal"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Ictal"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#ChildhoodAbsenceEpilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.org/sig/ont/fma/fma61817"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/447e1cfcbb8f960c52b19eac801e9f5091cda392"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_myoclonic_absences"/>
+        <entity2 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_11785"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D055423"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10008129"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35053"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/258061005"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G25.3"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Hemiclonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Hemiclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Typical_Absence_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Typical_Absence_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0270853"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/246545002"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Reflex_Epilepsies"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/8A61.40"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/G-A468"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D004827"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/danielhier/ontologies/2019/3/untitled-ontology-57/syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/NPOntology.owl#early_myoclonic_encephalopathy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85010119"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000676"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Clonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D009682"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/A06009"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/VHOG_0001639"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU048144"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906091072222824"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0039070"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84796"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000093"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/ERO_0001236"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10048816"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10015037"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Generalized_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#C579932"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://www.case.edu/EpSO.owl#AtonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://uri.neuinfo.org/nif/nifstd/birnlex_12776"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Benign_Childhood_Epilepsy_with_CentroTemporal_Spikes"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_childhood_epilepsy_with_centrotemporal_spikes"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Typical_Absence_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/432241000124101"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016532"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906023291021812"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/201006018848141740"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/32e22535f4724e82fd0c188a4d6f61951a1d5811"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D010775"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.mskcc.org/ontologies/2013/03/sae.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/4d8b5920ebc43700b32a7804f1bc16a5a9552eaf"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/AlzheimerOntology#cerebral_hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D010775"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/danielhier/ontologies/2019/3/untitled-ontology-57/aura"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/MA_0000133"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/L1-8D2"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/XC0Ac"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325521724189.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/1eb7fa5431bf49fe580a66320f97a7cc92206360"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/GAZ_00001111"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spike"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_10832"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://www.case.edu/EpSO.owl#CerebralHemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://cbmi.med.harvard.edu/asdphenotype#Class_505"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D009682"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_3651"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_familial_infantile_seizures"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#32207"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Childhood_Absence_Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.gamuts.net/entity#idiopathic"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/Ub02Z"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000474"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/6208003"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.orpha.net/ORDO/Orphanet_2382"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C128189"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntologyXCT.owl#MagneticResonanceSpectroscopy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.gamuts.net/entity#syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/1b6677e19c9464f5cf4160fb69a007a7bbd82abc"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://www.limics.fr/ontologies/ontolurgences#EpilepsieMyocloniqueJuvenile"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/8A61.20"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_childhood_epilepsy_with_centrotemporal_spikes"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://uri.neuinfo.org/nif/nifstd/birnlex_12721"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/7997a03a2ba88f1f816e84cd263e529b5d2832ae"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#27967"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spell"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/F25..00"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/4c761f208b2d721204d8d7d6a0be24f8126c985f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/DA-31530"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/52669001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epileptogenic"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/kb0000000969"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://uri.neuinfo.org/nif/nifstd/birnlex_12718"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#4556"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0007789"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000274"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <entity2 rdf:resource="http://www.gamuts.net/entity#Rasmussen_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Lennox-Gastaut_Syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/698021005"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10071082"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU020851"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#2667"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/606e951247884558e5a4620396f70a1316012353"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/26593000"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/537956f0080e04f9e9f03ef0e741279ecb798852"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/N88011"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Magnetic_Resonance_Spectroscopy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/230191005"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/ontolurgences#EncephalopathieMyocloniquePrecoceSymptomatique"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0010826"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CSP/2056-8027"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/MB49"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/HP_0001279"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C34460"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/CCTO_000902"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0015648"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Startle_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID10315"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MP_0012011"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0007789"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/N88012"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ebi.ac.uk/efo/EFO_1000632"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_neonatal_seizures"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DOID_14264"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0004377"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.gamuts.net/entity#Lennox_Gastaut_syndrome"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000275"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/763632004"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Startle_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/DOID_1969"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <entity2 rdf:resource="http://www.case.edu/EpSO.owl#TonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/N88006"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000272"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Prognosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Absence_Status_Epilepticus"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000694"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/8A61.21"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CST/SYNCOPE"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/4a5dce1ace3777c3f16e830a0f75f26fb0dcc03e"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/ontoDPN.owl#HemisphereCerebral_F"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://bioontology.org/projects/ontologies/birnlex#birnlex_12749"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/89d53e179cc83b51216f3f1f049ac917a3387a1a"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#3210689_3210808"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Interictal"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Interictal"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://radlex.org/RID/RID5664"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D002547"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/XA8GR3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000701"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Typical_Absence_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UO_0000302"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spike"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/GAZ_00396070"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/GAZ_00598523"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#3210689_3211193"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17013"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000677"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/ccadcf1469c5c02bdd7889223f0cb35cd97cbf4b"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis"/>
+        <entity2 rdf:resource="http://www.orpha.net/ORDO/Orphanet_99701"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000662"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_neonatal_seizures"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/Xa0Bl"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D002547"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116593"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0014544"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/HP:0100021"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/Xa0fC"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G80"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.orpha.net/ORDO/Orphanet_1935"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Mesial_Temporal_Lobe_Epilepsy_With_Hippocampal_Sclerosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/AlzheimerOntology#MRS"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDLINEPLUS/C0039070"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/STO.owl#OWLClass_817fa119_3297_4bee_85e9_ce2ff1db6997"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU020800"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/F-93550"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Thing"/>
+        <entity2 rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2974110_2768999"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/ProstateCancer.owl#Magnetic_resonance_spectroscopy(MRS)"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D001332"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.gamuts.net/entity#epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/37356005"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#1610"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.org/autism-ontology/1.0/autism-rules.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/XB5F"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.ebi.ac.uk/efo/EFO_0009371"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D004827"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/f43b243d5c6b1cc6b0354ea7af83e3ec51b020ca"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000684"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0009696"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001869"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/8A61.30"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X001S"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Corpus_Callosotomy"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906021410706222"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28242"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/F25A.00"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000672"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/danielhier/ontologies/2019/3/untitled-ontology-57/generalized_seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X75Z9"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://scai.fraunhofer.de/CSEO#CSEO_00000567"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://scdontology.h3abionet.org/ontology/SCDO_0008484"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/9e22c162c67d879ba056d2e1a10cadeeb138fe21"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0020476"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/84757009"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X75ZA"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Hemiclonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000731"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_14274"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D001332"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_102"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#JuvenileMyoclonicEpilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Atonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/NPOntology.owl#DOID_1969"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://www.case.edu/EpSO.owl#TonicClonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#C10.228.140.490"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/13BC.00"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#E01.789"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0009952"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906026538258372"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#2348"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/WHO/1434"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Negative_Myoclonus"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10063953"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://bioontology.org/projects/ontologies/birnlex#birnlex_12721"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Startle_epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Startle_Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/HP_0011147"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Typical_Absence_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10003791"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/STO.owl#OWLClass_4e11fbc9_67cb_434d_ae9a_4bf4847e9b39"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0004377"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA16985-6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/4/id/200906025715060255"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://id.loc.gov/authorities/subjects/sh88003575"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#paroxysmal"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://www.ifomis.org/acgt/1.0#CerebralHemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/HP_0011153"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_885"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D013575"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85022104"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU022799"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10071145"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/815f84ddedb620e93fb150716ed30143d4f19462"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNMI/DA-31540"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/XM03h"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU042660"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#C10.597.606.358.800.600"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://doe-generated-ontology.com/OntoAD#C0024487"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Late_onset_childhood_occipital_epilepsy_(Gastaut_type)"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Late-Onset_Childhood_Occipital_Epilepsy-Gastaut_Type"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CSP/0723-4729"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/d21d76b2dd27cc489938a1cad104a518aab72e88"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/54200006"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X006Q"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0270844"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/ontolurgences#SyndromeDeLennoxGastaut"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Sharp_Wave"/>
+        <entity2 rdf:resource="http://www.case.edu/EpSO.owl#SharpWave"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/5bef6b1bd41b44421fb588c586da214222d7eac6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D065768"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU044330"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Mesial_temporal_lobe_epilepsy_with_hippocampal_sclerosis"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/770643005"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D065768"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84816"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X006d"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.pepathway.org/peo/1.2#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/F2500"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#BenignChildhoodEpilepsyWithCentrotemporalSpikes"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_childhood_epilepsy_with_centrotemporal_spikes"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Corpus_Callosotomy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10073491"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Absence_Status_Epilepticus"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/8A66.10"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DOID_0060681"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#166"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D011379"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0302539"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spell"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#3210689_2971317"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D011379"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17013"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/DOID_0050561"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/DA-31570"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNMI/DA-31580"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906090163915931"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0020300"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000674"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Early-Onset_Benign_Childhood_Occipital_Epilepsy-Panayiotopoulos_Type"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_onset_benign_childhood_occipital_epilepsy_(Panayiotopoulos_type)"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.co-ode.org/ontologies/galen#TonicSeizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Aura"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85107299"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#4887"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906094659117372"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#E02.642.249.650"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.orpha.net/ORDO/Orphanet_166427"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Startle_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906083898344265"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/8f1514b12b2d1be6fa6ef1fbe0c6cac2c974f0de"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016022"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CSP/0944-7406"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/c49477e2827bf9d0f25ab9a8174e1581bbe8c804"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85044401"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Slowing"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906057946482445"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/8980fe1f8bbc397e6b83a0832bdbfb33b5c308f9"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D001332"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/9f118b03cf662cec4346ada12407fc6f167f8345"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#Prognosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0238111"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/11/abnormalities.owl#phenodb:1902"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10003830"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.co-ode.org/ontologies/galen#idiopathic"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/FIX_0000012"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/765060000"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85009537"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP248725-6"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syndrome"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DOID_225"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#3210689_3211218"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.org/obo/owlapi/fma#FMA_61817"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#MyoclonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DOID_1826"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.org/obo/owl/FMA#FMA_61817"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://bmi.utah.edu/ontologies/hfontology/C0039070"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy"/>
+        <entity2 rdf:resource="http://www.orpha.net/ORDO/Orphanet_98784"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/3577d45f9322ed8f5fd2b5e4086aea1be8d29f29"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU046868"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDLINEPLUS/C0007789"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Febrile_Seizures"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/F250500"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/NPOntology.owl#DOID_4890"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://scdontology.h3abionet.org/ontology/SCDO_0008553"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#CerebralHemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CSP/0485-7316"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDLINEPLUS/C0014544"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://www.orpha.net/ORDO/Orphanet_64280"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906044626616872"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1358660052.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/N99003"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D055423"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/DOID_308"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#9683"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000673"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#ClonicSeizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X78yk"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Aura"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae5.owl#C146750"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#MyoclonicSeizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#F02.463.425.179.149"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Juvenile_Myoclonic_Epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/N88015"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/STO.owl#ddbc554_1994_4df0_a647_f466280cdd12"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D009682"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID13857"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU020586"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Prognosis"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/9d4525f8a7bffcbb1d389bb3dca96a465295269f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#C10.228.140.140.254"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/BCCHRCATALOG/D002547"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X75ZD"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.projecthalo.com/aura#Thing"/>
+        <entity2 rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/NCBITAXON/1271638"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/3a23acb8ad4bf7cdc35036eaba3317ac9ba3b57a"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/6204001"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.case.edu/EpSO.owl#CerebralPalsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325521724189.owl#Magnetic_resonance_spectroscopy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.gamuts.net/entity#cerebral_palsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000642"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://metadatacenter.org/owl/caDSR_VS#2970676_2581525"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://scai.fraunhofer.de/MSOntology#Prognosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906021611469750"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/LNC/LA27858-2"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000267"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/TRAK_0001198"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_17645"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Startle_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0005027"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16810"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/128612007"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Focal_Motor_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://semanticscience.org/resource/Prognosis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#E05.723.729"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/F2B..00"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU004607"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://bioontology.org/projects/ontologies/birnlex#birnlex_12776"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/kb0000000968"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CMDO/CM1672"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/42365007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <entity2 rdf:resource="http://www.limics.org/hrdo/rdfns#pat_id_890"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.co-ode.org/ontologies/galen#LennoxGastautSyndrome"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://purl.bmicc.cn/ontology/ICD11CN/8A63.0"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/810ae1afa9ea859b57ecdb52ef80385e76796ef1"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://cbmi.med.harvard.edu/asdphenotype#Class_519"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MESH/D013575"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://data.bnf.fr/ark:/12148/cb121658933"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/X006L"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/EMAPA_38023"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/2ba79ebdef981b696125666d3daeaac28681a741"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000670"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://lod.nal.usda.gov/nalt/39357"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/TEMP#NVMAME1081645"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/NPOntology.owl#DOID_1826"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/STO.owl#OWLClass_060af1c3_0815_4817_b5c2_122792e7ce3f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ictal"/>
+        <entity2 rdf:resource="http://radlex.org/RID/RID45648"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://www.orpha.net/ORDO/Orphanet_307"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Generalized_Status_Epilepticus"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Generalized_Status_Epilepticus"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10073855"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.owl-ontologies.com/Ontology1358660052.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0236018"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Juvenile_myoclonic_epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DOID_4890"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Tonic-Clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://neuromorpho.org/ontologies/experimentconditionH.owl#NMOOt_1083"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Atonic_Seizure"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#AtonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCTV2/F035200"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#7668"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000671"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh00007511"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/07fbaa5f20ee43ded631e0a8e43f891ca8b79d20"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/271594007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <entity2 rdf:resource="http://id.loc.gov/authorities/subjects/sh85072093"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/OntologyXCT.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/GAZ_00338775"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://semanticscience.org/resource/SIO_001025"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/200906062053988875"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/ICD10CM/G40.81"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://radlex.org/RID/RID34633"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_myoclonic_absences"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0019487"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/ff2844088935b47df73efd1f8ac8e1119a86dc9f"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/HP_0002373"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000273"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Clonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D013575"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/128188000"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/XE2Q8"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/NBO_0000705"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://data.nasa.gov/qudt/owl/qudt#Thing"/>
+        <entity2 rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ictal"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001913"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0006497"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/LNC/LP184342-6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/WHO/0223"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/50866000"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Rasmussen_Syndrome"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Rasmussen_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Myoclonic_Absence_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Absence_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/51887003"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Photic_Stimulation"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D010775"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/a123ed63e0bde80cad69f3276ca17ddefdbc02d5"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.pepathway.org/peo/1.2#Cerebral_palsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/VTO_0005264"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://www.co-ode.org/ontologies/galen#TonicClonicSeizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/DDO.owl#DDO_0003878"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/D004827"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0259972"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Ketogenic_Diet"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://localhost/plosthes.2017-1#10903"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Sharp_Wave"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Sharp_Wave"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Tonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://snomed.info/id/271594007"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/1a8efe8715808727290ce3e7535376daa3ac3cd8"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/RCD/F25.."/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#E12832"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://www.owl-ontologies.com/Ontology1358660052.owl#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10042772"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Febrile_seizures"/>
+        <entity2 rdf:resource="http://uri.neuinfo.org/nif/nifstd/birnlex_12749"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/MEDDRA/10043996"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/7cd64e9f80420e7518469ed5fb20f212b4f3b7b7"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <entity2 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000407"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Automatism"/>
+        <entity2 rdf:resource="http://ontology.apa.org/apaonto/termsonlyOUT%20(5).owl#Automatism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/241671007"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/230418006"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Lennox-Gastaut_syndrome"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Autosomal_dominant_nocturnal_frontal_lobe_epilepsy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/MESH/C579932"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/aee36558b390c8f5488843f5a4a942eda0b50611"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/ef115055025d2bba41d2de4b73dc9cbdfcbaecba"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://bmi.utah.edu/ontologies/hfontology/C0332240"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Idiopathic"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#23661"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2012/0/Ontology1325521724189.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://www.projecthalo.com/aura#Cerebral-Hemisphere"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/RCD/X75Z8"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Benign_neonatal_seizures"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/MONDO_0016027"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67901"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Spike"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#11975"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <entity2 rdf:resource="http://bioonto.de/ro2.owl#Individual"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/6e17998e405f4eeecfd992bcf60272b078ca83e6"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://schema.org/Thing"/>
+        <entity2 rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="http://purl.obolibrary.org/obo/AAO_0010480"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Myoclonic_Seizure"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/ICPC2P/N88014"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy_with_myoclonic_absences"/>
+        <entity2 rdf:resource="http://www.orpha.net/ORDO/Orphanet_86911"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Hemisphere"/>
+        <entity2 rdf:resource="https://cadsr.nci.nih.gov/metadata/CADSR-VS/bc8ccc839b62c43e805397914605e7ab059d4ec3"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://localhost/plosthes.2017-1#404"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cerebral_Palsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/18618006"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Early_myoclonic_encephalopathy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/44423001"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/WHO/1385"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Aura"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.jp/bio/4/id/kb0000001817"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <entity2 rdf:resource="http://bioontology.org/projects/ontologies/birnlex#birnlex_12718"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Tonic-clonic_Seizure"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/danielhier/ontologies/2019/3/untitled-ontology-57/tonic_clonic_seizure"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#E05.196.867.519"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Spectroscopy"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/CPT/76390"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.bioontology.org/ontology/CSP/0485-6986"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#C23.888.592.604.359.800.600"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <entity2 rdf:resource="http://purl.bioontology.org/ontology/OMIM/MTHU005009"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Paroxysmal"/>
+        <entity2 rdf:resource="http://sbmi.uth.tmc.edu/ontology/ochv#C0205311"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.limics.fr/ontologies/ontolurgences#EpilepsieAvecAbsencesDeLEnfance"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Childhood_absence_epilepsy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Prognosis"/>
+        <entity2 rdf:resource="http://phenomebrowser.net/ontologies/mesh/mesh.owl#D011379"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Postictal"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/rjyy/ontologies/2015/5/ESSO#Postictal"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://www.semanticweb.org/ontologies/2012/11/abnormalities.owl#phenodb:2840"/>
+        <entity2 rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Syncope"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

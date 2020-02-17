@@ -1,0 +1,2284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-27"
+     xml:base="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-27"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://clininf.eu/ckdo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://clininf.eu/ckdo#Aluminium -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Aluminium">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Phosphate_binders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Analgesic_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Analgesic_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Angioplasty_of_dialysis_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Angioplasty_of_dialysis_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Other_dialysis_access_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Angioplasty_or_stent_of_renal_transplant_artery -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Angioplasty_or_stent_of_renal_transplant_artery">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplant_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Arsenic_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Arsenic_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#BK_nephropathy_of_renal_transplant -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#BK_nephropathy_of_renal_transplant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Declining_renal_graft_function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Balkan_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Balkan_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_chronic_renal_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Bilateral_absent_kidneys -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Bilateral_absent_kidneys">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Blood_tests -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Blood_tests">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Laboratory_tests"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CKD-EPI_formula -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CKD-EPI_formula">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#eGFR"/>
+        <rdfs:comment>CKD defined as an eGFR of &lt; 60 mL/min over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CKD_association_with_other_connective_tissue_disorder -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CKD_association_with_other_connective_tissue_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CKD_in_association_with_other_blood_disorder -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CKD_in_association_with_other_blood_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CKD_in_association_with_other_infectious_disease -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CKD_in_association_with_other_infectious_disease">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CKD_in_association_with_other_metabolic_disorder -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CKD_in_association_with_other_metabolic_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_metabolic_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#CNI_renal_toxicity -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#CNI_renal_toxicity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Declining_renal_graft_function"/>
+        <rdfs:comment>CNI = calcineurin inhibitor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Cadmium_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Cadmium_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Calciphylaxis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Calciphylaxis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+        <rdfs:comment>Usually, but not always, associated with CKD</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Calcium_acetate -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Calcium_acetate">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Phosphate_binders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Calcium_phosphate -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Calcium_phosphate">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Phosphate_binders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Chronic_renal_insufficiency -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Chronic_renal_insufficiency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Synonyms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Clinical_examination_findings -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Clinical_examination_findings"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Complications_of_care -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Complications_of_care"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Creatinine_clearance -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Creatinine_clearance">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Estimations_of_renal_function"/>
+        <rdfs:comment>e.g. using Cockcroft-Gault formula</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Cystatin_C -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Cystatin_C">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Blood_tests"/>
+        <rdfs:comment>Not diagnostic of CKD in isolation. Can be used to estimate GFR</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Diabetes_with_albuminuria -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Diabetes_with_albuminuria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diabetic_nephropathy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Diabetes_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Diabetes_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diabetic_nephropathy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Diagnoses -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Diagnoses"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysate_analysis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysate_analysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Laboratory_tests"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Procedures"/>
+        <rdfs:comment>Note that dialysis may be provided for AKI, in addition for CKD</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_access -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_access">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Procedures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_adequacy_test -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_adequacy_test">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Laboratory_tests"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_education -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_education">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#RRT_preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_fistula_formation -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_fistula_formation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_fistula_for_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_fistula_ligation -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_fistula_ligation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_fistula_for_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_fistula_or_graft_in_situ -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_fistula_or_graft_in_situ">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Clinical_examination_findings"/>
+        <rdfs:comment>Functioning or non-functioning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_graft_insertion -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_graft_insertion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_graft_for_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_graft_removal -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_graft_removal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_graft_for_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_recirculation_syndrome -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_recirculation_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_related_amyloidosis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_related_amyloidosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Dialysis_tunnelled_venous_catheter_in_situ -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Dialysis_tunnelled_venous_catheter_in_situ">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Clinical_examination_findings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Doppler_of_dialysis_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Doppler_of_dialysis_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Estimations_of_renal_function -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Estimations_of_renal_function">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Laboratory_tests"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Fanconi_syndrome -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Fanconi_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#HIV_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#HIV_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#HSP_nephritis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#HSP_nephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_mesangial_proliferative_glomerulonephritis"/>
+        <rdfs:comment>HSP = Henoch Schonlein purpura</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Haemoproteinuria -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Haemoproteinuria">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Urinalysis"/>
+        <rdfs:comment>Only if specified to be present for &gt; 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#History_of_CKD -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#History_of_CKD">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Past_medical_history"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#History_of_renal_transplantation -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#History_of_renal_transplantation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Past_medical_history"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Hypercalcaemic_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Hypercalcaemic_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_chronic_renal_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Hypokalaemic_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Hypokalaemic_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_chronic_renal_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Imaging -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Imaging">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Investigations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Investigations -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Investigations"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Isotopic_eGFR -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Isotopic_eGFR">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#eGFR"/>
+        <rdfs:comment>CKD defined as an eGFR of &lt; 60 mL/min over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Laboratory_tests -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Laboratory_tests">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Investigations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Lanthanum -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Lanthanum">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Phosphate_binders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Lead_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Lead_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Ligation_of_dialysis_arteriovenous_fistula_tributary -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Ligation_of_dialysis_arteriovenous_fistula_tributary">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Other_dialysis_access_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Lithium_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Lithium_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#MDRD_formula -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#MDRD_formula">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#eGFR"/>
+        <rdfs:comment>CKD defined as an eGFR of &lt; 60 mL/min over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Malarial_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Malarial_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Management -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Management">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Process_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Medication -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Medication">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>No medications specific to CKD</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Mercury_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Mercury_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Monitoring_of_CKD -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Monitoring_of_CKD">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Process_of_care"/>
+        <rdfs:comment>eg CKD annual check</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Native_renal_biopsy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Native_renal_biopsy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_biopsy"/>
+        <rdfs:comment>NB. May be performed to investigate AKI</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Nephrogenic_systemic_fibrosis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Nephrogenic_systemic_fibrosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_CKD_management_complications"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Other_CKD_procedure -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Other_CKD_procedure">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Procedures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Other_dialysis_access_procedure -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Other_dialysis_access_procedure">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Other_hereditary_renal_disorder -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Other_hereditary_renal_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hereditary_renal_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Other_renal_transplant_procedure -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Other_renal_transplant_procedure">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplant_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#PET_test -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#PET_test">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_adequacy_test"/>
+        <rdfs:comment>Peritoneal equilibrium test</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Past_medical_history -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Past_medical_history"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Peritoneal_dialysis_catheter_insertion -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Peritoneal_dialysis_catheter_insertion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis_(Tenckhoff)_catheter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Peritoneal_dialysis_catheter_removal -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Peritoneal_dialysis_catheter_removal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis_(Tenckhoff)_catheter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Peritoneal_leak_in_peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Peritoneal_leak_in_peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Persistant_proteinuria -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Persistant_proteinuria">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Clinical_examination_findings"/>
+        <rdfs:comment>Only if specified to be present for &gt; 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Phosphate_binders -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Phosphate_binders">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Medication"/>
+        <rdfs:comment>Frequently prescribed in CKD, but not exclusively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Primary_diagnoses -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Primary_diagnoses">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Procedures -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Procedures"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Process_of_care -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Process_of_care"/>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Proteinuria -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Proteinuria">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Urinalysis"/>
+        <rdfs:comment>Only if specified to be present for &gt; 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Proteinuria_estimation -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Proteinuria_estimation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Laboratory_tests"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#RRT_preparation -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#RRT_preparation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Process_of_care"/>
+        <rdfs:comment>RRT = renal replacement therapy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Radiation_nephritis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Radiation_nephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_chronic_renal_tubulo-interstitial_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Recurrent_disease_in_renal_transplant -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Recurrent_disease_in_renal_transplant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Declining_renal_graft_function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Refashioning_of_dialysis_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Refashioning_of_dialysis_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Other_dialysis_access_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Referral_to_nephrology -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Referral_to_nephrology">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Specialist_care"/>
+        <rdfs:comment>May not identify CKD exclusively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Reimplantation_of_renal_transplant_ureter -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Reimplantation_of_renal_transplant_ureter">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplant_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_biopsy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_biopsy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Investigations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_disease_associated_with_hepatitis_B -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_disease_associated_with_hepatitis_B">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_disease_associated_with_hepatitis_C -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_disease_associated_with_hepatitis_C">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_transplant_artery_doppler -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_transplant_artery_doppler">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_transplant_graft_in_situ -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_transplant_graft_in_situ">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Clinical_examination_findings"/>
+        <rdfs:comment>Functioning or non-functioning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_transplant_nephrectomy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_transplant_nephrectomy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplant_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_transplant_procedure -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_transplant_procedure">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Procedures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_transplant_ultrasound -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_transplant_ultrasound">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_transplantation -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_transplantation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Procedures"/>
+        <rdfs:comment>Not autotransplantation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Renal_tuberculosis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Renal_tuberculosis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Rheumatoid_arthritis_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Rheumatoid_arthritis_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Secondary_diagnoses -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Secondary_diagnoses">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Serum_creatinine -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Serum_creatinine">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Blood_tests"/>
+        <rdfs:comment>Not diagnostic of CKD in isolation. Used to calculate eGFR (MDRD or CKD-EPI equations) or creatinine clearance (Cockcroft-Gault equation)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Sevelamer -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Sevelamer">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Phosphate_binders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Shunt_nephritis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Shunt_nephritis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#CKD_in_association_with_infectious_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Specialist_care -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Specialist_care">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Process_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Thin_basement_membrane_disease -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Thin_basement_membrane_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Minor_glomerular_abnormality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Thrombectomy_of_dialysis_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Thrombectomy_of_dialysis_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Other_dialysis_access_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Transplant_renal_biopsy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Transplant_renal_biopsy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_biopsy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Tunnelled_dialysis_line_insertion -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Tunnelled_dialysis_line_insertion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Tunnelled_venous_catheter_for_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Tunnelled_dialysis_line_removal -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Tunnelled_dialysis_line_removal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Tunnelled_venous_catheter_for_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#URR -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#URR">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_adequacy_test"/>
+        <rdfs:comment>Urea reduction ratio</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Under_follow-up_of_nephrology -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Under_follow-up_of_nephrology">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Specialist_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Unspecified_glomerulopathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Unspecified_glomerulopathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Unspecified_nephritis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Unspecified_nephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Unspecified_nephropathy -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Unspecified_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Unspecified_renal_disease -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Unspecified_renal_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Urinalysis -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Urinalysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Investigations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Urine_albumin_creatinine_ratio -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Urine_albumin_creatinine_ratio">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Proteinuria_estimation"/>
+        <rdfs:comment>CKD defined as a uACR of &gt; 2.5 in woman and &gt; 3.5 in men, over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Urine_protein_creatinine_ratio -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Urine_protein_creatinine_ratio">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Proteinuria_estimation"/>
+        <rdfs:comment>CKD defined as a uPCR &gt; 15, over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#eGFR -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#eGFR">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Estimations_of_renal_function"/>
+        <rdfs:comment>= Estimated glomerular filtration rate. CKD defined as an eGFR of &lt; 60 mL/min over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#24h_urinary_protein_excretion -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#24h_urinary_protein_excretion">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Proteinuria_estimation"/>
+        <rdfs:comment>CKD defined as &gt; 30mg in 24 hours, confirmed over at least 3 months</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Kt/V -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Kt/V">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_adequacy_test"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#PD_fluid_m,c_and_s -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#PD_fluid_m,c_and_s">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysate_analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Peritoneal_dialysis_catheter_(Tenchkoff_catheter)_in_situ -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Peritoneal_dialysis_catheter_(Tenchkoff_catheter)_in_situ">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Clinical_examination_findings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://clininf.eu/ckdo#Sjogren&apos;s_syndrome_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://clininf.eu/ckdo#Sjogren&apos;s_syndrome_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Structural_abnormalities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acute_on_chronic_renal_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acute_on_chronic_renal_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_defined_by_stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acute_rejection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acute_rejection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Rejection_of_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Air_embolus_associated_with_haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Air_embolus_associated_with_haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Aneurysmal_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Aneurysmal_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Angioplasty_or_stenting_of_renal_artery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Angioplasty_or_stenting_of_renal_artery">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Other_CKD_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Anti-GBM_disease_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Anti-GBM_disease_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_fistula_for_haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_fistula_for_haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_graft_for_haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Arteriovenous_graft_for_haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Assisted_peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Assisted_peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Atrophy_of_kidney -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Atrophy_of_kidney">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Automatic_peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Automatic_peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_nephrectomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_nephrectomy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Other_CKD_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_renal_aplasia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_renal_aplasia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Congenital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_renal_hypoplasia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_renal_hypoplasia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Congenital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_small_kidneys -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bilateral_small_kidneys">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bleeding_from_dialysis_venous_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bleeding_from_dialysis_venous_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bleeding_from_peritoneal_dialysis_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bleeding_from_peritoneal_dialysis_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD-related_complication_in_pregnancy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD-related_complication_in_pregnancy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_KDIGO_stages_1-5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_KDIGO_stages_1-5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_defined_by_stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_defined_by_stage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_defined_by_stage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_metabolic_disorders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_metabolic_disorders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_neoplastic_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_neoplastic_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_pregnancy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_pregnancy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+        <rdfs:comment>Must be specified as pre-existing CKD (not unspecified renal disorders in pregnancy)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_syndromes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_syndromes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_drug-_and_heavy-metal-_induced_tubulo-interstitial_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_tubulo-intersitial_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_hydronephrosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_hydronephrosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_obstructive_and_reflux_nephropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_obstructive_and_reflux_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_tubulo-intersitial_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_pyelonephritis_or_pyelitis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_pyelonephritis_or_pyelitis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_tubulo-intersitial_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_rejection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_rejection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Rejection_of_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_renal_failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_renal_failure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Synonyms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_renal_impairment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_renal_impairment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Synonyms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_tubulo-intersitial_diseases -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_tubulo-intersitial_diseases">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_uraemia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_uraemia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Synonyms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Complications_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Complications_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Complications_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Complications_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Congenital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Congenital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Structural_abnormalities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Continuous_ambulatory_peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Continuous_ambulatory_peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cryoglobulinaemia_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cryoglobulinaemia_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cystic_renal_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cystic_renal_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Structural_abnormalities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cystinuria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cystinuria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Deceased_donor_renal_transplantation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Deceased_donor_renal_transplantation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplantation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Declining_renal_graft_function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Declining_renal_graft_function">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Dense_deposit_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Dense_deposit_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diabetic_nephropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diabetic_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+        <rdfs:comment>In both type I and type II diabetes mellitus</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_crescentic_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_crescentic_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_endocapillary_proliferative_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_endocapillary_proliferative_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_membranous_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_membranous_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_mesangial_proliferative_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_mesangial_proliferative_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_mesangiocapillary_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_mesangiocapillary_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Discontinuation_of_medication_due_to_CKD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Discontinuation_of_medication_due_to_CKD">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Management"/>
+        <rdfs:comment>Discontinuation of medication due to renal function not specific</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Disequilibrium_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Disequilibrium_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Displacement_of_dialysis_venous_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Displacement_of_dialysis_venous_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Displacement_of_peritoneal_dialysis_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Displacement_of_peritoneal_dialysis_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#End-stage_renal_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#End-stage_renal_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_defined_by_stage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Eosinophilic_granulomatosis_with_polyangiitis_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Eosinophilic_granulomatosis_with_polyangiitis_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis"/>
+        <rdfs:comment>Churg-Strauss syndrome (with renal involvement)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Erythropoeitin_therapy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Erythropoeitin_therapy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Medication"/>
+        <rdfs:comment>Frequently prescribed in CKD, but not exclusively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Failing_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Failing_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Fibromuscular_dysplasia_of_renal_artery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Fibromuscular_dysplasia_of_renal_artery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renovascular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Focal_and_segmental_glomerular_lesions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Focal_and_segmental_glomerular_lesions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Gitelman_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Gitelman_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Granulomatosis_with_polyangiitis_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Granulomatosis_with_polyangiitis_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis"/>
+        <rdfs:comment>Wegener&apos;s granulomatosis with renal involvement specified</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Growth_failure_secondary_to_CKD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Growth_failure_secondary_to_CKD">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodiafiltration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodiafiltration">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodialysis_first_use_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodialysis_first_use_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodynamic_instability_associated_with_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemodynamic_instability_associated_with_dialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemolytic_uraemic_syndrome_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemolytic_uraemic_syndrome_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemorrhage_from_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Haemorrhage_from_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Henoch-Scholein_purpura_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Henoch-Scholein_purpura_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hereditary_renal_diseases -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hereditary_renal_diseases">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Home_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Home_dialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hyperacute_rejection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hyperacute_rejection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Rejection_of_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hyperphosphataemia_secondary_to_CKD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hyperphosphataemia_secondary_to_CKD">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hypertension_secondary_to_CKD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hypertension_secondary_to_CKD">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hypertensive_nephropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hypertensive_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_other_conditions"/>
+        <rdfs:comment>Hypertensive renal disease, CKD secondary to hypertension</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#IgA_nephropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#IgA_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Diffuse_mesangial_proliferative_glomerulonephritis"/>
+        <rdfs:comment>Berger&apos;s disease</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Infection_associated_with_dialysis_venous_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Infection_associated_with_dialysis_venous_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Infection_associated_with_peritoneal_dialysis_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Infection_associated_with_peritoneal_dialysis_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Infection_of_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Infection_of_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Live-related_renal_transplantation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Live-related_renal_transplantation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplantation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Live_unrelated_renal_transplantation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Live_unrelated_renal_transplantation">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplantation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Lupus_nephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Lupus_nephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Malfunctioning_dialysis_venous_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Malfunctioning_dialysis_venous_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Malfunctioning_peritoneal_dialysis_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Malfunctioning_peritoneal_dialysis_catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Medullary_cystic_kidney_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Medullary_cystic_kidney_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cystic_renal_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Microscopic_polyangiitis_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Microscopic_polyangiitis_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Minimal_change_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Minimal_change_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Minor_glomerular_abnormality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Minor_glomerular_abnormality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Minor_glomerular_abnormality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Multiple_myeloma_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Multiple_myeloma_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nail-Patella_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nail-Patella_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hereditary_renal_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nephritic_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nephritic_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_syndromes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nephrogenic_diabetes_insipidus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nephrogenic_diabetes_insipidus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nephrotic_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Nephrotic_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_syndromes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Obstruction_or_hydronephrosis_of_renal_transplant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Obstruction_or_hydronephrosis_of_renal_transplant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_CKD_management_complications -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_CKD_management_complications">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Complications_of_care"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_chronic_renal_tubulo-interstitial_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_chronic_renal_tubulo-interstitial_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Chronic_tubulo-intersitial_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_complication_associated_with_haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_complication_associated_with_haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_haemodialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_complication_associated_with_peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_complication_associated_with_peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_complication_associated_with_renal_transplant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_complication_associated_with_renal_transplant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_dialysis_access_complication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_dialysis_access_complication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_renal_tubular_disorder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_renal_tubular_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_specified_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_specified_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis_associated_peritonitis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis_associated_peritonitis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Polycystic_kidney_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Polycystic_kidney_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Cystic_renal_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Primary_focal_and_segmental_glomerulosclerosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Primary_focal_and_segmental_glomerulosclerosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Focal_and_segmental_glomerular_lesions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Rejection_of_renal_transplant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Rejection_of_renal_transplant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Removal_of_renal_transplant_ureteric_stent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Removal_of_renal_transplant_ureteric_stent">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Renal_transplant_procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_amyloidosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_amyloidosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_metabolic_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_anaemia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_anaemia">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_artery_stenosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_artery_stenosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renovascular_disease"/>
+        <rdfs:comment>Atherosclerotic</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_bone_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_bone_disease">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_dysplasia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_dysplasia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Congenital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_glycosuria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_glycosuria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_involvement_in_scleroderma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_involvement_in_scleroderma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_retinopathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_retinopathy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_sarcoidosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_sarcoidosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_sclerosis_or_scarring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_sclerosis_or_scarring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Acquired"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_transplant_artery_stenosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_transplant_artery_stenosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_renal_transplant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_transplant_work-up -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_transplant_work-up">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#RRT_preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_acidosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_acidosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_connective_tissue_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renovascular_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renovascular_disease">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Sclerosing_peritonitis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Sclerosing_peritonitis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_peritoneal_dialysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Secondary_focal_and_segmental_glomerulosclerosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Secondary_focal_and_segmental_glomerulosclerosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Focal_and_segmental_glomerular_lesions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Sickle-cell_nephropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Sickle-cell_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Sodium_bicarbonate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Sodium_bicarbonate">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Medication"/>
+        <rdfs:comment>Frequently prescribed in CKD, but not exclusively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Stenosis_of_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Stenosis_of_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Structural_abnormalities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Structural_abnormalities">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Primary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Synonyms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Synonyms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_of_unspecified_aetiology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Thrombosis_of_arteriovenous_fistula_or_graft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Thrombosis_of_arteriovenous_fistula_or_graft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Complications_associated_with_dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Thrombosis_of_renal_artery_stent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Thrombosis_of_renal_artery_stent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Other_CKD_management_complications"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Thrombotic_thrombocytopenic_purpura_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Thrombotic_thrombocytopenic_purpura_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_disorders_of_the_blood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Tunnelled_venous_catheter_for_haemodialysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Tunnelled_venous_catheter_for_haemodialysis">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_access"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Unilateral_renal_agenesis_with_contralateral_renal_hypoplasia_or_dysplasia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Unilateral_renal_agenesis_with_contralateral_renal_hypoplasia_or_dysplasia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Congenital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Unspecified_glomerulonephritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Unspecified_glomerulonephritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Glomerular_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Unspecified_renal_vasculitis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Unspecified_renal_vasculitis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_vasculitis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Uraemic_neuropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Uraemic_neuropathy">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Secondary_diagnoses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Urate_nephropathy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Urate_nephropathy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_metabolic_disorders"/>
+        <rdfs:comment>&apos;Gouty nephropathy&apos;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#1α-Hydroxycholecalciferol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#1α-Hydroxycholecalciferol">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Medication"/>
+        <rdfs:comment>Frequently prescribed in CKD, but not exclusively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Alport&apos;s_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Alport&apos;s_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Hereditary_renal_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bartter&apos;s_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Bartter&apos;s_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Fabry&apos;s_disease_with_renal_involvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Fabry&apos;s_disease_with_renal_involvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#CKD_in_association_with_metabolic_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Liddle&apos;s_syndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Liddle&apos;s_syndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Renal_tubular_disorders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis_(Tenckhoff)_catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nic/ontologies/2017/0/untitled-ontology-14#Peritoneal_dialysis_(Tenckhoff)_catheter">
+        <rdfs:subClassOf rdf:resource="http://clininf.eu/ckdo#Dialysis_access"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

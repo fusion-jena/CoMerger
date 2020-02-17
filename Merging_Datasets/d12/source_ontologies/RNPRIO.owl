@@ -1,0 +1,772 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+    <!ENTITY Opt "http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Opt/" >
+    <!ENTITY Racial "http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Racial/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:Opt="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Opt/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Racial="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Racial/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Age">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Demographics"/>
+        <rdfs:comment xml:lang="en">1.b.i.3. Demographics: age</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Aggregation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Aggregation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens_collected_by_the_network -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens_collected_by_the_network">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens"/>
+        <rdfs:comment xml:lang="en">3.d.i. What types of analyses do they conduct on them?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens_from_biobanks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens_from_biobanks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens"/>
+        <rdfs:comment xml:lang="en">3.c. What types of analysis are done on them?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Applications -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Applications">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Statistical_Analysis"/>
+        <rdfs:comment xml:lang="en">4.i. What data (statistical) analysis tools, if any, are available for researchers through the network?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Approaches -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Approaches">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Natural_language_processing"/>
+        <rdfs:comment xml:lang="en">4.g.ii. What applications (e.g., UIMA, cTAKES, NegEx, MetaMap, many different parsers, etc.) or approaches (examples are machine learning, rule-based) are being used?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Architecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Query_distribution_via_central_hub"/>
+        <rdfs:comment xml:lang="en">4.b.ii. What is the architecture of the query distribution?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#BSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#BSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Biospecimen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#BType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#BType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Biospecimen"/>
+        <rdfs:comment xml:lang="en">3.b. What types of biospecimens are collected?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Before_it_leaves_the_local_site -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Before_it_leaves_the_local_site">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Aggregation"/>
+        <rdfs:comment xml:lang="en">4.h.i. (Y/N) Are data aggregated before the data leave the local site and are shared with the network?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Biobank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Biobank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#BSource"/>
+        <rdfs:comment xml:lang="en">3.a. (Y/N) Does the network have biobanks?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Biospecimen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Biospecimen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Broad_use_of_biosamples -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Broad_use_of_biosamples">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Type_of_Consent"/>
+        <rdfs:comment xml:lang="en">1.f.ii. Do patients consent to the broad (meaning data may be analyzed for other research) or specific use of their biological specimens?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Broad_use_of_electronic_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Broad_use_of_electronic_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Type_of_Consent"/>
+        <rdfs:comment xml:lang="en">1.f.i. Do patients consent to the broad (meaning data may be analyzed for other research) or specific use of their electronic data?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_Focus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_Focus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+        <rdfs:comment xml:lang="en">1.e.i. (Y/N) Does the network have a focus (i.e., topic area or purpose)?</rdfs:comment>
+        <rdfs:comment xml:lang="en">1.e.i.1. What does the network focus on?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_care_delivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_care_delivery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type"/>
+        <rdfs:comment xml:lang="en">1.a.iii. (Y/N) Is there evidence from the past that show the network can be used for clinical care delivery or quality improvement?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Collected_by_the_network_for_research -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Collected_by_the_network_for_research">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#BSource"/>
+        <rdfs:comment xml:lang="en">3.d. (Y/N) Do researchers in the network collect biospecimens for research purposes?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Common_data_model_used -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Common_data_model_used">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Harmonization"/>
+        <rdfs:comment xml:lang="en">4.d.i.(Y/N) Does the network use a common data model (CDM)? </rdfs:comment>
+        <rdfs:comment xml:lang="en">4.d.ii. Which CDM is used? </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_collected_in_clinical_trials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_collected_in_clinical_trials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Source"/>
+        <rdfs:comment xml:lang="en">1.g.ii.3. What are the sources of Clinical Trials data collected in the network? (e.g., coded diagnostics, drug information, procedures, lab orders, diagnostic results, imaging data, biospecimen, health-related quality of life)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_mapping_and_transformation_mechanism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_mapping_and_transformation_mechanism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Common_data_model_used"/>
+        <rdfs:comment xml:lang="en">4.d.iii. How are the data transformed and mapped?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_sharing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_sharing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Demographics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Demographics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient_Population"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Description -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Description">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Metadata_collected"/>
+        <rdfs:comment xml:lang="en">4.e.i.1. What standards, possibly home grown, are used? If home grown, is there a way to map back to standards? (Data Dictionary?)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#ED_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#ED_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Electronic_Data"/>
+        <rdfs:comment xml:lang="en">4.f. List the types of data that are being collected or accessed and incorporated into the network (e.g., EHR data, claims, patient-reported outcomes, etc.). </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Electronic_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Electronic_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Clinical_data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_Clinical_Studies_Capacity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_Clinical_Studies_Capacity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_clinical_care_or_quality_improvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_clinical_care_or_quality_improvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Publications"/>
+        <rdfs:comment xml:lang="en">1.a.iii.1. What is the evidence?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_longitudinal_follow-up_studies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_longitudinal_follow-up_studies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Publications"/>
+        <rdfs:comment xml:lang="en">2.b.i. What is the evidence?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_randomized_control_trials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_randomized_control_trials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Publications"/>
+        <rdfs:comment xml:lang="en">2.d.i.1. What is the evidence?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Extraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Extraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Finances -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Finances">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#From_existing_reports_by_passively_reviewing_the_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#From_existing_reports_by_passively_reviewing_the_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Longitudinal_follow_up"/>
+        <rdfs:comment xml:lang="en">2.b.ii. (Y/N) Can researchers conduct follow-up or ongoing observation from existing reports by passively reviewing data rather than actively pulling it?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Demographics"/>
+        <rdfs:comment xml:lang="en">1.b.i.4. Demographics: gender</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Geography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Geography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Demographics"/>
+        <rdfs:comment xml:lang="en">1.b.i.2. Demographics: geography</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Governance_involvement_mechanisms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Governance_involvement_mechanisms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient-related_policies"/>
+        <rdfs:comment xml:lang="en">1.g.i. (Y/N) Are patients involved in the decision-making process on the use of the data they provided to the network?</rdfs:comment>
+        <rdfs:comment xml:lang="en">1.g.i.1. What are the roles patients play and in what mechanism? How are they involved in the decision-making process?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Harmonization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Harmonization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Health_care_derived_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Health_care_derived_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Source"/>
+        <rdfs:comment xml:lang="en">1.g.ii.2. What are the sources of Health care-Derived data collected in the network? (e.g., coded diagnostics, pharmacy orders, pharmacy fulfillment, procedures, lab orders, diagnostic results, imaging data)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Healthcare_organizations_engagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Healthcare_organizations_engagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+        <rdfs:comment xml:lang="en">2.c.i. (Y/N) Are healthcare organizations (hospitals, outpatient centers) actively participating or engaging in research activities conducted by the network?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Integration_for_longitudinal_analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Integration_for_longitudinal_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing"/>
+        <rdfs:comment xml:lang="en">4.j.i. (Y/N) Are administrative, billing, and/or clinical records integrated into longitudinal patient-level data? (Are administrative, billing, and clinical records kept in individual places or lumped in with patient-level data?)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Longitudinal_follow_up -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Longitudinal_follow_up">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type"/>
+        <rdfs:comment xml:lang="en">2.b. (Y/N) Have researchers conducted studies that involve longitudinal (multiple values rather than one time) follow-up?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Mechanisms_of_participation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Mechanisms_of_participation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Healthcare_organizations_engagement"/>
+        <rdfs:comment xml:lang="en">2.c.ii. How? (Examples: by referring patients, giving access to EHRs, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Metadata_collected -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Metadata_collected">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Harmonization"/>
+        <rdfs:comment xml:lang="en">4.e.i. (Y/N) Does the network collect additional fields to help with analysis and interpretation (metadata)?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Methods_for_Data_Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Methods_for_Data_Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+        <rdfs:comment xml:lang="en">4.a. What type of security technology does the network use?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Natural_language_processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Natural_language_processing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Extraction"/>
+        <rdfs:comment xml:lang="en">4.g.i. (Y/N) Does the network use natural language processing?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#New_studies_in_the_same_or_different_condition_from_the_clinical_focus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#New_studies_in_the_same_or_different_condition_from_the_clinical_focus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type"/>
+        <rdfs:comment xml:lang="en">1.a.ii.1. Can the network be used for new studies in the same or a different condition?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#No_consent_required -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#No_consent_required">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Type_of_Consent"/>
+        <rdfs:comment xml:lang="en">1.f. (Y/N) Does the network use informed consent forms?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Number_of_Lives_Covered -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Number_of_Lives_Covered">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient_Population"/>
+        <rdfs:comment xml:lang="en">1.a. How many people does the network cover or involve?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient-related_policies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient-related_policies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Policies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient_Population -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient_Population">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Policies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Policies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Policies_for_protecting_proprietary_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Policies_for_protecting_proprietary_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_sharing"/>
+        <rdfs:comment xml:lang="en">1.g.iii.1.c. Policies for protecting proprietary data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Publications -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Publications">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_Clinical_Studies_Capacity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Quality_improvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Quality_improvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type"/>
+        <rdfs:comment xml:lang="en">1.a.iii. (Y/N) Is there evidence from the past that show the network can be used for clinical care delivery or quality improvement?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Query_distribution_via_central_hub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Query_distribution_via_central_hub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Harmonization"/>
+        <rdfs:comment xml:lang="en">4.b.i. (Y/N) Are queries distributed via a central hub?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Racial/Ethnic -->
+
+    <owl:Class rdf:about="&Racial;Ethnic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Demographics"/>
+        <rdfs:comment xml:lang="en">1.b.i.1. Demographics: racial/ethnic</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Randomized_controlled_trials_using_network_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Randomized_controlled_trials_using_network_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type"/>
+        <rdfs:comment xml:lang="en">2.d.i. (Y/N) Have there been any randomized control trials using the data collected in the network?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Re-contact_for_new_study_needed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Re-contact_for_new_study_needed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient-related_policies"/>
+        <rdfs:comment xml:lang="en">1.f.iii. (Y/N) Can patients be re-contacted for consent for a new study?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Requirements_for_institutional_investigators_to_collaborate_with_each_other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Requirements_for_institutional_investigators_to_collaborate_with_each_other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_sharing"/>
+        <rdfs:comment xml:lang="en">1.g.iii.1.a. Data use and sharing policies for institutional investigators to collaborate with each other using the data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Requirements_for_sharing_outside_the_network -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Requirements_for_sharing_outside_the_network">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_sharing"/>
+        <rdfs:comment xml:lang="en">1.g.iii.1.b. Policies for sharing data outside the network</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Results_linkable_to_patient_outcomes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Results_linkable_to_patient_outcomes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Analysis_of_biospecimens"/>
+        <rdfs:comment xml:lang="en">3.d.ii. Were they able to link the analysis/research results back to patient outcomes?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Self-reported_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Self-reported_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Source"/>
+        <rdfs:comment xml:lang="en">1.g.ii.1. What are the sources of Self-Reported data collected in the network? (e.g., conditions, medications, medication adherence, procedures, labs/imaging, health-related quality of life)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Electronic_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Sources_of_funding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Sources_of_funding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Finances"/>
+        <rdfs:comment xml:lang="en">1.c.ii. What are the current sources of funding?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Standardized_terminologies_adopted -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Standardized_terminologies_adopted">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Harmonization"/>
+        <rdfs:comment xml:lang="en">4.c.i. (Y/N) Does the network use standardized terminologies (i.e., ICD-9, SNOMED, etc.)? </rdfs:comment>
+        <rdfs:comment xml:lang="en">4.c.ii. Which terminologies?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Statistical_Analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Statistical_Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Data_Processing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Studies_published_in_peer_reviewed_journals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Studies_published_in_peer_reviewed_journals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Publications"/>
+        <rdfs:comment xml:lang="en">2.a. Three most recent (or high impact) studies published in peer-reviewed journals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Study_type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Evidence_of_Clinical_Studies_Capacity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Tools_used -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Tools_used">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Integration_for_longitudinal_analysis"/>
+        <rdfs:comment xml:lang="en">4.j.ii. What informatics tools are used?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Total_annual_budget -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Total_annual_budget">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Finances"/>
+        <rdfs:comment xml:lang="en">1.c.i.  What is the total annual budget?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Total_annual_cost_conducting_studies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Total_annual_cost_conducting_studies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Finances"/>
+        <rdfs:comment xml:lang="en">1.c.i.2. How much of that budget is dedicated to conducting studies?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Total_annual_cost_network_infrastructure_and_maintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Total_annual_cost_network_infrastructure_and_maintenance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Finances"/>
+        <rdfs:comment xml:lang="en">1.c.i.1. How much of that budget is dedicated to infrastructure and maintenance?</rdfs:comment>
+        <rdfs:comment xml:lang="en">1.c.iii. How much does it cost each year to maintain and update the network?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Transformation_method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Transformation_method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Aggregation"/>
+        <rdfs:comment xml:lang="en">4.h.ii. How are the data transformed (i.e., based on what criteria are the data aggregated)?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Type_of_Consent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Type_of_Consent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Patient-related_policies"/>
+        <rdfs:comment xml:lang="en">1.f. (Y/N) Does the network use informed consent forms?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Using_mechanisms_to_standardize_data_elements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Using_mechanisms_to_standardize_data_elements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#From_existing_reports_by_passively_reviewing_the_data"/>
+        <rdfs:comment xml:lang="en">2.b.ii.1. How do researchers standardize those data items? (e.g., how do researchers standardize survey type questions over a period of time?)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Years_in_existence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Years_in_existence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/PCORI.owl#Network_Characteristics"/>
+        <rdfs:comment xml:lang="en">1.d. How many years has this network existed? </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&owl;Thing">
+        <rdfs:label xml:lang="en">PCORI</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000183"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Trait"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000030"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Disease"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000070"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Bleeding"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000221"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Tachycardia"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000253"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Depression"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000171"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Death"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000172"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Cancer"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000127"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Headache"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000176"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Pain"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000189"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Protein"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8666666666666667</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000091"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugEffect"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8584177835894083</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.jp/bio/11/csso/CSSO_000272"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DiseaseExacerbation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8551724137931034</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

@@ -1,0 +1,786 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasIntegrated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasIntegrated">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasMeasurementOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasMeasurementOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasSource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isAdapting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isAdapting"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isIntergratedInto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isIntergratedInto">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasIntegrated"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isOccuringAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isOccuringAt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isPartOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isStoredInto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isStoredInto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AdaptationSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AdaptationSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AssistedLiving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AssistedLiving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Bluetooth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Bluetooth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#CommunicationsTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivitySensors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivitySensors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Sensors"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasMeasurementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Cognitive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Cognitive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#CommunicationsTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#CommunicationsTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Computer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Computer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ComputerToPatientInteraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ComputerToPatientInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ControlStick -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ControlStick">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataAnalysisSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataAnalysisSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataClassification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataClassification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataFusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataFusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataModelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataModelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#FeatureSelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#FeatureSelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#GameScore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#GameScore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#HardDiskDrive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#HardDiskDrive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Computer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#HeartBeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#HeartBeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VitalSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#HomeBased -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#HomeBased">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ICD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ICD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TerminologiesAndClassifications"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TouchScreen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGaming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGaming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RehabilitationActivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGames"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#LowerExtremety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#LowerExtremety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Motor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Robot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AdaptationSoftware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataAnalysisSoftware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isStoredInto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasSource"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MotionSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MotionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Motor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Motor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ControlStick"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RehabilitationActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Interaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Therapist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TouchScreen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientAssessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientMonitoring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientMonitoring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientToComputerInteraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PatientToComputerInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MachineLearning"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PhysicalExercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PhysicalExercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RehabilitationActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PhysicalPower -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#PhysicalPower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RehabilitationActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RehabilitationActivity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RobotArm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RobotArm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Sensors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Sensors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#SpeechImpairment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#SpeechImpairment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#SpeechTherapy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#SpeechTherapy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#RehabilitationActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TerminologiesAndClassifications -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TerminologiesAndClassifications"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Therapist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Therapist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TimeSeriesGraph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TimeSeriesGraph">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Visualization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TouchScreen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TouchScreen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#UpperExtremety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#UpperExtremety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Motor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VisualImpairment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VisualImpairment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Visualization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Visualization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataAnalysisSoftware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VitalSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VitalSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#fNIRs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#fNIRs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivitySensors"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasMeasurementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#BrainActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DimitriosZikos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DimitriosZikos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MySQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#MySQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OracleDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OracleDB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VassilisAthitsos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VassilisAthitsos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Therapist"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

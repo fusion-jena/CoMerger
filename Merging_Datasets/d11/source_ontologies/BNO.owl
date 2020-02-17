@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1361987617.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1361987617.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Nutrient_Composition">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutrient Composition</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DesignDiet"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Nutraceuticals_Prot_dev">
+    <rdfs:subClassOf rdf:resource="#Nutrient_Composition"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutraceuticals Protocol Development</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Adjusted_Body_Weight_Equation_for_Obesity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Predicted_Equation"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Adjusted Body Weight Equation for Obesity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Metabolic_Diet_Protocol">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metabolic Diet Protocol</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Screening"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fiber">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MacronutrientsControlled"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Poly">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Unsaturated"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Regular">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DietPlan"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Theraputic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hip_Waist_Measurement">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hip Waist Measurement</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BodyComposition"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Hip_Waist_Measurement_Hip_Circumference"/>
+          <owl:Class rdf:ID="Hip_Waist_Measurement_Waist_Circumference"/>
+          <owl:Class rdf:ID="Hip_Waist_Measurement_Waist_To_Hip_Ratio"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Saturated">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FAT"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Underwater_Weighing_PctBodyFat">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Underwater Weighing Percent Body Fat</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Underwater_Weighing"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Macronutrient">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Single_Nutrient_Intake"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Anthropometrics">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      Anthropometrics evaluates ...
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anthropometrics</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyComposition"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Anthropometrics_BMI"/>
+          <owl:Class rdf:ID="Anthropometrics_Height"/>
+          <owl:Class rdf:ID="Anthropometrics_Weight"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Outpatient">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DietMealsServed"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Snacks">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DietPlan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MacronutrientsControlled">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Metabolic"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Macronutrients Controlled</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PctLeanMass">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BodPod"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Percent Lean Mass</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Underwater_Weighing_PctLeanMass">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Underwater_Weighing"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Underwater Weighing Percent Lean Mass</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Activity_Questionnaire">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Activity Questionnaire</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Activity_Physical_Assessment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#FAT">
+    <rdfs:subClassOf rdf:resource="#MacronutrientsControlled"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Saturated"/>
+          <owl:Class rdf:ID="TransFattyAcids"/>
+          <owl:Class rdf:about="#Unsaturated"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Energy_Expediture">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ResearchNutritionAssessmentProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Energy Expediture</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Underwater_Weighing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Underwater Weighing</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyComposition"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Day_Rotation_3">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Day Rotation 3</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Menu_Rotation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Whole_Calorimetry">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Whole Calorimetry</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Energy_Expediture"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TransFattyAcids">
+    <rdfs:subClassOf rdf:resource="#FAT"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Trans Fatty Acids</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Formula">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Theraputic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Nutraceuticals_Prot_Dev_Resveratrol">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutraceuticals Protocol Development Resveratrol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Nutraceuticals_Prot_dev"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Anthropometrics_BMI">
+    <rdfs:subClassOf rdf:resource="#Anthropometrics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anthropometrics BMI</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Enteral">
+    <rdfs:subClassOf rdf:resource="#Formula"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WholeFood">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Whole Food</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Theraputic"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#DietMealsServed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Diet Meals Served</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DietPlan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ResearchNutritionAssessmentProcedure">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NutritionRoles"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Research Nutrition Assessment Procedure</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Procedures used in the Bionutrition domain</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Anthropometrics_Weight">
+    <rdfs:subClassOf rdf:resource="#Anthropometrics"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anthropometrics Weight</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Activity_Factor_or_Equation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Activity_Physical_Assessment"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Activity Factor or Equation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Hour_24_Diet_Recall">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Nutrient_Analysis"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hour 24 Diet Recall</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ScientificLiterature">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Scientific Literature</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProtocolDevelopment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Skinfold">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyComposition"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DEXA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyComposition"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Theraputic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DietPlan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Screening">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Nutrition_Assessment_Care_Plan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Single_Nutrient_Intake">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nutrient_Analysis"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Single Nutrient Intake</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Micronutrient_Prot_dev">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Micronutrient Protocol Development</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Nutrient_Composition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Day_1_Inpatient">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Day 1 Inpatient</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="RotatingMenuCycle"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Food_Recall">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nutrient_Analysis"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Food Recall</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Nutrient_Analysis">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutrient Analysis</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nutrition_Assessment_Care_Plan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Activity_Physical_Assessment">
+    <rdfs:subClassOf rdf:resource="#ResearchNutritionAssessmentProcedure"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Activity Physical Assessment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Mono">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Unsaturated"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Inpatient">
+    <rdfs:subClassOf rdf:resource="#DietMealsServed"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Diet_Review">
+    <rdfs:subClassOf rdf:resource="#Screening"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Diet Review</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Day_Rotation_5">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Day Rotation 5</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Menu_Rotation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Menu_Rotation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Menu Rotation</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DesignDiet"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Assessory_Nutrient">
+    <rdfs:subClassOf rdf:resource="#Single_Nutrient_Intake"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Assessory Nutrient</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Treadmill">
+    <rdfs:subClassOf rdf:resource="#Activity_Physical_Assessment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bike">
+    <rdfs:subClassOf rdf:resource="#Activity_Physical_Assessment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Food_Frequency_Questionnaires">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Food Frequency Questionnaires</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Nutrient_Analysis"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Macronutrient_Prot_Dev_Fat">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Macronutrient Protocol Development Fat</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Macronutrient_Prot_dev"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CHO">
+    <rdfs:subClassOf rdf:resource="#MacronutrientsControlled"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Food_Record_7_Day">
+    <rdfs:subClassOf rdf:resource="#Food_Recall"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Food Record 7 Day</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ProtocolDevelopment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NutritionRoles"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protocol Development</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#DesignDiet">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Design Diet</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ProtocolDevelopment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Skinfold_Subscapular">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Skinfold Subscapular</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Skinfold"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NutritionCapabilities">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutrition Capabilities</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Unsaturated">
+    <rdfs:subClassOf rdf:resource="#FAT"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Mono"/>
+          <owl:Class rdf:about="#Poly"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Grip_Strength">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Grip Strength</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Activity_Physical_Assessment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Hip_Waist_Measurement_Waist_To_Hip_Ratio">
+    <rdfs:subClassOf rdf:resource="#Hip_Waist_Measurement"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hip Waist Measurement Waist To Hip Ratio</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#NutritionRoles">
+    <rdfs:subClassOf rdf:resource="#NutritionCapabilities"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutrition Roles</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Navigation">
+    <rdfs:subClassOf rdf:resource="#ProtocolDevelopment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Macronutrient_Prot_Dev_Carbohydrate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Macronutrient Protocol Development Carbohydrate</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Macronutrient_Prot_dev"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spirometry">
+    <rdfs:subClassOf rdf:resource="#Whole_Calorimetry"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Anthropometrics_Height">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anthropometrics Height</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Anthropometrics"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Education">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nutrition_Assessment_Care_Plan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Predicted_Equation">
+    <rdfs:subClassOf rdf:resource="#Energy_Expediture"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Predicted Equation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Metabolic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DietPlan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#BodPod">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyComposition"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BodPod</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#DietPlan">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Diet Plan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#NutritionRoles"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Group">
+    <rdfs:subClassOf rdf:resource="#Education"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RotatingMenuCycle">
+    <rdfs:subClassOf rdf:resource="#Metabolic"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rotating Menu Cycle</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Day_5_Inpatient">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Day 5 Inpatient</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#RotatingMenuCycle"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Individual">
+    <rdfs:subClassOf rdf:resource="#Education"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Skinfold_Suprailiac">
+    <rdfs:subClassOf rdf:resource="#Skinfold"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Skinfold Suprailiac</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Macronutrient_Prot_Dev_Protein">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Macronutrient Protocol Development Protein</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Macronutrient_Prot_dev"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Macronutrient_Prot_Dev_Fiber">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Macronutrient_Prot_dev"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Macronutrient Protocol Development Fiber</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Day_2_Inpatient">
+    <rdfs:subClassOf rdf:resource="#RotatingMenuCycle"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Day 2 Inpatient</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Parenteral">
+    <rdfs:subClassOf rdf:resource="#Formula"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Macronutrient_Prot_dev">
+    <rdfs:subClassOf rdf:resource="#Nutrient_Composition"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Macronutrient Protocol Development</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Water">
+    <rdfs:subClassOf rdf:resource="#MacronutrientsControlled"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Minute_6_Walk">
+    <rdfs:subClassOf rdf:resource="#Activity_Physical_Assessment"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6 Minute Walk</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#BodyComposition">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      Body Composition is evaluated through multiple procedures
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#ResearchNutritionAssessmentProcedure"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Body Composition</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Metabolic_Monitor_Cart">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metabolic Monitor Cart</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Energy_Expediture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Day_Rotation_1">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Day Rotation 1</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Menu_Rotation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PctBodyFat">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Percent Body Fat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#BodPod"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Food_Record_3_4_Day">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Food Record 3 4 Day</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Food_Recall"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bioelectric_Impedence">
+    <rdfs:subClassOf rdf:resource="#BodyComposition"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bioelectric Impedence</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PRO">
+    <rdfs:subClassOf rdf:resource="#MacronutrientsControlled"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Hip_Waist_Measurement_Hip_Circumference">
+    <rdfs:subClassOf rdf:resource="#Hip_Waist_Measurement"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hip Waist Measurement Hip Circumference</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Micronutrient">
+    <rdfs:subClassOf rdf:resource="#Single_Nutrient_Intake"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Nutraceuticals_Prot_Dev_Omega_3_Fatty_Acids">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutraceuticals Protocol Development Omega 3 Fatty Acids</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Nutraceuticals_Prot_dev"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MicronutrientsControlled">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Micronutrients Controlled</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Metabolic"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Nutrition_Assessment_Care_Plan">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Nutrition Assessment Care Plan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ResearchNutritionAssessmentProcedure"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Harris_Benedict_Equation">
+    <rdfs:subClassOf rdf:resource="#Predicted_Equation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Harris Benedict Equation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Hip_Waist_Measurement_Waist_Circumference">
+    <rdfs:subClassOf rdf:resource="#Hip_Waist_Measurement"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hip Waist Measurement Waist Circumference</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasSubtype"/>
+  <owl:ObjectProperty rdf:ID="hasSubsection"/>
+  <owl:ObjectProperty rdf:ID="hasAnalyticalAssessment"/>
+  <owl:ObjectProperty rdf:ID="hasComposingMeasurements"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.7, Build 620)  http://protege.stanford.edu -->

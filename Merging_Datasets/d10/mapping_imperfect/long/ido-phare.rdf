@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>??</type>
+  <onto1>onto1</onto1>
+  <onto2>onto2</onto2>
+  <uri1>onto1</uri1>
+  <uri2>onto2</uri2>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugTarget"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Organism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000045"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Disease"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000020"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Symptom"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugPharmacokinetics"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000178"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Blood"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000586"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Infection"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Cell"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#GeneOrGeneProductFunction"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000607"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Synthesis"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000467"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#PhenotypeRisk"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#PhenotypeMechanism"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000610"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#Immunosuppression"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugEfficacy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/GO_0040007"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DiseaseExacerbation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000500"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugDoseVariation"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9400000000000001</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DiseaseSurvival"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8666666666666667</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000445"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#DrugSensitivity"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8615384615384616</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#regulates"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9647058823529412</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/RO_0000079"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#functionsAs"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9333333333333333</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#occurs"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9142857142857143</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+    <map>
+      <Cell>
+        <entity1 rdf:resource="http://purl.obolibrary.org/obo/IDO_0000660"/>
+        <entity2 rdf:resource="http://www.stanford.edu/~coulet/phare.owl#isCausedBy"/>
+        <measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.88</measure>
+        <relation>=</relation>
+      </Cell>
+    </map>
+  </Alignment>
+</rdf:RDF>

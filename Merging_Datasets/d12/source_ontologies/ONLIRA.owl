@@ -1,0 +1,2443 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#"
+     xml:base="http://vavlab.ee.boun.edu.tr/carera/onlira.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">changes
+* Segments and Regions are modelling as Classes in order to identify which patient (liver) they belong to.
+* Redundant restrictions are removed
+</owl:versionInfo>
+        <rdfs:comment>Access to and use of ONLIRA is governed by the GNU General Public
+License &lt;http://www.gnu.org/copyleft/gpl.html&gt;.
+By using this ontology, you agree to be bound by the terms
+of the GPL.
+
+ONLIRA is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+If you have any questions, feel free to contact onlira@boun.edu.tr</rdfs:comment>
+        <version>1.0.6</version>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RadlexID -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RadlexID"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RadlexTerm -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RadlexTerm"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#decorator -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#decorator"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#default -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#default"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#ordering -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#ordering"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#propertyType -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#propertyType"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#style -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#style"/>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#version -->
+
+    <owl:AnnotationProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#version"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#sizeMM -->
+
+    <rdfs:Datatype rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#sizeMM">
+        <owl:equivalentClass rdf:resource="&xsd;integer"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasArea -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasArea">
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity">
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionComponent -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionComponent">
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionComposition -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionComposition">
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLobe -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLobe">
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasParenchyma -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasParenchyma">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCloseToVein -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCloseToVein">
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInLobe -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInLobe">
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInRegion -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInRegion">
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInSegment -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInSegment">
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isNotLocatedInRegion -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isNotLocatedInRegion">
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy">
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaContrastPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaContrastPattern">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Area Contrast Pattern</rdfs:label>
+        <propertyType>Liver Pathology - Area Contrast Pattern Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">central</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">early uptake then wash out</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">fixing contrast in late phase</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">heterogeneous</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">homogeneous</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">spokes wheel</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">undecided</rdf:first>
+                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaDensity -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaDensity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Area Density</rdfs:label>
+        <propertyType>Liver Pathology - Area Density Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">hyperdense</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">hypodense</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">isodense</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaLengthFirst -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaLengthFirst">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Area Width</rdfs:label>
+        <propertyType>Liver Pathology - Area Size Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#sizeMM"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaLengthSecond -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaLengthSecond">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Area Height</rdfs:label>
+        <propertyType>Liver Pathology - Area Size Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#sizeMM"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaMarginType -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaMarginType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>Area Margin</rdfs:label>
+        <propertyType>Liver Pathology - Area Margin Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">geographical</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">ill defined</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">irregular</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">lobular</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">serpiginious</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">spiculative</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">well defined</rdf:first>
+                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaShape -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaShape">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>Area Shape</rdfs:label>
+        <propertyType>Liver Pathology - Area Shape Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">band</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">fusiform</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">irregular</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">linear</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">nodular</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">ovoid</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">round</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;string">serpiginious</rdf:first>
+                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasCalcification -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasCalcification">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Area Calcification</rdfs:label>
+        <propertyType>Liver Pathology - Area Calcification Property</propertyType>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">coarse</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">focal</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">millimetric – fine</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">punctate</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">scattered</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasCraniocaudalDimension -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasCraniocaudalDimension">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Craniocaudal Dimension (mm)</rdfs:label>
+        <propertyType>Liver Size Property</propertyType>
+        <rdfs:range rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#sizeMM"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasDebrisLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasDebrisLocation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Debris Location</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Debris Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">floating inside</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">located on dependent position</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasDensity -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasDensity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Density Type</rdfs:label>
+        <default>homogeneous</default>
+        <propertyType>Liver Structure Property</propertyType>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">heterogeneous</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">homogeneous</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionContrastPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionContrastPattern">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Lesion Contrast Pattern</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Contrast Pattern Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">central</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">early uptake then wash out</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">fixing contrast in late phase</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">heterogeneous</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">homogeneous</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">peripheric</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">peripheric nodular</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                        <rdf:first rdf:datatype="&xsd;string">spokes wheel</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                <rdf:first rdf:datatype="&xsd;string">undecided</rdf:first>
+                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionContrastUptake -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionContrastUptake">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Lesion Contrast Uptake</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Contrast Uptake Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">dense</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">heterogeneous</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">homogeneous</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">minimal</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">moderate</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionLeveling -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionLeveling">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Lesion Leveling Type</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Leveling Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">fluid fluid</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">fluid gas</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">fluid solid</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">gas solid</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionQuantity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Lesion Cluster size</rdfs:label>
+        <propertyType>Lesion Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;integer">1</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;integer">2</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;integer">3</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;integer">4</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;integer">5</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">multiple</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionShape -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionShape">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>Lesion Shape</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Shape Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">band</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">fusiform</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">linear</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">nodular</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">ovoid</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">serpiginious</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                <rdf:first rdf:datatype="&xsd;string">spheric</rdf:first>
+                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionVeinProximity -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLesionVeinProximity">
+        <rdfs:label rdf:datatype="&xsd;string">Vasculature Proximity</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Vasculature Relation</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">adjacent</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">adjunct to contact</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">bended</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">circumscribed</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">invaded</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLiverContour -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLiverContour">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>Liver Contour</rdfs:label>
+        <propertyType>Liver Surface Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">irregular</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">lobulated</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">nodular</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">regular</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLiverDensityChange -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLiverDensityChange">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Liver Density Change</rdfs:label>
+        <default>normal</default>
+        <propertyType>Liver Structure Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">decreased</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">increased</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">normal</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLiverPlacement -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLiverPlacement">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">downward displacement</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">leftward displacement</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">normal placement</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">upward displacement</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLumenDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLumenDiameter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Lumen Diameter</rdfs:label>
+        <propertyType>Liver Vasculature Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">decreased</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">increased</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">normal</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLumenType -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLumenType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Lumen type</rdfs:label>
+        <propertyType>Liver Vasculature Property</propertyType>
+        <default>open</default>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">obliterated</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">open</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">partially obliterated</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasParenchymaDensityChange -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasParenchymaDensityChange">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">decreased</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">increased</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">normal</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSeptaDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSeptaDiameter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Septa Diameter Type</rdfs:label>
+        <propertyType>Liver Pathology - Septa Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Septa"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">complete</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">incomplete</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSeptaWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSeptaWidth">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Septa Thickness</rdfs:label>
+        <propertyType>Liver Pathology - Septa Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Septa"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">thick</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">thin</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSizeChange -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSizeChange">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>Size Change</rdfs:label>
+        <propertyType>Liver/Lobe Size Property</propertyType>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">decreased</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">increased</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">normal</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasWallType -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasWallType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">Wall Type</rdfs:label>
+        <propertyType>Liver Pathology - Wall Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Wall"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">thick</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">thin</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCalcified -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCalcified">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>is Calcified</rdfs:label>
+        <propertyType>Liver Pathology - Component Property</propertyType>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCavernousTransformationObserved -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCavernousTransformationObserved">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Cavernous Transformation observed</rdfs:label>
+        <propertyType>Liver Vasculature Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCentralLocalized -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isCentralLocalized">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Central Localized</rdfs:label>
+        <propertyType>Lesion Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isContrasted -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isContrasted">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Contrasted</rdfs:label>
+        <propertyType>Liver Pathology - Area Contrast Property</propertyType>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+                    <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Wall"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isDebrisObserved -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isDebrisObserved">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Debris observed</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Debris Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isGallbladderAdjacent -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isGallbladderAdjacent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Lesion Gallbladder Adjante</rdfs:label>
+        <propertyType>Lesion Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLevelingObserved -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLevelingObserved">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Leveling observed</rdfs:label>
+        <propertyType>Liver Pathology - Lesion Leveling Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isPeriphericalLocalized -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isPeriphericalLocalized">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Lesion Peripherical Localized</rdfs:label>
+        <propertyType>Lesion Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSubcapsularLocalized -->
+
+    <owl:DatatypeProperty rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSubcapsularLocalized">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is Lesion Subcupsular Localized</rdfs:label>
+        <propertyType>Lesion Property</propertyType>
+        <rdfs:domain rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Abcess -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Abcess">
+        <rdfs:label rdf:datatype="&xsd;string">Abcess</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#AnteriorBranchOfRightPortalVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#AnteriorBranchOfRightPortalVein">
+        <rdfs:label rdf:datatype="&xsd;string">Anterior Branch of Right Portal Vein </rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightPortalVein"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PosteriorBranchOfRightPortalVein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#AnteriorRegion -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#AnteriorRegion">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area">
+        <rdfs:label>Area</rdfs:label>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent">
+        <rdfs:label>Calcifiable Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MultilocularCystic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Capsule -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Capsule">
+        <rdfs:label>Capsule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Pseudocapsule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CaudateLobe -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CaudateLobe">
+        <rdfs:label rdf:datatype="&xsd;string">Caudate Lobe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftLobe"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightLobe"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Caudate lobe of liver</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID77</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic">
+        <rdfs:label rdf:datatype="&xsd;string">Cystic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Solid"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidCycsticMix"/>
+        <RadlexTerm>Cystic</RadlexTerm>
+        <RadlexID>RID5739</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CysticWithDebris -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CysticWithDebris">
+        <rdfs:label rdf:datatype="&xsd;string">Cystic with Debris</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CysticWithSolidComponent -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CysticWithSolidComponent">
+        <rdfs:label rdf:datatype="&xsd;string">Cystic with Solid Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticArtery -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticArtery">
+        <rdfs:label rdf:datatype="&xsd;string">Hepatic Artery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Hepatic artery</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID38078</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein">
+        <rdfs:label rdf:datatype="&xsd;string">Hepatic Portal Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Hepatic portal vein</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID34467</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity">
+        <rdfs:label rdf:datatype="&xsd;string">Hepatic Vascularity</rdfs:label>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+        <RadlexID rdf:datatype="&xsd;string">RID29520</RadlexID>
+        <RadlexTerm rdf:datatype="&xsd;string">Vasculature of liver</RadlexTerm>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein">
+        <rdfs:label rdf:datatype="&xsd;string">Hepatic Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Hepatic vein</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID1179</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LateralRegion -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LateralRegion">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftHepaticVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftHepaticVein">
+        <rdfs:label rdf:datatype="&xsd;string">Left Hepatic Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Left hepatic vein</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID1180</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftLobe -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftLobe">
+        <rdfs:label rdf:datatype="&xsd;string">Left Lobe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentII"/>
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIII"/>
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIV"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightLobe"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Left lobe of liver</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID69</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftPortalVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftPortalVein">
+        <rdfs:label rdf:datatype="&xsd;string">Left Portal Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Left portal vein</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID34470</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lesion">
+        <rdfs:label rdf:datatype="&xsd;string">Lesion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaContrastPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasAreaShape"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent">
+        <rdfs:label>Lesion Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition">
+        <rdfs:label>Lesion Composition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Liver">
+        <rdfs:label rdf:datatype="&xsd;string">Liver</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLobe"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightLobe"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLobe"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CaudateLobe"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftHepaticVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasLobe"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftLobe"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LeftPortalVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticArtery"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MiddleHepaticVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightPortalVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasHepaticVascularity"/>
+                <owl:onClass rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightHepaticVein"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Liver</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID58</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe">
+        <rdfs:label>Lobe</rdfs:label>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Lobe of liver 	</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID29234</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MedialRegion -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MedialRegion">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MiddleHepaticVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MiddleHepaticVein">
+        <rdfs:label rdf:datatype="&xsd;string">Middle Hepatic Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+        <RadlexTerm rdf:datatype="&xsd;string">Middle hepatic vein</RadlexTerm>
+        <RadlexID rdf:datatype="&xsd;string">RID1181</RadlexID>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MultilocularCystic -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#MultilocularCystic">
+        <rdfs:label>Multilocular Cystic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Parenchyma">
+        <rdfs:label>Parenchyma</rdfs:label>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Polyp -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Polyp">
+        <rdfs:label rdf:datatype="&xsd;string">Polyp</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PosteriorBranchOfRightPortalVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PosteriorBranchOfRightPortalVein">
+        <rdfs:label rdf:datatype="&xsd;string">Posterior Branch of Right Portal Vein </rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightPortalVein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PosteriorRegion -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PosteriorRegion">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PredominantCystic -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PredominantCystic">
+        <rdfs:label rdf:datatype="&xsd;string">Predominant Cystic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PredominantSolid -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PredominantSolid">
+        <rdfs:label rdf:datatype="&xsd;string">Predominant Solid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Solid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Pseudocapsule -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Pseudocapsule">
+        <rdfs:label>Pseudocapsule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PureCystic -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PureCystic">
+        <rdfs:label rdf:datatype="&xsd;string">Pure Cystic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Cystic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PureSolid -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#PureSolid">
+        <rdfs:label rdf:datatype="&xsd;string">Pure Solid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Solid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region">
+        <rdfs:label>Region</rdfs:label>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightHepaticVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightHepaticVein">
+        <rdfs:label rdf:datatype="&xsd;string">Right Hepatic Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+        <RadlexID rdf:datatype="&xsd;string">RID1182</RadlexID>
+        <RadlexTerm rdf:datatype="&xsd;string">Right hepatic vein</RadlexTerm>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightLobe -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightLobe">
+        <rdfs:label rdf:datatype="&xsd;string">Right Lobe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Lobe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentV"/>
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVI"/>
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVII"/>
+                            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVIII"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVIII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isSegmentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <RadlexID rdf:datatype="&xsd;string">RID74</RadlexID>
+        <RadlexTerm rdf:datatype="&xsd;string">Right lobe of liver</RadlexTerm>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightPortalVein -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#RightPortalVein">
+        <rdfs:label rdf:datatype="&xsd;string">Right Portal Vein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein"/>
+        <RadlexID rdf:datatype="&xsd;string">RID34469</RadlexID>
+        <RadlexTerm rdf:datatype="&xsd;string">Right portal vein</RadlexTerm>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment">
+        <rdfs:label>Segment</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isLocatedInRegion"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isNotLocatedInRegion"/>
+                <owl:allValuesFrom rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <RadlexID rdf:datatype="&xsd;string">RID29237</RadlexID>
+        <RadlexTerm rdf:datatype="&xsd;string">Segment of liver</RadlexTerm>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentI -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentI">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentII -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentII">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIII -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIII">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIV -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentIV">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentV -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentV">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVI -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVI">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVII -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVII">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVIII -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SegmentVIII">
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Segment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Septa -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Septa">
+        <rdfs:label rdf:datatype="&xsd;string">Septa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSeptaWidth"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">thick</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">thin</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasSeptaDiameter"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">complete</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">incomplete</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Solid -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Solid">
+        <rdfs:label rdf:datatype="&xsd;string">Solid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+        <owl:disjointWith rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidCycsticMix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidComponent -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidComponent">
+        <rdfs:label rdf:datatype="&xsd;string">Solid Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidCycsticMix -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidCycsticMix">
+        <rdfs:label rdf:datatype="&xsd;string">Solid Cycstic Mix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#LesionComposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidWithCystic -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#SolidWithCystic">
+        <rdfs:label rdf:datatype="&xsd;string">Solid with Cystic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Solid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#VenacavaInferior -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#VenacavaInferior">
+        <rdfs:label rdf:datatype="&xsd;string">Venacava Inferior</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVascularity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Wall -->
+
+    <owl:Class rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#Wall">
+        <rdfs:label rdf:datatype="&xsd;string">Wall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#CalcifiableComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#isContrasted"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#hasWallType"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">other</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">thick</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">thin</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticArtery"/>
+            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticPortalVein"/>
+            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#HepaticVein"/>
+            <rdf:Description rdf:about="http://vavlab.ee.boun.edu.tr/carera/onlira.owl#VenacavaInferior"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
