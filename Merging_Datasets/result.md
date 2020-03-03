@@ -1,20 +1,35 @@
-Characteristics of the merged result
+# Ontology Merging Test's Info:
+
+This tables shows the statistics of running six version (V<sub>1</sub>-V<sub>6</sub>) of our datasets (d<sub>1</sub>-d<sub>12</sub>). For each test of the created merged ontology (O<sub>M</sub>), we show: 
+* test version (id); 
+* number of classes |C| of the merged ontology; 
+* number of properties |P| of the merged ontology; 
+* number of instances |I| of the merged ontology; 
+* class coverage (cov<sub>C</sub>); 
+* property coverage (cov<sub>P</sub>); 
+* instance coverage (cov<sub>I</sub>); 
+* number of the unpreserved structure in the merged ontology (|un_str|); 
+* number of properties with multiple domains and ranges, i.e., oneness (|on|); 
+* number of unconnected classes (|un<sub>C</sub>|); 
+* number of cycles on the class hierarchy (|cyc|); 
+* number of required refinements on the blocks as local refinements (R<sub>L</sub>); 
+* number of required refinements on the final merged ontology as global refinements  (R<sub>G</sub>).
 
 <table >
   <tr>
-    <th class="tg-0lax">test_version</th>
-    <th class="tg-0lax">class_OM</th>
-    <th class="tg-0lax">property_OM</th>
-    <th class="tg-0lax">instance_OM</th>
-    <th class="tg-0lax">class_coverage</th>
-    <th class="tg-0lax">property_coverage</th>
-    <th class="tg-0lax">instance_coverage</th>
-    <th class="tg-0lax">unpreserved_structure</th>
-    <th class="tg-0lax">oness</th>
-    <th class="tg-0lax">unconnected_class</th>
-    <th class="tg-0lax">cycle_class</th>
-    <th class="tg-0lax">refine_action_on_cluster</th>
-    <th class="tg-0lax">refine_action_on_merge</th>
+    <th class="tg-0lax">id</th>
+    <th class="tg-0lax">|C|</th>
+    <th class="tg-0lax">|P|</th>
+    <th class="tg-0lax">|I|</th>
+    <th class="tg-0lax">cov<sub>C</sub></th>
+    <th class="tg-0lax">cov<sub>P</sub></th>
+    <th class="tg-0lax">cov<sub>I</sub></th>
+    <th class="tg-0lax">|un_str|</th>
+    <th class="tg-0lax">|on|</th>
+    <th class="tg-0lax">|un<sub>C</sub>|</th>
+    <th class="tg-0lax">|cyc|</th>
+    <th class="tg-0lax">R<sub>L</sub></th>
+    <th class="tg-0lax">R<sub>G</sub></th>
   </tr>
   <tr>
     <td class="tg-0lax">d1V1</td>
