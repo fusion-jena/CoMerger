@@ -110,7 +110,7 @@ This dataset contains different ontology merging tests, considering perfect or i
 
 <tr align="center">
 <td>d<sub>9</sub></td>
-<td><7/td>
+<td>7</td>
 <td>AHSO | BNO | CABRO | EPILONT | RAO | RNPRIO | RO</td>
 <td>341 | 281 | 175 | 741 | 1401 | 219 | 2274</td>
 <td>6</td>
