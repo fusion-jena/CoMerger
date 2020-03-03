@@ -1,12 +1,14 @@
-Dataset statistics: name and size of source ontologies with their imperfect and perfect mappings' size.
+# Dataset statistics
+
+This dataset contains different ontology merging tests, considering perfect or imperfect mapping of them. In each dataset (d<sub>i</sub>), we include different source ontologies. The below table shows the information for each dataset, including: id; number (n) and name of source ontologies (O<sub>S</sub>); axioms size of source ontologies; number of corresponding classes (M'<sub>C</sub>) and properties (M'<sub>P</sub>) of imperfect mapping; number of corresponding classes (M<sub>C</sub>) and properties (M'<sub>P</sub>) of perfect mapping.
 
 <table align="center">
 <tbody>
-<tr>
+<tr align="center">
   <td><b>id</b></td>
   <td><b>n</b></td>
-  <td><b>Source Ontologies OS</b></td>
-<td><b>Axioms of OS</b></td>
+  <td><b>Source Ontologies O<sub>S</sub></b></td>
+<td><b>Axioms of O<sub>S</sub></b></td>
 <td><b>M'<sub>C</sub></b></td>
 <td><b>M'<sub>P</sub></b></td>
 <td><b>M<sub>C</sub></b></td>
