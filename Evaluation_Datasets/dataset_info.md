@@ -1,4 +1,6 @@
-Dataset statistics: name and size of source ontologies with their imperfect and perfect mappings' size.
+# Dataset statistics: 
+
+This dataset contains different ontologies merged test. In each dataset (di), we include different source ontologies. The below table shows the information for each dataset, including: id; number (n) and name of source ontologies (OS); size of source ontologies (in terms of number of classes (C), properties (P), instances (I)); number of corresponding classes, properties, and insatnce of the mapping (M); size of the merged ontology (OM).
 
 <table align="center">
 <tbody>
