@@ -1,6 +1,11 @@
 # Dataset statistics 
 
-This dataset contains different ontology merging tests. In each dataset (d<sub>i</sub>), we include different source ontologies. The below table shows the information for each dataset, including: id; number (n) and name of source ontologies (O<sub>S</sub>); size of source ontologies (in terms of number of classes (C), properties (P), instances (I)); number of corresponding classes, properties, and insatnce of the mapping (M); size of the merged ontology (O<sub>M</sub>).
+This dataset contains different ontology merging tests. In each dataset (d<sub>i</sub>), we include different source ontologies. The below table shows the information for each dataset, including: 
+* id; 
+* number (n) and name of source ontologies (O<sub>S</sub>); 
+* size of source ontologies (in terms of number of classes (C), properties (P), instances (I)); 
+* number of corresponding classes, properties, and insatnce of the mapping (M); 
+* size of the merged ontology (O<sub>M</sub>).
 
 <table align="center">
 <tbody>
