@@ -2,18 +2,95 @@
 
 This tables shows the statistics of running six version (V<sub>1</sub>-V<sub>6</sub>) of our datasets (d<sub>1</sub>-d<sub>12</sub>). For each test of the created merged ontology (O<sub>M</sub>), we show: 
 * test version (id); 
-* number of classes |C| of the merged ontology; 
-* number of properties |P| of the merged ontology; 
-* number of instances |I| of the merged ontology; 
+* number of classes of the merged ontology (#C); 
+* number of properties of the merged ontology (#P); 
+* number of instances of the merged ontology (#I); 
 * class coverage (cov<sub>C</sub>); 
 * property coverage (cov<sub>P</sub>); 
 * instance coverage (cov<sub>I</sub>); 
-* number of the unpreserved structure in the merged ontology (|un_str|); 
-* number of properties with multiple domains and ranges, i.e., oneness (|on|); 
-* number of unconnected classes (|un<sub>C</sub>|); 
-* number of cycles on the class hierarchy (|cyc|); 
-* number of required refinements on the blocks as local refinements (R<sub>L</sub>); 
-* number of required refinements on the final merged ontology as global refinements  (R<sub>G</sub>).
+* number of the unpreserved structure in the merged ontology (#un_str); 
+* number of properties with multiple domains and ranges, i.e., oneness (#on); 
+* number of unconnected classes (#un<sub>C</sub>); 
+* number of cycles on the class hierarchy (#cyc); 
+* number of required refinements on the blocks as local refinements (#R<sub>L</sub>); 
+* number of required refinements on the final merged ontology as global refinements  (#R<sub>G</sub>).
+
+
+|         id        | #C | #P | #I | cov<sub>C</sub> | cov<sub>P</sub> | cov<sub>I</sub> | #un_str | #on | #un<sub>C</sub> | #cyc | #R<sub>L</sub> | #R<sub>G</sub> |
+|:---------------------------:|:--------:|:-----------:|:-----------:|:--------------:|:-----------------:|:-----------------:|:---------------------:|:-----:|:-----------------:|:-----------:|:------------------------:|:----------------------:|
+|  d<sub>1</sub>V<sub>1</sub> |    77    |     120     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |            14            |            8           |
+|  d<sub>1</sub>V<sub>2</sub> |    77    |     120     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |           12           |
+|  d<sub>1</sub>V<sub>3</sub> |    76    |     120     |      0      |      0.97      |         1         |         -         |           0           |   4   |         6         |      1      |             -            |            0           |
+|  d<sub>1</sub>V<sub>4</sub> |    82    |     121     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             8            |           12           |
+|  d<sub>1</sub>V<sub>5</sub> |    82    |     121     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |           13           |
+|  d<sub>1</sub>V<sub>6</sub> |    81    |     121     |      0      |      0.98      |         1         |         -         |           0           |   4   |         8         |      0      |             -            |            0           |
+|  d<sub>2</sub>V<sub>1</sub> |    112   |      61     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |            17            |            1           |
+|  d<sub>2</sub>V<sub>2</sub> |    112   |      61     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |            1           |
+|  d<sub>2</sub>V<sub>3</sub> |    112   |      61     |      0      |        1       |         1         |         -         |           0           |   0   |         1         |      0      |             -            |            0           |
+|  d<sub>2</sub>V<sub>4</sub> |    115   |      60     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |            18            |            3           |
+|  d<sub>2</sub>V<sub>5</sub> |    115   |      60     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |            4           |
+|  d<sub>2</sub>V<sub>6</sub> |    115   |      60     |      0      |        1       |         1         |         -         |           0           |   2   |         2         |      0      |             -            |            0           |
+|  d<sub>3</sub>V<sub>1</sub> |    98    |     147     |      0      |      0.98      |         1         |         -         |           0           |   0   |         0         |      0      |            21            |           11           |
+|  d<sub>3</sub>V<sub>2</sub> |    98    |     147     |      0      |      0.98      |         1         |         -         |           0           |   0   |         0         |      0      |             -            |           16           |
+|  d<sub>3</sub>V<sub>3</sub> |    97    |     147     |      0      |      0.97      |         1         |         -         |           0           |   6   |         7         |      1      |             -            |            0           |
+|  d<sub>3</sub>V<sub>4</sub> |    109   |     154     |      0      |      0.98      |         1         |         -         |           0           |   0   |         0         |      0      |            14            |           15           |
+|  d<sub>3</sub>V<sub>5</sub> |    109   |     154     |      0      |      0.98      |         1         |         -         |           0           |   0   |         0         |      0      |             -            |           17           |
+|  d<sub>3</sub>V<sub>6</sub> |    108   |     154     |      0      |      0.97      |         1         |         -         |           0           |   6   |         9         |      0      |             -            |            0           |
+|  d<sub>4</sub>V<sub>1</sub> |    202   |     167     |     114     |      0.99      |         1         |         1         |           0           |   0   |         0         |      0      |            30            |           12           |
+|  d<sub>4</sub>V<sub>2</sub> |    201   |     167     |     114     |      0.99      |         1         |         1         |           0           |   0   |         0         |      0      |             -            |           18           |
+|  d<sub>4</sub>V<sub>3</sub> |    199   |     167     |     114     |      0.98      |         1         |         1         |           0           |   6   |         8         |      1      |             -            |            0           |
+|  d<sub>4</sub>V<sub>4</sub> |    226   |     165     |     114     |      0.99      |        0.99       |         1         |           0           |   0   |         0         |      0      |            26            |           18           |
+|  d<sub>4</sub>V<sub>5</sub> |    226   |     165     |     114     |      0.99      |        0.99       |         1         |           0           |   0   |         0         |      0      |             -            |           21           |
+|  d<sub>4</sub>V<sub>6</sub> |    224   |     165     |     114     |      0.98      |        0.99       |         1         |           0           |   9   |         9         |      0      |             -            |            0           |
+|  d<sub>5</sub>V<sub>1</sub> |    248   |     156     |      4      |      0.99      |         1         |         1         |           0           |   0   |         0         |      0      |            61            |            7           |
+|  d<sub>5</sub>V<sub>2</sub> |    247   |     156     |      4      |      0.99      |         1         |         1         |           0           |   0   |         0         |      0      |             -            |            9           |
+|  d<sub>5</sub>V<sub>3</sub> |    246   |     156     |      4      |      0.98      |         1         |         1         |           0           |   3   |         5         |      0      |             -            |            0           |
+|  d<sub>5</sub>V<sub>4</sub> |    253   |     155     |      4      |      0.99      |        1.01       |         1         |           0           |   0   |         0         |      0      |            64            |           13           |
+|  d<sub>5</sub>V<sub>5</sub> |    253   |     154     |      4      |      0.99      |         1         |         1         |           0           |   0   |         0         |      0      |             -            |           17           |
+|  d<sub>5</sub>V<sub>6</sub> |    251   |     153     |      4      |      0.98      |         1         |         1         |           1           |   9   |         5         |      0      |             -            |            0           |
+|  d<sub>6</sub>V<sub>1</sub> |    338   |     274     |     118     |      0.99      |        1.05       |         1         |           0           |   0   |         0         |      0      |            71            |           21           |
+|  d<sub>6</sub>V<sub>2</sub> |    336   |     274     |     118     |      0.98      |        1.05       |         1         |           0           |   0   |         0         |      0      |             -            |           29           |
+|  d<sub>6</sub>V<sub>3</sub> |    334   |     274     |     118     |      0.98      |        1.05       |         1         |           0           |   14  |         8         |      4      |             -            |            0           |
+|  d<sub>6</sub>V<sub>4</sub> |    390   |     283     |     118     |      0.99      |        1.03       |         1         |           0           |   0   |         0         |      0      |            96            |           34           |
+|  d<sub>6</sub>V<sub>5</sub> |    390   |     281     |     118     |      0.99      |        1.02       |         1         |           0           |   0   |         0         |      0      |             -            |           41           |
+|  d<sub>6</sub>V<sub>6</sub> |    386   |     280     |     118     |      0.98      |        1.01       |         1         |           1           |   24  |         11        |      0      |             -            |            0           |
+|  d<sub>7</sub>V<sub>1</sub> |   4526   |      4      |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |            9           |
+|  d<sub>7</sub>V<sub>2</sub> |   4526   |      4      |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |            9           |
+|  d<sub>7</sub>V<sub>3</sub> |   4526   |      4      |      0      |        1       |         1         |         -         |           0           |   0   |         7         |      2      |             -            |            0           |
+|  d<sub>7</sub>V<sub>4</sub> |   4873   |      2      |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |            7           |
+|  d<sub>7</sub>V<sub>5</sub> |   4873   |      2      |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |            7           |
+|  d<sub>7</sub>V<sub>6</sub> |   4873   |      2      |      0      |        1       |         1         |         -         |           0           |   0   |         7         |      0      |             -            |            0           |
+|  d<sub>8</sub>V<sub>1</sub> |   7290   |      87     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |          1949          |
+|  d<sub>8</sub>V<sub>2</sub> |   7290   |      87     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |          1949          |
+|  d<sub>8</sub>V<sub>3</sub> |   7285   |      87     |      0      |        1       |         1         |         -         |           4           |   0   |        1916       |      29     |             -            |            0           |
+|  d<sub>8</sub>V<sub>4</sub> |   7721   |      87     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |          1925          |
+|  d<sub>8</sub>V<sub>5</sub> |   7721   |      87     |      0      |        1       |         1         |         -         |           0           |   0   |         0         |      0      |             -            |          1925          |
+|  d<sub>8</sub>V<sub>6</sub> |   7712   |      87     |      0      |        1       |         1         |         -         |           9           |   0   |        1916       |      0      |             -            |            0           |
+|  d<sub>9</sub>V<sub>1</sub> |   1145   |     101     |      31     |        1       |        0.72       |         1         |           0           |   0   |         0         |      0      |             8            |           17           |
+|  d<sub>9</sub>V<sub>2</sub> |   1145   |     101     |      31     |        1       |        0.72       |         1         |           0           |   0   |         0         |      0      |             -            |           17           |
+|  d<sub>9</sub>V<sub>3</sub> |   1144   |     101     |      31     |        1       |        0.72       |         1         |           0           |   14  |         2         |      0      |             -            |            0           |
+|  d<sub>9</sub>V<sub>4</sub> |   1146   |     101     |      31     |        1       |        0.72       |         1         |           0           |   0   |         0         |      0      |             0            |           17           |
+|  d<sub>9</sub>V<sub>5</sub> |   1146   |     101     |      31     |        1       |        0.72       |         1         |           0           |   0   |         0         |      0      |             -            |           17           |
+|  d<sub>9</sub>V<sub>6</sub> |   1145   |     101     |      31     |        1       |        0.72       |         1         |           0           |   14  |         2         |      0      |             -            |            0           |
+| d<sub>10</sub>V<sub>1</sub> |   5042   |     2197    |     843     |      0.99      |        0.9        |        0.93       |           0           |   0   |         0         |      0      |            41            |           106          |
+| d<sub>10</sub>V<sub>2</sub> |   5042   |     2197    |     843     |      0.99      |        0.9        |        0.93       |           0           |   0   |         0         |      0      |             -            |           116          |
+| d<sub>10</sub>V<sub>3</sub> |   5018   |     2197    |     843     |      0.99      |        0.9        |        0.93       |           71          |   21  |         5         |      2      |             -            |            0           |
+| d<sub>10</sub>V<sub>4</sub> |   4957   |     2394    |     882     |        1       |        1.01       |        0.98       |           0           |   0   |         0         |      0      |             -            |           143          |
+| d<sub>10</sub>V<sub>5</sub> |   4957   |     2394    |     882     |        1       |        1.01       |        0.98       |           0           |   0   |         0         |      0      |             -            |           143          |
+| d<sub>10</sub>V<sub>6</sub> |   4928   |     2378    |     882     |      0.99      |         1         |        0.98       |           87          |   22  |         7         |      3      |             -            |            0           |
+| d<sub>11</sub>V<sub>1</sub> |   5564   |     2245    |     870     |      0.99      |        0.89       |        0.94       |           0           |   0   |         0         |      0      |            40            |           110          |
+| d<sub>11</sub>V<sub>2</sub> |   5564   |     2245    |     870     |      0.99      |        0.89       |        0.94       |           0           |   0   |         0         |      0      |             -            |           120          |
+| d<sub>11</sub>V<sub>3</sub> |   5539   |     2245    |     870     |      0.99      |        0.89       |        0.94       |           75          |   21  |         5         |      2      |             -            |            0           |
+| d<sub>11</sub>V<sub>4</sub> |   5490   |     2469    |     909     |        1       |        1.01       |        0.98       |           0           |   0   |         0         |      0      |             -            |           143          |
+| d<sub>11</sub>V<sub>5</sub> |   5490   |     2469    |     909     |        1       |        1.01       |        0.98       |           0           |   0   |         0         |      0      |             -            |           143          |
+| d<sub>11</sub>V<sub>6</sub> |   5461   |     2453    |     909     |      0.99      |         1         |        0.98       |           87          |   22  |         7         |      3      |             -            |            0           |
+| d<sub>12</sub>V<sub>1</sub> |   15822  |     3818    |     1262    |      0.98      |        0.95       |        0.96       |           0           |   0   |         0         |      0      |             -            |           524          |
+| d<sub>12</sub>V<sub>2</sub> |   15822  |     3818    |     1262    |      0.98      |        0.95       |        0.96       |           0           |   0   |         0         |      0      |             -            |           524          |
+| d<sub>12</sub>V<sub>3</sub> |   15729  |     3818    |     1262    |      0.98      |        0.95       |        0.96       |          176          |   44  |        252        |      4      |             -            |            0           |
+| d<sub>12</sub>V<sub>4</sub> |   15080  |     3589    |     1262    |      0.99      |        1.03       |        0.96       |           0           |   0   |         0         |      0      |             -            |           977          |
+| d<sub>12</sub>V<sub>5</sub> |   15080  |     3589    |     1262    |      0.99      |        1.03       |        0.96       |           0           |   0   |         0         |      0      |             -            |           977          |
+| d<sub>12</sub>V<sub>6</sub> |   14944  |     3540    |     1262    |      0.98      |        1.01       |        0.96       |          579          |   85  |        229        |      13     |             -            |            0           |
+
 
 <table >
   <tr>
