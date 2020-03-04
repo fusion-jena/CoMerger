@@ -2,5 +2,5 @@
 
 This dataset has been used in the research paper:
 
-''Holistic Knowledge Integration with CoMerger: A divide-and-conquer approach'', Submitted in ESWC2020 by Samira Babalou and Birgitta König-Ries
+''Multiple Ontology Merging with CoMerger: A Divide-and-Conquer Approach'', Submitted in ESWC2020, Poster and Demo track, by Samira Babalou and Birgitta König-Ries
 
