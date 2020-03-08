@@ -1126,7 +1126,7 @@ The below table show the result:
 * In the case that the ontology does not have any knowledge about the CQ, we indicate this by an *unknown* (Uk.) answer.    
 * In the last column, we provide a sum value on the *complete*, *semi-complete* and *partial* (Co.), (SC.) and (Pa.) answers given by the *total correct* (TC.).
 
-Table
+
 <table>
   <tr align="center">
     <th align="center">id</th>
