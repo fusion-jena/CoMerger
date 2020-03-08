@@ -1,4 +1,4 @@
-# Ontology Merging Test's Info:
+# Characteristics of the N-Ary Merged Result
 
 This tables shows the statistics of running six version (V<sub>1</sub>-V<sub>6</sub>) of our datasets (d<sub>1</sub>-d<sub>12</sub>). For each test of the created merged ontology (O<sub>M</sub>), we show: 
 * test version (id); 
@@ -1111,5 +1111,471 @@ This tables shows the statistics of running six version (V<sub>1</sub>-V<sub>6</
     <td align="center">13</td>
     <td align="center">-</td>
     <td align="center">0</td>
+  </tr>
+</table>
+
+
+# Test with Competency Questions
+We used a set of Competency Questions CQs (see [here](http://comerger.uni-jena.de/cqCatalog.jsp)) in the conference domain. Each CQ converts to a SPARQL query and runs on the source ontologies and the different versions of the merged ontologies (our datasets in the conference domain). We compare the CQ-results for each dataset with all possible answers from the merged ontology with respect to its source ontologies on that dataset.
+The below table show the result:
+* The *complete* (Co.) answer indicates a full answer.
+* Among all answers of the source ontologies, if the number of found answers in the merged ontology is higher than the number of not found, we marked it as a *semi-complete* (SC.) answer. 
+* Among all answers of the source ontologies, if the number of found answers in the merged ontology is lower than the number of not found, we marked it as a *partial* (Pa.) answer. 
+* An answer is marked as a *wrong* (Wr.) if CQ returns false instead of true, or shows the wrong hierarchy.
+* If CQ's entities exist in the ontology, but no further knowledge exists about them, we mark them by *null* (Nu.) answer. 
+* In the case that the ontology does not have any knowledge about the CQ, we indicate this by an *unknown* (Uk.) answer.    
+* In the last column, we provide a sum value on the *complete*, *semi-complete* and *partial* (Co.), (SC.) and (Pa.) answers given by the *total correct* (TC.).
+
+Table
+<table>
+  <tr align="center">
+    <th align="center">id</th>
+    <th align="center">Co.</th>
+    <th align="center">SC.</th>
+    <th align="center">Pa.</th>
+    <th align="center">Wr.</th>
+    <th align="center">Nu.</th>
+    <th align="center">Uk.</th>
+    <th align="center">TC.</th>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>1</sub>V<sub>1</sub></td>
+    <td align="center">20</td>
+    <td align="center">6.7</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">30</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>1</sub>V<sub>2</sub></td>
+    <td align="center">20</td>
+    <td align="center">6.7</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">30</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>1</sub>V<sub>3</sub></td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">3.3</td>
+    <td align="center">63.3</td>
+    <td align="center">3.4</td>
+    <td align="center">30</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>1</sub>V<sub>4</sub></td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">3.3</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">30</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>1</sub>V<sub>5</sub></td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">3.3</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">30</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>1</sub>V<sub>6</sub></td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">3.3</td>
+    <td align="center">63.3</td>
+    <td align="center">3.4</td>
+    <td align="center">30</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>2</sub>V<sub>1</sub></td>
+    <td align="center">13.3</td>
+    <td align="center">6.7</td>
+    <td align="center">13.3</td>
+    <td align="center">0</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">33.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>2</sub>V<sub>2</sub></td>
+    <td align="center">13.3</td>
+    <td align="center">6.7</td>
+    <td align="center">13.3</td>
+    <td align="center">0</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">33.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>2</sub>V<sub>3</sub></td>
+    <td align="center">13.3</td>
+    <td align="center">6.7</td>
+    <td align="center">13.3</td>
+    <td align="center">0</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">33.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>2</sub>V<sub>4</sub></td>
+    <td align="center">13.3</td>
+    <td align="center">6.7</td>
+    <td align="center">13.3</td>
+    <td align="center">0</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">33.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>2</sub>V<sub>5</sub></td>
+    <td align="center">13.3</td>
+    <td align="center">6.7</td>
+    <td align="center">13.3</td>
+    <td align="center">0</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">33.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>2</sub>V<sub>6</sub></td>
+    <td align="center">13.3</td>
+    <td align="center">6.7</td>
+    <td align="center">13.3</td>
+    <td align="center">0</td>
+    <td align="center">66.7</td>
+    <td align="center">0</td>
+    <td align="center">33.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>1</sub></td>
+    <td align="center">36.7</td>
+    <td align="center">26.7</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">26.7</td>
+    <td align="center">3.2</td>
+    <td align="center">70</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>2</sub></td>
+    <td align="center">36.7</td>
+    <td align="center">26.7</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">26.7</td>
+    <td align="center">3.2</td>
+    <td align="center">70</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>3</sub></td>
+    <td align="center">33.3</td>
+    <td align="center">30</td>
+    <td align="center">3.3</td>
+    <td align="center">0</td>
+    <td align="center">26.7</td>
+    <td align="center">6.7</td>
+    <td align="center">66.7</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>4</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">26.7</td>
+    <td align="center">3.4</td>
+    <td align="center">66.7</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>5</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">26.7</td>
+    <td align="center">3.4</td>
+    <td align="center">66.7</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>6</sub></td>
+    <td align="center">36.7</td>
+    <td align="center">23.3</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">26.7</td>
+    <td align="center">6.7</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>7</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">26.7</td>
+    <td align="center">3.4</td>
+    <td align="center">66.7</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>3</sub>V<sub>8</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">3.3</td>
+    <td align="center">3.3</td>
+    <td align="center">26.7</td>
+    <td align="center">3.4</td>
+    <td align="center">66.7</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>1</sub></td>
+    <td align="center">33.3</td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>2</sub></td>
+    <td align="center">33.3</td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>3</sub></td>
+    <td align="center">33.3</td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>4</sub></td>
+    <td align="center">36.7</td>
+    <td align="center">13.3</td>
+    <td align="center">13.3</td>
+    <td align="center">3.3</td>
+    <td align="center">33.3</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>5</sub></td>
+    <td align="center">36.7</td>
+    <td align="center">13.3</td>
+    <td align="center">13.3</td>
+    <td align="center">3.3</td>
+    <td align="center">33.3</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>6</sub></td>
+    <td align="center">36.7</td>
+    <td align="center">13.3</td>
+    <td align="center">13.3</td>
+    <td align="center">3.3</td>
+    <td align="center">33.3</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>7</sub></td>
+    <td align="center">33.3</td>
+    <td align="center">13.3</td>
+    <td align="center">13.3</td>
+    <td align="center">3.3</td>
+    <td align="center">33.4</td>
+    <td align="center">3.4</td>
+    <td align="center">60</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>4</sub>V<sub>8</sub></td>
+    <td align="center">33.3</td>
+    <td align="center">13.3</td>
+    <td align="center">13.3</td>
+    <td align="center">3.3</td>
+    <td align="center">33.4</td>
+    <td align="center">3.4</td>
+    <td align="center">60</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>1</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">13.4</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">40</td>
+    <td align="center">0</td>
+    <td align="center">60</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>2</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">13.4</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">40</td>
+    <td align="center">0</td>
+    <td align="center">60</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>3</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">13.4</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">40</td>
+    <td align="center">0</td>
+    <td align="center">60</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>4</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">16.7</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>5</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">16.7</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>6</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">16.7</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>7</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">16.7</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>5</sub>V<sub>8</sub></td>
+    <td align="center">23.3</td>
+    <td align="center">16.7</td>
+    <td align="center">23.3</td>
+    <td align="center">0</td>
+    <td align="center">36.7</td>
+    <td align="center">0</td>
+    <td align="center">63.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>1</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">26.7</td>
+    <td align="center">0</td>
+    <td align="center">73.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>2</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">26.7</td>
+    <td align="center">0</td>
+    <td align="center">73.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>3</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">10</td>
+    <td align="center">0</td>
+    <td align="center">26.7</td>
+    <td align="center">0</td>
+    <td align="center">73.3</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>4</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">70</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>5</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">70</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>6</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">70</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>7</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">70</td>
+  </tr>
+  <tr align="center">
+    <td align="center">d<sub>6</sub>V<sub>8</sub></td>
+    <td align="center">40</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">0</td>
+    <td align="center">23.3</td>
+    <td align="center">6.7</td>
+    <td align="center">70</td>
   </tr>
 </table>
