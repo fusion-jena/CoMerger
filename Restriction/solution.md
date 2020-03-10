@@ -182,7 +182,7 @@ Each conflict on the values or cardinality constraints requires the individual r
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with minCard - primitive conflict <br> <b>Solution:</b> take the least upper bound to cover both - in example it's value(p<sup>i</sup><sub>minCard</sub>)=(4-n)</td>
 </tr>
 <tr >
-    <td>C</td>
+    <td align="center">C</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with exCard - primitive conflict <br> <b>Solution:</b> no automatic solution, only through user's preference</td>
 </tr>
 <tr >
