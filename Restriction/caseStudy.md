@@ -72,9 +72,9 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
  </table>
  
  
-# CQ answers on the conflicted O<sub>M</sub> and the repaired O<sub>M'</sub>
+# Competency Questions answers on the conflicted O<sub>M</sub> and the repaired O<sub>M'</sub>
 
-This dataset contains answers to 10 CQ questions.
+This dataset contains answers to 10 CQ questions. <p><a href="http://comerger.uni-jena.de/cqCatalog.jsp">This is the link to the CQs.</a></p>
 
 
 <table align="center">

@@ -24,80 +24,201 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
   </tr>
 
 <tr align="center">
-    <td>B</td>
+    <td>N</td>
     <td>value(p<sup>i</sup><sub>maxCard</sub>) = value(p<sup>j</sup><sub>maxCard</sub>)</td>
     <td>value(p<sup>i</sup><sub>maxCard</sub>)=(0-4) &nbsp;&nbsp; value(p<sup>j</sup><sub>maxCard</sub>)=(0-4)</td>
     <td>no conflict </td>
   </tr>
+  
   <tr align="center">
-    <td>d<sub>3</sub></td>
-    <td>3</td>
-    <td>cmt | conference | confOf</td>
-    <td>- | - | (39,36,0)</td>
-    <td>(22,11,0)</td>
-    <td>(97,147,0)</td>
+    <td>B</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)  <span>&#8800;</span> value(p<sup>j</sup><sub>minCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)=(4-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>minCard</sub>)=(5-n)</td>
+    <td>primitive </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>4</sub></td>
-    <td>3</td>
-    <td>conference | edas | sigkdd</td>
-    <td>- | (104,50,114) | -</td>
-    <td>(24,10,0)</td>
-    <td>(179,132,114)</td>
+    <td>N</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)  = value(p<sup>j</sup><sub>minCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)=(4-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>minCard</sub>)=(4-n)</td>
+    <td>no conflict </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>5</sub></td>
-    <td>4</td>
-    <td>conference | confOf | edas | ekaw</td>
-    <td>- | - | - | - </td>
-    <td>(40,13,0)</td>
-    <td>(199,167,114)</td>
+    <td>C</td>
+    <td>value(p<sup>i</sup><sub>exCard</sub>)  <span>&#8800;</span> value(p<sup>j</sup><sub>exCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>exCard</sub>)= 4 &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 5</td>
+    <td>primitive </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>6</sub></td>
-    <td>4</td>
-    <td>cmt | ekaw | iasted | sigkdd</td>
-    <td>- | - | (141,41,4) | -</td>
-    <td>(33,5,0)</td>
-    <td>(246,156,4)</td>
+    <td>N</td>
+    <td>value(p<sup>i</sup><sub>exCard</sub>) = value(p<sup>j</sup><sub>exCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>exCard</sub>)= 4 &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 4</td>
+    <td>primitive </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>7</sub></td>
-    <td>5</td>
-    <td>confOf | edas | ekaw | iasted | sigkdd</td>
-    <td>- | - | - | - | -</td>
-    <td>(53,13,0)</td>
-    <td>(305,174,118)</td>
+    <td>D</td>
+    <td>value(p<sup>i</sup><sub>maxCard</sub>) = value(p<sup>j</sup><sub>exCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>maxCard</sub>)=(0-3) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 3</td>
+    <td>complex </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>8</sub></td>
-    <td>7</td>
-    <td>cmt | conference | confOf | edas | ekaw | iasted | sigkdd</td>
-    <td>- | - | - | - | - | - | - </td>
-    <td>(68,27,0)</td>
-    <td>(334,274,118)</td>
+    <td>E</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>) = value(p<sup>j</sup><sub>exCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)=(3-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 3</td>
+    <td>complex </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>9</sub></td>
-    <td>2</td>
-    <td>human | mouse</td>
-    <td>(3304,2,0) | (2744,3,0)</td>
-    <td>(1490,0,0)</td>
-    <td>(4526,4,0)</td>
+    <td>F</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>) = value(p<sup>j</sup><sub>maxCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)=(3-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>maxCard</sub>)=(0-3)</td>
+    <td>complex </td>
   </tr>
   
   <tr align="center">
-    <td>d<sub>10</sub></td>
-    <td>2</td>
-    <td>FMA_samll | NCI_small</td>
-    <td>(3696,24,0) | (6488,63,0)</td>
-    <td>(2480,0,0)</td>
-    <td>(7285,87,0)</td>
+    <td>G</td>
+    <td>value(p<sup>i</sup><sub>maxCard</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>exCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>maxCard</sub>)=(0-3) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 2 <b>or</b> value(p<sup>i</sup><sub>maxCard</sub>)=(0-3) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 4</td> 
+    <td>complex </td>
+  </tr>
+  
+  <tr align="center">
+    <td>H</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>exCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)=(3-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 2 <b>or</b> value(p<sup>i</sup><sub>maxCard</sub>)=(3-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= 4</td> 
+    <td>complex </td>
+  </tr>
+  
+  <tr align="center">
+    <td>I</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>maxCard</sub>)</td>
+    <td>value(p<sup>i</sup><sub>minCard</sub>)=(3-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>maxCard</sub>)= (0-4) <b>or</b> value(p<sup>i</sup><sub>maxCard</sub>)=(3-n) &nbsp;&nbsp; value(p<sup>j</sup><sub>exCard</sub>)= (0-2)</td> 
+    <td>complex </td>
+  </tr>
+  
+  <tr align="center">
+    <td>J</td>
+    <td>value(p<sup>i</sup><sub>sVF</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>sVF</sub>)</td>
+    <td>value(p<sup>i</sup><sub>sVF</sub>)=Reviewer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=Person <b>or</b> value(p<sup>i</sup><sub>sVF</sub>)=Integer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=String</td> 
+    <td>primitive </td>
+  </tr>
+  
+  <tr align="center">
+    <td>N</td>
+    <td>value(p<sup>i</sup><sub>sVF</sub>) = value(p<sup>j</sup><sub>sVF</sub>)</td>
+    <td>value(p<sup>i</sup><sub>sVF</sub>)=Reviewer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=Reviewer <b>or</b> value(p<sup>i</sup><sub>sVF</sub>)=Integer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=Integer</td> 
+    <td>no conflict </td>
+  </tr>
+  
+  <tr align="center">
+    <td>K</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>aVF</sub>)</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>)=Reviewer &nbsp;&nbsp; value(p<sup>j</sup><sub>aVF</sub>)=Person <b>or</b> value(p<sup>i</sup><sub>aVF</sub>)=Integer &nbsp;&nbsp; value(p<sup>j</sup><sub>aVF</sub>)=String</td> 
+    <td>primitive </td>
+   </tr>
+  
+  <tr align="center">
+    <td>N</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>) = value(p<sup>j</sup><sub>aVF</sub>)</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>)=Reviewer &nbsp;&nbsp; value(p<sup>j</sup><sub>aVF</sub>)=Reviewer <b>or</b> value(p<sup>i</sup><sub>aVF</sub>)=Integer &nbsp;&nbsp; value(p<sup>j</sup><sub>aVF</sub>)=Integer</td> 
+    <td>no conflict </td>
+  </tr>
+  
+  <tr align="center">
+    <td>L</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>sVF</sub>)</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>)=Reviewer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=Person <b>or</b> value(p<sup>i</sup><sub>aVF</sub>)=Integer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=String</td> 
+    <td>complex </td>
+  </tr>
+  
+ <tr align="center">
+    <td>N</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>) = value(p<sup>j</sup><sub>sVF</sub>)</td>
+    <td>value(p<sup>i</sup><sub>aVF</sub>)= Reviewer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=Reviewer <b>or</b> value(p<sup>i</sup><sub>aVF</sub>)=Integer &nbsp;&nbsp; value(p<sup>j</sup><sub>sVF</sub>)=Integer</td> 
+    <td>no conflict </td>
+  </tr>
+  
+   <tr align="center">
+    <td>M</td>
+    <td>value(p<sup>i</sup><sub>hV</sub>) <span>&#8800;</span> value(p<sup>j</sup><sub>hV</sub>)</td>
+    <td>value(p<sup>i</sup><sub>hV</sub>)= Accept.PaperStatus &nbsp;&nbsp; value(p<sup>j</sup><sub>hV</sub>)=Reject.PaperStatus <b>or</b> value(p<sup>i</sup><sub>hV</sub>)=true &nbsp;&nbsp; value(p<sup>j</sup><sub>hV</sub>)=false</td> 
+    <td>primitive </td>
+  </tr>
+  
+  <tr align="center">
+    <td>N</td>
+    <td>value(p<sup>i</sup><sub>hV</sub>) = value(p<sup>j</sup><sub>hV</sub>)</td>
+    <td>value(p<sup>i</sup><sub>hV</sub>)= Accept.PaperStatus &nbsp;&nbsp; value(p<sup>j</sup><sub>hV</sub>)=Accept.PaperStatus <b>or</b> value(p<sup>i</sup><sub>hV</sub>)=true &nbsp;&nbsp; value(p<sup>j</sup><sub>hV</sub>)=true</td> 
+    <td>no conflict </td>
   </tr>
  </table>
+ 
+ 
+ 
+<table align="center">
+<tbody>
+<tr align="center">
+  <td><b>Case</b></td>
+  <td><b>Explanation</b></td>
+</tr>
+<tr align="center">
+    <td>A</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with maxCard - primitive conflict <br> <b>Solution:</b> take the greatest lower bound to cover both - in example it's value(p<sup>j</sup><sub>maxCard</sub>)=(0-5)</td>
+</tr>
+<tr align="center">
+    <td>B</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with minCard - primitive conflict <br> <b>Solution:</b> take the least upper bound to cover both - in example it's value(p<sup>i</sup><sub>minCard</sub>)=(4-n)</td>
+</tr>
+<tr align="center">
+    <td>C</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with exCard - primitive conflict <br> <b>Solution:</b> no automatic solution, only through user's preference</td>
+</tr>
+<tr align="center">
+    <td>D</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between maxCard and exCard - complex conflict <br> <b>Solution:</b> take the exact number to cover both - in example it's value(p<sup>j</sup><sub>exCard</sub>)= 3</td>
+</tr>
+<tr align="center">
+    <td>E</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and exCard - complex conflict <br> <b>Solution:</b> take the exact number to cover both - in example it's value(p<sup>j</sup><sub>exCard</sub>)= 3</td>
+</tr>
+<tr align="center">
+    <td>F</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and maxCard - complex conflict <br> <b>Solution:</b> take the least upper bound from minCard and greatest lower bound from maxCard to cover both - in example it's 3</td>
+</tr>
+<tr align="center">
+    <td>G</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between maxCard and exCard - complex conflict <br> <b>Solution:</b> if in range, take the exact number, in example it's value(p<sup>j</sup><sub>exCard</sub>)= 2, if out of range, no solution </td>
+</tr>
+<tr align="center">
+    <td>H</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and exCard - complex conflict <br> <b>Solution:</b> if in range, take the exact number, in example it's value(p<sup>j</sup><sub>exCard</sub>)= 4, if out of range, no solution </td>
+</tr>
+<tr align="center">
+    <td>I</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and maxCard - complex conflict <br> <b>Solution:</b> like in Case F or no solution if no overlaps </td>
+</tr
+<tr align="center">
+    <td>J</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with someValuesFrom - primitive conflict <br> <b>Solution:</b> object property: semantic relatedness - if path exists, take superclass; datatype property: subsumption hierarchy - if path exists, take more general type </td>
+</tr>
+<tr align="center">
+    <td>K</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with allValuesFrom - primitive conflict <br> <b>Solution:</b> object property: semantic relatedness - if path exists, take superclass; datatype property: subsumption hierarchy - if path exists, take more general type </td>
+</tr>
+<tr align="center">
+    <td>L</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between allValuesFrom and someValuesFrom - complex conflict <br> <b>Solution:</b> object property: semantic relatedness - if path exists, take superclass; datatype property: subsumption hierarchy - if path exists, take more general type </td>
+</tr>
+<tr align="center">
+    <td>M</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with hasValue - primitive conflict <br> <b>Solution:</b> no automatic solution, only through user's preference </td>
+</tr>
+<tr align="center">
+    <td>N</td>
+    <td><b>Detection:</b> based on the Attribute Graph RG there is an edge with label 1 - but there is no conflict <br> <b>Solution:</b> no solution needed, because there is no conflict </td>
+</tr>
+</table>
