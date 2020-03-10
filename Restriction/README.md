@@ -1,4 +1,4 @@
-OWL Restriction Reconciliation Repository
+# OWL Restriction Reconciliation Repository
 
 This is a repository about the OWL restriction reconciliation in merging ontologies. 
 We proposed (i) one type conflicts by building a subsumption hierarchy on datatypes and performing substitution or instantiation on them, (ii) cardinality restriction conflicts with least upper and greatest lower bound method, (iii) value restriction conflicts by utilizing the semantic relatedness. 
