@@ -1,0 +1,1925 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:/C:/Tomcat%208.5/webapps/comerger/uploads/MergedOnt637.owl#"
+     xml:base="file:/C:/Tomcat%208.5/webapps/comerger/uploads/MergedOnt637.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:/C:/Tomcat%208.5/webapps/comerger/uploads/MergedOnt637.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cmt#acceptPaper -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#acceptPaper">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#acceptedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#acceptedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <owl:inverseOf rdf:resource="http://cmt#acceptPaper"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#addProgramCommitteeMember -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#addProgramCommitteeMember">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#addedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#addedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="http://cmt#addProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#adjustBid -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#adjustBid">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://cmt#Bid"/>
+        <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#adjustedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#adjustedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://cmt#Bid"/>
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://cmt#adjustBid"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#assignExternalReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#assignExternalReviewer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://cmt#ExternalReviewer"/>
+        <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://cmt#assignedByReviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#assignReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#assignReviewer">
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#assignedByAdministrator -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#assignedByAdministrator">
+        <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://cmt#assignReviewer"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#assignedByReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#assignedByReviewer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://cmt#ExternalReviewer"/>
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#assignedTo -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#assignedTo">
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#co-writePaper -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#co-writePaper">
+        <rdfs:domain rdf:resource="http://cmt#Co-author"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#detailsEnteredBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#detailsEnteredBy">
+        <owl:inverseOf rdf:resource="http://cmt#enterConferenceDetails"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#enableVirtualMeeting -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#enableVirtualMeeting">
+        <owl:inverseOf rdf:resource="http://cmt#virtualMeetingEnabledBy"/>
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#endReview -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#endReview">
+        <rdfs:range rdf:resource="http://cmt#Review"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeChair"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#enterConferenceDetails -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#enterConferenceDetails">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#enterReviewCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#enterReviewCriteria">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#finalizePaperAssignment -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#finalizePaperAssignment">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hardcopyMailingManifestsPrintedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hardcopyMailingManifestsPrintedBy">
+        <owl:inverseOf rdf:resource="http://cmt#printHardcopyMailingManifests"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hasBid -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hasBid">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://cmt#Bid"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hasCo-author -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hasCo-author">
+        <rdfs:range rdf:resource="http://cmt#Co-author"/>
+        <owl:inverseOf rdf:resource="http://cmt#co-writePaper"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hasConferenceMember -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hasConferenceMember">
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://merged#ConferenceMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hasConflictOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hasConflictOfInterest">
+        <rdfs:range rdf:resource="http://cmt#Document"/>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hasDecision -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hasDecision">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://cmt#Decision"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#hasProgramCommitteeMember -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#hasProgramCommitteeMember">
+        <rdfs:domain rdf:resource="http://cmt#ProgramCommittee"/>
+        <owl:inverseOf rdf:resource="http://cmt#memberOfProgramCommittee"/>
+        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#markConflictOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#markConflictOfInterest">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In CMT terms, a ‘Conflict of Interest’ is an association between a specific Reviewer and a specific Paper that states there is a conflict of interest between that Reviewer and that paper. Conflicts can be marked by Authors (during paper submission) or by Reviewers (in Phase 2) or by Chairmen (in Phase 3).
+
+Based on that conflict, the reviewer will not be able to bid on the paper, be assigned to that paper (either automatically by the system or manually by a Chairman) or view review submissions for that paper.
+</rdfs:comment>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cmt#Chairman"/>
+                    <rdf:Description rdf:about="http://cmt#Reviewer"/>
+                    <rdf:Description rdf:about="http://merged#Author"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#memberOfConference -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#memberOfConference">
+        <owl:inverseOf rdf:resource="http://cmt#hasConferenceMember"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+        <rdfs:domain rdf:resource="http://merged#ConferenceMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#memberOfProgramCommittee -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#memberOfProgramCommittee">
+        <rdfs:range rdf:resource="http://cmt#ProgramCommittee"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#paperAssignmentFinalizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#paperAssignmentFinalizedBy">
+        <owl:inverseOf rdf:resource="http://cmt#finalizePaperAssignment"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#paperAssignmentToolsRunBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#paperAssignmentToolsRunBy">
+        <owl:inverseOf rdf:resource="http://cmt#runPaperAssignmentTools"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#printHardcopyMailingManifests -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#printHardcopyMailingManifests">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#readByMeta-Reviewer -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#readByMeta-Reviewer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://cmt#Meta-Reviewer"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#readByReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#readByReviewer">
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://cmt#readPaper"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#readPaper -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#readPaper">
+        <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#rejectPaper -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#rejectPaper">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <owl:inverseOf rdf:resource="http://cmt#rejectedBy"/>
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#rejectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#rejectedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#reviewCriteriaEnteredBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#reviewCriteriaEnteredBy">
+        <owl:inverseOf rdf:resource="http://cmt#enterReviewCriteria"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#reviewerBiddingStartedBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#reviewerBiddingStartedBy">
+        <owl:inverseOf rdf:resource="http://cmt#startReviewerBidding"/>
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#runPaperAssignmentTools -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#runPaperAssignmentTools">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#setMaxPapers -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#setMaxPapers">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#startReviewerBidding -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#startReviewerBidding">
+        <rdfs:domain rdf:resource="http://merged#Administrator"/>
+        <rdfs:range rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#submitPaper -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#submitPaper">
+        <rdfs:domain rdf:resource="http://merged#Author"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#virtualMeetingEnabledBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#virtualMeetingEnabledBy">
+        <rdfs:range rdf:resource="http://merged#Administrator"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#writeReview -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#writeReview">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://cmt#Review"/>
+        <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cmt#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://cmt#writtenBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://cmt#Review"/>
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://cmt#writeReview"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#employedBy -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#employedBy">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://confOf#Organization"/>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#expertOn -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#expertOn">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#SubjectArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#follows -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#follows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://confOf#Administrative_event"/>
+        <rdfs:range rdf:resource="http://confOf#Administrative_event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#hasAdministrativeEvent -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#hasAdministrativeEvent">
+        <rdfs:range rdf:resource="http://confOf#Administrative_event"/>
+        <rdfs:domain rdf:resource="http://confOf#Working_event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#hasCity -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#hasCity">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://confOf#City"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Organization"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#hasCountry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://confOf#Country"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Organization"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#hasTopic -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#hasTopic">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://confOf#Working_event"/>
+        <rdfs:range rdf:resource="http://merged#SubjectArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#parallel_with -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#parallel_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:range rdf:resource="http://confOf#Administrative_event"/>
+        <rdfs:domain rdf:resource="http://confOf#Administrative_event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://confOf#studyAt -->
+
+    <owl:ObjectProperty rdf:about="http://confOf#studyAt">
+        <rdfs:domain rdf:resource="http://confOf#Scholar"/>
+        <rdfs:range rdf:resource="http://confOf#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#hasBeenAssigned -->
+
+    <owl:ObjectProperty rdf:about="http://merged#hasBeenAssigned">
+        <rdfs:label rdf:resource="http://cmt#hasBeenAssigned"/>
+        <rdfs:label rdf:resource="http://confOf#reviewes"/>
+        <owl:inverseOf rdf:resource="http://cmt#assignedTo"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cmt#Reviewer"/>
+                    <rdf:Description rdf:about="http://merged#ProgramCommitteeMember"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#hasSubjectArea -->
+
+    <owl:ObjectProperty rdf:about="http://merged#hasSubjectArea">
+        <rdfs:label rdf:resource="http://cmt#hasSubjectArea"/>
+        <rdfs:label rdf:resource="http://confOf#dealsWith"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://merged#SubjectArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#writePaper -->
+
+    <owl:ObjectProperty rdf:about="http://merged#writePaper">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:label rdf:resource="http://cmt#writePaper"/>
+        <rdfs:label rdf:resource="http://confOf#writes"/>
+        <rdfs:domain rdf:resource="http://merged#Author"/>
+        <rdfs:range rdf:resource="http://merged#Contribution"/>
+        <owl:inverseOf rdf:resource="http://merged#writtenBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://merged#writtenBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://cmt#hasAuthor"/>
+        <rdfs:label rdf:resource="http://confOf#writtenBy"/>
+        <rdfs:range rdf:resource="http://merged#Author"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cmt#acceptsHardcopySubmissions -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#acceptsHardcopySubmissions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#date -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#date">
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#logoURL -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#logoURL">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#maxPapers -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#maxPapers">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#name -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://merged#Conference"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#paperID -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#paperID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#reviewsPerPaper -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#reviewsPerPaper">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cmt#siteURL -->
+
+    <owl:DatatypeProperty rdf:about="http://cmt#siteURL">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#abstract">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#contactEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#contactEmail">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#defaultChoice -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#defaultChoice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#earlyRegistration -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#earlyRegistration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://confOf#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#ends_on -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#ends_on">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://confOf#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasFax -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasFax">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasFirstName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">involved middle name</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasHomePage -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasHomePage">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasKeyword -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasKeyword">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasPhone -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasPhone">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasPostalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasPostalCode">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Organization"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasStreet -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasStreet">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Organization"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasSurname -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasSurname">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#hasVAT -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#hasVAT">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">value added tax
+</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#has_short_title -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#has_short_title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#has_title -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#has_title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#location -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#location">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">where the event is being held</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#maxChoice -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#maxChoice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool
+</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#minChoice -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#minChoice">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool
+</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://confOf#Social_event"/>
+                    <rdf:Description rdf:about="http://confOf#Working_event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#remark -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#remark">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://confOf#starts_on -->
+
+    <owl:DatatypeProperty rdf:about="http://confOf#starts_on">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:domain rdf:resource="http://confOf#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#hasEmail">
+        <rdfs:label rdf:resource="http://cmt#email"/>
+        <rdfs:label rdf:resource="http://confOf#hasEmail"/>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#hasTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://cmt#title"/>
+        <rdfs:label rdf:resource="http://confOf#hasTitle"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cmt#Acceptance -->
+
+    <owl:Class rdf:about="http://cmt#Acceptance">
+        <rdfs:subClassOf rdf:resource="http://cmt#Decision"/>
+        <owl:disjointWith rdf:resource="http://cmt#Rejection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#AssociatedChair -->
+
+    <owl:Class rdf:about="http://cmt#AssociatedChair">
+        <rdfs:subClassOf rdf:resource="http://merged#ConferenceMember"/>
+        <owl:disjointWith rdf:resource="http://cmt#ConferenceChair"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#AuthorNotReviewer -->
+
+    <owl:Class rdf:about="http://cmt#AuthorNotReviewer">
+        <rdfs:subClassOf rdf:resource="http://merged#Author"/>
+        <owl:disjointWith rdf:resource="http://cmt#Reviewer"/>
+        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeMember"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Bid -->
+
+    <owl:Class rdf:about="http://cmt#Bid">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+        <owl:disjointWith rdf:resource="http://cmt#Document"/>
+        <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+        <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Chairman -->
+
+    <owl:Class rdf:about="http://cmt#Chairman">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cmt#AssociatedChair"/>
+                    <rdf:Description rdf:about="http://cmt#ConferenceChair"/>
+                    <rdf:Description rdf:about="http://merged#ProgramCommitteeChair"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Co-author -->
+
+    <owl:Class rdf:about="http://cmt#Co-author">
+        <rdfs:subClassOf rdf:resource="http://merged#Author"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#ConferenceChair -->
+
+    <owl:Class rdf:about="http://cmt#ConferenceChair">
+        <rdfs:subClassOf rdf:resource="http://merged#ConferenceMember"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Decision -->
+
+    <owl:Class rdf:about="http://cmt#Decision">
+        <owl:disjointWith rdf:resource="http://cmt#Document"/>
+        <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+        <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Document -->
+
+    <owl:Class rdf:about="http://cmt#Document">
+        <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+        <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#ExternalReviewer -->
+
+    <owl:Class rdf:about="http://cmt#ExternalReviewer">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#assignedByReviewer"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An External Reviewer is a person that has been assigned to review a paper for another Reviewer, but is not themselves a Reviewer. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Meta-Review -->
+
+    <owl:Class rdf:about="http://cmt#Meta-Review">
+        <rdfs:subClassOf rdf:resource="http://cmt#Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Meta-Reviewer -->
+
+    <owl:Class rdf:about="http://cmt#Meta-Reviewer">
+        <rdfs:subClassOf rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A special type of Reviewer.  There can be any number of Reviewers for a given paper, but only one Meta-Reviewer.  The Meta-Reviewer can go over all the reviews submitted for the paper and submit their own review.  Questions for the Meta-Reviewer can be different from those for a normal Reviewer.  Their role is to ensure that the reviews are good and consistent. The decision to use Meta-Reviewers is optional, and must be set before paper assignment occurs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#PaperAbstract -->
+
+    <owl:Class rdf:about="http://cmt#PaperAbstract">
+        <rdfs:subClassOf rdf:resource="http://merged#Contribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Preference -->
+
+    <owl:Class rdf:about="http://cmt#Preference">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#ProgramCommittee -->
+
+    <owl:Class rdf:about="http://cmt#ProgramCommittee">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Rejection -->
+
+    <owl:Class rdf:about="http://cmt#Rejection">
+        <rdfs:subClassOf rdf:resource="http://cmt#Decision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Review -->
+
+    <owl:Class rdf:about="http://cmt#Review">
+        <rdfs:subClassOf rdf:resource="http://cmt#Document"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#writtenBy"/>
+                <owl:allValuesFrom rdf:resource="http://cmt#Meta-Reviewer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://merged#Contribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#Reviewer -->
+
+    <owl:Class rdf:about="http://cmt#Reviewer">
+        <rdfs:subClassOf rdf:resource="http://cmt#User"/>
+        <rdfs:subClassOf rdf:resource="http://merged#ConferenceMember"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cmt#User -->
+
+    <owl:Class rdf:about="http://cmt#User">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Administrative_event -->
+
+    <owl:Class rdf:about="http://confOf#Administrative_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Social_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Working_event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Assistant -->
+
+    <owl:Class rdf:about="http://confOf#Assistant">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Banquet -->
+
+    <owl:Class rdf:about="http://confOf#Banquet">
+        <rdfs:subClassOf rdf:resource="http://confOf#Social_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Reception"/>
+        <owl:disjointWith rdf:resource="http://confOf#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Camera_Ready_event -->
+
+    <owl:Class rdf:about="http://confOf#Camera_Ready_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Registration_of_participants_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Reviewing_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Reviewing_results_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Submission_event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final upload of accepted contributions</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#City -->
+
+    <owl:Class rdf:about="http://confOf#City">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://confOf#Event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Contribution"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Company -->
+
+    <owl:Class rdf:about="http://confOf#Company">
+        <rdfs:subClassOf rdf:resource="http://confOf#Organization"/>
+        <owl:disjointWith rdf:resource="http://confOf#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Country -->
+
+    <owl:Class rdf:about="http://confOf#Country">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://confOf#Event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Contribution"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Event -->
+
+    <owl:Class rdf:about="http://confOf#Event">
+        <owl:disjointWith rdf:resource="http://confOf#Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Contribution"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Organization -->
+
+    <owl:Class rdf:about="http://confOf#Organization">
+        <owl:disjointWith rdf:resource="http://merged#Contribution"/>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Participant -->
+
+    <owl:Class rdf:about="http://confOf#Participant">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Person -->
+
+    <owl:Class rdf:about="http://confOf#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasFirstName"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Poster -->
+
+    <owl:Class rdf:about="http://confOf#Poster">
+        <rdfs:subClassOf rdf:resource="http://merged#Contribution"/>
+        <owl:disjointWith rdf:resource="http://confOf#Short_paper"/>
+        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Reception -->
+
+    <owl:Class rdf:about="http://confOf#Reception">
+        <rdfs:subClassOf rdf:resource="http://confOf#Social_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Registration_of_participants_event -->
+
+    <owl:Class rdf:about="http://confOf#Registration_of_participants_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Reviewing_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Reviewing_results_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Submission_event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Registration of new ConfTool users</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Regular -->
+
+    <owl:Class rdf:about="http://confOf#Regular">
+        <rdfs:subClassOf rdf:resource="http://confOf#Participant"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Reviewing_event -->
+
+    <owl:Class rdf:about="http://confOf#Reviewing_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Reviewing_results_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Submission_event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reviewing procedure for submitted contributions</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Reviewing_results_event -->
+
+    <owl:Class rdf:about="http://confOf#Reviewing_results_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Submission_event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Results of the reviewing procedures, accessable to authors</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Scholar -->
+
+    <owl:Class rdf:about="http://confOf#Scholar">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#studyAt"/>
+                <owl:someValuesFrom rdf:resource="http://confOf#University"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#studyAt"/>
+                <owl:allValuesFrom rdf:resource="http://confOf#University"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price category - scholar</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Science_Worker -->
+
+    <owl:Class rdf:about="http://confOf#Science_Worker">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price category - science worker</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Short_paper -->
+
+    <owl:Class rdf:about="http://confOf#Short_paper">
+        <rdfs:subClassOf rdf:resource="http://merged#Contribution"/>
+        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Social_event -->
+
+    <owl:Class rdf:about="http://confOf#Social_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#defaultChoice"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#has_title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#location"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://confOf#Working_event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Student -->
+
+    <owl:Class rdf:about="http://confOf#Student">
+        <rdfs:subClassOf rdf:resource="http://confOf#Participant"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Submission_event -->
+
+    <owl:Class rdf:about="http://confOf#Submission_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submission of contributions</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Trip -->
+
+    <owl:Class rdf:about="http://confOf#Trip">
+        <rdfs:subClassOf rdf:resource="http://confOf#Social_event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Tutorial -->
+
+    <owl:Class rdf:about="http://confOf#Tutorial">
+        <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
+        <owl:disjointWith rdf:resource="http://confOf#Workshop"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#University -->
+
+    <owl:Class rdf:about="http://confOf#University">
+        <rdfs:subClassOf rdf:resource="http://confOf#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Volunteer -->
+
+    <owl:Class rdf:about="http://confOf#Volunteer">
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Working_event -->
+
+    <owl:Class rdf:about="http://confOf#Working_event">
+        <rdfs:subClassOf rdf:resource="http://confOf#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasTopic"/>
+                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasTopic"/>
+                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#defaultChoice"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#has_title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#location"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://confOf#Workshop -->
+
+    <owl:Class rdf:about="http://confOf#Workshop">
+        <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Administrator -->
+
+    <owl:Class rdf:about="http://merged#Administrator">
+        <rdfs:label rdf:resource="http://cmt#Administrator"/>
+        <rdfs:label rdf:resource="http://confOf#Administrator"/>
+        <rdfs:subClassOf rdf:resource="http://cmt#User"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Author -->
+
+    <owl:Class rdf:about="http://merged#Author">
+        <rdfs:label rdf:resource="http://cmt#Author"/>
+        <rdfs:label rdf:resource="http://confOf#Author"/>
+        <rdfs:subClassOf rdf:resource="http://cmt#User"/>
+        <rdfs:subClassOf rdf:resource="http://merged#ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#writePaper"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Contribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#writePaper"/>
+                <owl:allValuesFrom rdf:resource="http://merged#Contribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Conference -->
+
+    <owl:Class rdf:about="http://merged#Conference">
+        <rdfs:label rdf:resource="http://cmt#Conference"/>
+        <rdfs:label rdf:resource="http://confOf#Conference"/>
+        <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#date"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#reviewsPerPaper"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#ConferenceMember -->
+
+    <owl:Class rdf:about="http://merged#ConferenceMember">
+        <rdfs:label rdf:resource="http://cmt#ConferenceMember"/>
+        <rdfs:label rdf:resource="http://confOf#Member"/>
+        <rdfs:subClassOf rdf:resource="http://confOf#Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Contribution -->
+
+    <owl:Class rdf:about="http://merged#Contribution">
+        <rdfs:label rdf:resource="http://cmt#Paper"/>
+        <rdfs:label rdf:resource="http://confOf#Contribution"/>
+        <rdfs:subClassOf rdf:resource="http://cmt#Document"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasSubjectArea"/>
+                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasSubjectArea"/>
+                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#hasDecision"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#readByReviewer"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#hasDecision"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#readByMeta-Reviewer"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#contactEmail"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasKeyword"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#abstract"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasTitle"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://merged#Person"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
+        <rdfs:comment xml:lang="en">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#PaperFullVersion -->
+
+    <owl:Class rdf:about="http://merged#PaperFullVersion">
+        <rdfs:label rdf:resource="http://cmt#PaperFullVersion"/>
+        <rdfs:label rdf:resource="http://confOf#Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Contribution"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Person -->
+
+    <owl:Class rdf:about="http://merged#Person">
+        <rdfs:label rdf:resource="http://cmt#Person"/>
+        <rdfs:label rdf:resource="http://confOf#Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#employedBy"/>
+                <owl:someValuesFrom rdf:resource="http://confOf#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasCity"/>
+                <owl:someValuesFrom rdf:resource="http://confOf#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://confOf#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#employedBy"/>
+                <owl:allValuesFrom rdf:resource="http://confOf#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasPostalCode"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasStreet"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasEmail"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasFirstName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#hasSurname"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasEmail"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#ProgramCommitteeChair -->
+
+    <owl:Class rdf:about="http://merged#ProgramCommitteeChair">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommitteeChair"/>
+        <rdfs:label rdf:resource="http://confOf#Chair_PC"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:subClassOf rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#ProgramCommitteeMember -->
+
+    <owl:Class rdf:about="http://merged#ProgramCommitteeMember">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommitteeMember"/>
+        <rdfs:label rdf:resource="http://confOf#Member_PC"/>
+        <rdfs:subClassOf rdf:resource="http://merged#ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#expertOn"/>
+                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasBeenAssigned"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Contribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://confOf#expertOn"/>
+                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#hasBeenAssigned"/>
+                <owl:allValuesFrom rdf:resource="http://merged#Contribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reviewer</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Program Committee consists of all members of the conference except for Authors who are not also Reviewers.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#SubjectArea -->
+
+    <owl:Class rdf:about="http://merged#SubjectArea">
+        <rdfs:label rdf:resource="http://cmt#SubjectArea"/>
+        <rdfs:label rdf:resource="http://confOf#Topic"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.6) http://owlapi.sourceforge.net -->
+
