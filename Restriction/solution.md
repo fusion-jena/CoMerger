@@ -167,66 +167,66 @@ Each conflict on the values or cardinality constraints requires the individual r
  
  
  
-<table align="center">
+<table>
 <tbody>
 <tr align="center">
   <td><b>Case</b></td>
   <td><b>Explanation</b></td>
 </tr>
-<tr align="center">
-    <td>A</td>
+<tr>
+    <td align="center">A</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with maxCard - primitive conflict <br> <b>Solution:</b> take the greatest lower bound to cover both - in example it's value(p<sup>j</sup><sub>maxCard</sub>)=(0-5)</td>
 </tr>
-<tr align="center">
-    <td>B</td>
+<tr>
+    <td align="center">B</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with minCard - primitive conflict <br> <b>Solution:</b> take the least upper bound to cover both - in example it's value(p<sup>i</sup><sub>minCard</sub>)=(4-n)</td>
 </tr>
-<tr align="center">
+<tr >
     <td>C</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with exCard - primitive conflict <br> <b>Solution:</b> no automatic solution, only through user's preference</td>
 </tr>
-<tr align="center">
-    <td>D</td>
+<tr >
+    <td align="center">D</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between maxCard and exCard - complex conflict <br> <b>Solution:</b> take the exact number to cover both - in example it's value(p<sup>j</sup><sub>exCard</sub>)= 3</td>
 </tr>
-<tr align="center">
-    <td>E</td>
+<tr >
+    <td align="center">E</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and exCard - complex conflict <br> <b>Solution:</b> take the exact number to cover both - in example it's value(p<sup>j</sup><sub>exCard</sub>)= 3</td>
 </tr>
-<tr align="center">
-    <td>F</td>
+<tr >
+    <td align="center">F</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and maxCard - complex conflict <br> <b>Solution:</b> take the least upper bound from minCard and greatest lower bound from maxCard to cover both - in example it's 3</td>
 </tr>
-<tr align="center">
-    <td>G</td>
+<tr >
+    <td align="center">G</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between maxCard and exCard - complex conflict <br> <b>Solution:</b> if in range, take the exact number, in example it's value(p<sup>j</sup><sub>exCard</sub>)= 2, if out of range, no solution </td>
 </tr>
-<tr align="center">
-    <td>H</td>
+<tr >
+    <td align="center">H</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and exCard - complex conflict <br> <b>Solution:</b> if in range, take the exact number, in example it's value(p<sup>j</sup><sub>exCard</sub>)= 4, if out of range, no solution </td>
 </tr>
-<tr align="center">
-    <td>I</td>
+<tr >
+    <td align="center">I</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between minCard and maxCard - complex conflict <br> <b>Solution:</b> like in Case F or no solution if no overlaps </td>
 </tr
-<tr align="center">
-    <td>J</td>
+<tr >
+    <td align="center">J</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with someValuesFrom - primitive conflict <br> <b>Solution:</b> object property: semantic relatedness - if path exists, take superclass; datatype property: subsumption hierarchy - if path exists, take more general type </td>
 </tr>
-<tr align="center">
-    <td>K</td>
+<tr >
+    <td align="center">K</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with allValuesFrom - primitive conflict <br> <b>Solution:</b> object property: semantic relatedness - if path exists, take superclass; datatype property: subsumption hierarchy - if path exists, take more general type </td>
 </tr>
-<tr align="center">
-    <td>L</td>
+<tr >
+    <td align="center">L</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an orange edge between allValuesFrom and someValuesFrom - complex conflict <br> <b>Solution:</b> object property: semantic relatedness - if path exists, take superclass; datatype property: subsumption hierarchy - if path exists, take more general type </td>
 </tr>
-<tr align="center">
-    <td>M</td>
+<tr >
+    <td align="center">M</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is a violet recursive edge with hasValue - primitive conflict <br> <b>Solution:</b> no automatic solution, only through user's preference </td>
 </tr>
-<tr align="center">
-    <td>N</td>
+<tr >
+    <td align="center">N</td>
     <td><b>Detection:</b> based on the Attribute Graph RG there is an edge with label 1 - but there is no conflict <br> <b>Solution:</b> no solution needed, because there is no conflict </td>
 </tr>
 </table>
