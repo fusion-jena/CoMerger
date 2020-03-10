@@ -12,7 +12,7 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
 * number of someValuesFrom restrictions in the merged ontology (|SVF|)
 * number of hasValue restrictions in the merged ontology (|HV|)
 * number of primitive conflicts (|conf<sub>prim</sub>|)
-* number of complex conflicts (|conf<sub>comp</sub>|)
+* number of complex conflicts (|conf<sub>com</sub>|)
 
 <table align="center">
 <tbody>
