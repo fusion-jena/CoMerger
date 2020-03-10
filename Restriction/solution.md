@@ -1,11 +1,19 @@
 # Detection and Solution 
 
-This dataset contains different ontology merging tests. In each dataset (d<sub>i</sub>), we include different source ontologies. The below table shows the information for each dataset, including: 
-* id; 
-* number (n) and name of source ontologies (O<sub>S</sub>); 
-* size of source ontologies (in terms of number of classes (C), properties (P), instances (I)); 
-* number of corresponding classes, properties, and insatnce of the mapping (M); 
-* size of the merged ontology (O<sub>M</sub>).
+
+We considers the interaction betweens owl restrctions, as:
+* allValuesFrom, someValuesFrom, hasValue, excatCardinality, maxCardinality, minCardinality
+
+The interactions between owl restriction can reveal three different states:
+* no conflict
+* primitive conflict
+* complex conflict
+
+Each conflict on the values or cardinality constraints requires the individual reconciliation method. Thus, we derived a detailed solution of all 21 interaction restriction cases (see cases A-N in the following tables). Case N stands for no conflict. Other cases are explained in detail with given an example for each of them, where p<sub>i</sub> belongs to ontology i (O<sub>i</sub>) and p<sub>j</sub> belongs to ontology j (O<sub>j</sub>).
+
+
+
+
 
 <table align="center">
 <tbody>
