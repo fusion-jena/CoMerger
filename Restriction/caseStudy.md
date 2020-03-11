@@ -1,8 +1,7 @@
 # Dataset statistics
 
-For this dataset, we selected three ontologies as an instance from Ontology Alignment Evaluation Initiative (OAEI). 
-We decided to choose them because those ontologies are rich with properties and restrictions and suit well for a case study. 
-We edited the ontologies by adding some more restrictions and also altered one alignment file to align properties. This was done to to cause more conflicts.
+For this dataset, we selected three ontologies as an instance from the Ontology Alignment Evaluation Initiative (<a href="http://oaei.ontologymatching.org/2017/">OAEI</a>). 
+Because they are rich with properties and restrictions and suit well for a case study. However, we edited them in such a way to add more restrictions on the corresponding entities (available in <a href="https://github.com/fusion-jena/CoMerger/tree/master/Restriction/datasets">here</a>) by adding some more restrictions and one entry of the alignment file.
 
 ## Characteristics of OWL Restriction Reconciliation Test
 
@@ -18,7 +17,7 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
 * number of someValuesFrom restrictions in the merged ontology (|SVF|)
 * number of hasValue restrictions in the merged ontology (|HV|)
 * number of primitive conflicts (|conf<sub>prim</sub>|)
-* number of complex conflicts (|conf<sub>comp</sub>|)
+* number of complex conflicts (|conf<sub>com</sub>|)
 
 <table align="center">
 <tbody>
