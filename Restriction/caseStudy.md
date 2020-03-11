@@ -1,5 +1,11 @@
 # Dataset statistics
 
+For this dataset, we selected three ontologies as an instance from Ontology Alignment Evaluation Initiative (OAEI). 
+We decided to choose them because those ontologies are rich with properties and restrictions and suit well for a case study. 
+We edited the ontologies by adding some more restrictions and also altered one alignment file to align properties. This was done to to cause more conflicts.
+
+## Characteristics of OWL Restriction Reconciliation Test
+
 This dataset contains different ontology merging tests. In each dataset (d<sub>i</sub>), we include different source ontologies. The below table shows the information for each dataset, including: 
 * id; 
 * size of classes in merged ontology 
@@ -75,6 +81,18 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
 # Competency Questions answers on the conflicted O<sub>M</sub> and the repaired O<sub>M'</sub>
 
 This dataset contains answers to 10 CQ questions. <p><a href="http://comerger.uni-jena.de/cqCatalog.jsp">This is the link to the CQs.</a></p>
+
+Queries:
+* CQ<sub>1</sub>: Does a Person have an email?
+* CQ<sub>2</sub>: Who can have an email?
+* CQ<sub>3</sub>: How many emails can a Person have?
+* CQ<sub>4</sub>: Does a Conference have a name?
+* CQ<sub>5</sub>: Who can have a name?
+* CQ<sub>6</sub>: How many names can a Conference have?
+* CQ<sub>7</sub>: Has a Review only a Reviewer as author?
+* CQ<sub>8</sub>: By whom is a Review written by?
+* CQ<sub>9</sub>: What can have a title?
+* CQ<sub>10</sub>:Which range does the title have?
 
 
 <table align="center">

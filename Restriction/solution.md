@@ -1,16 +1,17 @@
 # Detection and Solution 
 
 
-We considers the interaction betweens owl restrctions, as:
+We consider the interaction between OWL restrictions, as:
 * allValuesFrom, someValuesFrom, hasValue, excatCardinality, maxCardinality, minCardinality
 
-The interactions between owl restriction can reveal three different states:
+The interactions between OWL restrictions can reveal three different states:
 * no conflict
 * primitive conflict
 * complex conflict
 
 Each conflict on the values or cardinality constraints requires the individual reconciliation method. Thus, we derived a detailed solution of all 21 interaction restriction cases (see cases A-N in the following tables). Case N stands for no conflict. Other cases are explained in detail with given an example for each of them, where p<sub>i</sub> belongs to ontology i (O<sub>i</sub>) and p<sub>j</sub> belongs to ontology j (O<sub>j</sub>).
 
+By the Attribute Graph RG we mean the file which is located <p><a href="https://fusion.cs.uni-jena.de/git/publication/eswc2020_owl_restriction/-/blob/master/Figures/graphNew.pdf">here</a></p>.
 
 
 
