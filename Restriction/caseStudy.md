@@ -7,39 +7,33 @@ We edited the ontologies by adding some more restrictions and also altered one a
 ## Characteristics of OWL Restriction Reconciliation Test
 
 This dataset contains different ontology merging tests. In each dataset (d<sub>i</sub>), we include different source ontologies. The below table shows the information for each dataset, including: 
-* id of each dataset (id); 
-* name of two source ontologies to be merged (O<sub>S</sub>)
-* number of classes in the merged ontology (|C|)
-* number of properties in the merged ontology (|C|)
-* number of max cardinality restrictions in the merged ontology (|maxCa|)
-* number of min cardinality restrictions in the merged ontology (|minCa|)
-* number of exact cardinality restrictions in the merged ontology (|exCa|)
-* number of allValuesFrom restrictions in the merged ontology (|AVF|)
-* number of someValuesFrom restrictions in the merged ontology (|SVF|)
-* number of hasValue restrictions in the merged ontology (|HV|)
-* number of primitive conflicts (|conf<sub>prim</sub>|)
-* number of complex conflicts (|conf<sub>com</sub>|)
+* id; 
+* size of classes in merged ontology 
+* size of properties in merged ontology
+* number of restrictions
+* number of primitive conflicts
+* number of complex conflicts
 
 <table align="center">
 <tbody>
 <tr align="center">
   <td><b>id</b></td>
-  <td><b>O<sub>S</sub></b></td>
+  <td><b>Merged Ontology O<sub>M</sub></b></td>
   <td><b>|C|</b></td>
   <td><b>|P|</b></td>
-  <td><b>|maxCa|</b></td>
-  <td><b>|minCa|</b></td>
-  <td><b>|exCa|</b></td>
-  <td><b>|AVF|</b></td>
-  <td><b>|SVF|</b></td>
-  <td><b>|HV|</b></td>
-  <td><b>|conf<sub>prim</sub>|</b></td>
-  <td><b>|conf<sub>com</sub>|</b></td>
+  <td><b>|maxCard|</b></td>
+  <td><b>|minCard|</b></td>
+  <td><b>|exCard|</b></td>
+  <td><b>|allValuesFrom|</b></td>
+  <td><b>|someValuesFrom|</b></td>
+  <td><b>|hasValue|</b></td>
+  <td><b>|primitive<sub>conflict</sub>|</b></td>
+  <td><b>|complex<sub>conflict</sub>|</b></td>
 </tr>
   
   <tr align="center">
     <td>d<sub>1</sub></td>
-    <td>cmt, conference</td>
+    <td>cmt,conference</td>
     <td>78</td>
     <td>118</td>
     <td>3</td>
@@ -54,7 +48,7 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
 
   <tr align="center">
     <td>d<sub>2</sub></td>
-    <td>cmt, confOf</td>
+    <td>cmt,confOf</td>
     <td>59</td>
     <td>89</td>
     <td>2</td>
@@ -69,7 +63,7 @@ This dataset contains different ontology merging tests. In each dataset (d<sub>i
   
   <tr align="center">
     <td>d<sub>3</sub></td>
-    <td>conference, confOf</td>
+    <td>conference,confOf</td>
     <td>87</td>
     <td>96</td>
     <td>1</td>
