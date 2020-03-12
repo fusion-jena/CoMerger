@@ -11,7 +11,7 @@ The interactions between OWL restrictions can reveal three different states:
 
 Each conflict on the values or cardinality constraints requires the individual reconciliation method. Thus, we derived a detailed solution of all 21 interaction restriction cases (see cases A-N in the following tables). Case N stands for no conflict. Other cases are explained in detail with given an example for each of them, where p<sub>i</sub> belongs to ontology i (O<sub>i</sub>) and p<sub>j</sub> belongs to ontology j (O<sub>j</sub>).
 
-By the Attribute Graph RG we mean the file which is located in <a href="https://github.com/fusion-jena/CoMerger/blob/master/Restriction/restrctionGraph.pdff">here</a>.
+By the Attribute Graph RG we mean the file which is located in <a href="https://github.com/fusion-jena/CoMerger/blob/master/Restriction/restrctionGraph.pdf">here</a>.
 
 
 
