@@ -1123,8 +1123,8 @@ The following three tables compare the n-ary, balanced, and ladder merge strateg
 * number of instances (|I|)
 * number of corresponding entities (|Cor|) 
 * number of translated axioms (|tr|) 
-* number of local refinements (R<sub>L</sub>|)
-* number of global refinements (R<sub>G</sub>|)
+* number of local refinements (|R<sub>L</sub>|)
+* number of global refinements (|R<sub>G</sub>|)
 * number of merge processes (|Mer.|)
 
 
@@ -1139,7 +1139,7 @@ The following three tables compare the n-ary, balanced, and ladder merge strateg
     <th align="center">|Corr|</th>
     <th align="center">|tr|</th>
     <th align="center">|R<sub>L</sub>|</th>
-    <th align="center">R<sub>G</sub>|</th>
+    <th align="center">|R<sub>G</sub>|</th>
     <th align="center">|Mer.|</th>
   </tr>
   <tr>
@@ -1442,7 +1442,7 @@ The following three tables compare the n-ary, balanced, and ladder merge strateg
     <th align="center">|I|</th>
     <th align="center">|Corr|</th>
     <th align="center">|tr|</th>
-    <th align="center">R<sub>G</sub>|</th>
+    <th align="center">|R<sub>G</sub>|</th>
     <th align="center">|Mer.|</th>
   </tr>
   <tr>
