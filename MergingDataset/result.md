@@ -1115,7 +1115,7 @@ This table shows the statistics of running six version (V<sub>1</sub>-V<sub>6</s
 </table>
 
 # Comparing N-ary, Balanced, and Ladder binary merges
-The following three tables compare the n-ary, balanced, and ladder merge strategies for different versions of merged ontology (V4-V12). The first table shows the results when both local and global refinements are applied. The second table shows the results when only global refinements are applied. The third table shows the results when no refinement is applied. In all tables, we show the results for those datasets which have more than two source ontologies. For all we show:
+The following three tables compare the n-ary, balanced, and ladder merge strategies for different versions of merged ontology (V<sub>4</sub>-V<sub>12</sub>). The first table shows the results when both local and global refinements are applied. The second table shows the results when only global refinements are applied. The third table shows the results when no refinement is applied. In all tables, we show the results for those datasets which have more than two source ontologies. For all we show:
 * id: dataset id
 * merge method: N-ary, Balanced, Ladder
 * number of classes (|C|)
