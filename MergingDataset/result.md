@@ -1128,7 +1128,7 @@ The following three tables compare the n-ary, balanced, and ladder merge strateg
 * number of merge processes (|Mer.|)
 
 
-## Comparing n-ary (V<sub>4</sub>), balanced (V<sub>7</sub>), and ladder(V<sub>10</sub>)  merge strategies.
+## Comparing n-ary (V<sub>4</sub>), balanced (V<sub>7</sub>), and ladder(V<sub>10</sub>)  merge strategies:
 <table align="center">
   <tr>
     <th align="center">id</th>
@@ -1432,7 +1432,538 @@ The following three tables compare the n-ary, balanced, and ladder merge strateg
   </tr>
 </table>
 
+## Comparing n-ary (V<sub>5</sub>), balanced (V<sub>8</sub>), and ladder(V<sub>11</sub>)  merge strategies:
+<table align="center">
+    <tr>
+    <th align="center">id</th>
+    <th align="center">Method</th>
+    <th align="center">|C|</th>
+    <th align="center">|P|</th>
+    <th align="center">|I|</th>
+    <th align="center">|Corr|</th>
+    <th align="center">|tr|</th>
+    <th align="center">R<sub>G</sub>|</th>
+    <th align="center">|Mer.|</th>
+  </tr>
+  <tr>
+    <td align="center">d<sub>3</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">109</td>
+    <td align="center">154</td>
+    <td align="center">0</td>
+    <td align="center">19</td>
+    <td align="center">374</td>
+    <td align="center">17</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>3</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">110</td>
+    <td align="center">154</td>
+    <td align="center">0</td>
+    <td align="center">22</td>
+    <td align="center">566</td>
+    <td align="center">18</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>3</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">110</td>
+    <td align="center">154</td>
+    <td align="center">0</td>
+    <td align="center">22</td>
+    <td align="center">566</td>
+    <td align="center">18</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>4</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">226</td>
+    <td align="center">165</td>
+    <td align="center">114</td>
+    <td align="center">47</td>
+    <td align="center">790</td>
+    <td align="center">21</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>4</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">226</td>
+    <td align="center">166</td>
+    <td align="center">114</td>
+    <td align="center">65</td>
+    <td align="center">1270</td>
+    <td align="center">27</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>4</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">226</td>
+    <td align="center">167</td>
+    <td align="center">114</td>
+    <td align="center">64</td>
+    <td align="center">1339</td>
+    <td align="center">23</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>5</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">253</td>
+    <td align="center">154</td>
+    <td align="center">4</td>
+    <td align="center">37</td>
+    <td align="center">527</td>
+    <td align="center">17</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>5</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">254</td>
+    <td align="center">154</td>
+    <td align="center">4</td>
+    <td align="center">47</td>
+    <td align="center">865</td>
+    <td align="center">19</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>5</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">254</td>
+    <td align="center">154</td>
+    <td align="center">4</td>
+    <td align="center">47</td>
+    <td align="center">994</td>
+    <td align="center">19</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>6</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">390</td>
+    <td align="center">281</td>
+    <td align="center">118</td>
+    <td align="center">82</td>
+    <td align="center">1310</td>
+    <td align="center">41</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>6</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">394</td>
+    <td align="center">284</td>
+    <td align="center">118</td>
+    <td align="center">127</td>
+    <td align="center">2791</td>
+    <td align="center">48</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>6</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">394</td>
+    <td align="center">283</td>
+    <td align="center">118</td>
+    <td align="center">128</td>
+    <td align="center">3462</td>
+    <td align="center">51</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>9</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">1146</td>
+    <td align="center">101</td>
+    <td align="center">31</td>
+    <td align="center">6</td>
+    <td align="center">278</td>
+    <td align="center">17</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>9</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">1146</td>
+    <td align="center">101</td>
+    <td align="center">31</td>
+    <td align="center">6</td>
+    <td align="center">360</td>
+    <td align="center">17</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>9</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">1146</td>
+    <td align="center">139</td>
+    <td align="center">31</td>
+    <td align="center">6</td>
+    <td align="center">483</td>
+    <td align="center">17</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">4957</td>
+    <td align="center">2394</td>
+    <td align="center">882</td>
+    <td align="center">266</td>
+    <td align="center">6949</td>
+    <td align="center">143</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">4982</td>
+    <td align="center">2193</td>
+    <td align="center">843</td>
+    <td align="center">369</td>
+    <td align="center">15816</td>
+    <td align="center">166</td>
+    <td align="center">16</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">5003</td>
+    <td align="center">2193</td>
+    <td align="center">843</td>
+    <td align="center">351</td>
+    <td align="center">31420</td>
+    <td align="center">191</td>
+    <td align="center">16</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>11</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">5490</td>
+    <td align="center">2469</td>
+    <td align="center">909</td>
+    <td align="center">267</td>
+    <td align="center">6960</td>
+    <td align="center">143</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>11</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">5507</td>
+    <td align="center">2246</td>
+    <td align="center">870</td>
+    <td align="center">388</td>
+    <td align="center">16060</td>
+    <td align="center">177</td>
+    <td align="center">18</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>11</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">5511</td>
+    <td align="center">2265</td>
+    <td align="center">870</td>
+    <td align="center">386</td>
+    <td align="center">35480</td>
+    <td align="center">196</td>
+    <td align="center">18</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>12</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">15080</td>
+    <td align="center">3589</td>
+    <td align="center">1262</td>
+    <td align="center">1139</td>
+    <td align="center">30035</td>
+    <td align="center">977</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>12</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">15450</td>
+    <td align="center">3282</td>
+    <td align="center">1175</td>
+    <td align="center">2186</td>
+    <td align="center">66344</td>
+    <td align="center">1533</td>
+    <td align="center">54</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>12</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">15384</td>
+    <td align="center">3395</td>
+    <td align="center">1175</td>
+    <td align="center">2159</td>
+    <td align="center">154002</td>
+    <td align="center">1560</td>
+    <td align="center">54</td>
+  </tr>
+</table>
 
+## Comparing n-ary (V<sub>6</sub>), balanced (V<sub>9</sub>), and ladder(V<sub>12</sub>)  merge strategies:
+<table align="center">
+     <tr>
+    <th align="center">id</th>
+    <th align="center">Method</th>
+    <th align="center">|C|</th>
+    <th align="center">|P|</th>
+    <th align="center">|I|</th>
+    <th align="center">|Corr|</th>
+    <th align="center">|tr|</th>
+    <th align="center">|Mer.|</th>
+  </tr>
+  <tr>
+    <td align="center">d<sub>3</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">108</td>
+    <td align="center">154</td>
+    <td align="center">0</td>
+    <td align="center">19</td>
+    <td align="center">374</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>3</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">109</td>
+    <td align="center">154</td>
+    <td align="center">0</td>
+    <td align="center">22</td>
+    <td align="center">567</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>3</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">109</td>
+    <td align="center">154</td>
+    <td align="center">0</td>
+    <td align="center">22</td>
+    <td align="center">567</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>4</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">224</td>
+    <td align="center">165</td>
+    <td align="center">114</td>
+    <td align="center">47</td>
+    <td align="center">790</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>4</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">224</td>
+    <td align="center">166</td>
+    <td align="center">114</td>
+    <td align="center">65</td>
+    <td align="center">1268</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>4</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">224</td>
+    <td align="center">167</td>
+    <td align="center">114</td>
+    <td align="center">64</td>
+    <td align="center">1339</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>5</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">251</td>
+    <td align="center">153</td>
+    <td align="center">4</td>
+    <td align="center">37</td>
+    <td align="center">527</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>5</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">252</td>
+    <td align="center">153</td>
+    <td align="center">4</td>
+    <td align="center">47</td>
+    <td align="center">868</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>5</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">252</td>
+    <td align="center">153</td>
+    <td align="center">4</td>
+    <td align="center">47</td>
+    <td align="center">1001</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>6</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">386</td>
+    <td align="center">280</td>
+    <td align="center">118</td>
+    <td align="center">82</td>
+    <td align="center">1310</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>6</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">389</td>
+    <td align="center">283</td>
+    <td align="center">118</td>
+    <td align="center">127</td>
+    <td align="center">2786</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>6</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">390</td>
+    <td align="center">282</td>
+    <td align="center">118</td>
+    <td align="center">128</td>
+    <td align="center">3440</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>9</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">1145</td>
+    <td align="center">101</td>
+    <td align="center">31</td>
+    <td align="center">6</td>
+    <td align="center">278</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>9</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">1145</td>
+    <td align="center">101</td>
+    <td align="center">31</td>
+    <td align="center">6</td>
+    <td align="center">372</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>9</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">1146</td>
+    <td align="center">139</td>
+    <td align="center">31</td>
+    <td align="center">6</td>
+    <td align="center">513</td>
+    <td align="center">6</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">4928</td>
+    <td align="center">2378</td>
+    <td align="center">882</td>
+    <td align="center">266</td>
+    <td align="center">6949</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">4951</td>
+    <td align="center">2177</td>
+    <td align="center">843</td>
+    <td align="center">365</td>
+    <td align="center">15866</td>
+    <td align="center">16</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">4970</td>
+    <td align="center">2176</td>
+    <td align="center">843</td>
+    <td align="center">350</td>
+    <td align="center">31733</td>
+    <td align="center">16</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>11</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">5461</td>
+    <td align="center">2453</td>
+    <td align="center">909</td>
+    <td align="center">267</td>
+    <td align="center">6960</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>11</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">5475</td>
+    <td align="center">2231</td>
+    <td align="center">870</td>
+    <td align="center">386</td>
+    <td align="center">15801</td>
+    <td align="center">18</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>11</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">5474</td>
+    <td align="center">2246</td>
+    <td align="center">870</td>
+    <td align="center">385</td>
+    <td align="center">35742</td>
+    <td align="center">18</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>12</sub></td>
+    <td align="center">N-ary</td>
+    <td align="center">14944</td>
+    <td align="center">3540</td>
+    <td align="center">1262</td>
+    <td align="center">1139</td>
+    <td align="center">30035</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>12</sub></td>
+    <td align="center">Balanced</td>
+    <td align="center">14868</td>
+    <td align="center">3225</td>
+    <td align="center">1171</td>
+    <td align="center">3617</td>
+    <td align="center">80151</td>
+    <td align="center">54</td>
+  </tr>
+  <tr>
+    <td align="center">d<sub>12</sub></td>
+    <td align="center">Ladder</td>
+    <td align="center">15111</td>
+    <td align="center">3346</td>
+    <td align="center">1175</td>
+    <td align="center">2135</td>
+    <td align="center">156293</td>
+    <td align="center">54</td>
+  </tr>
+</table>
 
 # Test with Competency Questions
 We used a set of Competency Questions CQs (see [here](http://comerger.uni-jena.de/cqCatalog.jsp)) in the conference domain. Each CQ converts to a SPARQL query and runs on the source ontologies and the different versions of the merged ontologies (our datasets in the conference domain). We compare the CQ-results for each dataset with all possible answers from the merged ontology with respect to its source ontologies on that dataset.
