@@ -1,28 +1,11 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/Eval_HolisticDataSet/d3/MergedOnt645.owl#"
-     xml:base="file:/C:/Users/Samira/Desktop/Eval_HolisticDataSet/d3/MergedOnt645.owl"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/Eval_HolisticDataSet/d3/MergedOnt477.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/Eval_HolisticDataSet/d3/MergedOnt477.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/Eval_HolisticDataSet/d3/MergedOnt645.owl"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/Eval_HolisticDataSet/d3/MergedOnt477.owl"/>
     
 
 
@@ -43,7 +26,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -55,7 +38,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://cmt#acceptPaper"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -65,7 +48,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#addProgramCommitteeMember">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
     </owl:ObjectProperty>
     
 
@@ -76,7 +59,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://cmt#addProgramCommitteeMember"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
     </owl:ObjectProperty>
     
 
@@ -125,7 +108,7 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#assignedTo">
         <rdfs:range rdf:resource="http://cmt#Reviewer"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -133,8 +116,8 @@
     <!-- http://cmt#co-writePaper -->
 
     <owl:ObjectProperty rdf:about="http://cmt#co-writePaper">
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:domain rdf:resource="http://merged#ContributionCo-author"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:domain rdf:resource="http://merged#Contribution_co-author"/>
     </owl:ObjectProperty>
     
 
@@ -144,7 +127,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#detailsEnteredBy">
         <owl:inverseOf rdf:resource="http://cmt#enterConferenceDetails"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -154,7 +137,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#enableVirtualMeeting">
         <owl:inverseOf rdf:resource="http://cmt#virtualMeetingEnabledBy"/>
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -162,7 +145,7 @@
     <!-- http://cmt#endReview -->
 
     <owl:ObjectProperty rdf:about="http://cmt#endReview">
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeChair_ChairPC"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeChair"/>
         <rdfs:range rdf:resource="http://merged#Review"/>
     </owl:ObjectProperty>
     
@@ -172,7 +155,7 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#enterConferenceDetails">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -181,7 +164,7 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#enterReviewCriteria">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -190,7 +173,7 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#finalizePaperAssignment">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -200,7 +183,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#hardcopyMailingManifestsPrintedBy">
         <owl:inverseOf rdf:resource="http://cmt#printHardcopyMailingManifests"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -210,7 +193,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#hasBid">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="http://cmt#Bid"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -219,8 +202,8 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#hasCo-author">
         <owl:inverseOf rdf:resource="http://cmt#co-writePaper"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:range rdf:resource="http://merged#ContributionCo-author"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:range rdf:resource="http://merged#Contribution_co-author"/>
     </owl:ObjectProperty>
     
 
@@ -229,7 +212,7 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#hasConferenceMember">
         <rdfs:range rdf:resource="http://merged#ConferenceMember"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -237,7 +220,7 @@
     <!-- http://cmt#hasConflictOfInterest -->
 
     <owl:ObjectProperty rdf:about="http://cmt#hasConflictOfInterest">
-        <rdfs:range rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:range rdf:resource="http://merged#Conference_document"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
     </owl:ObjectProperty>
     
@@ -248,7 +231,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#hasDecision">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://cmt#Decision"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -257,8 +240,8 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#hasProgramCommitteeMember">
         <owl:inverseOf rdf:resource="http://cmt#memberOfProgramCommittee"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommittee"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:domain rdf:resource="http://merged#Program_committee"/>
     </owl:ObjectProperty>
     
 
@@ -270,13 +253,13 @@
 
 Based on that conflict, the reviewer will not be able to bid on the paper, be assigned to that paper (either automatically by the system or manually by a Chairman) or view review submissions for that paper.
 </rdfs:comment>
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://cmt#Reviewer"/>
                     <rdf:Description rdf:about="http://merged#Chairman"/>
-                    <rdf:Description rdf:about="http://merged#RegularAuthor"/>
+                    <rdf:Description rdf:about="http://merged#Regular_author"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -289,7 +272,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#memberOfConference">
         <owl:inverseOf rdf:resource="http://cmt#hasConferenceMember"/>
         <rdfs:domain rdf:resource="http://merged#ConferenceMember"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -297,8 +280,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#memberOfProgramCommittee -->
 
     <owl:ObjectProperty rdf:about="http://cmt#memberOfProgramCommittee">
-        <rdfs:range rdf:resource="http://merged#ProgramCommittee"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#Program_committee"/>
     </owl:ObjectProperty>
     
 
@@ -308,7 +291,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#paperAssignmentFinalizedBy">
         <owl:inverseOf rdf:resource="http://cmt#finalizePaperAssignment"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -318,7 +301,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#paperAssignmentToolsRunBy">
         <owl:inverseOf rdf:resource="http://cmt#runPaperAssignmentTools"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -327,7 +310,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#printHardcopyMailingManifests">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -337,7 +320,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#readByMeta-Reviewer">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://cmt#Meta-Reviewer"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -347,7 +330,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#readByReviewer">
         <rdfs:range rdf:resource="http://cmt#Reviewer"/>
         <owl:inverseOf rdf:resource="http://cmt#readPaper"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -356,7 +339,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#readPaper">
         <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -367,7 +350,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://cmt#rejectedBy"/>
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -377,7 +360,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#rejectedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
     </owl:ObjectProperty>
     
 
@@ -387,7 +370,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#reviewCriteriaEnteredBy">
         <owl:inverseOf rdf:resource="http://cmt#enterReviewCriteria"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -397,7 +380,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#reviewerBiddingStartedBy">
         <owl:inverseOf rdf:resource="http://cmt#startReviewerBidding"/>
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -406,7 +389,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#runPaperAssignmentTools">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -415,7 +398,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#setMaxPapers">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
     </owl:ObjectProperty>
     
 
@@ -424,7 +407,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#startReviewerBidding">
         <rdfs:domain rdf:resource="http://merged#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -432,8 +415,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#submitPaper -->
 
     <owl:ObjectProperty rdf:about="http://cmt#submitPaper">
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:domain rdf:resource="http://merged#RegularAuthor"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:domain rdf:resource="http://merged#Regular_author"/>
     </owl:ObjectProperty>
     
 
@@ -442,7 +425,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#virtualMeetingEnabledBy">
         <rdfs:range rdf:resource="http://merged#Administrator"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -482,8 +465,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://confOf#expertOn">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
-        <rdfs:range rdf:resource="http://merged#SubjectArea_Topic"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#SubjectArea"/>
     </owl:ObjectProperty>
     
 
@@ -567,7 +550,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://conference#belong_to_a_conference_volume">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Important_dates"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -576,8 +559,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#belongs_to_a_review_reference">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:range rdf:resource="http://merged#ReviewPreference"/>
-        <rdfs:domain rdf:resource="http://merged#SubjectArea_Topic"/>
+        <rdfs:range rdf:resource="http://merged#Review_preference"/>
+        <rdfs:domain rdf:resource="http://merged#SubjectArea"/>
     </owl:ObjectProperty>
     
 
@@ -590,7 +573,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Review_expertise"/>
-                    <rdf:Description rdf:about="http://merged#ReviewPreference"/>
+                    <rdf:Description rdf:about="http://merged#Review_preference"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -602,7 +585,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#contributes">
         <owl:inverseOf rdf:resource="http://conference#has_authors"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:range rdf:resource="http://merged#Conference_document"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
     </owl:ObjectProperty>
     
@@ -644,7 +627,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#has_a_commtitee">
         <rdfs:range rdf:resource="http://conference#Committee"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -655,8 +638,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#has_a_commtitee"/>
         <owl:inverseOf rdf:resource="http://conference#was_a_program_committee_of"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommittee"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
+        <rdfs:range rdf:resource="http://merged#Program_committee"/>
     </owl:ObjectProperty>
     
 
@@ -701,7 +684,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Review_expertise"/>
-                    <rdf:Description rdf:about="http://merged#ReviewPreference"/>
+                    <rdf:Description rdf:about="http://merged#Review_preference"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -716,7 +699,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:range rdf:resource="http://conference#Steering_committee"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#has_a_commtitee"/>
         <owl:inverseOf rdf:resource="http://conference#was_a_steering_committee_of"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -736,12 +719,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#has_a_topic_or_a_submission_contribution">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ReviewPreference"/>
+        <rdfs:domain rdf:resource="http://merged#Review_preference"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Submitted_contribution"/>
-                    <rdf:Description rdf:about="http://merged#SubjectArea_Topic"/>
+                    <rdf:Description rdf:about="http://merged#SubjectArea"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -784,7 +767,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:range rdf:resource="http://conference#Organizing_committee"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#has_a_commtitee"/>
         <owl:inverseOf rdf:resource="http://conference#was_an_organizing_committee_of"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -792,7 +775,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#has_authors -->
 
     <owl:ObjectProperty rdf:about="http://conference#has_authors">
-        <rdfs:domain rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_document"/>
         <rdfs:range rdf:resource="http://merged#Person"/>
     </owl:ObjectProperty>
     
@@ -803,12 +786,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://conference#has_been_assigned_a_review_reference">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://conference#has_a_topic_or_a_submission_contribution"/>
-        <rdfs:range rdf:resource="http://merged#ReviewPreference"/>
+        <rdfs:range rdf:resource="http://merged#Review_preference"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Submitted_contribution"/>
-                    <rdf:Description rdf:about="http://merged#SubjectArea_Topic"/>
+                    <rdf:Description rdf:about="http://merged#SubjectArea"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -819,8 +802,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#has_contributions -->
 
     <owl:ObjectProperty rdf:about="http://conference#has_contributions">
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -831,7 +814,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://conference#Important_dates"/>
         <owl:inverseOf rdf:resource="http://conference#belong_to_a_conference_volume"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -849,7 +832,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#has_parts">
         <rdfs:range rdf:resource="http://conference#Conference_part"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -859,7 +842,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://conference#has_tracks">
         <rdfs:range rdf:resource="http://conference#Track"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#has_parts"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -868,7 +851,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#has_tutorials">
         <rdfs:subPropertyOf rdf:resource="http://conference#has_parts"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
         <rdfs:range rdf:resource="http://merged#Tutorial"/>
     </owl:ObjectProperty>
     
@@ -878,7 +861,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#has_workshops">
         <rdfs:subPropertyOf rdf:resource="http://conference#has_parts"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
         <rdfs:range rdf:resource="http://merged#Workshop"/>
     </owl:ObjectProperty>
     
@@ -888,8 +871,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#is_a_topis_of_conference_parts">
         <rdfs:range rdf:resource="http://conference#Conference_part"/>
-        <rdfs:domain rdf:resource="http://merged#SubjectArea_Topic"/>
-        <owl:inverseOf rdf:resource="http://merged#hasATrack-workshop-tutorialTopic_hastopic"/>
+        <rdfs:domain rdf:resource="http://merged#SubjectArea"/>
+        <owl:inverseOf rdf:resource="http://merged#has_a_track-workshop-tutorial_topic"/>
     </owl:ObjectProperty>
     
 
@@ -909,7 +892,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://conference#is_part_of_conference_volumes">
         <rdfs:domain rdf:resource="http://conference#Conference_part"/>
         <owl:inverseOf rdf:resource="http://conference#has_parts"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -918,8 +901,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://conference#is_submitted_at">
         <owl:inverseOf rdf:resource="http://conference#has_contributions"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -990,7 +973,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://conference#was_a_committee_of">
         <rdfs:domain rdf:resource="http://conference#Committee"/>
         <owl:inverseOf rdf:resource="http://conference#has_a_commtitee"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -1010,8 +993,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://conference#was_a_program_committee_of">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#was_a_committee_of"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommittee"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
+        <rdfs:domain rdf:resource="http://merged#Program_committee"/>
     </owl:ObjectProperty>
     
 
@@ -1022,7 +1005,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Steering_committee"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#was_a_committee_of"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
@@ -1044,83 +1027,97 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Organizing_committee"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#was_a_committee_of"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:range rdf:resource="http://merged#Conference_volume"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://merged#assignedbyreviewer_invitedBy -->
+    <!-- http://merged#assignExternalReviewer -->
 
-    <owl:ObjectProperty rdf:about="http://merged#assignedbyreviewer_invitedBy">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://cmt#ExternalReviewer"/>
-        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
-        <rdfs:domain rdf:resource="http://conference#Reviewer"/>
-        <rdfs:range rdf:resource="http://conference#Reviewer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://merged#assignexternalreviewer_invitesCo-reviewers -->
-
-    <owl:ObjectProperty rdf:about="http://merged#assignexternalreviewer_invitesCo-reviewers">
+    <owl:ObjectProperty rdf:about="http://merged#assignExternalReviewer">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:label rdf:resource="http://cmt#assignExternalReviewer"/>
+        <rdfs:label rdf:resource="http://conference#invites_co-reviewers"/>
         <rdfs:range rdf:resource="http://cmt#ExternalReviewer"/>
         <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
         <rdfs:range rdf:resource="http://conference#Reviewer"/>
         <rdfs:domain rdf:resource="http://conference#Reviewer"/>
-        <owl:inverseOf rdf:resource="http://merged#assignedbyreviewer_invitedBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://merged#hasATrack-workshop-tutorialTopic_hastopic -->
+    <!-- http://merged#assignedByReviewer -->
 
-    <owl:ObjectProperty rdf:about="http://merged#hasATrack-workshop-tutorialTopic_hastopic">
-        <rdfs:domain rdf:resource="http://confOf#Working_event"/>
-        <rdfs:domain rdf:resource="http://conference#Conference_part"/>
-        <rdfs:range rdf:resource="http://merged#SubjectArea_Topic"/>
+    <owl:ObjectProperty rdf:about="http://merged#assignedByReviewer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://cmt#assignedByReviewer"/>
+        <rdfs:label rdf:resource="http://conference#invited_by"/>
+        <rdfs:domain rdf:resource="http://cmt#ExternalReviewer"/>
+        <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:domain rdf:resource="http://conference#Reviewer"/>
+        <rdfs:range rdf:resource="http://conference#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://merged#assignExternalReviewer"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://merged#hasbeenassigned_reviewes -->
+    <!-- http://merged#hasBeenAssigned -->
 
-    <owl:ObjectProperty rdf:about="http://merged#hasbeenassigned_reviewes">
+    <owl:ObjectProperty rdf:about="http://merged#hasBeenAssigned">
+        <rdfs:label rdf:resource="http://cmt#hasBeenAssigned"/>
+        <rdfs:label rdf:resource="http://confOf#reviewes"/>
         <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
         <owl:inverseOf rdf:resource="http://cmt#assignedTo"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://merged#hassubjectarea_dealswith -->
+    <!-- http://merged#hasSubjectArea -->
 
-    <owl:ObjectProperty rdf:about="http://merged#hassubjectarea_dealswith">
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:range rdf:resource="http://merged#SubjectArea_Topic"/>
+    <owl:ObjectProperty rdf:about="http://merged#hasSubjectArea">
+        <rdfs:label rdf:resource="http://cmt#hasSubjectArea"/>
+        <rdfs:label rdf:resource="http://confOf#dealsWith"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:range rdf:resource="http://merged#SubjectArea"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://merged#writepaper_writes -->
+    <!-- http://merged#has_a_track-workshop-tutorial_topic -->
 
-    <owl:ObjectProperty rdf:about="http://merged#writepaper_writes">
+    <owl:ObjectProperty rdf:about="http://merged#has_a_track-workshop-tutorial_topic">
+        <rdfs:label rdf:resource="http://confOf#hasTopic"/>
+        <rdfs:label rdf:resource="http://conference#has_a_track-workshop-tutorial_topic"/>
+        <rdfs:domain rdf:resource="http://confOf#Working_event"/>
+        <rdfs:domain rdf:resource="http://conference#Conference_part"/>
+        <rdfs:range rdf:resource="http://merged#SubjectArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#writePaper -->
+
+    <owl:ObjectProperty rdf:about="http://merged#writePaper">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:domain rdf:resource="http://merged#RegularAuthor"/>
+        <rdfs:label rdf:resource="http://cmt#writePaper"/>
+        <rdfs:label rdf:resource="http://confOf#writes"/>
+        <rdfs:range rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:domain rdf:resource="http://merged#Regular_author"/>
+        <owl:inverseOf rdf:resource="http://merged#writtenBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://merged#writtenby_hasauthor -->
+    <!-- http://merged#writtenBy -->
 
-    <owl:ObjectProperty rdf:about="http://merged#writtenby_hasauthor">
+    <owl:ObjectProperty rdf:about="http://merged#writtenBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
-        <rdfs:range rdf:resource="http://merged#RegularAuthor"/>
-        <owl:inverseOf rdf:resource="http://merged#writepaper_writes"/>
+        <rdfs:label rdf:resource="http://cmt#hasAuthor"/>
+        <rdfs:label rdf:resource="http://confOf#writtenBy"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:range rdf:resource="http://merged#Regular_author"/>
     </owl:ObjectProperty>
     
 
@@ -1140,7 +1137,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#acceptsHardcopySubmissions">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:DatatypeProperty>
     
 
@@ -1148,7 +1145,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#date -->
 
     <owl:DatatypeProperty rdf:about="http://cmt#date">
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:DatatypeProperty>
     
 
@@ -1157,7 +1154,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#logoURL">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:DatatypeProperty>
     
 
@@ -1166,7 +1163,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#maxPapers">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -1180,7 +1177,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#ConferenceVolume"/>
+                    <rdf:Description rdf:about="http://merged#Conference_volume"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1193,7 +1190,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#paperID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
     </owl:DatatypeProperty>
     
@@ -1203,7 +1200,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#reviewsPerPaper">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:DatatypeProperty>
     
 
@@ -1212,7 +1209,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#siteURL">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:DatatypeProperty>
     
 
@@ -1222,7 +1219,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:DatatypeProperty rdf:about="http://confOf#abstract">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1232,7 +1229,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://confOf#contactEmail">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1259,7 +1256,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://confOf#earlyRegistration">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_participant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -1299,7 +1296,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://confOf#hasKeyword">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1458,7 +1455,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://confOf#remark">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1479,7 +1476,6 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:DatatypeProperty rdf:about="http://conference#has_a_URL">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Conference_www"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1488,8 +1484,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://conference#has_a_date_of_issue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceDocument"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_document"/>
     </owl:DatatypeProperty>
     
 
@@ -1498,7 +1493,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://conference#has_a_degree">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ReviewPreference"/>
+        <rdfs:domain rdf:resource="http://merged#Review_preference"/>
     </owl:DatatypeProperty>
     
 
@@ -1506,7 +1501,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#has_a_location -->
 
     <owl:DatatypeProperty rdf:about="http://conference#has_a_location">
-        <rdfs:domain rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_volume"/>
     </owl:DatatypeProperty>
     
 
@@ -1521,8 +1516,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                     <rdf:Description rdf:about="http://conference#Conference_part"/>
                     <rdf:Description rdf:about="http://conference#Conference_proceedings"/>
                     <rdf:Description rdf:about="http://conference#Publisher"/>
-                    <rdf:Description rdf:about="http://merged#ConferenceVolume"/>
-                    <rdf:Description rdf:about="http://merged#SubjectArea_Topic"/>
+                    <rdf:Description rdf:about="http://merged#Conference_volume"/>
+                    <rdf:Description rdf:about="http://merged#SubjectArea"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1637,40 +1632,49 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#hasAnEmail_hasemail -->
+    <!-- http://merged#hasTitle -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#hasAnEmail_hasemail">
+    <owl:DatatypeProperty rdf:about="http://merged#hasTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://cmt#title"/>
+        <rdfs:label rdf:resource="http://confOf#hasTitle"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#has_an_email -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#has_an_email">
+        <rdfs:label rdf:resource="http://cmt#email"/>
+        <rdfs:label rdf:resource="http://confOf#hasEmail"/>
+        <rdfs:label rdf:resource="http://conference#has_an_email"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://merged#hasTheFirstName_hasfirstname -->
+    <!-- http://merged#has_the_first_name -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#hasTheFirstName_hasfirstname">
+    <owl:DatatypeProperty rdf:about="http://merged#has_the_first_name">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://confOf#hasFirstName"/>
+        <rdfs:label rdf:resource="http://conference#has_the_first_name"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://merged#hasTheLastName_hassurname -->
+    <!-- http://merged#has_the_last_name -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#hasTheLastName_hassurname">
+    <owl:DatatypeProperty rdf:about="http://merged#has_the_last_name">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://confOf#hasSurname"/>
+        <rdfs:label rdf:resource="http://conference#has_the_last_name"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://merged#hastitle -->
-
-    <owl:DatatypeProperty rdf:about="http://merged#hastitle">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceContribution_Paper"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1708,9 +1712,9 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#AuthorNotReviewer -->
 
     <owl:Class rdf:about="http://cmt#AuthorNotReviewer">
-        <rdfs:subClassOf rdf:resource="http://merged#RegularAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Regular_author"/>
         <owl:disjointWith rdf:resource="http://cmt#Reviewer"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeMember"/>
     </owl:Class>
     
 
@@ -1719,11 +1723,11 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:Class rdf:about="http://cmt#Bid">
         <owl:disjointWith rdf:resource="http://cmt#Decision"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceDocument"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceVolume"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_document"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_volume"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
-        <owl:disjointWith rdf:resource="http://merged#ReviewPreference"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
+        <owl:disjointWith rdf:resource="http://merged#Review_preference"/>
     </owl:Class>
     
 
@@ -1739,11 +1743,11 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#Decision -->
 
     <owl:Class rdf:about="http://cmt#Decision">
-        <owl:disjointWith rdf:resource="http://merged#ConferenceDocument"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceVolume"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_document"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_volume"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
-        <owl:disjointWith rdf:resource="http://merged#ReviewPreference"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
+        <owl:disjointWith rdf:resource="http://merged#Review_preference"/>
     </owl:Class>
     
 
@@ -1754,7 +1758,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#assignedbyreviewer_invitedBy"/>
+                <owl:onProperty rdf:resource="http://merged#assignedByReviewer"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1853,10 +1857,10 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:Class rdf:about="http://confOf#City">
         <owl:disjointWith rdf:resource="http://confOf#Event"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_contribution"/>
         <owl:disjointWith rdf:resource="http://merged#Organization"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#SubjectArea_Topic"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
     </owl:Class>
     
 
@@ -1874,10 +1878,10 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:Class rdf:about="http://confOf#Country">
         <owl:disjointWith rdf:resource="http://confOf#Event"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_contribution"/>
         <owl:disjointWith rdf:resource="http://merged#Organization"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#SubjectArea_Topic"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
     </owl:Class>
     
 
@@ -1885,10 +1889,10 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://confOf#Event -->
 
     <owl:Class rdf:about="http://confOf#Event">
-        <owl:disjointWith rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_contribution"/>
         <owl:disjointWith rdf:resource="http://merged#Organization"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#SubjectArea_Topic"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
@@ -1919,7 +1923,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://confOf#Regular -->
 
     <owl:Class rdf:about="http://confOf#Regular">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_participant"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
@@ -1983,7 +1987,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://confOf#Short_paper -->
 
     <owl:Class rdf:about="http://confOf#Short_paper">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_contribution"/>
         <owl:disjointWith rdf:resource="http://merged#PaperFullVersion"/>
         <owl:disjointWith rdf:resource="http://merged#Poster"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
@@ -2021,7 +2025,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://confOf#Student -->
 
     <owl:Class rdf:about="http://confOf#Student">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_participant"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
@@ -2068,14 +2072,14 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:subClassOf rdf:resource="http://confOf#Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasATrack-workshop-tutorialTopic_hastopic"/>
-                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea_Topic"/>
+                <owl:onProperty rdf:resource="http://merged#has_a_track-workshop-tutorial_topic"/>
+                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasATrack-workshop-tutorialTopic_hastopic"/>
-                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea_Topic"/>
+                <owl:onProperty rdf:resource="http://merged#has_a_track-workshop-tutorial_topic"/>
+                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2113,12 +2117,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:Class rdf:about="http://conference#Active_conference_participant">
         <rdfs:subClassOf rdf:resource="http://conference#Conference_contributor"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_participant"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Invited_speaker"/>
-                    <rdf:Description rdf:about="http://merged#RegularAuthor"/>
+                    <rdf:Description rdf:about="http://merged#Regular_author"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -2130,7 +2134,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Call_for_paper -->
 
     <owl:Class rdf:about="http://conference#Call_for_paper">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
     </owl:Class>
     
 
@@ -2138,7 +2142,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Call_for_participation -->
 
     <owl:Class rdf:about="http://conference#Call_for_participation">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
     </owl:Class>
     
 
@@ -2173,7 +2177,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Organizing_committee"/>
                     <rdf:Description rdf:about="http://conference#Steering_committee"/>
-                    <rdf:Description rdf:about="http://merged#ProgramCommittee"/>
+                    <rdf:Description rdf:about="http://merged#Program_committee"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2198,7 +2202,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Conference_announcement -->
 
     <owl:Class rdf:about="http://conference#Conference_announcement">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
     </owl:Class>
     
 
@@ -2219,6 +2223,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
+    <!-- http://conference#Conference_fees -->
+
+    <owl:Class rdf:about="http://conference#Conference_fees"/>
+    
+
+
     <!-- http://conference#Conference_part -->
 
     <owl:Class rdf:about="http://conference#Conference_part"/>
@@ -2234,7 +2244,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Conference_www -->
 
     <owl:Class rdf:about="http://conference#Conference_www">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
     </owl:Class>
     
 
@@ -2242,8 +2252,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Contribution_1th-author -->
 
     <owl:Class rdf:about="http://conference#Contribution_1th-author">
-        <rdfs:subClassOf rdf:resource="http://merged#RegularAuthor"/>
-        <owl:disjointWith rdf:resource="http://merged#ContributionCo-author"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Regular_author"/>
+        <owl:disjointWith rdf:resource="http://merged#Contribution_co-author"/>
     </owl:Class>
     
 
@@ -2275,7 +2285,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Information_for_participants -->
 
     <owl:Class rdf:about="http://conference#Information_for_participants">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
     </owl:Class>
     
 
@@ -2333,7 +2343,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:Class rdf:about="http://conference#Organizing_committee">
         <rdfs:subClassOf rdf:resource="http://conference#Committee"/>
         <owl:disjointWith rdf:resource="http://conference#Steering_committee"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
     </owl:Class>
     
 
@@ -2357,7 +2367,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Passive_conference_participant -->
 
     <owl:Class rdf:about="http://conference#Passive_conference_participant">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_participant"/>
     </owl:Class>
     
 
@@ -2365,7 +2375,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Presentation -->
 
     <owl:Class rdf:about="http://conference#Presentation">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_contribution"/>
     </owl:Class>
     
 
@@ -2457,7 +2467,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:Class rdf:about="http://conference#Steering_committee">
         <rdfs:subClassOf rdf:resource="http://conference#Committee"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
     </owl:Class>
     
 
@@ -2512,7 +2522,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://conference#Written_contribution -->
 
     <owl:Class rdf:about="http://conference#Written_contribution">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2528,6 +2538,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Administrator -->
 
     <owl:Class rdf:about="http://merged#Administrator">
+        <rdfs:label rdf:resource="http://cmt#Administrator"/>
+        <rdfs:label rdf:resource="http://confOf#Administrator"/>
         <rdfs:subClassOf rdf:resource="http://cmt#User"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
@@ -2538,12 +2550,14 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Chairman -->
 
     <owl:Class rdf:about="http://merged#Chairman">
+        <rdfs:label rdf:resource="http://cmt#Chairman"/>
+        <rdfs:label rdf:resource="http://conference#Chair"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://cmt#AssociatedChair"/>
                     <rdf:Description rdf:about="http://cmt#ConferenceChair"/>
-                    <rdf:Description rdf:about="http://merged#ProgramCommitteeChair_ChairPC"/>
+                    <rdf:Description rdf:about="http://merged#ProgramCommitteeChair"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2559,9 +2573,24 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#ConferenceContribution_Paper -->
+    <!-- http://merged#ConferenceMember -->
 
-    <owl:Class rdf:about="http://merged#ConferenceContribution_Paper">
+    <owl:Class rdf:about="http://merged#ConferenceMember">
+        <rdfs:label rdf:resource="http://cmt#ConferenceMember"/>
+        <rdfs:label rdf:resource="http://confOf#Member"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Conference_contribution -->
+
+    <owl:Class rdf:about="http://merged#Conference_contribution">
+        <rdfs:label rdf:resource="http://cmt#Paper"/>
+        <rdfs:label rdf:resource="http://confOf#Contribution"/>
+        <rdfs:label rdf:resource="http://conference#Conference_contribution"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2579,18 +2608,30 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hassubjectarea_dealswith"/>
-                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea_Topic"/>
+                <owl:onProperty rdf:resource="http://merged#hasSubjectArea"/>
+                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hassubjectarea_dealswith"/>
-                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea_Topic"/>
+                <owl:onProperty rdf:resource="http://merged#hasSubjectArea"/>
+                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#hasDecision"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#readByReviewer"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2625,43 +2666,37 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hastitle"/>
+                <owl:onProperty rdf:resource="http://merged#hasTitle"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://merged#Organization"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Review"/>
-        <owl:disjointWith rdf:resource="http://merged#SubjectArea_Topic"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
         <rdfs:comment xml:lang="en">confTool</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://merged#ConferenceDocument -->
+    <!-- http://merged#Conference_document -->
 
-    <owl:Class rdf:about="http://merged#ConferenceDocument">
-        <owl:disjointWith rdf:resource="http://merged#ConferenceVolume"/>
+    <owl:Class rdf:about="http://merged#Conference_document">
+        <rdfs:label rdf:resource="http://cmt#Document"/>
+        <rdfs:label rdf:resource="http://conference#Conference_document"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_volume"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
-        <owl:disjointWith rdf:resource="http://merged#ReviewPreference"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
+        <owl:disjointWith rdf:resource="http://merged#Review_preference"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#ConferenceMember -->
+    <!-- http://merged#Conference_participant -->
 
-    <owl:Class rdf:about="http://merged#ConferenceMember">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
-        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://merged#ConferenceParticipant -->
-
-    <owl:Class rdf:about="http://merged#ConferenceParticipant">
+    <owl:Class rdf:about="http://merged#Conference_participant">
+        <rdfs:label rdf:resource="http://confOf#Participant"/>
+        <rdfs:label rdf:resource="http://conference#Conference_participant"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2676,11 +2711,15 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#ConferenceVolume -->
+    <!-- http://merged#Conference_volume -->
 
-    <owl:Class rdf:about="http://merged#ConferenceVolume">
+    <owl:Class rdf:about="http://merged#Conference_volume">
+        <rdfs:label rdf:resource="http://cmt#Conference"/>
+        <rdfs:label rdf:resource="http://confOf#Conference"/>
+        <rdfs:label rdf:resource="http://conference#Conference"/>
+        <rdfs:label rdf:resource="http://conference#Conference_volume"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceVolume"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_volume"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2701,18 +2740,20 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
-        <owl:disjointWith rdf:resource="http://merged#ReviewPreference"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
+        <owl:disjointWith rdf:resource="http://merged#Review_preference"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
         <owl:disjointWith rdf:resource="http://merged#Workshop"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#ContributionCo-author -->
+    <!-- http://merged#Contribution_co-author -->
 
-    <owl:Class rdf:about="http://merged#ContributionCo-author">
-        <rdfs:subClassOf rdf:resource="http://merged#RegularAuthor"/>
+    <owl:Class rdf:about="http://merged#Contribution_co-author">
+        <rdfs:label rdf:resource="http://cmt#Co-author"/>
+        <rdfs:label rdf:resource="http://conference#Contribution_co-author"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Regular_author"/>
     </owl:Class>
     
 
@@ -2720,8 +2761,10 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Organization -->
 
     <owl:Class rdf:about="http://merged#Organization">
+        <rdfs:label rdf:resource="http://confOf#Organization"/>
+        <rdfs:label rdf:resource="http://conference#Organization"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#SubjectArea_Topic"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
     </owl:Class>
     
 
@@ -2729,8 +2772,10 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#PaperAbstract -->
 
     <owl:Class rdf:about="http://merged#PaperAbstract">
+        <rdfs:label rdf:resource="http://cmt#PaperAbstract"/>
+        <rdfs:label rdf:resource="http://conference#Abstract"/>
         <rdfs:subClassOf rdf:resource="http://conference#Extended_abstract"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_contribution"/>
     </owl:Class>
     
 
@@ -2738,8 +2783,11 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#PaperFullVersion -->
 
     <owl:Class rdf:about="http://merged#PaperFullVersion">
+        <rdfs:label rdf:resource="http://cmt#PaperFullVersion"/>
+        <rdfs:label rdf:resource="http://confOf#Paper"/>
+        <rdfs:label rdf:resource="http://conference#Paper"/>
         <rdfs:subClassOf rdf:resource="http://conference#Regular_contribution"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_contribution"/>
         <owl:disjointWith rdf:resource="http://merged#Poster"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
@@ -2749,6 +2797,9 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Person -->
 
     <owl:Class rdf:about="http://merged#Person">
+        <rdfs:label rdf:resource="http://cmt#Person"/>
+        <rdfs:label rdf:resource="http://confOf#Person"/>
+        <rdfs:label rdf:resource="http://conference#Person"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2788,25 +2839,25 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasAnEmail_hasemail"/>
+                <owl:onProperty rdf:resource="http://merged#has_an_email"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasTheFirstName_hasfirstname"/>
+                <owl:onProperty rdf:resource="http://merged#has_the_first_name"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasTheLastName_hassurname"/>
+                <owl:onProperty rdf:resource="http://merged#has_the_last_name"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
-        <owl:disjointWith rdf:resource="http://merged#ReviewPreference"/>
-        <owl:disjointWith rdf:resource="http://merged#SubjectArea_Topic"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_committee"/>
+        <owl:disjointWith rdf:resource="http://merged#Review_preference"/>
+        <owl:disjointWith rdf:resource="http://merged#SubjectArea"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
@@ -2815,58 +2866,55 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Poster -->
 
     <owl:Class rdf:about="http://merged#Poster">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceContribution_Paper"/>
+        <rdfs:label rdf:resource="http://confOf#Poster"/>
+        <rdfs:label rdf:resource="http://conference#Poster"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_contribution"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://merged#ProgramCommittee -->
+    <!-- http://merged#ProgramCommitteeChair -->
 
-    <owl:Class rdf:about="http://merged#ProgramCommittee">
-        <rdfs:subClassOf rdf:resource="http://conference#Committee"/>
-        <owl:disjointWith rdf:resource="http://merged#ReviewPreference"/>
-    </owl:Class>
-    
-
-
-    <!-- http://merged#ProgramCommitteeChair_ChairPC -->
-
-    <owl:Class rdf:about="http://merged#ProgramCommitteeChair_ChairPC">
+    <owl:Class rdf:about="http://merged#ProgramCommitteeChair">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommitteeChair"/>
+        <rdfs:label rdf:resource="http://confOf#Chair_PC"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ProgramCommitteeMember_MemberPC"/>
+        <rdfs:subClassOf rdf:resource="http://merged#ProgramCommitteeMember"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://merged#ProgramCommitteeMember_MemberPC -->
+    <!-- http://merged#ProgramCommitteeMember -->
 
-    <owl:Class rdf:about="http://merged#ProgramCommitteeMember_MemberPC">
+    <owl:Class rdf:about="http://merged#ProgramCommitteeMember">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommitteeMember"/>
+        <rdfs:label rdf:resource="http://confOf#Member_PC"/>
         <rdfs:subClassOf rdf:resource="http://merged#ConferenceMember"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://confOf#expertOn"/>
-                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea_Topic"/>
+                <owl:someValuesFrom rdf:resource="http://merged#SubjectArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasbeenassigned_reviewes"/>
-                <owl:someValuesFrom rdf:resource="http://merged#ConferenceContribution_Paper"/>
+                <owl:onProperty rdf:resource="http://merged#hasBeenAssigned"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Conference_contribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://confOf#expertOn"/>
-                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea_Topic"/>
+                <owl:allValuesFrom rdf:resource="http://merged#SubjectArea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasbeenassigned_reviewes"/>
-                <owl:allValuesFrom rdf:resource="http://merged#ConferenceContribution_Paper"/>
+                <owl:onProperty rdf:resource="http://merged#hasBeenAssigned"/>
+                <owl:allValuesFrom rdf:resource="http://merged#Conference_contribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reviewer</rdfs:comment>
@@ -2876,21 +2924,35 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#RegularAuthor -->
+    <!-- http://merged#Program_committee -->
 
-    <owl:Class rdf:about="http://merged#RegularAuthor">
+    <owl:Class rdf:about="http://merged#Program_committee">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommittee"/>
+        <rdfs:label rdf:resource="http://conference#Program_committee"/>
+        <rdfs:subClassOf rdf:resource="http://conference#Committee"/>
+        <owl:disjointWith rdf:resource="http://merged#Review_preference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Regular_author -->
+
+    <owl:Class rdf:about="http://merged#Regular_author">
+        <rdfs:label rdf:resource="http://cmt#Author"/>
+        <rdfs:label rdf:resource="http://confOf#Author"/>
+        <rdfs:label rdf:resource="http://conference#Regular_author"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://conference#Contribution_1th-author"/>
-                            <rdf:Description rdf:about="http://merged#ContributionCo-author"/>
+                            <rdf:Description rdf:about="http://merged#Contribution_co-author"/>
                         </owl:unionOf>
                     </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://conference#contributes"/>
-                        <owl:someValuesFrom rdf:resource="http://merged#ConferenceContribution_Paper"/>
+                        <owl:someValuesFrom rdf:resource="http://merged#Conference_contribution"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2901,14 +2963,14 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#writepaper_writes"/>
-                <owl:someValuesFrom rdf:resource="http://merged#ConferenceContribution_Paper"/>
+                <owl:onProperty rdf:resource="http://merged#writePaper"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Conference_contribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#writepaper_writes"/>
-                <owl:allValuesFrom rdf:resource="http://merged#ConferenceContribution_Paper"/>
+                <owl:onProperty rdf:resource="http://merged#writePaper"/>
+                <owl:allValuesFrom rdf:resource="http://merged#Conference_contribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
@@ -2919,7 +2981,9 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Review -->
 
     <owl:Class rdf:about="http://merged#Review">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceDocument"/>
+        <rdfs:label rdf:resource="http://cmt#Review"/>
+        <rdfs:label rdf:resource="http://conference#Review"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://conference#has_authors"/>
@@ -2930,9 +2994,11 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#ReviewPreference -->
+    <!-- http://merged#Review_preference -->
 
-    <owl:Class rdf:about="http://merged#ReviewPreference">
+    <owl:Class rdf:about="http://merged#Review_preference">
+        <rdfs:label rdf:resource="http://cmt#Preference"/>
+        <rdfs:label rdf:resource="http://conference#Review_preference"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2947,7 +3013,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://conference#Submitted_contribution"/>
-                            <rdf:Description rdf:about="http://merged#SubjectArea_Topic"/>
+                            <rdf:Description rdf:about="http://merged#SubjectArea"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -2957,9 +3023,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#SubjectArea_Topic -->
+    <!-- http://merged#SubjectArea -->
 
-    <owl:Class rdf:about="http://merged#SubjectArea_Topic">
+    <owl:Class rdf:about="http://merged#SubjectArea">
+        <rdfs:label rdf:resource="http://cmt#SubjectArea"/>
+        <rdfs:label rdf:resource="http://confOf#Topic"/>
+        <rdfs:label rdf:resource="http://conference#Topic"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
@@ -2968,6 +3037,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Tutorial -->
 
     <owl:Class rdf:about="http://merged#Tutorial">
+        <rdfs:label rdf:resource="http://confOf#Tutorial"/>
+        <rdfs:label rdf:resource="http://conference#Tutorial"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
         <rdfs:subClassOf rdf:resource="http://conference#Conference_part"/>
         <owl:disjointWith rdf:resource="http://merged#Workshop"/>
@@ -2978,6 +3049,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://merged#Workshop -->
 
     <owl:Class rdf:about="http://merged#Workshop">
+        <rdfs:label rdf:resource="http://confOf#Workshop"/>
+        <rdfs:label rdf:resource="http://conference#Workshop"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
         <rdfs:subClassOf rdf:resource="http://conference#Conference_part"/>
     </owl:Class>
