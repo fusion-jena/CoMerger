@@ -125,9 +125,9 @@ This table shows the statistics about evaluating the usability-profile on our da
     <th align="center">id</th>
     <th align="center">Ont. URI</th>
     <th align="center">Name Space</th>
-    <th align="center">Ont. Dec.</th>
+    <th align="center">Ont. Declaration</th>
     <th align="center">Label Uniqueness</th>
-    <th align="center">Entity Dec.</th>
+    <th align="center">Entity Declaration</th>
     <th align="center">Unify Naming</th>
   </tr>
     <tr>
