@@ -115,3 +115,37 @@ Moreover, we show the total numbers of GMRs that are not satisfied in each datas
     <td align="center">4</td>
   </tr>
 </table>
+
+
+# Evaluation of the usability-profile dimension
+This table shows the statistics about evaluating the usability-profile on our datasets. We present whether each metric is satisfied (value 1) or not (value 0). 
+
+<table align="center">
+  <tr>
+    <th align="center">id</th>
+    <th align="center">Ont. URI</th>
+    <th align="center">Name Space</th>
+    <th align="center">Ont. Dec.</th>
+    <th align="center">Label Uniqueness</th>
+    <th align="center">Entity Dec.</th>
+    <th align="center">Unify Naming</th>
+  </tr>
+    <tr>
+    <td align="center">d<sub>1</sub>-d<sub>9</sub></td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+    <td align="center">0</td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+    <td align="center">0</td>
+  </tr>
+   <tr>
+    <td align="center">d<sub>10</sub></td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+    <td align="center">0</td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+  </tr>
+</table>
