@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d4/MergedOnt559.owl#"
-     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d4/MergedOnt559.owl"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d4/MergedOnt228.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d4/MergedOnt228.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d4/MergedOnt559.owl"/>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d4/MergedOnt228.owl"/>
     
 
 
@@ -34,7 +34,7 @@
 
     <owl:ObjectProperty rdf:about="http://confOf#employedBy">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-        <rdfs:range rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:range rdf:resource="http://merged#Organisation"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
     </owl:ObjectProperty>
     
@@ -77,7 +77,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -121,7 +121,7 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
         <rdfs:range rdf:resource="http://confOf#Contribution"/>
         <rdfs:domain rdf:resource="http://merged#Author"/>
-        <owl:inverseOf rdf:resource="http://merged#iswrittenby"/>
+        <owl:inverseOf rdf:resource="http://merged#isWrittenBy"/>
     </owl:ObjectProperty>
     
 
@@ -187,7 +187,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Committee"/>
         <owl:inverseOf rdf:resource="http://conference#was_a_committee_chair_of"/>
-        <rdfs:range rdf:resource="http://merged#ChairPC"/>
+        <rdfs:range rdf:resource="http://merged#Chair_PC"/>
     </owl:ObjectProperty>
     
 
@@ -229,7 +229,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://conference#Publisher"/>
         <owl:inverseOf rdf:resource="http://conference#issues"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceProceedings"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_proceedings"/>
     </owl:ObjectProperty>
     
 
@@ -306,7 +306,7 @@
     <owl:ObjectProperty rdf:about="http://conference#has_a_track-workshop-tutorial_chair">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://conference#Track-workshop_chair"/>
-        <rdfs:domain rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_Paper"/>
     </owl:ObjectProperty>
     
 
@@ -314,7 +314,7 @@
     <!-- http://conference#has_a_track-workshop-tutorial_topic -->
 
     <owl:ObjectProperty rdf:about="http://conference#has_a_track-workshop-tutorial_topic">
-        <rdfs:domain rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_Paper"/>
         <rdfs:range rdf:resource="http://merged#Topic"/>
     </owl:ObjectProperty>
     
@@ -447,7 +447,7 @@
 
     <owl:ObjectProperty rdf:about="http://conference#is_a_topis_of_conference_parts">
         <owl:inverseOf rdf:resource="http://conference#has_a_track-workshop-tutorial_topic"/>
-        <rdfs:range rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:range rdf:resource="http://merged#Conference_Paper"/>
         <rdfs:domain rdf:resource="http://merged#Topic"/>
     </owl:ObjectProperty>
     
@@ -467,8 +467,8 @@
 
     <owl:ObjectProperty rdf:about="http://conference#is_part_of_conference_volumes">
         <rdfs:range rdf:resource="http://conference#Conference_volume"/>
-        <rdfs:domain rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
-        <owl:inverseOf rdf:resource="http://merged#hasParts"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_Paper"/>
+        <owl:inverseOf rdf:resource="http://merged#has_parts"/>
     </owl:ObjectProperty>
     
 
@@ -507,7 +507,7 @@
     <owl:ObjectProperty rdf:about="http://conference#issues">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Publisher"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceProceedings"/>
+        <rdfs:range rdf:resource="http://merged#Conference_proceedings"/>
     </owl:ObjectProperty>
     
 
@@ -518,7 +518,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://conference#Reviewed_contribution"/>
         <rdfs:domain rdf:resource="http://merged#Review"/>
-        <owl:inverseOf rdf:resource="http://merged#hasAReview_hasreview"/>
+        <owl:inverseOf rdf:resource="http://merged#has_a_review"/>
     </owl:ObjectProperty>
     
 
@@ -539,7 +539,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="http://conference#Committee"/>
         <rdfs:subPropertyOf rdf:resource="http://conference#was_a_member_of"/>
-        <rdfs:domain rdf:resource="http://merged#ChairPC"/>
+        <rdfs:domain rdf:resource="http://merged#Chair_PC"/>
     </owl:ObjectProperty>
     
 
@@ -591,7 +591,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://conference#Track-workshop_chair"/>
         <owl:inverseOf rdf:resource="http://conference#has_a_track-workshop-tutorial_chair"/>
-        <rdfs:range rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:range rdf:resource="http://merged#Conference_Paper"/>
     </owl:ObjectProperty>
     
 
@@ -660,7 +660,7 @@
     <owl:ObjectProperty rdf:about="http://edas#hasLocation">
         <rdfs:domain rdf:resource="http://edas#ConferenceEvent"/>
         <rdfs:range rdf:resource="http://edas#Place"/>
-        <owl:inverseOf rdf:resource="http://merged#islocationof"/>
+        <owl:inverseOf rdf:resource="http://merged#isLocationOf"/>
     </owl:ObjectProperty>
     
 
@@ -704,7 +704,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://edas#AcademicEvent"/>
                     <rdf:Description rdf:about="http://merged#Conference"/>
-                    <rdf:Description rdf:about="http://merged#ConferenceSession"/>
+                    <rdf:Description rdf:about="http://merged#Conference_Session"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -741,8 +741,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://edas#ConferenceChair"/>
-                    <rdf:Description rdf:about="http://merged#SessionChair"/>
-                    <rdf:Description rdf:about="http://merged#TPCMember"/>
+                    <rdf:Description rdf:about="http://merged#PC_Member"/>
+                    <rdf:Description rdf:about="http://merged#Session_Chair"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -758,8 +758,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://edas#ConferenceChair"/>
-                    <rdf:Description rdf:about="http://merged#SessionChair"/>
-                    <rdf:Description rdf:about="http://merged#TPCMember"/>
+                    <rdf:Description rdf:about="http://merged#PC_Member"/>
+                    <rdf:Description rdf:about="http://merged#Session_Chair"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -772,7 +772,6 @@
     <owl:ObjectProperty rdf:about="http://edas#isMemberOf">
         <rdfs:range rdf:resource="http://merged#Conference"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
-        <owl:inverseOf rdf:resource="http://merged#hasMembers"/>
     </owl:ObjectProperty>
     
 
@@ -790,7 +789,7 @@
 
     <owl:ObjectProperty rdf:about="http://edas#isProviderOf">
         <rdfs:range rdf:resource="http://edas#Sponsorship"/>
-        <rdfs:domain rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:domain rdf:resource="http://merged#Organisation"/>
     </owl:ObjectProperty>
     
 
@@ -812,9 +811,9 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://edas#ConferenceChair"/>
+                    <rdf:Description rdf:about="http://merged#PC_Member"/>
                     <rdf:Description rdf:about="http://merged#Reviewer"/>
-                    <rdf:Description rdf:about="http://merged#SessionChair"/>
-                    <rdf:Description rdf:about="http://merged#TPCMember"/>
+                    <rdf:Description rdf:about="http://merged#Session_Chair"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -831,9 +830,9 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://edas#ConferenceChair"/>
+                    <rdf:Description rdf:about="http://merged#PC_Member"/>
                     <rdf:Description rdf:about="http://merged#Reviewer"/>
-                    <rdf:Description rdf:about="http://merged#SessionChair"/>
-                    <rdf:Description rdf:about="http://merged#TPCMember"/>
+                    <rdf:Description rdf:about="http://merged#Session_Chair"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -862,7 +861,7 @@
     <owl:ObjectProperty rdf:about="http://edas#providedBy">
         <rdfs:domain rdf:resource="http://edas#Sponsorship"/>
         <owl:inverseOf rdf:resource="http://edas#isProviderOf"/>
-        <rdfs:range rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:range rdf:resource="http://merged#Organisation"/>
     </owl:ObjectProperty>
     
 
@@ -871,7 +870,7 @@
 
     <owl:ObjectProperty rdf:about="http://edas#relatedToEvent">
         <rdfs:range rdf:resource="http://edas#PaperPresentation"/>
-        <rdfs:domain rdf:resource="http://merged#AcceptedPaper"/>
+        <rdfs:domain rdf:resource="http://merged#Accepted_Paper"/>
     </owl:ObjectProperty>
     
 
@@ -881,7 +880,7 @@
     <owl:ObjectProperty rdf:about="http://edas#relatedToPaper">
         <rdfs:domain rdf:resource="http://edas#PaperPresentation"/>
         <owl:inverseOf rdf:resource="http://edas#relatedToEvent"/>
-        <rdfs:range rdf:resource="http://merged#AcceptedPaper"/>
+        <rdfs:range rdf:resource="http://merged#Accepted_Paper"/>
     </owl:ObjectProperty>
     
 
@@ -895,7 +894,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://edas#AcademicEvent"/>
                     <rdf:Description rdf:about="http://merged#Conference"/>
-                    <rdf:Description rdf:about="http://merged#ConferenceSession"/>
+                    <rdf:Description rdf:about="http://merged#Conference_Session"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -909,7 +908,6 @@
     <owl:ObjectProperty rdf:about="http://ekaw#authorOf">
         <rdfs:range rdf:resource="http://merged#Document"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
-        <owl:inverseOf rdf:resource="http://merged#iswrittenby"/>
     </owl:ObjectProperty>
     
 
@@ -981,7 +979,7 @@
     <owl:ObjectProperty rdf:about="http://ekaw#heldIn">
         <rdfs:range rdf:resource="http://ekaw#Location"/>
         <rdfs:domain rdf:resource="http://merged#Event"/>
-        <owl:inverseOf rdf:resource="http://merged#islocationof"/>
+        <owl:inverseOf rdf:resource="http://merged#isLocationOf"/>
     </owl:ObjectProperty>
     
 
@@ -1017,7 +1015,7 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1034,7 +1032,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1069,7 +1067,6 @@
 
     <owl:ObjectProperty rdf:about="http://ekaw#partOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <owl:inverseOf rdf:resource="http://merged#hasParts"/>
     </owl:ObjectProperty>
     
 
@@ -1105,7 +1102,7 @@
     <!-- http://ekaw#publisherOf -->
 
     <owl:ObjectProperty rdf:about="http://ekaw#publisherOf">
-        <rdfs:domain rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:domain rdf:resource="http://merged#Organisation"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1194,7 +1191,7 @@
     <owl:ObjectProperty rdf:about="http://ekaw#technicallyOrganises">
         <rdfs:subPropertyOf rdf:resource="http://ekaw#organises"/>
         <owl:inverseOf rdf:resource="http://ekaw#technicallyOrganisedBy"/>
-        <rdfs:domain rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:domain rdf:resource="http://merged#Organisation"/>
     </owl:ObjectProperty>
     
 
@@ -1233,50 +1230,18 @@
     
 
 
-    <!-- http://merged#hasAReview_hasreview -->
+    <!-- http://merged#hasCountry -->
 
-    <owl:ObjectProperty rdf:about="http://merged#hasAReview_hasreview">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://conference#Reviewed_contribution"/>
-        <owl:inverseOf rdf:resource="http://ekaw#reviewOfPaper"/>
-        <rdfs:domain rdf:resource="http://merged#Paper"/>
-        <rdfs:range rdf:resource="http://merged#Review"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://merged#hasMembers -->
-
-    <owl:ObjectProperty rdf:about="http://merged#hasMembers">
-        <rdfs:domain rdf:resource="http://conference#Committee"/>
-        <rdfs:range rdf:resource="http://conference#Committee_member"/>
-        <owl:inverseOf rdf:resource="http://conference#was_a_member_of"/>
-        <rdfs:domain rdf:resource="http://merged#Conference"/>
-        <rdfs:range rdf:resource="http://merged#Person"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://merged#hasParts -->
-
-    <owl:ObjectProperty rdf:about="http://merged#hasParts">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://conference#Conference_volume"/>
-        <rdfs:range rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://merged#hascountry -->
-
-    <owl:ObjectProperty rdf:about="http://merged#hascountry">
+    <owl:ObjectProperty rdf:about="http://merged#hasCountry">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://confOf#hasCountry"/>
+        <rdfs:label rdf:resource="http://edas#hasCountry"/>
         <rdfs:domain rdf:resource="http://merged#Conference"/>
         <rdfs:range rdf:resource="http://merged#Country"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1285,9 +1250,11 @@
     
 
 
-    <!-- http://merged#hastopic -->
+    <!-- http://merged#hasTopic -->
 
-    <owl:ObjectProperty rdf:about="http://merged#hastopic">
+    <owl:ObjectProperty rdf:about="http://merged#hasTopic">
+        <rdfs:label rdf:resource="http://confOf#hasTopic"/>
+        <rdfs:label rdf:resource="http://edas#hasTopic"/>
         <rdfs:domain rdf:resource="http://confOf#Working_event"/>
         <owl:inverseOf rdf:resource="http://edas#isTopicOf"/>
         <rdfs:range rdf:resource="http://merged#Topic"/>
@@ -1303,9 +1270,53 @@
     
 
 
-    <!-- http://merged#islocationof -->
+    <!-- http://merged#has_a_review -->
 
-    <owl:ObjectProperty rdf:about="http://merged#islocationof">
+    <owl:ObjectProperty rdf:about="http://merged#has_a_review">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:label rdf:resource="http://conference#has_a_review"/>
+        <rdfs:label rdf:resource="http://ekaw#hasReview"/>
+        <rdfs:domain rdf:resource="http://conference#Reviewed_contribution"/>
+        <owl:inverseOf rdf:resource="http://ekaw#reviewOfPaper"/>
+        <rdfs:domain rdf:resource="http://merged#Paper"/>
+        <rdfs:range rdf:resource="http://merged#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#has_members -->
+
+    <owl:ObjectProperty rdf:about="http://merged#has_members">
+        <rdfs:label rdf:resource="http://conference#has_members"/>
+        <rdfs:label rdf:resource="http://edas#hasMember"/>
+        <rdfs:domain rdf:resource="http://conference#Committee"/>
+        <rdfs:range rdf:resource="http://conference#Committee_member"/>
+        <owl:inverseOf rdf:resource="http://conference#was_a_member_of"/>
+        <owl:inverseOf rdf:resource="http://edas#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:range rdf:resource="http://merged#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#has_parts -->
+
+    <owl:ObjectProperty rdf:about="http://merged#has_parts">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label rdf:resource="http://conference#has_parts"/>
+        <rdfs:label rdf:resource="http://ekaw#hasPart"/>
+        <rdfs:domain rdf:resource="http://conference#Conference_volume"/>
+        <owl:inverseOf rdf:resource="http://ekaw#partOf"/>
+        <rdfs:range rdf:resource="http://merged#Conference_Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://merged#isLocationOf">
+        <rdfs:label rdf:resource="http://edas#isLocationOf"/>
+        <rdfs:label rdf:resource="http://ekaw#locationOf"/>
         <rdfs:range rdf:resource="http://edas#ConferenceEvent"/>
         <rdfs:domain rdf:resource="http://edas#Place"/>
         <rdfs:domain rdf:resource="http://ekaw#Location"/>
@@ -1314,11 +1325,15 @@
     
 
 
-    <!-- http://merged#iswrittenby -->
+    <!-- http://merged#isWrittenBy -->
 
-    <owl:ObjectProperty rdf:about="http://merged#iswrittenby">
+    <owl:ObjectProperty rdf:about="http://merged#isWrittenBy">
+        <rdfs:label rdf:resource="http://confOf#writtenBy"/>
+        <rdfs:label rdf:resource="http://edas#isWrittenBy"/>
+        <rdfs:label rdf:resource="http://ekaw#writtenBy"/>
         <rdfs:domain rdf:resource="http://confOf#Contribution"/>
         <owl:inverseOf rdf:resource="http://edas#hasRelatedPaper"/>
+        <owl:inverseOf rdf:resource="http://ekaw#authorOf"/>
         <rdfs:range rdf:resource="http://merged#Author"/>
         <rdfs:domain rdf:resource="http://merged#Document"/>
         <rdfs:domain rdf:resource="http://merged#Paper"/>
@@ -1367,7 +1382,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1446,7 +1461,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1464,7 +1479,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1482,7 +1497,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1500,7 +1515,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1519,7 +1534,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1537,7 +1552,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://confOf#Working_event"/>
-                    <rdf:Description rdf:about="http://merged#SocialEvent"/>
+                    <rdf:Description rdf:about="http://merged#Social_Event"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1604,7 +1619,7 @@
 
     <owl:DatatypeProperty rdf:about="http://conference#has_a_volume">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceProceedings"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_proceedings"/>
     </owl:DatatypeProperty>
     
 
@@ -1613,7 +1628,7 @@
 
     <owl:DatatypeProperty rdf:about="http://conference#has_an_ISBN">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceProceedings"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_proceedings"/>
     </owl:DatatypeProperty>
     
 
@@ -1824,9 +1839,87 @@
     
 
 
-    <!-- http://merged#hasAnEmail_hasemail -->
+    <!-- http://merged#hasPhone -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#hasAnEmail_hasemail">
+    <owl:DatatypeProperty rdf:about="http://merged#hasPhone">
+        <rdfs:label rdf:resource="http://confOf#hasPhone"/>
+        <rdfs:label rdf:resource="http://edas#hasPhone"/>
+        <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#hasPostalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#hasPostalCode">
+        <rdfs:label rdf:resource="http://confOf#hasPostalCode"/>
+        <rdfs:label rdf:resource="http://edas#hasPostalCode"/>
+        <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#hasStreet -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#hasStreet">
+        <rdfs:label rdf:resource="http://confOf#hasStreet"/>
+        <rdfs:label rdf:resource="http://edas#hasStreet"/>
+        <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
+                    <rdf:Description rdf:about="http://merged#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#has_a_name -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#has_a_name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://confOf#hasSurname"/>
+        <rdfs:label rdf:resource="http://conference#has_a_name"/>
+        <rdfs:label rdf:resource="http://edas#hasName"/>
+        <rdfs:domain rdf:resource="http://merged#Conference"/>
+        <rdfs:domain rdf:resource="http://merged#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://conference#Publisher"/>
+                    <rdf:Description rdf:about="http://merged#Conference"/>
+                    <rdf:Description rdf:about="http://merged#Conference_Paper"/>
+                    <rdf:Description rdf:about="http://merged#Conference_proceedings"/>
+                    <rdf:Description rdf:about="http://merged#Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://merged#has_an_email -->
+
+    <owl:DatatypeProperty rdf:about="http://merged#has_an_email">
+        <rdfs:label rdf:resource="http://confOf#hasEmail"/>
+        <rdfs:label rdf:resource="http://conference#has_an_email"/>
+        <rdfs:label rdf:resource="http://edas#hasEmail"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:domain>
@@ -1841,88 +1934,27 @@
     
 
 
-    <!-- http://merged#hasTheFirstName_hasfirstname -->
+    <!-- http://merged#has_the_first_name -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#hasTheFirstName_hasfirstname">
+    <owl:DatatypeProperty rdf:about="http://merged#has_the_first_name">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://confOf#hasFirstName"/>
+        <rdfs:label rdf:resource="http://conference#has_the_first_name"/>
+        <rdfs:label rdf:resource="http://edas#hasFirstName"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://merged#hasTheLastName_haslastname -->
+    <!-- http://merged#has_the_last_name -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#hasTheLastName_haslastname">
+    <owl:DatatypeProperty rdf:about="http://merged#has_the_last_name">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label rdf:resource="http://conference#has_the_last_name"/>
+        <rdfs:label rdf:resource="http://edas#hasLastName"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://merged#hasphone -->
-
-    <owl:DatatypeProperty rdf:about="http://merged#hasphone">
-        <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
-        <rdfs:domain rdf:resource="http://merged#Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://merged#haspostalcode -->
-
-    <owl:DatatypeProperty rdf:about="http://merged#haspostalcode">
-        <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
-                    <rdf:Description rdf:about="http://merged#Person"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://merged#hasstreet -->
-
-    <owl:DatatypeProperty rdf:about="http://merged#hasstreet">
-        <rdfs:domain rdf:resource="http://edas#ContactInformation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
-                    <rdf:Description rdf:about="http://merged#Person"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://merged#hassurname_hasname_hasAName -->
-
-    <owl:DatatypeProperty rdf:about="http://merged#hassurname_hasname_hasAName">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#Conference"/>
-        <rdfs:domain rdf:resource="http://merged#Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://conference#Publisher"/>
-                    <rdf:Description rdf:about="http://merged#Conference"/>
-                    <rdf:Description rdf:about="http://merged#ConferencePaper_ConferencePart"/>
-                    <rdf:Description rdf:about="http://merged#ConferenceProceedings"/>
-                    <rdf:Description rdf:about="http://merged#Topic"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1943,7 +1975,7 @@
     <owl:Class rdf:about="http://confOf#Administrative_event">
         <rdfs:subClassOf rdf:resource="http://merged#Event"/>
         <owl:disjointWith rdf:resource="http://confOf#Working_event"/>
-        <owl:disjointWith rdf:resource="http://merged#SocialEvent"/>
+        <owl:disjointWith rdf:resource="http://merged#Social_Event"/>
     </owl:Class>
     
 
@@ -1969,7 +2001,7 @@
     <!-- http://confOf#Banquet -->
 
     <owl:Class rdf:about="http://confOf#Banquet">
-        <rdfs:subClassOf rdf:resource="http://merged#SocialEvent"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Social_Event"/>
         <owl:disjointWith rdf:resource="http://confOf#Trip"/>
         <owl:disjointWith rdf:resource="http://merged#Reception"/>
     </owl:Class>
@@ -1995,7 +2027,7 @@
     <owl:Class rdf:about="http://confOf#City">
         <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
         <owl:disjointWith rdf:resource="http://merged#Event"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -2005,7 +2037,7 @@
     <!-- http://confOf#Company -->
 
     <owl:Class rdf:about="http://confOf#Company">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#University"/>
     </owl:Class>
     
@@ -2053,7 +2085,7 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Event"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
         <rdfs:comment xml:lang="en">confTool</rdfs:comment>
@@ -2205,7 +2237,7 @@
     <!-- http://confOf#Trip -->
 
     <owl:Class rdf:about="http://confOf#Trip">
-        <rdfs:subClassOf rdf:resource="http://merged#SocialEvent"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Social_Event"/>
         <owl:disjointWith rdf:resource="http://merged#Reception"/>
     </owl:Class>
     
@@ -2226,13 +2258,13 @@
         <rdfs:subClassOf rdf:resource="http://merged#Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hastopic"/>
+                <owl:onProperty rdf:resource="http://merged#hasTopic"/>
                 <owl:someValuesFrom rdf:resource="http://merged#Topic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hastopic"/>
+                <owl:onProperty rdf:resource="http://merged#hasTopic"/>
                 <owl:allValuesFrom rdf:resource="http://merged#Topic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2254,7 +2286,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://merged#SocialEvent"/>
+        <owl:disjointWith rdf:resource="http://merged#Social_Event"/>
     </owl:Class>
     
 
@@ -2272,12 +2304,12 @@
 
     <owl:Class rdf:about="http://conference#Active_conference_participant">
         <rdfs:subClassOf rdf:resource="http://conference#Conference_contributor"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Regular_author"/>
-                    <rdf:Description rdf:about="http://merged#InvitedSpeaker"/>
+                    <rdf:Description rdf:about="http://merged#Invited_speaker"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -2377,7 +2409,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Regular_contribution"/>
-                    <rdf:Description rdf:about="http://merged#InvitedTalk"/>
+                    <rdf:Description rdf:about="http://merged#Invited_talk"/>
                     <rdf:Description rdf:about="http://merged#Poster"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2482,7 +2514,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://conference#Committee_member"/>
-                    <rdf:Description rdf:about="http://merged#Organisation_Organization"/>
+                    <rdf:Description rdf:about="http://merged#Organisation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -2519,7 +2551,7 @@
     <!-- http://conference#Passive_conference_participant -->
 
     <owl:Class rdf:about="http://conference#Passive_conference_participant">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -2591,7 +2623,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://conference#Written_contribution"/>
-        <owl:disjointWith rdf:resource="http://merged#InvitedTalk"/>
+        <owl:disjointWith rdf:resource="http://merged#Invited_talk"/>
         <owl:disjointWith rdf:resource="http://merged#Poster"/>
     </owl:Class>
     
@@ -2732,7 +2764,7 @@
     <!-- http://edas#AcademiaOrganization -->
 
     <owl:Class rdf:about="http://edas#AcademiaOrganization">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://edas#GovernmentOrganization"/>
         <owl:disjointWith rdf:resource="http://edas#IndustryOrganization"/>
         <owl:disjointWith rdf:resource="http://edas#NGO"/>
@@ -2785,8 +2817,8 @@
         <owl:disjointWith rdf:resource="http://edas#PendingPaper"/>
         <owl:disjointWith rdf:resource="http://edas#PublishedPaper"/>
         <owl:disjointWith rdf:resource="http://edas#WithdrawnPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#AcceptedPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#RejectedPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#Accepted_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Rejected_Paper"/>
     </owl:Class>
     
 
@@ -2884,10 +2916,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3147,10 +3179,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3175,10 +3207,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
     
@@ -3217,7 +3249,7 @@
     <!-- http://edas#Excursion -->
 
     <owl:Class rdf:about="http://edas#Excursion">
-        <rdfs:subClassOf rdf:resource="http://merged#SocialEvent"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Social_Event"/>
     </owl:Class>
     
 
@@ -3233,7 +3265,7 @@
     <!-- http://edas#GovernmentOrganization -->
 
     <owl:Class rdf:about="http://edas#GovernmentOrganization">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://edas#IndustryOrganization"/>
         <owl:disjointWith rdf:resource="http://edas#NGO"/>
     </owl:Class>
@@ -3243,7 +3275,7 @@
     <!-- http://edas#IndustryOrganization -->
 
     <owl:Class rdf:about="http://edas#IndustryOrganization">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://edas#NGO"/>
     </owl:Class>
     
@@ -3366,7 +3398,7 @@
     <!-- http://edas#NGO -->
 
     <owl:Class rdf:about="http://edas#NGO">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
     </owl:Class>
     
 
@@ -3447,8 +3479,8 @@
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
         <owl:disjointWith rdf:resource="http://edas#PublishedPaper"/>
         <owl:disjointWith rdf:resource="http://edas#WithdrawnPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#AcceptedPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#RejectedPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#Accepted_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Rejected_Paper"/>
     </owl:Class>
     
 
@@ -3477,10 +3509,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3511,10 +3543,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3551,8 +3583,8 @@
     <owl:Class rdf:about="http://edas#PublishedPaper">
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
         <owl:disjointWith rdf:resource="http://edas#WithdrawnPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#AcceptedPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#RejectedPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#Accepted_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Rejected_Paper"/>
     </owl:Class>
     
 
@@ -3600,10 +3632,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3616,10 +3648,10 @@
         <owl:disjointWith rdf:resource="http://edas#ReviewRating"/>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3641,10 +3673,10 @@
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="http://edas#Sponsorship"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3698,10 +3730,10 @@
 
     <owl:Class rdf:about="http://edas#Sponsorship">
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -3749,8 +3781,8 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://merged#hasMembers"/>
-                        <owl:someValuesFrom rdf:resource="http://merged#TPCMember"/>
+                        <owl:onProperty rdf:resource="http://merged#has_members"/>
+                        <owl:someValuesFrom rdf:resource="http://merged#PC_Member"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -3787,8 +3819,8 @@
 
     <owl:Class rdf:about="http://edas#WithdrawnPaper">
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
-        <owl:disjointWith rdf:resource="http://merged#AcceptedPaper"/>
-        <owl:disjointWith rdf:resource="http://merged#RejectedPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#Accepted_Paper"/>
+        <owl:disjointWith rdf:resource="http://merged#Rejected_Paper"/>
     </owl:Class>
     
 
@@ -3796,7 +3828,7 @@
     <!-- http://ekaw#Academic_Institution -->
 
     <owl:Class rdf:about="http://ekaw#Academic_Institution">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://ekaw#Organising_Agency"/>
     </owl:Class>
     
@@ -3831,18 +3863,18 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ekaw#updatedVersionOf"/>
-                <owl:someValuesFrom rdf:resource="http://merged#AcceptedPaper"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Accepted_Paper"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#iswrittenby"/>
-                <owl:someValuesFrom rdf:resource="http://merged#ConferenceParticipant"/>
+                <owl:onProperty rdf:resource="http://merged#isWrittenBy"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Conference_Participant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://ekaw#Evaluated_Paper"/>
         <owl:disjointWith rdf:resource="http://ekaw#Submitted_Paper"/>
-        <owl:disjointWith rdf:resource="http://merged#AcceptedPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#Accepted_Paper"/>
     </owl:Class>
     
 
@@ -3850,7 +3882,7 @@
     <!-- http://ekaw#Conference_Banquet -->
 
     <owl:Class rdf:about="http://ekaw#Conference_Banquet">
-        <rdfs:subClassOf rdf:resource="http://merged#SocialEvent"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Social_Event"/>
     </owl:Class>
     
 
@@ -3858,7 +3890,7 @@
     <!-- http://ekaw#Conference_Trip -->
 
     <owl:Class rdf:about="http://ekaw#Conference_Trip">
-        <rdfs:subClassOf rdf:resource="http://merged#SocialEvent"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Social_Event"/>
     </owl:Class>
     
 
@@ -3881,8 +3913,8 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://ekaw#Session"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#InvitedTalk"/>
-        <owl:disjointWith rdf:resource="http://merged#SocialEvent"/>
+        <owl:disjointWith rdf:resource="http://merged#Invited_talk"/>
+        <owl:disjointWith rdf:resource="http://merged#Social_Event"/>
         <owl:disjointWith rdf:resource="http://merged#Track"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
     </owl:Class>
@@ -3892,7 +3924,7 @@
     <!-- http://ekaw#Demo_Chair -->
 
     <owl:Class rdf:about="http://ekaw#Demo_Chair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -3921,7 +3953,7 @@
     <!-- http://ekaw#Early-Registered_Participant -->
 
     <owl:Class rdf:about="http://ekaw#Early-Registered_Participant">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <owl:disjointWith rdf:resource="http://ekaw#Late-Registered_Participant"/>
     </owl:Class>
     
@@ -3931,6 +3963,12 @@
 
     <owl:Class rdf:about="http://ekaw#Evaluated_Paper">
         <rdfs:subClassOf rdf:resource="http://ekaw#Assigned_Paper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://merged#has_a_review"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3972,7 +4010,7 @@
     <!-- http://ekaw#Industrial_Session -->
 
     <owl:Class rdf:about="http://ekaw#Industrial_Session">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceSession"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Session"/>
     </owl:Class>
     
 
@@ -3988,7 +4026,7 @@
     <!-- http://ekaw#Late-Registered_Participant -->
 
     <owl:Class rdf:about="http://ekaw#Late-Registered_Participant">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -4043,7 +4081,7 @@
     <!-- http://ekaw#OC_Member -->
 
     <owl:Class rdf:about="http://ekaw#OC_Member">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -4051,7 +4089,7 @@
     <!-- http://ekaw#Organising_Agency -->
 
     <owl:Class rdf:about="http://ekaw#Organising_Agency">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
     </owl:Class>
     
 
@@ -4059,8 +4097,8 @@
     <!-- http://ekaw#PC_Chair -->
 
     <owl:Class rdf:about="http://ekaw#PC_Chair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
-        <rdfs:subClassOf rdf:resource="http://merged#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#PC_Member"/>
         <owl:disjointWith rdf:resource="http://ekaw#Tutorial_Chair"/>
         <owl:disjointWith rdf:resource="http://ekaw#Workshop_Chair"/>
     </owl:Class>
@@ -4120,7 +4158,7 @@
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://ekaw#Invited_Talk_Abstract"/>
-                            <rdf:Description rdf:about="http://merged#AcceptedPaper"/>
+                            <rdf:Description rdf:about="http://merged#Accepted_Paper"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -4143,7 +4181,7 @@
     <!-- http://ekaw#Proceedings_Publisher -->
 
     <owl:Class rdf:about="http://ekaw#Proceedings_Publisher">
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
     </owl:Class>
     
 
@@ -4192,7 +4230,7 @@
     <!-- http://ekaw#SC_Member -->
 
     <owl:Class rdf:about="http://ekaw#SC_Member">
-        <rdfs:subClassOf rdf:resource="http://merged#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#PC_Member"/>
     </owl:Class>
     
 
@@ -4243,7 +4281,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
-        <owl:disjointWith rdf:resource="http://merged#InvitedTalk"/>
+        <owl:disjointWith rdf:resource="http://merged#Invited_talk"/>
         <owl:disjointWith rdf:resource="http://merged#Track"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
         <owl:disjointWith rdf:resource="http://merged#Workshop"/>
@@ -4270,8 +4308,8 @@
     <!-- http://ekaw#Tutorial_Chair -->
 
     <owl:Class rdf:about="http://ekaw#Tutorial_Chair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
-        <rdfs:subClassOf rdf:resource="http://merged#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#PC_Member"/>
     </owl:Class>
     
 
@@ -4289,8 +4327,8 @@
     <!-- http://ekaw#Workshop_Chair -->
 
     <owl:Class rdf:about="http://ekaw#Workshop_Chair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
-        <rdfs:subClassOf rdf:resource="http://merged#TPCMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#PC_Member"/>
     </owl:Class>
     
 
@@ -4299,7 +4337,7 @@
 
     <owl:Class rdf:about="http://ekaw#Workshop_Paper">
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Paper"/>
     </owl:Class>
     
 
@@ -4308,7 +4346,7 @@
 
     <owl:Class rdf:about="http://ekaw#Workshop_Session">
         <rdfs:subClassOf rdf:resource="http://ekaw#Session"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
     </owl:Class>
     
 
@@ -4316,24 +4354,28 @@
     <!-- http://merged#Abstract -->
 
     <owl:Class rdf:about="http://merged#Abstract">
+        <rdfs:label rdf:resource="http://conference#Abstract"/>
+        <rdfs:label rdf:resource="http://ekaw#Abstract"/>
         <rdfs:subClassOf rdf:resource="http://conference#Extended_abstract"/>
         <rdfs:subClassOf rdf:resource="http://merged#Document"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#AcceptedPaper -->
+    <!-- http://merged#Accepted_Paper -->
 
-    <owl:Class rdf:about="http://merged#AcceptedPaper">
+    <owl:Class rdf:about="http://merged#Accepted_Paper">
+        <rdfs:label rdf:resource="http://edas#AcceptedPaper"/>
+        <rdfs:label rdf:resource="http://ekaw#Accepted_Paper"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Evaluated_Paper"/>
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasAReview_hasreview"/>
+                <owl:onProperty rdf:resource="http://merged#has_a_review"/>
                 <owl:someValuesFrom rdf:resource="http://ekaw#Positive_Review"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://merged#RejectedPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#Rejected_Paper"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accepted paper to become part of proceedings. 
 Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as it was accepted in a different form!</rdfs:comment>
     </owl:Class>
@@ -4343,6 +4385,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Author -->
 
     <owl:Class rdf:about="http://merged#Author">
+        <rdfs:label rdf:resource="http://confOf#Author"/>
+        <rdfs:label rdf:resource="http://edas#Author"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4366,16 +4410,18 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:allValuesFrom rdf:resource="http://confOf#Contribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://merged#SessionChair"/>
-        <owl:disjointWith rdf:resource="http://merged#TPCMember"/>
+        <owl:disjointWith rdf:resource="http://merged#PC_Member"/>
+        <owl:disjointWith rdf:resource="http://merged#Session_Chair"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://merged#CallForPapers -->
+    <!-- http://merged#Call_for_paper -->
 
-    <owl:Class rdf:about="http://merged#CallForPapers">
+    <owl:Class rdf:about="http://merged#Call_for_paper">
+        <rdfs:label rdf:resource="http://conference#Call_for_paper"/>
+        <rdfs:label rdf:resource="http://edas#CallForPapers"/>
         <rdfs:subClassOf rdf:resource="http://conference#Conference_document"/>
         <rdfs:subClassOf rdf:resource="http://edas#Call"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Call For Papers</rdfs:comment>
@@ -4383,9 +4429,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#ChairPC -->
+    <!-- http://merged#Chair_PC -->
 
-    <owl:Class rdf:about="http://merged#ChairPC">
+    <owl:Class rdf:about="http://merged#Chair_PC">
+        <rdfs:label rdf:resource="http://confOf#Chair_PC"/>
+        <rdfs:label rdf:resource="http://conference#Chair"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://conference#was_a_committee_chair_of"/>
@@ -4402,24 +4450,28 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Conference -->
 
     <owl:Class rdf:about="http://merged#Conference">
+        <rdfs:label rdf:resource="http://confOf#Conference"/>
+        <rdfs:label rdf:resource="http://conference#Conference"/>
+        <rdfs:label rdf:resource="http://edas#Conference"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Scientific_Event"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hascountry"/>
+                <owl:onProperty rdf:resource="http://merged#hasCountry"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hastopic"/>
+                <owl:onProperty rdf:resource="http://merged#hasTopic"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hassurname_hasname_hasAName"/>
+                <owl:onProperty rdf:resource="http://merged#has_a_name"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4453,14 +4505,14 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceSession"/>
+        <owl:disjointWith rdf:resource="http://merged#Conference_Session"/>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#InvitedTalk"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Invited_talk"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Paper"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#SocialEvent"/>
+        <owl:disjointWith rdf:resource="http://merged#Social_Event"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
         <owl:disjointWith rdf:resource="http://merged#Track"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
@@ -4471,17 +4523,21 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#ConferencePaper_ConferencePart -->
+    <!-- http://merged#Conference_Paper -->
 
-    <owl:Class rdf:about="http://merged#ConferencePaper_ConferencePart">
+    <owl:Class rdf:about="http://merged#Conference_Paper">
+        <rdfs:label rdf:resource="http://conference#Conference_part"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference_Paper"/>
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#ConferenceParticipant -->
+    <!-- http://merged#Conference_Participant -->
 
-    <owl:Class rdf:about="http://merged#ConferenceParticipant">
+    <owl:Class rdf:about="http://merged#Conference_Participant">
+        <rdfs:label rdf:resource="http://conference#Conference_participant"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference_Participant"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -4495,30 +4551,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#ConferenceProceedings -->
+    <!-- http://merged#Conference_Session -->
 
-    <owl:Class rdf:about="http://merged#ConferenceProceedings">
-        <rdfs:subClassOf rdf:resource="http://ekaw#Proceedings"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ekaw#volumeContainsPaper"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://ekaw#Invited_Talk_Abstract"/>
-                            <rdf:Description rdf:about="http://merged#ConferencePaper_ConferencePart"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://merged#ConferenceSession -->
-
-    <owl:Class rdf:about="http://merged#ConferenceSession">
+    <owl:Class rdf:about="http://merged#Conference_Session">
+        <rdfs:label rdf:resource="http://edas#ConferenceSession"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference_Session"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Session"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4528,9 +4565,32 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://merged#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Conference_proceedings -->
+
+    <owl:Class rdf:about="http://merged#Conference_proceedings">
+        <rdfs:label rdf:resource="http://conference#Conference_proceedings"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference_Proceedings"/>
+        <rdfs:subClassOf rdf:resource="http://ekaw#Proceedings"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ekaw#volumeContainsPaper"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ekaw#Invited_Talk_Abstract"/>
+                            <rdf:Description rdf:about="http://merged#Conference_Paper"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4538,9 +4598,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Country -->
 
     <owl:Class rdf:about="http://merged#Country">
+        <rdfs:label rdf:resource="http://confOf#Country"/>
+        <rdfs:label rdf:resource="http://edas#Country"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
         <owl:disjointWith rdf:resource="http://merged#Event"/>
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -4550,7 +4612,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Document -->
 
     <owl:Class rdf:about="http://merged#Document">
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:label rdf:resource="http://edas#Document"/>
+        <rdfs:label rdf:resource="http://ekaw#Document"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
     </owl:Class>
@@ -4560,7 +4624,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Event -->
 
     <owl:Class rdf:about="http://merged#Event">
-        <owl:disjointWith rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:label rdf:resource="http://confOf#Event"/>
+        <rdfs:label rdf:resource="http://ekaw#Event"/>
+        <owl:disjointWith rdf:resource="http://merged#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
@@ -4568,13 +4634,15 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#InvitedSpeaker -->
+    <!-- http://merged#Invited_speaker -->
 
-    <owl:Class rdf:about="http://merged#InvitedSpeaker">
+    <owl:Class rdf:about="http://merged#Invited_speaker">
+        <rdfs:label rdf:resource="http://conference#Invited_speaker"/>
+        <rdfs:label rdf:resource="http://ekaw#Invited_Speaker"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://conference#contributes"/>
-                <owl:someValuesFrom rdf:resource="http://merged#InvitedTalk"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Invited_talk"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://conference#Conference_contributor"/>
@@ -4583,13 +4651,15 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#InvitedTalk -->
+    <!-- http://merged#Invited_talk -->
 
-    <owl:Class rdf:about="http://merged#InvitedTalk">
+    <owl:Class rdf:about="http://merged#Invited_talk">
+        <rdfs:label rdf:resource="http://conference#Invited_talk"/>
+        <rdfs:label rdf:resource="http://ekaw#Invited_Talk"/>
         <rdfs:subClassOf rdf:resource="http://conference#Presentation"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Individual_Presentation"/>
         <owl:disjointWith rdf:resource="http://merged#Poster"/>
-        <owl:disjointWith rdf:resource="http://merged#SocialEvent"/>
+        <owl:disjointWith rdf:resource="http://merged#Social_Event"/>
         <owl:disjointWith rdf:resource="http://merged#Track"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
         <owl:disjointWith rdf:resource="http://merged#Workshop"/>
@@ -4597,11 +4667,29 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#Organisation_Organization -->
+    <!-- http://merged#Organisation -->
 
-    <owl:Class rdf:about="http://merged#Organisation_Organization">
+    <owl:Class rdf:about="http://merged#Organisation">
+        <rdfs:label rdf:resource="http://confOf#Organization"/>
+        <rdfs:label rdf:resource="http://conference#Organization"/>
+        <rdfs:label rdf:resource="http://edas#Organization"/>
+        <rdfs:label rdf:resource="http://ekaw#Organisation"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
         <owl:disjointWith rdf:resource="http://merged#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#PC_Member -->
+
+    <owl:Class rdf:about="http://merged#PC_Member">
+        <rdfs:label rdf:resource="http://confOf#Member"/>
+        <rdfs:label rdf:resource="http://edas#TPCMember"/>
+        <rdfs:label rdf:resource="http://ekaw#PC_Member"/>
+        <rdfs:subClassOf rdf:resource="http://confOf#Participant"/>
+        <rdfs:subClassOf rdf:resource="http://ekaw#Possible_Reviewer"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
 
@@ -4609,6 +4697,10 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Paper -->
 
     <owl:Class rdf:about="http://merged#Paper">
+        <rdfs:label rdf:resource="http://confOf#Paper"/>
+        <rdfs:label rdf:resource="http://conference#Paper"/>
+        <rdfs:label rdf:resource="http://edas#Paper"/>
+        <rdfs:label rdf:resource="http://ekaw#Paper"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Contribution"/>
         <rdfs:subClassOf rdf:resource="http://conference#Regular_contribution"/>
         <rdfs:subClassOf rdf:resource="http://merged#Document"/>
@@ -4622,11 +4714,15 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Person -->
 
     <owl:Class rdf:about="http://merged#Person">
+        <rdfs:label rdf:resource="http://confOf#Person"/>
+        <rdfs:label rdf:resource="http://conference#Person"/>
+        <rdfs:label rdf:resource="http://edas#Person"/>
+        <rdfs:label rdf:resource="http://ekaw#Person"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://confOf#employedBy"/>
-                <owl:someValuesFrom rdf:resource="http://merged#Organisation_Organization"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Organisation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4637,43 +4733,43 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hascountry"/>
+                <owl:onProperty rdf:resource="http://merged#hasCountry"/>
                 <owl:someValuesFrom rdf:resource="http://merged#Country"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://confOf#employedBy"/>
-                <owl:allValuesFrom rdf:resource="http://merged#Organisation_Organization"/>
+                <owl:allValuesFrom rdf:resource="http://merged#Organisation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasAnEmail_hasemail"/>
+                <owl:onProperty rdf:resource="http://merged#hasPostalCode"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#haspostalcode"/>
+                <owl:onProperty rdf:resource="http://merged#hasStreet"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasstreet"/>
+                <owl:onProperty rdf:resource="http://merged#has_an_email"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hasTheFirstName_hasfirstname"/>
+                <owl:onProperty rdf:resource="http://merged#has_a_name"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#hassurname_hasname_hasAName"/>
+                <owl:onProperty rdf:resource="http://merged#has_the_first_name"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4686,6 +4782,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Poster -->
 
     <owl:Class rdf:about="http://merged#Poster">
+        <rdfs:label rdf:resource="http://confOf#Poster"/>
+        <rdfs:label rdf:resource="http://conference#Poster"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Contribution"/>
         <rdfs:subClassOf rdf:resource="http://conference#Conference_contribution"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
@@ -4696,8 +4794,10 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Presenter -->
 
     <owl:Class rdf:about="http://merged#Presenter">
+        <rdfs:label rdf:resource="http://edas#Presenter"/>
+        <rdfs:label rdf:resource="http://ekaw#Presenter"/>
         <rdfs:subClassOf rdf:resource="http://merged#Author"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -4705,14 +4805,18 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Reception -->
 
     <owl:Class rdf:about="http://merged#Reception">
-        <rdfs:subClassOf rdf:resource="http://merged#SocialEvent"/>
+        <rdfs:label rdf:resource="http://confOf#Reception"/>
+        <rdfs:label rdf:resource="http://edas#Reception"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Social_Event"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#RejectedPaper -->
+    <!-- http://merged#Rejected_Paper -->
 
-    <owl:Class rdf:about="http://merged#RejectedPaper">
+    <owl:Class rdf:about="http://merged#Rejected_Paper">
+        <rdfs:label rdf:resource="http://edas#RejectedPaper"/>
+        <rdfs:label rdf:resource="http://ekaw#Rejected_Paper"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Evaluated_Paper"/>
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
     </owl:Class>
@@ -4722,6 +4826,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Review -->
 
     <owl:Class rdf:about="http://merged#Review">
+        <rdfs:label rdf:resource="http://conference#Review"/>
+        <rdfs:label rdf:resource="http://edas#Review"/>
+        <rdfs:label rdf:resource="http://ekaw#Review"/>
         <rdfs:subClassOf rdf:resource="http://conference#Conference_document"/>
         <rdfs:subClassOf rdf:resource="http://merged#Document"/>
         <rdfs:subClassOf>
@@ -4737,6 +4844,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Reviewer -->
 
     <owl:Class rdf:about="http://merged#Reviewer">
+        <rdfs:label rdf:resource="http://conference#Reviewer"/>
+        <rdfs:label rdf:resource="http://edas#Reviewer"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4752,19 +4861,24 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#SessionChair -->
+    <!-- http://merged#Session_Chair -->
 
-    <owl:Class rdf:about="http://merged#SessionChair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant"/>
+    <owl:Class rdf:about="http://merged#Session_Chair">
+        <rdfs:label rdf:resource="http://edas#SessionChair"/>
+        <rdfs:label rdf:resource="http://ekaw#Session_Chair"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#PC_Member"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
-        <rdfs:subClassOf rdf:resource="http://merged#TPCMember"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#SocialEvent -->
+    <!-- http://merged#Social_Event -->
 
-    <owl:Class rdf:about="http://merged#SocialEvent">
+    <owl:Class rdf:about="http://merged#Social_Event">
+        <rdfs:label rdf:resource="http://confOf#Social_event"/>
+        <rdfs:label rdf:resource="http://edas#SocialEvent"/>
+        <rdfs:label rdf:resource="http://ekaw#Social_Event"/>
         <rdfs:subClassOf rdf:resource="http://edas#NonAcademicEvent"/>
         <rdfs:subClassOf rdf:resource="http://merged#Event"/>
         <rdfs:subClassOf>
@@ -4795,18 +4909,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Student -->
 
     <owl:Class rdf:about="http://merged#Student">
+        <rdfs:label rdf:resource="http://confOf#Student"/>
+        <rdfs:label rdf:resource="http://ekaw#Student"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Participant"/>
-        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://merged#TPCMember -->
-
-    <owl:Class rdf:about="http://merged#TPCMember">
-        <rdfs:subClassOf rdf:resource="http://confOf#Participant"/>
-        <rdfs:subClassOf rdf:resource="http://ekaw#Possible_Reviewer"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
@@ -4816,6 +4921,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Topic -->
 
     <owl:Class rdf:about="http://merged#Topic">
+        <rdfs:label rdf:resource="http://confOf#Topic"/>
+        <rdfs:label rdf:resource="http://conference#Topic"/>
+        <rdfs:label rdf:resource="http://edas#Topic"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confTool</rdfs:comment>
     </owl:Class>
     
@@ -4824,8 +4932,10 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Track -->
 
     <owl:Class rdf:about="http://merged#Track">
+        <rdfs:label rdf:resource="http://conference#Track"/>
+        <rdfs:label rdf:resource="http://ekaw#Track"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Scientific_Event"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Paper"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
         <owl:disjointWith rdf:resource="http://merged#Workshop"/>
     </owl:Class>
@@ -4835,9 +4945,12 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Tutorial -->
 
     <owl:Class rdf:about="http://merged#Tutorial">
+        <rdfs:label rdf:resource="http://confOf#Tutorial"/>
+        <rdfs:label rdf:resource="http://conference#Tutorial"/>
+        <rdfs:label rdf:resource="http://ekaw#Tutorial"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Individual_Presentation"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Paper"/>
         <owl:disjointWith rdf:resource="http://merged#Workshop"/>
     </owl:Class>
     
@@ -4846,8 +4959,10 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#University -->
 
     <owl:Class rdf:about="http://merged#University">
+        <rdfs:label rdf:resource="http://confOf#University"/>
+        <rdfs:label rdf:resource="http://ekaw#University"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Academic_Institution"/>
-        <rdfs:subClassOf rdf:resource="http://merged#Organisation_Organization"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organisation"/>
     </owl:Class>
     
 
@@ -4855,10 +4970,14 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Workshop -->
 
     <owl:Class rdf:about="http://merged#Workshop">
+        <rdfs:label rdf:resource="http://confOf#Workshop"/>
+        <rdfs:label rdf:resource="http://conference#Workshop"/>
+        <rdfs:label rdf:resource="http://edas#Workshop"/>
+        <rdfs:label rdf:resource="http://ekaw#Workshop"/>
         <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
         <rdfs:subClassOf rdf:resource="http://edas#AcademicEvent"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Scientific_Event"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferencePaper_ConferencePart"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Paper"/>
     </owl:Class>
     
 

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d2/MergedOnt687.owl#"
-     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d2/MergedOnt687.owl"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d2/MergedOnt368.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d2/MergedOnt368.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d2/MergedOnt687.owl"/>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d2/MergedOnt368.owl"/>
     
 
 
@@ -198,6 +198,7 @@
 
     <owl:ObjectProperty rdf:about="http://ekaw#paperPresentedAs">
         <rdfs:range rdf:resource="http://ekaw#Individual_Presentation"/>
+        <owl:inverseOf rdf:resource="http://merged#presentationOfPaper"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -371,11 +372,12 @@
     
 
 
-    <!-- http://merged#presentationofpaper -->
+    <!-- http://merged#presentationOfPaper -->
 
-    <owl:ObjectProperty rdf:about="http://merged#presentationofpaper">
+    <owl:ObjectProperty rdf:about="http://merged#presentationOfPaper">
+        <rdfs:label rdf:resource="http://ekaw#presentationOfPaper"/>
+        <rdfs:label rdf:resource="http://sigkdd#presentation"/>
         <rdfs:domain rdf:resource="http://ekaw#Individual_Presentation"/>
-        <owl:inverseOf rdf:resource="http://ekaw#paperPresentedAs"/>
         <rdfs:range rdf:resource="http://merged#Document"/>
         <rdfs:domain rdf:resource="http://sigkdd#Speaker"/>
         <owl:inverseOf rdf:resource="http://sigkdd#presentationed_by"/>
@@ -797,13 +799,13 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf rdf:resource="http://ekaw#Individual_Presentation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#presentationofpaper"/>
+                <owl:onProperty rdf:resource="http://merged#presentationOfPaper"/>
                 <owl:someValuesFrom rdf:resource="http://ekaw#Camera_Ready_Paper"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#presentationofpaper"/>
+                <owl:onProperty rdf:resource="http://merged#presentationOfPaper"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1360,6 +1362,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Abstract -->
 
     <owl:Class rdf:about="http://merged#Abstract">
+        <rdfs:label rdf:resource="http://ekaw#Abstract"/>
+        <rdfs:label rdf:resource="http://sigkdd#Abstract"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#submit_until"/>
@@ -1371,9 +1375,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#AuthorOfPaper_PaperAuthor -->
+    <!-- http://merged#Author_of_paper -->
 
-    <owl:Class rdf:about="http://merged#AuthorOfPaper_PaperAuthor">
+    <owl:Class rdf:about="http://merged#Author_of_paper">
+        <rdfs:label rdf:resource="http://ekaw#Paper_Author"/>
+        <rdfs:label rdf:resource="http://sigkdd#Author_of_paper"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf rdf:resource="http://sigkdd#Author"/>
         <rdfs:subClassOf>
@@ -1395,6 +1401,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Conference -->
 
     <owl:Class rdf:about="http://merged#Conference">
+        <rdfs:label rdf:resource="http://ekaw#Conference"/>
+        <rdfs:label rdf:resource="http://sigkdd#Conference"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Scientific_Event"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One edition of a conference</rdfs:comment>
     </owl:Class>
@@ -1404,14 +1412,18 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Document -->
 
     <owl:Class rdf:about="http://merged#Document">
+        <rdfs:label rdf:resource="http://ekaw#Document"/>
+        <rdfs:label rdf:resource="http://sigkdd#Document"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#InvitedSpeaker -->
+    <!-- http://merged#Invited_Speaker -->
 
-    <owl:Class rdf:about="http://merged#InvitedSpeaker">
+    <owl:Class rdf:about="http://merged#Invited_Speaker">
+        <rdfs:label rdf:resource="http://ekaw#Invited_Speaker"/>
+        <rdfs:label rdf:resource="http://sigkdd#Invited_Speaker"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Presenter"/>
         <rdfs:subClassOf rdf:resource="http://sigkdd#Speaker"/>
     </owl:Class>
@@ -1421,6 +1433,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Paper -->
 
     <owl:Class rdf:about="http://merged#Paper">
+        <rdfs:label rdf:resource="http://ekaw#Paper"/>
+        <rdfs:label rdf:resource="http://sigkdd#Paper"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#submit_until"/>
@@ -1436,6 +1450,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Person -->
 
     <owl:Class rdf:about="http://merged#Person">
+        <rdfs:label rdf:resource="http://ekaw#Person"/>
+        <rdfs:label rdf:resource="http://sigkdd#Person"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#pay"/>
@@ -1456,6 +1472,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Review -->
 
     <owl:Class rdf:about="http://merged#Review">
+        <rdfs:label rdf:resource="http://ekaw#Review"/>
+        <rdfs:label rdf:resource="http://sigkdd#Review"/>
         <rdfs:subClassOf rdf:resource="http://merged#Document"/>
     </owl:Class>
     
@@ -1795,7 +1813,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <owl:Class rdf:about="http://sigkdd#Speaker">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#presentationofpaper"/>
+                <owl:onProperty rdf:resource="http://merged#presentationOfPaper"/>
                 <owl:someValuesFrom rdf:resource="http://merged#Document"/>
             </owl:Restriction>
         </owl:equivalentClass>

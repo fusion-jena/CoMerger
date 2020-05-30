@@ -1,16 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://merged#"
-     xml:base="http://merged"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/temp/MergedOnt158.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/temp/MergedOnt158.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:peontology="http://bmi.utah.edu/ontologies/peontology/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://merged#">
-        <owl:versionIRI rdf:resource="1.0"/>
-    </owl:Ontology>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/temp/MergedOnt158.owl"/>
     
 
 
@@ -37,45 +34,9 @@
     
 
 
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
     
 
 
@@ -92,10 +53,10 @@
 
     <!-- http://www.cancerdata.org/roo/100031 -->
 
-    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100031">
+    <rdf:Description rdf:about="http://www.cancerdata.org/roo/100031">
         <rdfs:label>temporally_related_to</rdfs:label>
         <skos:definition>Related in time by preceding, co-occuring with, or following</skos:definition>
-    </owl:ObjectProperty>
+    </rdf:Description>
     
 
 
@@ -114,46 +75,6 @@
         <rdfs:label>precedes</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100031"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.cancerdata.org/roo/100212 -->
-
-    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100212">
-        <rdfs:label>has_property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.cancerdata.org/roo/100284 -->
-
-    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100284">
-        <rdfs:label>has_pacs_study</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Ontology1361987617.owl#hasAnalyticalAssessment -->
-
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#hasAnalyticalAssessment"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Ontology1361987617.owl#hasComposingMeasurements -->
-
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#hasComposingMeasurements"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Ontology1361987617.owl#hasSubsection -->
-
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#hasSubsection"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/Ontology1361987617.owl#hasSubtype -->
-
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#hasSubtype"/>
     
 
 
@@ -216,14 +137,6 @@
         <skos:definition>Obtained by delineate a contour</skos:definition>
         <owl:inverseOf rdf:resource="http://www.radiomics.org/RO/P00025"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P000103 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P000103">
-        <rdfs:label>has_version_status</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -327,101 +240,11 @@
     
 
 
-    <!-- http://www.radiomics.org/RO/P00039 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00039">
-        <rdfs:label>has_filter</rdfs:label>
-        <skos:definition>Specifies the imaging filter</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00040 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00040">
-        <rdfs:label>has_function</rdfs:label>
-        <skos:definition>Speficies the mathematical function</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00043 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00043">
-        <rdfs:label>has_GreyLevelRound</rdfs:label>
-        <skos:definition>Specifies the grey level round</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00048 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00048">
-        <rdfs:label>has_intensity_fraction</rdfs:label>
-        <skos:definition>Specifies the intensity fraction (refers to class IntensityFraction) used to compute the volume at intensity fraction</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.radiomics.org/RO/P00051 -->
 
     <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00051">
         <rdfs:label>has_label</rdfs:label>
         <owl:inverseOf rdf:resource="http://www.radiomics.org/RO/P00190"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00055 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00055">
-        <rdfs:label>has_license</rdfs:label>
-        <skos:definition>The relationship between an entity and the set of legal restrictions, i.e. license, which are applied in using or otherwise interacting with that entity. Eg. relationship between software and a software license</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00060 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00060">
-        <rdfs:label>has_max</rdfs:label>
-        <skos:definition>Specifies maximum value</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00061 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00061">
-        <rdfs:label>has_method</rdfs:label>
-        <skos:definition>Specifies computational method</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00064 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00064">
-        <rdfs:label>has_min</rdfs:label>
-        <skos:definition>Specifies minimum value</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00068 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00068">
-        <rdfs:label>has_orientation</rdfs:label>
-        <skos:definition>Specifies orientation along the space</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00074 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00074">
-        <rdfs:label>has_PartialVolumeCutOff</rdfs:label>
-        <skos:definition>Specifies Partial Volume cut off value</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -456,15 +279,6 @@
     
 
 
-    <!-- http://www.radiomics.org/RO/P00089 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00089">
-        <rdfs:label>has_scale</rdfs:label>
-        <skos:definition>Speficies if a particular scale (e.g. logaritmic has been applied)</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.radiomics.org/RO/P00092 -->
 
     <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00092">
@@ -475,71 +289,12 @@
     
 
 
-    <!-- http://www.radiomics.org/RO/P00099 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00099">
-        <rdfs:label>has_unit</rdfs:label>
-        <skos:definition>Specifies the unity associated to a quantity</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.radiomics.org/RO/P00101 -->
 
     <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00101">
         <rdfs:label>has_version</rdfs:label>
         <skos:definition>This predicates is use to link the software with the name of the version. Usually the version name is represented by a number, which represents the release of the SW</skos:definition>
         <owl:inverseOf rdf:resource="http://www.radiomics.org/RO/P0479"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00111 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00111">
-        <rdfs:label>has_volume_fraction</rdfs:label>
-        <skos:definition>The predicate is used to specify the volume fraction (refers to class VolumeFraction) used to compute the intensity at volume fraction (refers to class IntensityAtVolumeFraction) feature</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00118 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00118">
-        <rdfs:label>has_voxel_dimensionX</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00123 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00123">
-        <rdfs:label>has_voxel_dimensionY</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00149 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00149">
-        <rdfs:label>has_voxel_dimensionZ</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00156 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00156">
-        <rdfs:label>implemented_in</rdfs:label>
-        <skos:definition>To put into effect according to or by means of a definite procedure</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P00189 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P00189">
-        <rdfs:label>is_connected_to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -598,22 +353,6 @@
     
 
 
-    <!-- http://www.radiomics.org/RO/P02928312341 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P02928312341">
-        <rdfs:label>has_imaging_modality</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P0295212521 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P0295212521">
-        <rdfs:label>has_discretization_algorithm</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.radiomics.org/RO/P0394 -->
 
     <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P0394">
@@ -643,23 +382,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P0546">
         <rdfs:label>performed_by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P0821014 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P0821014">
-        <rdfs:label>has_FixedBinSize</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.radiomics.org/RO/P0876 -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/P0876">
-        <rdfs:label>originated_from</rdfs:label>
-        <skos:definition>Created from a certain context</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -723,14 +445,6 @@
     
 
 
-    <!-- http://www.radiomics.org/RO/is_FixedBinSize_of -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/is_FixedBinSize_of">
-        <rdfs:label>is_FixedBinSize_of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.radiomics.org/RO/is_equalisation_of -->
 
     <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/is_equalisation_of"/>
@@ -769,14 +483,6 @@
     
 
 
-    <!-- http://www.radiomics.org/RO/run_on -->
-
-    <owl:ObjectProperty rdf:about="http://www.radiomics.org/RO/run_on">
-        <rdfs:label>run_on</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
@@ -811,12 +517,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isAdapting -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isAdapting"/>
-    
-
-
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isIntergratedInto -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isIntergratedInto">
@@ -829,12 +529,6 @@
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isInvolvedIn"/>
-    
-
-
-    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isOccuringAt -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isOccuringAt"/>
     
 
 
@@ -914,10 +608,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000013"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000029"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -928,10 +618,6 @@
         <rdfs:label xml:lang="en">hasBreed</rdfs:label>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000019"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000031"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -957,7 +643,6 @@
     <!-- https://w3id.org/ahso#AHSO_0000_000033 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000033">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">hasMember</rdfs:label>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
@@ -973,10 +658,6 @@
         <rdfs:label xml:lang="en">hasProductionType</rdfs:label>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000020"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000034"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1008,14 +689,6 @@
         <rdfs:label xml:lang="en">hasSpecies</rdfs:label>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000025"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000031"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000044"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000037"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1034,18 +707,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000031"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000038"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000038"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1064,18 +725,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000034"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000039"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000039"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1094,18 +743,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000037"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000040"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000040"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1124,14 +761,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1151,14 +780,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000042"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000042"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1178,14 +799,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000043"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000043"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1204,7 +817,6 @@
     <!-- https://w3id.org/ahso#AHSO_0000_000045 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000045">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">isMemberOf</rdfs:label>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
@@ -1230,10 +842,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000008"/>
         <owl:inverseOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000049"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000045"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000048"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1244,10 +852,6 @@
         <rdfs:label xml:lang="en">isOwnerOf</rdfs:label>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000008"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000049"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000033"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1276,18 +880,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000041"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000029"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000061"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000061"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1329,7 +921,6 @@
     <!-- https://w3id.org/ahso#AHSO_0003_000006 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000006">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">has member activity</rdfs:label>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0002_000001"/>
@@ -1353,10 +944,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000003"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000007"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1375,10 +962,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000008"/>
-            <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000004"/>
-        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -1412,7 +995,6 @@
     <!-- https://w3id.org/ahso#AHSO_0003_000010 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0003_000010">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">has context member</rdfs:label>
         <rdfs:domain>
@@ -1446,51 +1028,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property1 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property1">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property2 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property2">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property3 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property3">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property4 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#property4">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Property"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/ahso#AHSO_0000_000053 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000053">
         <rdfs:label xml:lang="en">hasAgeValue</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000059"/>
     </owl:DatatypeProperty>
     
 
@@ -1499,7 +1041,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000054">
         <rdfs:label xml:lang="en">hasDOB</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
     </owl:DatatypeProperty>
     
@@ -1509,7 +1050,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000055">
         <rdfs:label xml:lang="en">hasID</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000003"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
@@ -1524,7 +1064,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000056">
         <rdfs:label xml:lang="en">occursOnDateTime</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
     </owl:DatatypeProperty>
@@ -1535,7 +1074,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000057">
         <rdfs:label xml:lang="en">isRecordedOnDateTime</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000001"/>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0003_000004"/>
     </owl:DatatypeProperty>
@@ -1556,36 +1094,6 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000060">
         <rdfs:label xml:lang="en">hasAgeUnit</rdfs:label>
         <rdfs:domain rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000059"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>days</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>months</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>weeks</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>years</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -4678,6 +4186,8 @@
     <owl:Class rdf:about="http://merged#Cognitive">
         <rdfs:label xml:lang="en">Cognitive</rdfs:label>
         <rdfs:label xml:lang="pt">Cognição</rdfs:label>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Cognitive"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cognitive"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts"/>
         <owl:versionInfo>0.1</owl:versionInfo>
@@ -4689,23 +4199,27 @@
     <!-- http://merged#InPatient -->
 
     <owl:Class rdf:about="http://merged#InPatient">
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#DietMealsServed"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#MagneticResonanceImaging_C16809 -->
+    <!-- http://merged#Magnetic_Resonance_Imaging -->
 
-    <owl:Class rdf:about="http://merged#MagneticResonanceImaging_C16809">
-        <rdfs:label xml:lang="en">Magnetic resonance imaging</rdfs:label>
+    <owl:Class rdf:about="http://merged#Magnetic_Resonance_Imaging">
         <rdfs:label>MagneticResonanceImaging</rdfs:label>
+        <rdfs:label xml:lang="en">Magnetic resonance imaging</rdfs:label>
         <rdfs:label xml:lang="pt">Ressonância magnética</rdfs:label>
+        <rdfs:label rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16809"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Imaging"/>
         <rdfs:subClassOf rdf:resource="http://www.radiomics.org/RO/LK99"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <owl:versionInfo>0.1</owl:versionInfo>
         <rdfs:comment xml:lang="en">A scanning technique that creates pictures of the inside of the body and the brain; uses a strong magnet.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -4713,23 +4227,27 @@
     <!-- http://merged#Outpatient -->
 
     <owl:Class rdf:about="http://merged#Outpatient">
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#DietMealsServed"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#PositronEmissionTomography_C17007 -->
+    <!-- http://merged#Positron_Emission_Tomography -->
 
-    <owl:Class rdf:about="http://merged#PositronEmissionTomography_C17007">
+    <owl:Class rdf:about="http://merged#Positron_Emission_Tomography">
         <rdfs:label xml:lang="en">Positron emission tomography</rdfs:label>
         <rdfs:label>PositronEmissionTomography</rdfs:label>
         <rdfs:label xml:lang="pt">Tomografia por emissão de positrões</rdfs:label>
+        <rdfs:label rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Positron_Emission_Tomography"/>
         <rdfs:subClassOf rdf:resource="http://www.radiomics.org/RO/LK99"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <owl:versionInfo>0.1</owl:versionInfo>
         <rdfs:comment xml:lang="en">A diagnostic test that uses a very low dose of a radioactive compound to measure metabolic activity in the brain; areas of decreased metabolism correspond to the seizure focus.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -4737,6 +4255,8 @@
     <!-- http://merged#Treatment -->
 
     <owl:Class rdf:about="http://merged#Treatment">
+        <rdfs:label rdf:resource="http://bmi.utah.edu/ontologies/peontology/Treatment"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
     </owl:Class>
     
@@ -4831,21 +4351,21 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
 
     <!-- http://purl.bioontology.org/ontology/STY/T051 -->
 
-    <owl:Class rdf:about="http://purl.bioontology.org/ontology/STY/T051">
+    <rdf:Description rdf:about="http://purl.bioontology.org/ontology/STY/T051">
         <rdfs:label>Event</rdfs:label>
         <skos:definition>A broad type for grouping activities, processes and states</skos:definition>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- http://purl.bioontology.org/ontology/STY/T071 -->
 
-    <owl:Class rdf:about="http://purl.bioontology.org/ontology/STY/T071">
+    <rdf:Description rdf:about="http://purl.bioontology.org/ontology/STY/T071">
         <rdfs:label>Entity</rdfs:label>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <skos:definition>A broad type for grouping physical and conceptual entities</skos:definition>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -5922,9 +5442,9 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
 
     <!-- http://www.owl-ontologies.com/Ontology1361987617.owl#NutritionCapabilities -->
 
-    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#NutritionCapabilities">
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#NutritionCapabilities">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nutrition Capabilities</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -13138,49 +12658,49 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
-    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:label xml:lang="en">PCORI</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- https://w3id.org/ahso#AHSO_0000_000001 -->
 
-    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000001">
+    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000001">
         <rdfs:label xml:lang="en">Observation</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- https://w3id.org/ahso#AHSO_0000_000002 -->
 
-    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000002">
+    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000002">
         <rdfs:label xml:lang="en">Zoographical Information</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- https://w3id.org/ahso#AHSO_0000_000003 -->
 
-    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000003">
+    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000003">
         <rdfs:label xml:lang="en">Registry</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- https://w3id.org/ahso#AHSO_0000_000004 -->
 
-    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000004">
+    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000004">
         <rdfs:label xml:lang="en">Population unit</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- https://w3id.org/ahso#AHSO_0000_000005 -->
 
-    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000005">
+    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000005">
         <rdfs:label xml:lang="en">Health and surveillance actors</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -13188,6 +12708,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000007">
         <rdfs:label xml:lang="en">Geographical Information</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     
 
@@ -13304,6 +12825,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000026">
         <rdfs:label>Mapped terminologies</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     
 
@@ -13409,9 +12931,9 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <!-- https://w3id.org/ahso#AHSO_0002_000001 -->
 
-    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0002_000001">
+    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0002_000001">
         <rdfs:label>Observation context</rdfs:label>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -13473,6 +12995,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0003_000004">
         <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     
 
@@ -13760,6 +13283,113 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#VassilisAthitsos">
         <rdf:type rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Therapist"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.cancerdata.org/roo/100212">
+        <rdfs:label>has_property</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.cancerdata.org/roo/100284">
+        <rdfs:label>has_pacs_study</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P000103">
+        <rdfs:label>has_version_status</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00039">
+        <rdfs:label>has_filter</rdfs:label>
+        <skos:definition>Specifies the imaging filter</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00040">
+        <rdfs:label>has_function</rdfs:label>
+        <skos:definition>Speficies the mathematical function</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00043">
+        <rdfs:label>has_GreyLevelRound</rdfs:label>
+        <skos:definition>Specifies the grey level round</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00048">
+        <rdfs:label>has_intensity_fraction</rdfs:label>
+        <skos:definition>Specifies the intensity fraction (refers to class IntensityFraction) used to compute the volume at intensity fraction</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00055">
+        <rdfs:label>has_license</rdfs:label>
+        <skos:definition>The relationship between an entity and the set of legal restrictions, i.e. license, which are applied in using or otherwise interacting with that entity. Eg. relationship between software and a software license</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00060">
+        <rdfs:label>has_max</rdfs:label>
+        <skos:definition>Specifies maximum value</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00061">
+        <rdfs:label>has_method</rdfs:label>
+        <skos:definition>Specifies computational method</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00064">
+        <rdfs:label>has_min</rdfs:label>
+        <skos:definition>Specifies minimum value</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00068">
+        <rdfs:label>has_orientation</rdfs:label>
+        <skos:definition>Specifies orientation along the space</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00074">
+        <rdfs:label>has_PartialVolumeCutOff</rdfs:label>
+        <skos:definition>Specifies Partial Volume cut off value</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00089">
+        <rdfs:label>has_scale</rdfs:label>
+        <skos:definition>Speficies if a particular scale (e.g. logaritmic has been applied)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00099">
+        <rdfs:label>has_unit</rdfs:label>
+        <skos:definition>Specifies the unity associated to a quantity</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00111">
+        <rdfs:label>has_volume_fraction</rdfs:label>
+        <skos:definition>The predicate is used to specify the volume fraction (refers to class VolumeFraction) used to compute the intensity at volume fraction (refers to class IntensityAtVolumeFraction) feature</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00118">
+        <rdfs:label>has_voxel_dimensionX</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00123">
+        <rdfs:label>has_voxel_dimensionY</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00149">
+        <rdfs:label>has_voxel_dimensionZ</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00156">
+        <rdfs:label>implemented_in</rdfs:label>
+        <skos:definition>To put into effect according to or by means of a definite procedure</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P00189">
+        <rdfs:label>is_connected_to</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P02928312341">
+        <rdfs:label>has_imaging_modality</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P0295212521">
+        <rdfs:label>has_discretization_algorithm</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P0821014">
+        <rdfs:label>has_FixedBinSize</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/P0876">
+        <rdfs:label>originated_from</rdfs:label>
+        <skos:definition>Created from a certain context</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/is_FixedBinSize_of">
+        <rdfs:label>is_FixedBinSize_of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.radiomics.org/RO/run_on">
+        <rdfs:label>run_on</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

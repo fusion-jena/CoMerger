@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt909.owl#"
-     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt909.owl"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt177.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt177.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:peontology="http://bmi.utah.edu/ontologies/peontology/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt909.owl"/>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt177.owl"/>
     
 
 
@@ -677,7 +677,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000036">
         <rdfs:label xml:lang="en">hasSex</rdfs:label>
-        <rdfs:domain rdf:resource="http://merged#AHSO0000000010_Individual"/>
+        <rdfs:domain rdf:resource="http://merged#AHSO_0000_000010"/>
         <rdfs:range rdf:resource="https://w3id.org/ahso#AHSO_0000_000021"/>
     </owl:ObjectProperty>
     
@@ -769,7 +769,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000042">
         <rdfs:label xml:lang="en">hasSubjectAnimal</rdfs:label>
-        <rdfs:range rdf:resource="http://merged#AHSO0000000010_Individual"/>
+        <rdfs:range rdf:resource="http://merged#AHSO_0000_000010"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000041"/>
         <rdfs:domain>
             <owl:Class>
@@ -1032,7 +1032,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000053">
         <rdfs:label xml:lang="en">hasAgeValue</rdfs:label>
-        <rdfs:domain rdf:resource="http://merged#AHSO0000000010_Individual"/>
+        <rdfs:domain rdf:resource="http://merged#AHSO_0000_000010"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     </owl:DatatypeProperty>
     
@@ -1042,7 +1042,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000054">
         <rdfs:label xml:lang="en">hasDOB</rdfs:label>
-        <rdfs:domain rdf:resource="http://merged#AHSO0000000010_Individual"/>
+        <rdfs:domain rdf:resource="http://merged#AHSO_0000_000010"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -1087,7 +1087,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000059">
         <rdfs:label xml:lang="en">hasAgeInformation</rdfs:label>
-        <rdfs:domain rdf:resource="http://merged#AHSO0000000010_Individual"/>
+        <rdfs:domain rdf:resource="http://merged#AHSO_0000_000010"/>
     </owl:DatatypeProperty>
     
 
@@ -1096,7 +1096,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ahso#AHSO_0000_000060">
         <rdfs:label xml:lang="en">hasAgeUnit</rdfs:label>
-        <rdfs:domain rdf:resource="http://merged#AHSO0000000010_Individual"/>
+        <rdfs:domain rdf:resource="http://merged#AHSO_0000_000010"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1859,7 +1859,7 @@
 
     <owl:Class rdf:about="http://bmi.utah.edu/ontologies/peontology/C0030688">
         <rdfs:label>patient education</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://merged#Education_C0039401"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Education"/>
         <peontology:prefCUI>C0030688</peontology:prefCUI>
     </owl:Class>
     
@@ -4203,20 +4203,24 @@
     
 
 
-    <!-- http://merged#AHSO0000000010_Individual -->
+    <!-- http://merged#AHSO_0000_000010 -->
 
-    <owl:Class rdf:about="http://merged#AHSO0000000010_Individual">
+    <owl:Class rdf:about="http://merged#AHSO_0000_000010">
         <rdfs:label xml:lang="en">Individual</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://merged#Education_C0039401"/>
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Individual"/>
+        <rdfs:label rdf:resource="https://w3id.org/ahso#AHSO_0000_000010"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Education"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ahso#AHSO_0000_000004"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#Education_C0039401 -->
+    <!-- http://merged#Education -->
 
-    <owl:Class rdf:about="http://merged#Education_C0039401">
+    <owl:Class rdf:about="http://merged#Education">
         <rdfs:label>education</rdfs:label>
+        <rdfs:label rdf:resource="http://bmi.utah.edu/ontologies/peontology/C0039401"/>
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Education"/>
         <rdfs:subClassOf rdf:resource="http://merged#Treatment"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Nutrition_Assessment_Care_Plan"/>
         <peontology:prefCUI>C0039401</peontology:prefCUI>
@@ -4227,6 +4231,8 @@
     <!-- http://merged#InPatient -->
 
     <owl:Class rdf:about="http://merged#InPatient">
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#DietMealsServed"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
     </owl:Class>
@@ -4236,16 +4242,20 @@
     <!-- http://merged#Outpatient -->
 
     <owl:Class rdf:about="http://merged#Outpatient">
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#DietMealsServed"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#Patient_C16960 -->
+    <!-- http://merged#Patient -->
 
-    <owl:Class rdf:about="http://merged#Patient_C16960">
+    <owl:Class rdf:about="http://merged#Patient">
         <rdfs:label>Patient</rdfs:label>
+        <rdfs:label rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient"/>
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Human"/>
         <rdfs:subClassOf>
@@ -4290,16 +4300,24 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#TouchScreen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition>A person who receives medical attention, care, or treatment, or who is registered with medical professional or institution with the purpose to receive medical care when necessary</skos:definition>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
     </owl:Class>
     
 
 
-    <!-- http://merged#SWO0000001_Software -->
+    <!-- http://merged#SWO_0000001 -->
 
-    <owl:Class rdf:about="http://merged#SWO0000001_Software">
+    <owl:Class rdf:about="http://merged#SWO_0000001">
         <rdfs:label>Software</rdfs:label>
+        <rdfs:label rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Software"/>
         <rdfs:subClassOf rdf:resource="http://www.radiomics.org/RO/P236"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4317,6 +4335,8 @@
     <!-- http://merged#Treatment -->
 
     <owl:Class rdf:about="http://merged#Treatment">
+        <rdfs:label rdf:resource="http://bmi.utah.edu/ontologies/peontology/Treatment"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
     </owl:Class>
     
@@ -5223,7 +5243,7 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
     <!-- http://www.owl-ontologies.com/Ontology1361987617.owl#Group -->
 
     <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1361987617.owl#Group">
-        <rdfs:subClassOf rdf:resource="http://merged#Education_C0039401"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Education"/>
     </owl:Class>
     
 
@@ -9922,7 +9942,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AdaptationSoftware -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#AdaptationSoftware">
-        <rdfs:subClassOf rdf:resource="http://merged#SWO0000001_Software"/>
+        <rdfs:subClassOf rdf:resource="http://merged#SWO_0000001"/>
     </owl:Class>
     
 
@@ -10026,7 +10046,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataAnalysisSoftware -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DataAnalysisSoftware">
-        <rdfs:subClassOf rdf:resource="http://merged#SWO0000001_Software"/>
+        <rdfs:subClassOf rdf:resource="http://merged#SWO_0000001"/>
     </owl:Class>
     
 
@@ -10058,7 +10078,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DatabaseManagementSystem">
-        <rdfs:subClassOf rdf:resource="http://merged#SWO0000001_Software"/>
+        <rdfs:subClassOf rdf:resource="http://merged#SWO_0000001"/>
     </owl:Class>
     
 
@@ -10153,7 +10173,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGames -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InteractiveGames">
-        <rdfs:subClassOf rdf:resource="http://merged#SWO0000001_Software"/>
+        <rdfs:subClassOf rdf:resource="http://merged#SWO_0000001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#isUsing"/>
@@ -10229,7 +10249,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#hasSource"/>
-                <owl:someValuesFrom rdf:resource="http://merged#Patient_C16960"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Patient"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10260,20 +10280,6 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Motor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Patient">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#has"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -12735,9 +12741,10 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <!-- https://w3id.org/ahso#AHSO_0000_000007 -->
 
-    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000007">
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000007">
         <rdfs:label xml:lang="en">Geographical Information</rdfs:label>
-    </rdf:Description>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -13012,9 +13019,10 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <!-- https://w3id.org/ahso#AHSO_0003_000004 -->
 
-    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000004">
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0003_000004">
         <rdfs:label xml:lang="en">Sample</rdfs:label>
-    </rdf:Description>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -13275,7 +13283,7 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
     <!-- http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DimitriosZikos -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#DimitriosZikos">
-        <rdf:type rdf:resource="http://merged#Patient_C16960"/>
+        <rdf:type rdf:resource="http://merged#Patient"/>
     </owl:NamedIndividual>
     
 

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d5/MergedOnt527.owl#"
-     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d5/MergedOnt527.owl"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d5/MergedOnt149.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d5/MergedOnt149.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d5/MergedOnt527.owl"/>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d5/MergedOnt149.owl"/>
     
 
 
@@ -65,7 +65,7 @@
     <owl:ObjectProperty rdf:about="http://cmt#addProgramCommitteeMember">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://cmt#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#Program_Committee_member"/>
     </owl:ObjectProperty>
     
 
@@ -76,7 +76,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://cmt#Administrator"/>
         <owl:inverseOf rdf:resource="http://cmt#addProgramCommitteeMember"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:domain rdf:resource="http://merged#Program_Committee_member"/>
     </owl:ObjectProperty>
     
 
@@ -174,7 +174,7 @@
     <!-- http://cmt#endReview -->
 
     <owl:ObjectProperty rdf:about="http://cmt#endReview">
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeChair_PCChair_ProgramChair"/>
+        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeChair"/>
         <rdfs:range rdf:resource="http://merged#Review"/>
     </owl:ObjectProperty>
     
@@ -223,7 +223,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://cmt#writePaper"/>
         <rdfs:domain rdf:resource="http://merged#Paper"/>
-        <rdfs:range rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:range rdf:resource="http://merged#Paper_Author"/>
     </owl:ObjectProperty>
     
 
@@ -252,7 +252,7 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#hasConferenceMember">
         <rdfs:domain rdf:resource="http://merged#Conference"/>
-        <rdfs:range rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:range rdf:resource="http://merged#Conference_Participant"/>
     </owl:ObjectProperty>
     
 
@@ -280,8 +280,8 @@
 
     <owl:ObjectProperty rdf:about="http://cmt#hasProgramCommitteeMember">
         <owl:inverseOf rdf:resource="http://cmt#memberOfProgramCommittee"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommittee"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:domain rdf:resource="http://merged#Program_Committee"/>
+        <rdfs:range rdf:resource="http://merged#Program_Committee_member"/>
     </owl:ObjectProperty>
     
 
@@ -307,7 +307,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://cmt#Chairman"/>
-                    <rdf:Description rdf:about="http://merged#PaperAuthor"/>
+                    <rdf:Description rdf:about="http://merged#Paper_Author"/>
                     <rdf:Description rdf:about="http://merged#Reviewer"/>
                 </owl:unionOf>
             </owl:Class>
@@ -321,7 +321,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#memberOfConference">
         <owl:inverseOf rdf:resource="http://cmt#hasConferenceMember"/>
         <rdfs:range rdf:resource="http://merged#Conference"/>
-        <rdfs:domain rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:domain rdf:resource="http://merged#Conference_Participant"/>
     </owl:ObjectProperty>
     
 
@@ -329,8 +329,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#memberOfProgramCommittee -->
 
     <owl:ObjectProperty rdf:about="http://cmt#memberOfProgramCommittee">
-        <rdfs:range rdf:resource="http://merged#ProgramCommittee"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#Program_Committee"/>
+        <rdfs:domain rdf:resource="http://merged#Program_Committee_member"/>
     </owl:ObjectProperty>
     
 
@@ -447,7 +447,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://cmt#setMaxPapers">
         <rdfs:domain rdf:resource="http://cmt#Administrator"/>
-        <rdfs:range rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:range rdf:resource="http://merged#Program_Committee_member"/>
     </owl:ObjectProperty>
     
 
@@ -475,7 +475,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://cmt#writePaper">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="http://merged#Paper"/>
-        <rdfs:domain rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:domain rdf:resource="http://merged#Paper_Author"/>
     </owl:ObjectProperty>
     
 
@@ -486,6 +486,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="http://merged#Review"/>
         <rdfs:domain rdf:resource="http://merged#Reviewer"/>
+        <owl:inverseOf rdf:resource="http://merged#reviewWrittenBy"/>
     </owl:ObjectProperty>
     
 
@@ -506,7 +507,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                     <rdf:Description rdf:about="http://merged#Paper"/>
                 </owl:unionOf>
             </owl:Class>
@@ -519,7 +520,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://ekaw#eventOnList">
         <owl:inverseOf rdf:resource="http://ekaw#listsEvent"/>
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -537,8 +538,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://ekaw#hasEvent">
         <rdfs:subPropertyOf rdf:resource="http://ekaw#hasPart"/>
         <owl:inverseOf rdf:resource="http://ekaw#partOfEvent"/>
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
     </owl:ObjectProperty>
     
 
@@ -562,12 +563,6 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://ekaw#hasReviewer -->
-
-    <owl:ObjectProperty rdf:about="http://ekaw#hasReviewer"/>
-    
-
-
     <!-- http://ekaw#hasUpdatedVersion -->
 
     <owl:ObjectProperty rdf:about="http://ekaw#hasUpdatedVersion">
@@ -581,8 +576,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://ekaw#heldIn -->
 
     <owl:ObjectProperty rdf:about="http://ekaw#heldIn">
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
-        <rdfs:range rdf:resource="http://merged#Location_Place"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
+        <rdfs:range rdf:resource="http://merged#Location"/>
     </owl:ObjectProperty>
     
 
@@ -591,7 +586,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://ekaw#inverse_of_partOf_7">
         <rdfs:subPropertyOf rdf:resource="http://ekaw#hasPart"/>
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
     </owl:ObjectProperty>
     
 
@@ -599,7 +594,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://ekaw#listsEvent -->
 
     <owl:ObjectProperty rdf:about="http://ekaw#listsEvent">
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -616,8 +611,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://ekaw#locationOf">
         <owl:inverseOf rdf:resource="http://ekaw#heldIn"/>
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
-        <rdfs:domain rdf:resource="http://merged#Location_Place"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
+        <rdfs:domain rdf:resource="http://merged#Location"/>
     </owl:ObjectProperty>
     
 
@@ -625,7 +620,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://ekaw#organisedBy -->
 
     <owl:ObjectProperty rdf:about="http://ekaw#organisedBy">
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -642,7 +637,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://ekaw#organises">
         <owl:inverseOf rdf:resource="http://ekaw#organisedBy"/>
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -690,8 +685,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <owl:ObjectProperty rdf:about="http://ekaw#partOfEvent">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://ekaw#partOf"/>
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
     </owl:ObjectProperty>
     
 
@@ -799,7 +794,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                     <rdf:Description rdf:about="http://merged#Paper"/>
                 </owl:unionOf>
             </owl:Class>
@@ -844,7 +839,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Item"/>
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -856,7 +851,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://iasted#go_through">
         <rdfs:domain rdf:resource="http://iasted#Item"/>
-        <rdfs:range rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:range rdf:resource="http://merged#Activity"/>
     </owl:ObjectProperty>
     
 
@@ -867,7 +862,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -876,7 +871,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Item"/>
-                    <rdf:Description rdf:about="http://merged#Location_Place"/>
+                    <rdf:Description rdf:about="http://merged#Location"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -892,14 +887,14 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Money"/>
                     <rdf:Description rdf:about="http://iasted#Time"/>
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                     <rdf:Description rdf:about="http://merged#Person"/>
                 </owl:unionOf>
             </owl:Class>
@@ -912,7 +907,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://iasted#is_equipped_by">
         <rdfs:range rdf:resource="http://iasted#Item"/>
-        <rdfs:domain rdf:resource="http://merged#Location_Place"/>
+        <rdfs:domain rdf:resource="http://merged#Location"/>
     </owl:ObjectProperty>
     
 
@@ -925,7 +920,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Item"/>
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -946,7 +941,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://iasted#is_held_after">
         <rdfs:range rdf:resource="http://iasted#Time"/>
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
     </owl:ObjectProperty>
     
 
@@ -955,7 +950,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://iasted#is_held_before">
         <rdfs:range rdf:resource="http://iasted#Time"/>
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
     </owl:ObjectProperty>
     
 
@@ -963,12 +958,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://iasted#is_held_in -->
 
     <owl:ObjectProperty rdf:about="http://iasted#is_held_in">
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Time"/>
-                    <rdf:Description rdf:about="http://merged#Location_Place"/>
+                    <rdf:Description rdf:about="http://merged#Location"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1031,7 +1026,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Item"/>
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1083,7 +1078,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Time"/>
-                    <rdf:Description rdf:about="http://merged#Location_Place"/>
+                    <rdf:Description rdf:about="http://merged#Location"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1137,7 +1132,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Building"/>
                     <rdf:Description rdf:about="http://iasted#City"/>
-                    <rdf:Description rdf:about="http://merged#Location_Place"/>
+                    <rdf:Description rdf:about="http://merged#Location"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1147,7 +1142,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
                     <rdf:Description rdf:about="http://iasted#Building"/>
                     <rdf:Description rdf:about="http://iasted#City"/>
                     <rdf:Description rdf:about="http://iasted#State"/>
-                    <rdf:Description rdf:about="http://merged#Location_Place"/>
+                    <rdf:Description rdf:about="http://merged#Location"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1172,7 +1167,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Money"/>
-                    <rdf:Description rdf:about="http://merged#Activity_Event"/>
+                    <rdf:Description rdf:about="http://merged#Activity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1286,7 +1281,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://iasted#Time"/>
-                    <rdf:Description rdf:about="http://merged#Location_Place"/>
+                    <rdf:Description rdf:about="http://merged#Location"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1304,10 +1299,13 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#hasreviewer_assignedto -->
+    <!-- http://merged#hasReviewer -->
 
-    <owl:ObjectProperty rdf:about="http://merged#hasreviewer_assignedto">
+    <owl:ObjectProperty rdf:about="http://merged#hasReviewer">
+        <rdfs:label rdf:resource="http://cmt#assignedTo"/>
+        <rdfs:label rdf:resource="http://ekaw#hasReviewer"/>
         <rdfs:domain rdf:resource="http://merged#Paper"/>
+        <owl:inverseOf rdf:resource="http://merged#reviewerOfPaper"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1320,28 +1318,12 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#reviewerofpaper_hasbeenassigned -->
+    <!-- http://merged#reviewWrittenBy -->
 
-    <owl:ObjectProperty rdf:about="http://merged#reviewerofpaper_hasbeenassigned">
-        <rdfs:range rdf:resource="http://merged#Paper"/>
-        <owl:inverseOf rdf:resource="http://merged#hasreviewer_assignedto"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ekaw#Possible_Reviewer"/>
-                    <rdf:Description rdf:about="http://merged#Reviewer"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://merged#reviewwrittenby -->
-
-    <owl:ObjectProperty rdf:about="http://merged#reviewwrittenby">
+    <owl:ObjectProperty rdf:about="http://merged#reviewWrittenBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <owl:inverseOf rdf:resource="http://cmt#writeReview"/>
+        <rdfs:label rdf:resource="http://cmt#writtenBy"/>
+        <rdfs:label rdf:resource="http://ekaw#reviewWrittenBy"/>
         <rdfs:subPropertyOf rdf:resource="http://ekaw#writtenBy"/>
         <rdfs:domain rdf:resource="http://merged#Review"/>
         <rdfs:range>
@@ -1356,11 +1338,31 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://merged#submitpaper -->
+    <!-- http://merged#reviewerOfPaper -->
 
-    <owl:ObjectProperty rdf:about="http://merged#submitpaper">
+    <owl:ObjectProperty rdf:about="http://merged#reviewerOfPaper">
+        <rdfs:label rdf:resource="http://cmt#hasBeenAssigned"/>
+        <rdfs:label rdf:resource="http://ekaw#reviewerOfPaper"/>
         <rdfs:range rdf:resource="http://merged#Paper"/>
-        <rdfs:domain rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ekaw#Possible_Reviewer"/>
+                    <rdf:Description rdf:about="http://merged#Reviewer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://merged#submitPaper -->
+
+    <owl:ObjectProperty rdf:about="http://merged#submitPaper">
+        <rdfs:label rdf:resource="http://cmt#submitPaper"/>
+        <rdfs:label rdf:resource="http://sigkdd#submit"/>
+        <rdfs:range rdf:resource="http://merged#Paper"/>
+        <rdfs:domain rdf:resource="http://merged#Paper_Author"/>
     </owl:ObjectProperty>
     
 
@@ -1385,7 +1387,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#can_stay_in -->
 
     <owl:ObjectProperty rdf:about="http://sigkdd#can_stay_in">
-        <rdfs:range rdf:resource="http://merged#Location_Place"/>
+        <rdfs:range rdf:resource="http://merged#Location"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
     </owl:ObjectProperty>
     
@@ -1432,8 +1434,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#notification_until -->
 
     <owl:ObjectProperty rdf:about="http://sigkdd#notification_until">
-        <rdfs:range rdf:resource="http://merged#DeadlineForNotificationOfAcceptance_DeadlineAuthorNotification"/>
-        <rdfs:domain rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:range rdf:resource="http://merged#Deadline_for_notification_of_acceptance"/>
+        <rdfs:domain rdf:resource="http://merged#Paper_Author"/>
     </owl:ObjectProperty>
     
 
@@ -1441,7 +1443,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#obtain -->
 
     <owl:ObjectProperty rdf:about="http://sigkdd#obtain">
-        <rdfs:domain rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:domain rdf:resource="http://merged#Paper_Author"/>
         <rdfs:range rdf:resource="http://sigkdd#Award"/>
     </owl:ObjectProperty>
     
@@ -1451,7 +1453,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://sigkdd#pay">
         <rdfs:domain rdf:resource="http://merged#Person"/>
-        <rdfs:range rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:range rdf:resource="http://merged#Registration_fee"/>
     </owl:ObjectProperty>
     
 
@@ -1460,7 +1462,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:ObjectProperty rdf:about="http://sigkdd#payed_by">
         <rdfs:range rdf:resource="http://merged#Person"/>
-        <rdfs:domain rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:domain rdf:resource="http://merged#Registration_fee"/>
         <owl:inverseOf rdf:resource="http://sigkdd#pay"/>
     </owl:ObjectProperty>
     
@@ -1488,7 +1490,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#search -->
 
     <owl:ObjectProperty rdf:about="http://sigkdd#search">
-        <rdfs:range rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:range rdf:resource="http://merged#Sponsor"/>
         <rdfs:domain rdf:resource="http://sigkdd#ACM_SIGKDD"/>
     </owl:ObjectProperty>
     
@@ -1497,7 +1499,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#searched_by -->
 
     <owl:ObjectProperty rdf:about="http://sigkdd#searched_by">
-        <rdfs:domain rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:domain rdf:resource="http://merged#Sponsor"/>
         <rdfs:range rdf:resource="http://sigkdd#ACM_SIGKDD"/>
         <owl:inverseOf rdf:resource="http://sigkdd#search"/>
     </owl:ObjectProperty>
@@ -1554,7 +1556,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <owl:DatatypeProperty rdf:about="http://cmt#maxPapers">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:domain rdf:resource="http://merged#Program_Committee_member"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -1635,14 +1637,16 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://iasted#is_dated_on -->
 
     <owl:DatatypeProperty rdf:about="http://iasted#is_dated_on">
-        <rdfs:domain rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:domain rdf:resource="http://merged#Activity"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://merged#e-mail_email -->
+    <!-- http://merged#e-mail -->
 
-    <owl:DatatypeProperty rdf:about="http://merged#e-mail_email">
+    <owl:DatatypeProperty rdf:about="http://merged#e-mail">
+        <rdfs:label rdf:resource="http://cmt#email"/>
+        <rdfs:label rdf:resource="http://sigkdd#E-mail"/>
         <rdfs:domain rdf:resource="http://merged#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -1660,7 +1664,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#Currency -->
 
     <owl:DatatypeProperty rdf:about="http://sigkdd#Currency">
-        <rdfs:domain rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:domain rdf:resource="http://merged#Registration_fee"/>
     </owl:DatatypeProperty>
     
 
@@ -1702,7 +1706,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#Name_of_sponsor -->
 
     <owl:DatatypeProperty rdf:about="http://sigkdd#Name_of_sponsor">
-        <rdfs:domain rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:domain rdf:resource="http://merged#Sponsor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1720,7 +1724,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://sigkdd#Price -->
 
     <owl:DatatypeProperty rdf:about="http://sigkdd#Price">
-        <rdfs:domain rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:domain rdf:resource="http://merged#Registration_fee"/>
     </owl:DatatypeProperty>
     
 
@@ -1764,8 +1768,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#AssociatedChair -->
 
     <owl:Class rdf:about="http://cmt#AssociatedChair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
-        <owl:disjointWith rdf:resource="http://merged#ConferenceChair_GeneralChair"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <owl:disjointWith rdf:resource="http://merged#ConferenceChair"/>
     </owl:Class>
     
 
@@ -1773,8 +1777,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#AuthorNotReviewer -->
 
     <owl:Class rdf:about="http://cmt#AuthorNotReviewer">
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee_member"/>
         <owl:disjointWith rdf:resource="http://merged#Reviewer"/>
     </owl:Class>
     
@@ -1783,12 +1787,13 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#Bid -->
 
     <owl:Class rdf:about="http://cmt#Bid">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <owl:disjointWith rdf:resource="http://cmt#Decision"/>
         <owl:disjointWith rdf:resource="http://cmt#Preference"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee"/>
     </owl:Class>
     
 
@@ -1800,8 +1805,8 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://cmt#AssociatedChair"/>
-                    <rdf:Description rdf:about="http://merged#ConferenceChair_GeneralChair"/>
-                    <rdf:Description rdf:about="http://merged#ProgramCommitteeChair_PCChair_ProgramChair"/>
+                    <rdf:Description rdf:about="http://merged#ConferenceChair"/>
+                    <rdf:Description rdf:about="http://merged#ProgramCommitteeChair"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1813,7 +1818,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#Co-author -->
 
     <owl:Class rdf:about="http://cmt#Co-author">
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
     </owl:Class>
     
 
@@ -1825,7 +1830,7 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee"/>
     </owl:Class>
     
 
@@ -1863,25 +1868,6 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     
 
 
-    <!-- http://cmt#Paper -->
-
-    <owl:Class rdf:about="http://cmt#Paper">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://cmt#hasDecision"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://cmt#readByReviewer"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://cmt#PaperAbstract -->
 
     <owl:Class rdf:about="http://cmt#PaperAbstract">
@@ -1893,10 +1879,11 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
     <!-- http://cmt#Preference -->
 
     <owl:Class rdf:about="http://cmt#Preference">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee"/>
     </owl:Class>
     
 
@@ -1911,7 +1898,9 @@ Based on that conflict, the reviewer will not be able to bid on the paper, be as
 
     <!-- http://cmt#SubjectArea -->
 
-    <owl:Class rdf:about="http://cmt#SubjectArea"/>
+    <owl:Class rdf:about="http://cmt#SubjectArea">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -1964,7 +1953,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf rdf:resource="http://ekaw#Submitted_Paper"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ekaw#hasReviewer"/>
+                <owl:onProperty rdf:resource="http://merged#hasReviewer"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1985,7 +1974,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ekaw#writtenBy"/>
-                <owl:someValuesFrom rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Conference_Participant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://ekaw#Evaluated_Paper"/>
@@ -2076,7 +2065,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#Demo_Chair -->
 
     <owl:Class rdf:about="http://ekaw#Demo_Chair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -2087,7 +2076,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
         <owl:disjointWith rdf:resource="http://ekaw#Industrial_Paper"/>
         <owl:disjointWith rdf:resource="http://ekaw#Poster_Paper"/>
-        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion_RegularPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion"/>
     </owl:Class>
     
 
@@ -2105,7 +2094,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#Early-Registered_Participant -->
 
     <owl:Class rdf:about="http://ekaw#Early-Registered_Participant">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <owl:disjointWith rdf:resource="http://ekaw#Late-Registered_Participant"/>
     </owl:Class>
     
@@ -2154,7 +2143,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
         <owl:disjointWith rdf:resource="http://ekaw#Poster_Paper"/>
         <owl:disjointWith rdf:resource="http://ekaw#Workshop_Paper"/>
-        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion_RegularPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion"/>
     </owl:Class>
     
 
@@ -2192,7 +2181,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#Late-Registered_Participant -->
 
     <owl:Class rdf:about="http://ekaw#Late-Registered_Participant">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -2231,7 +2220,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#OC_Chair -->
 
     <owl:Class rdf:about="http://ekaw#OC_Chair">
-        <rdfs:subClassOf rdf:resource="http://merged#OrganizingCommitteeMember_OCMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Organizing_Committee_member"/>
     </owl:Class>
     
 
@@ -2280,7 +2269,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
 
     <owl:Class rdf:about="http://ekaw#Poster_Paper">
         <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
-        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion_RegularPaper"/>
+        <owl:disjointWith rdf:resource="http://merged#PaperFullVersion"/>
     </owl:Class>
     
 
@@ -2297,7 +2286,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#Presenter -->
 
     <owl:Class rdf:about="http://ekaw#Presenter">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
     </owl:Class>
     
 
@@ -2378,7 +2367,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
 
     <!-- http://ekaw#Research_Topic -->
 
-    <owl:Class rdf:about="http://ekaw#Research_Topic"/>
+    <owl:Class rdf:about="http://ekaw#Research_Topic">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -2393,7 +2384,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#Scientific_Event -->
 
     <owl:Class rdf:about="http://ekaw#Scientific_Event">
-        <rdfs:subClassOf rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Activity"/>
     </owl:Class>
     
 
@@ -2401,7 +2392,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://ekaw#Social_Event -->
 
     <owl:Class rdf:about="http://ekaw#Social_Event">
-        <rdfs:subClassOf rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Activity"/>
         <owl:disjointWith rdf:resource="http://ekaw#Track"/>
         <owl:disjointWith rdf:resource="http://ekaw#Workshop"/>
         <owl:disjointWith rdf:resource="http://merged#Conference"/>
@@ -2450,8 +2441,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
 
     <owl:Class rdf:about="http://ekaw#Tutorial_Chair">
         <rdfs:subClassOf rdf:resource="http://ekaw#PC_Member"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeChair_PCChair_ProgramChair"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeChair"/>
     </owl:Class>
     
 
@@ -2489,8 +2480,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
 
     <owl:Class rdf:about="http://ekaw#Workshop_Chair">
         <rdfs:subClassOf rdf:resource="http://ekaw#PC_Member"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeChair_PCChair_ProgramChair"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <owl:disjointWith rdf:resource="http://merged#ProgramCommitteeChair"/>
     </owl:Class>
     
 
@@ -2522,7 +2513,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Activity_after_conference -->
 
     <owl:Class rdf:about="http://iasted#Activity_after_conference">
-        <rdfs:subClassOf rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_held_after"/>
@@ -2536,7 +2527,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Activity_before_conference -->
 
     <owl:Class rdf:about="http://iasted#Activity_before_conference">
-        <rdfs:subClassOf rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_held_before"/>
@@ -2576,7 +2567,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Author_attendee_book_registration_fee -->
 
     <owl:Class rdf:about="http://iasted#Author_attendee_book_registration_fee">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_paid_for"/>
@@ -2590,7 +2581,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Author_attendee_cd_registration_fee -->
 
     <owl:Class rdf:about="http://iasted#Author_attendee_cd_registration_fee">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_paid_for"/>
@@ -2604,7 +2595,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Author_book_proceedings_included -->
 
     <owl:Class rdf:about="http://iasted#Author_book_proceedings_included">
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#obtain"/>
@@ -2618,7 +2609,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Author_cd_proceedings_included -->
 
     <owl:Class rdf:about="http://iasted#Author_cd_proceedings_included">
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#obtain"/>
@@ -2636,7 +2627,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_sent_after"/>
-                <owl:someValuesFrom rdf:resource="http://merged#DeadlineForNotificationOfAcceptance_DeadlineAuthorNotification"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Deadline_for_notification_of_acceptance"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2666,13 +2657,13 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_given_by"/>
-                <owl:someValuesFrom rdf:resource="http://merged#PaperAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Paper_Author"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_given_to"/>
-                <owl:someValuesFrom rdf:resource="http://merged#SessionChair"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Session_chair"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2682,7 +2673,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Building -->
 
     <owl:Class rdf:about="http://iasted#Building">
-        <rdfs:subClassOf rdf:resource="http://merged#Location_Place"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Location"/>
     </owl:Class>
     
 
@@ -2794,7 +2785,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Conference_activity -->
 
     <owl:Class rdf:about="http://iasted#Conference_activity">
-        <rdfs:subClassOf rdf:resource="http://merged#Activity_Event"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_held_in"/>
@@ -2975,7 +2966,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
 
     <!-- http://iasted#Currency -->
 
-    <owl:Class rdf:about="http://iasted#Currency"/>
+    <owl:Class rdf:about="http://iasted#Currency">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -3042,7 +3035,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#pay"/>
-                <owl:someValuesFrom rdf:resource="http://merged#RegistrationFee"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Registration_fee"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3212,7 +3205,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Hotel_room -->
 
     <owl:Class rdf:about="http://iasted#Hotel_room">
-        <rdfs:subClassOf rdf:resource="http://merged#Location_Place"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_designed_for"/>
@@ -3249,7 +3242,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#pay"/>
-                <owl:someValuesFrom rdf:resource="http://merged#NonmemberRegistrationFee_RegistrationNon-Member"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Nonmember_registration_fee"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://iasted#Delegate"/>
@@ -3338,7 +3331,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:someValuesFrom rdf:resource="http://merged#Session"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#speak_in"/>
@@ -3366,7 +3359,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Memeber_registration_fee -->
 
     <owl:Class rdf:about="http://iasted#Memeber_registration_fee">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_designed_for"/>
@@ -3403,7 +3396,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Nonauthor_registration_fee -->
 
     <owl:Class rdf:about="http://iasted#Nonauthor_registration_fee">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_designed_for"/>
@@ -3488,11 +3481,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:someValuesFrom rdf:resource="http://merged#Tutorial"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#speak_in"/>
-                <owl:someValuesFrom rdf:resource="http://merged#ConferenceHall"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Conference_hall"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3706,7 +3699,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://iasted#Session_room -->
 
     <owl:Class rdf:about="http://iasted#Session_room">
-        <rdfs:subClassOf rdf:resource="http://merged#Location_Place"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_equipped_by"/>
@@ -3776,7 +3769,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_occupied_by"/>
-                <owl:someValuesFrom rdf:resource="http://merged#Sponsor_Sponzor"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Sponsor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3790,7 +3783,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_occupied_by"/>
-                <owl:someValuesFrom rdf:resource="http://merged#Sponsor_Sponzor"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Sponsor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3823,7 +3816,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_paid_by"/>
-                <owl:someValuesFrom rdf:resource="http://merged#Sponsor_Sponzor"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Sponsor"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://iasted#Money"/>
@@ -3851,7 +3844,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#pay"/>
-                <owl:someValuesFrom rdf:resource="http://merged#StudentRegistrationFee_RegistrationStudent"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Student_registration_fee"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://iasted#Non_speaker"/>
@@ -4018,11 +4011,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:someValuesFrom rdf:resource="http://iasted#Plenary_lecture"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#speak_in"/>
-                <owl:someValuesFrom rdf:resource="http://merged#ConferenceHall"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Conference_hall"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4108,6 +4101,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Abstract -->
 
     <owl:Class rdf:about="http://merged#Abstract">
+        <rdfs:label rdf:resource="http://ekaw#Abstract"/>
+        <rdfs:label rdf:resource="http://sigkdd#Abstract"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#submit_until"/>
@@ -4119,9 +4114,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#Activity_Event -->
+    <!-- http://merged#Activity -->
 
-    <owl:Class rdf:about="http://merged#Activity_Event">
+    <owl:Class rdf:about="http://merged#Activity">
+        <rdfs:label rdf:resource="http://ekaw#Event"/>
+        <rdfs:label rdf:resource="http://iasted#Activity"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
     </owl:Class>
     
@@ -4130,6 +4127,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Conference -->
 
     <owl:Class rdf:about="http://merged#Conference">
+        <rdfs:label rdf:resource="http://cmt#Conference"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference"/>
+        <rdfs:label rdf:resource="http://sigkdd#Conference"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Scientific_Event"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
@@ -4152,7 +4152,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://merged#Document"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee"/>
         <owl:disjointWith rdf:resource="http://merged#Session"/>
         <owl:disjointWith rdf:resource="http://merged#Tutorial"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One edition of a conference</rdfs:comment>
@@ -4160,9 +4160,22 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#ConferenceBanquet_DinnerBanquet -->
+    <!-- http://merged#ConferenceChair -->
 
-    <owl:Class rdf:about="http://merged#ConferenceBanquet_DinnerBanquet">
+    <owl:Class rdf:about="http://merged#ConferenceChair">
+        <rdfs:label rdf:resource="http://cmt#ConferenceChair"/>
+        <rdfs:label rdf:resource="http://sigkdd#General_Chair"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://sigkdd#Organizator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Conference_Banquet -->
+
+    <owl:Class rdf:about="http://merged#Conference_Banquet">
+        <rdfs:label rdf:resource="http://ekaw#Conference_Banquet"/>
+        <rdfs:label rdf:resource="http://iasted#Dinner_banquet"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Social_Event"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Social_program"/>
         <rdfs:subClassOf>
@@ -4175,19 +4188,22 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#ConferenceChair_GeneralChair -->
+    <!-- http://merged#Conference_Participant -->
 
-    <owl:Class rdf:about="http://merged#ConferenceChair_GeneralChair">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
-        <rdfs:subClassOf rdf:resource="http://sigkdd#Organizator"/>
+    <owl:Class rdf:about="http://merged#Conference_Participant">
+        <rdfs:label rdf:resource="http://cmt#ConferenceMember"/>
+        <rdfs:label rdf:resource="http://ekaw#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#ConferenceHall -->
+    <!-- http://merged#Conference_hall -->
 
-    <owl:Class rdf:about="http://merged#ConferenceHall">
-        <rdfs:subClassOf rdf:resource="http://merged#Location_Place"/>
+    <owl:Class rdf:about="http://merged#Conference_hall">
+        <rdfs:label rdf:resource="http://iasted#Conference_hall"/>
+        <rdfs:label rdf:resource="http://sigkdd#Conference_hall"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_situated_in"/>
@@ -4198,17 +4214,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#ConferenceParticipant_ConferenceMember -->
-
-    <owl:Class rdf:about="http://merged#ConferenceParticipant_ConferenceMember">
-        <rdfs:subClassOf rdf:resource="http://merged#Person"/>
-    </owl:Class>
-    
-
-
     <!-- http://merged#Deadline -->
 
     <owl:Class rdf:about="http://merged#Deadline">
+        <rdfs:label rdf:resource="http://iasted#Deadline"/>
+        <rdfs:label rdf:resource="http://sigkdd#Deadline"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Time"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4220,9 +4230,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#DeadlineForNotificationOfAcceptance_DeadlineAuthorNotification -->
+    <!-- http://merged#Deadline_for_notification_of_acceptance -->
 
-    <owl:Class rdf:about="http://merged#DeadlineForNotificationOfAcceptance_DeadlineAuthorNotification">
+    <owl:Class rdf:about="http://merged#Deadline_for_notification_of_acceptance">
+        <rdfs:label rdf:resource="http://iasted#Deadline_for_notification_of_acceptance"/>
+        <rdfs:label rdf:resource="http://sigkdd#Deadline_Author_notification"/>
         <rdfs:subClassOf rdf:resource="http://merged#Deadline"/>
     </owl:Class>
     
@@ -4231,9 +4243,13 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Document -->
 
     <owl:Class rdf:about="http://merged#Document">
+        <rdfs:label rdf:resource="http://cmt#Document"/>
+        <rdfs:label rdf:resource="http://ekaw#Document"/>
+        <rdfs:label rdf:resource="http://iasted#Document"/>
+        <rdfs:label rdf:resource="http://sigkdd#Document"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Item"/>
         <owl:disjointWith rdf:resource="http://merged#Person"/>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee"/>
     </owl:Class>
     
 
@@ -4241,6 +4257,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Fee -->
 
     <owl:Class rdf:about="http://merged#Fee">
+        <rdfs:label rdf:resource="http://iasted#Fee"/>
+        <rdfs:label rdf:resource="http://sigkdd#Fee"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Money"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4259,9 +4277,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#InvitedSpeaker -->
+    <!-- http://merged#Invited_Speaker -->
 
-    <owl:Class rdf:about="http://merged#InvitedSpeaker">
+    <owl:Class rdf:about="http://merged#Invited_Speaker">
+        <rdfs:label rdf:resource="http://ekaw#Invited_Speaker"/>
+        <rdfs:label rdf:resource="http://sigkdd#Invited_Speaker"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Presenter"/>
         <rdfs:subClassOf rdf:resource="http://merged#Speaker"/>
     </owl:Class>
@@ -4271,6 +4291,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Listener -->
 
     <owl:Class rdf:about="http://merged#Listener">
+        <rdfs:label rdf:resource="http://iasted#Listener"/>
+        <rdfs:label rdf:resource="http://sigkdd#Listener"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Delegate"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf>
@@ -4280,7 +4302,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://iasted#Session_room"/>
-                            <rdf:Description rdf:about="http://merged#ConferenceHall"/>
+                            <rdf:Description rdf:about="http://merged#Conference_hall"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -4296,9 +4318,12 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#Location_Place -->
+    <!-- http://merged#Location -->
 
-    <owl:Class rdf:about="http://merged#Location_Place">
+    <owl:Class rdf:about="http://merged#Location">
+        <rdfs:label rdf:resource="http://ekaw#Location"/>
+        <rdfs:label rdf:resource="http://iasted#Place"/>
+        <rdfs:label rdf:resource="http://sigkdd#Place"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4317,18 +4342,22 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#MainOffice -->
+    <!-- http://merged#Main_office -->
 
-    <owl:Class rdf:about="http://merged#MainOffice">
-        <rdfs:subClassOf rdf:resource="http://merged#Location_Place"/>
+    <owl:Class rdf:about="http://merged#Main_office">
+        <rdfs:label rdf:resource="http://iasted#Main_office"/>
+        <rdfs:label rdf:resource="http://sigkdd#Main_office"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Location"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#NonmemberRegistrationFee_RegistrationNon-Member -->
+    <!-- http://merged#Nonmember_registration_fee -->
 
-    <owl:Class rdf:about="http://merged#NonmemberRegistrationFee_RegistrationNon-Member">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+    <owl:Class rdf:about="http://merged#Nonmember_registration_fee">
+        <rdfs:label rdf:resource="http://iasted#Nonmember_registration_fee"/>
+        <rdfs:label rdf:resource="http://sigkdd#Registration_Non-Member"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_designed_for"/>
@@ -4339,10 +4368,12 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#OrganizingCommitteeMember_OCMember -->
+    <!-- http://merged#Organizing_Committee_member -->
 
-    <owl:Class rdf:about="http://merged#OrganizingCommitteeMember_OCMember">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+    <owl:Class rdf:about="http://merged#Organizing_Committee_member">
+        <rdfs:label rdf:resource="http://ekaw#OC_Member"/>
+        <rdfs:label rdf:resource="http://sigkdd#Organizing_Committee_member"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <rdfs:subClassOf rdf:resource="http://sigkdd#Organizator"/>
     </owl:Class>
     
@@ -4351,6 +4382,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Paper -->
 
     <owl:Class rdf:about="http://merged#Paper">
+        <rdfs:label rdf:resource="http://cmt#Paper"/>
+        <rdfs:label rdf:resource="http://ekaw#Paper"/>
+        <rdfs:label rdf:resource="http://sigkdd#Paper"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#submit_until"/>
@@ -4358,6 +4392,18 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://merged#Document"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#hasDecision"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cmt#readByReviewer"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://cmt#hasDecision"/>
@@ -4375,17 +4421,31 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#PaperAuthor -->
+    <!-- http://merged#PaperFullVersion -->
 
-    <owl:Class rdf:about="http://merged#PaperAuthor">
+    <owl:Class rdf:about="http://merged#PaperFullVersion">
+        <rdfs:label rdf:resource="http://cmt#PaperFullVersion"/>
+        <rdfs:label rdf:resource="http://ekaw#Regular_Paper"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Paper_Author -->
+
+    <owl:Class rdf:about="http://merged#Paper_Author">
+        <rdfs:label rdf:resource="http://cmt#Author"/>
+        <rdfs:label rdf:resource="http://ekaw#Paper_Author"/>
+        <rdfs:label rdf:resource="http://iasted#Author"/>
+        <rdfs:label rdf:resource="http://sigkdd#Author"/>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://merged#submitpaper"/>
+                <owl:onProperty rdf:resource="http://merged#submitPaper"/>
                 <owl:someValuesFrom rdf:resource="http://merged#Paper"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://cmt#User"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf rdf:resource="http://merged#Speaker"/>
         <rdfs:subClassOf>
@@ -4403,17 +4463,9 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#notification_until"/>
-                <owl:someValuesFrom rdf:resource="http://merged#DeadlineForNotificationOfAcceptance_DeadlineAuthorNotification"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Deadline_for_notification_of_acceptance"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://merged#PaperFullVersion_RegularPaper -->
-
-    <owl:Class rdf:about="http://merged#PaperFullVersion_RegularPaper">
-        <rdfs:subClassOf rdf:resource="http://merged#Paper"/>
     </owl:Class>
     
 
@@ -4421,10 +4473,14 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Person -->
 
     <owl:Class rdf:about="http://merged#Person">
+        <rdfs:label rdf:resource="http://cmt#Person"/>
+        <rdfs:label rdf:resource="http://ekaw#Person"/>
+        <rdfs:label rdf:resource="http://iasted#Person"/>
+        <rdfs:label rdf:resource="http://sigkdd#Person"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#pay"/>
-                <owl:someValuesFrom rdf:resource="http://merged#RegistrationFee"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Registration_fee"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -4434,34 +4490,41 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:someValuesFrom rdf:resource="http://sigkdd#Hotel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://merged#ProgramCommittee"/>
+        <owl:disjointWith rdf:resource="http://merged#Program_Committee"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#ProgramCommittee -->
+    <!-- http://merged#ProgramCommitteeChair -->
 
-    <owl:Class rdf:about="http://merged#ProgramCommittee">
-        <rdfs:subClassOf rdf:resource="http://sigkdd#Committee"/>
-    </owl:Class>
-    
-
-
-    <!-- http://merged#ProgramCommitteeChair_PCChair_ProgramChair -->
-
-    <owl:Class rdf:about="http://merged#ProgramCommitteeChair_PCChair_ProgramChair">
+    <owl:Class rdf:about="http://merged#ProgramCommitteeChair">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommitteeChair"/>
+        <rdfs:label rdf:resource="http://ekaw#PC_Chair"/>
+        <rdfs:label rdf:resource="http://sigkdd#Program_Chair"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#PC_Member"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ProgramCommitteeMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Program_Committee_member"/>
         <rdfs:subClassOf rdf:resource="http://sigkdd#Organizator"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#ProgramCommitteeMember -->
+    <!-- http://merged#Program_Committee -->
 
-    <owl:Class rdf:about="http://merged#ProgramCommitteeMember">
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+    <owl:Class rdf:about="http://merged#Program_Committee">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommittee"/>
+        <rdfs:label rdf:resource="http://sigkdd#Program_Committee"/>
+        <rdfs:subClassOf rdf:resource="http://sigkdd#Committee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://merged#Program_Committee_member -->
+
+    <owl:Class rdf:about="http://merged#Program_Committee_member">
+        <rdfs:label rdf:resource="http://cmt#ProgramCommitteeMember"/>
+        <rdfs:label rdf:resource="http://sigkdd#Program_Committee_member"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <rdfs:subClassOf rdf:resource="http://merged#Person"/>
         <rdfs:subClassOf rdf:resource="http://sigkdd#Organizator"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Program Committee consists of all members of the conference except for Authors who are not also Reviewers.</rdfs:comment>
@@ -4469,9 +4532,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#RegistrationFee -->
+    <!-- http://merged#Registration_fee -->
 
-    <owl:Class rdf:about="http://merged#RegistrationFee">
+    <owl:Class rdf:about="http://merged#Registration_fee">
+        <rdfs:label rdf:resource="http://iasted#Registration_fee"/>
+        <rdfs:label rdf:resource="http://sigkdd#Registration_fee"/>
         <rdfs:subClassOf rdf:resource="http://merged#Fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4492,6 +4557,10 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Review -->
 
     <owl:Class rdf:about="http://merged#Review">
+        <rdfs:label rdf:resource="http://cmt#Review"/>
+        <rdfs:label rdf:resource="http://ekaw#Review"/>
+        <rdfs:label rdf:resource="http://iasted#Review"/>
+        <rdfs:label rdf:resource="http://sigkdd#Review"/>
         <rdfs:subClassOf rdf:resource="http://merged#Document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4506,6 +4575,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Reviewer -->
 
     <owl:Class rdf:about="http://merged#Reviewer">
+        <rdfs:label rdf:resource="http://cmt#Reviewer"/>
+        <rdfs:label rdf:resource="http://iasted#Reviewer"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#give"/>
@@ -4513,7 +4584,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://cmt#User"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <rdfs:subClassOf rdf:resource="http://merged#Speaker"/>
     </owl:Class>
     
@@ -4522,6 +4593,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Session -->
 
     <owl:Class rdf:about="http://merged#Session">
+        <rdfs:label rdf:resource="http://ekaw#Session"/>
+        <rdfs:label rdf:resource="http://iasted#Session"/>
         <rdfs:subClassOf rdf:resource="http://ekaw#Scientific_Event"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Lecture"/>
         <rdfs:subClassOf>
@@ -4549,8 +4622,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://merged#PaperAuthor"/>
-                            <rdf:Description rdf:about="http://merged#SessionChair"/>
+                            <rdf:Description rdf:about="http://merged#Paper_Author"/>
+                            <rdf:Description rdf:about="http://merged#Session_chair"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -4581,9 +4654,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#SessionChair -->
+    <!-- http://merged#Session_chair -->
 
-    <owl:Class rdf:about="http://merged#SessionChair">
+    <owl:Class rdf:about="http://merged#Session_chair">
+        <rdfs:label rdf:resource="http://ekaw#Session_Chair"/>
+        <rdfs:label rdf:resource="http://iasted#Session_chair"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#go_through"/>
@@ -4592,7 +4667,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ekaw#PC_Member"/>
         <rdfs:subClassOf rdf:resource="http://iasted#Delegate"/>
-        <rdfs:subClassOf rdf:resource="http://merged#ConferenceParticipant_ConferenceMember"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Conference_Participant"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#obtain"/>
@@ -4606,6 +4681,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Speaker -->
 
     <owl:Class rdf:about="http://merged#Speaker">
+        <rdfs:label rdf:resource="http://iasted#Speaker"/>
+        <rdfs:label rdf:resource="http://sigkdd#Speaker"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#presentation"/>
@@ -4630,9 +4707,11 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#Sponsor_Sponzor -->
+    <!-- http://merged#Sponsor -->
 
-    <owl:Class rdf:about="http://merged#Sponsor_Sponzor">
+    <owl:Class rdf:about="http://merged#Sponsor">
+        <rdfs:label rdf:resource="http://iasted#Sponsor"/>
+        <rdfs:label rdf:resource="http://sigkdd#Sponzor"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#give"/>
@@ -4668,10 +4747,12 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     
 
 
-    <!-- http://merged#StudentRegistrationFee_RegistrationStudent -->
+    <!-- http://merged#Student_registration_fee -->
 
-    <owl:Class rdf:about="http://merged#StudentRegistrationFee_RegistrationStudent">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+    <owl:Class rdf:about="http://merged#Student_registration_fee">
+        <rdfs:label rdf:resource="http://iasted#Student_registration_fee"/>
+        <rdfs:label rdf:resource="http://sigkdd#Registration_Student"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_designed_for"/>
@@ -4692,6 +4773,8 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://merged#Tutorial -->
 
     <owl:Class rdf:about="http://merged#Tutorial">
+        <rdfs:label rdf:resource="http://ekaw#Tutorial"/>
+        <rdfs:label rdf:resource="http://iasted#Tutorial"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iasted#is_given_by"/>
@@ -4723,7 +4806,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#search"/>
-                <owl:someValuesFrom rdf:resource="http://merged#Sponsor_Sponzor"/>
+                <owl:someValuesFrom rdf:resource="http://merged#Sponsor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4733,7 +4816,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Author_of_paper -->
 
     <owl:Class rdf:about="http://sigkdd#Author_of_paper">
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#award"/>
@@ -4753,7 +4836,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Author_of_paper_student -->
 
     <owl:Class rdf:about="http://sigkdd#Author_of_paper_student">
-        <rdfs:subClassOf rdf:resource="http://merged#PaperAuthor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Paper_Author"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://sigkdd#award"/>
@@ -4812,7 +4895,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Best_Student_Paper_Supporter -->
 
     <owl:Class rdf:about="http://sigkdd#Best_Student_Paper_Supporter">
-        <rdfs:subClassOf rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Sponsor"/>
     </owl:Class>
     
 
@@ -4820,7 +4903,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Bronze_Supporter -->
 
     <owl:Class rdf:about="http://sigkdd#Bronze_Supporter">
-        <rdfs:subClassOf rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Sponsor"/>
     </owl:Class>
     
 
@@ -4850,7 +4933,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Exhibitor -->
 
     <owl:Class rdf:about="http://sigkdd#Exhibitor">
-        <rdfs:subClassOf rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Sponsor"/>
     </owl:Class>
     
 
@@ -4858,7 +4941,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Gold_Supporter -->
 
     <owl:Class rdf:about="http://sigkdd#Gold_Supporter">
-        <rdfs:subClassOf rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Sponsor"/>
     </owl:Class>
     
 
@@ -4866,7 +4949,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Hotel -->
 
     <owl:Class rdf:about="http://sigkdd#Hotel">
-        <rdfs:subClassOf rdf:resource="http://merged#Location_Place"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Location"/>
     </owl:Class>
     
 
@@ -4890,7 +4973,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Platinum_Supporter -->
 
     <owl:Class rdf:about="http://sigkdd#Platinum_Supporter">
-        <rdfs:subClassOf rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Sponsor"/>
     </owl:Class>
     
 
@@ -4898,7 +4981,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Registration_SIGKDD_Member -->
 
     <owl:Class rdf:about="http://sigkdd#Registration_SIGKDD_Member">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
     </owl:Class>
     
 
@@ -4906,7 +4989,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Registration_SIGMOD_Member -->
 
     <owl:Class rdf:about="http://sigkdd#Registration_SIGMOD_Member">
-        <rdfs:subClassOf rdf:resource="http://merged#RegistrationFee"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Registration_fee"/>
     </owl:Class>
     
 
@@ -4914,7 +4997,7 @@ Note that camera-ready paper is not considered as &apos;accepted paper&apos;, as
     <!-- http://sigkdd#Silver_Supporter -->
 
     <owl:Class rdf:about="http://sigkdd#Silver_Supporter">
-        <rdfs:subClassOf rdf:resource="http://merged#Sponsor_Sponzor"/>
+        <rdfs:subClassOf rdf:resource="http://merged#Sponsor"/>
     </owl:Class>
     
 

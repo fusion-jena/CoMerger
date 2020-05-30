@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/elly1/ontology2#"
+     xml:base="http://www.semanticweb.org/elly1/ontology2"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elly1/ontology2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#has_an_abstract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/ontology2#has_an_abstract">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/ontology2#Abstract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/ontology2#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#has_authors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/ontology2#has_authors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/ontology2#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/ontology2#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#has_doi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elly1/ontology2#has_doi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/ontology2#Paper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#has_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elly1/ontology2#has_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/ontology2#Review"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#Abstract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#ExtendedAbstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#ConferenceContribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#ConferenceContribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#ConferenceDocument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#ConferenceDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#ConferenceDocument"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#ExtendedAbstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#ExtendedAbstract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#RegularContribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#Paper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#RegularContribution"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#RegularContribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#RegularContribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#WrittenContribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#Review">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#ConferenceDocument"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elly1/ontology2#has_authors"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elly1/ontology2#Reviewer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elly1/ontology2#has_id"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#Reviewer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#Reviewer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/ontology2#WrittenContribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/ontology2#WrittenContribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/ontology2#ConferenceContribution"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

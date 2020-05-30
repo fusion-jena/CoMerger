@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/elly1/merged_ontology1#"
+     xml:base="http://www.semanticweb.org/elly1/merged_ontology1"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elly1/merged_ontology1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#assignExternalReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#assignExternalReviewer">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#ExternalReviewer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#hasAuthor">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#hasCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Conference"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#hasMember">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Conference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#has_an_abstract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#has_an_abstract">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Abstract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#readByReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#readByReviewer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Paper"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#writtenBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#has_doi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#has_doi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Paper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#has_email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#has_email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Author"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#has_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#has_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Review"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#has_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#has_title">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Paper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Abstract"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#has_email"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Conference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Conference"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#ExternalReviewer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#ExternalReviewer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Paper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Document"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Review">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Document"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#has_id"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#writtenBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Reviewer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#has_id"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Reviewer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Reviewer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#ESWC2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#ESWC2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Conference"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elly1/merged_ontology1#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elly1/merged_ontology1#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elly1/merged_ontology1#Country"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

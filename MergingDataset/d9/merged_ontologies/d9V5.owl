@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt394.owl#"
-     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt394.owl"
+<rdf:RDF xmlns="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt195.owl#"
+     xml:base="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt195.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:peontology="http://bmi.utah.edu/ontologies/peontology/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt394.owl"/>
+    <owl:Ontology rdf:about="file:/C:/Users/Samira/Desktop/HolisticDataSet/d9/MergedOnt195.owl"/>
     
 
 
@@ -4186,6 +4186,8 @@
     <owl:Class rdf:about="http://merged#Cognitive">
         <rdfs:label xml:lang="en">Cognitive</rdfs:label>
         <rdfs:label xml:lang="pt">Cognição</rdfs:label>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Cognitive"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Cognitive"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Impairment"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts"/>
         <owl:versionInfo>0.1</owl:versionInfo>
@@ -4197,23 +4199,27 @@
     <!-- http://merged#InPatient -->
 
     <owl:Class rdf:about="http://merged#InPatient">
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Inpatient"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#InPatient"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#DietMealsServed"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#MagneticResonanceImaging_C16809 -->
+    <!-- http://merged#Magnetic_Resonance_Imaging -->
 
-    <owl:Class rdf:about="http://merged#MagneticResonanceImaging_C16809">
-        <rdfs:label xml:lang="en">Magnetic resonance imaging</rdfs:label>
+    <owl:Class rdf:about="http://merged#Magnetic_Resonance_Imaging">
         <rdfs:label>MagneticResonanceImaging</rdfs:label>
+        <rdfs:label xml:lang="en">Magnetic resonance imaging</rdfs:label>
         <rdfs:label xml:lang="pt">Ressonância magnética</rdfs:label>
+        <rdfs:label rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16809"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Magnetic_Resonance_Imaging"/>
         <rdfs:subClassOf rdf:resource="http://www.radiomics.org/RO/LK99"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <owl:versionInfo>0.1</owl:versionInfo>
         <rdfs:comment xml:lang="en">A scanning technique that creates pictures of the inside of the body and the brain; uses a strong magnet.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -4221,23 +4227,27 @@
     <!-- http://merged#Outpatient -->
 
     <owl:Class rdf:about="http://merged#Outpatient">
+        <rdfs:label rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#Outpatient"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#OutPatient"/>
         <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1361987617.owl#DietMealsServed"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Setting"/>
     </owl:Class>
     
 
 
-    <!-- http://merged#PositronEmissionTomography_C17007 -->
+    <!-- http://merged#Positron_Emission_Tomography -->
 
-    <owl:Class rdf:about="http://merged#PositronEmissionTomography_C17007">
+    <owl:Class rdf:about="http://merged#Positron_Emission_Tomography">
         <rdfs:label xml:lang="en">Positron emission tomography</rdfs:label>
         <rdfs:label>PositronEmissionTomography</rdfs:label>
         <rdfs:label xml:lang="pt">Tomografia por emissão de positrões</rdfs:label>
+        <rdfs:label rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#Positron_Emission_Tomography"/>
         <rdfs:subClassOf rdf:resource="http://www.radiomics.org/RO/LK99"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2009/3/EpilepsyOntology.owl#General_Concepts"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <owl:versionInfo>0.1</owl:versionInfo>
         <rdfs:comment xml:lang="en">A diagnostic test that uses a very low dose of a radioactive compound to measure metabolic activity in the brain; areas of decreased metabolism correspond to the seizure focus.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -4245,6 +4255,8 @@
     <!-- http://merged#Treatment -->
 
     <owl:Class rdf:about="http://merged#Treatment">
+        <rdfs:label rdf:resource="http://bmi.utah.edu/ontologies/peontology/Treatment"/>
+        <rdfs:label rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#Treatment"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dimitrios/ontologies/2013/2/untitled-ontology-2#ClinicalProcess"/>
     </owl:Class>
     
@@ -12694,9 +12706,10 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <!-- https://w3id.org/ahso#AHSO_0000_000007 -->
 
-    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0000_000007">
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0000_000007">
         <rdfs:label xml:lang="en">Geographical Information</rdfs:label>
-    </rdf:Description>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
@@ -12980,9 +12993,10 @@ I = (i-min(G)) / (max(G) - min(G))</skos:definition>
 
     <!-- https://w3id.org/ahso#AHSO_0003_000004 -->
 
-    <rdf:Description rdf:about="https://w3id.org/ahso#AHSO_0003_000004">
+    <owl:Class rdf:about="https://w3id.org/ahso#AHSO_0003_000004">
         <rdfs:label xml:lang="en">Sample</rdfs:label>
-    </rdf:Description>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
