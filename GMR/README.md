@@ -1,5 +1,5 @@
 # Generic Merge Requirements (GMRs)
-two source ontologies and their merged ontologies, to reflect different GMRs on them.
+Two source ontologies and their merged ontologies. They have been created manually to reflect different GMRs.
 
 # Publictation
 [1] Samira Babalou, Elena Grygorova and Birgitta König-Ries, "GMRs: Reconciliation of Generic Merge Requirements in Ontology Integration", In SEMANTICS Poster and Demo, 2019.
