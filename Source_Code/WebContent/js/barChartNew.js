@@ -75,15 +75,15 @@ function showBarChartNew(data) {
 			"sans-serif").attr("font-size", "12px").attr("fill", "black").text(
 			function(d) {
 				if (d.value == 20) {
-					return "VERY BAD";// red
+					return "not covered";// red
 				} else if (d.value == 40) {
-					return "BAD"; // light red
+					return "rarely covered"; // light red
 				} else if (d.value == 50) {
-					return "NEUTRAL"; // yellow
+					return "partially covered"; // yellow
 				} else if (d.value == 80) {
-					return "GOOD"; // light green
+					return "mostly covered"; // light green
 				}else if (d.value == 100) {
-					return "VERY GOOD"; // dark green
+					return "comp. covered"; // dark green
 				}
 				return ""; // no label for empty dimension 
 			});

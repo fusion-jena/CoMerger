@@ -5,13 +5,12 @@ $(document).ready(function() {
 
 })
 
-
 function checkVariables() {
-	/*if ("${NumPrefOnt}" === "") {
-		document.getElementById('PreferedOnt').value = "equal";
-	} else {
-		document.getElementById("PreferedOnt").value = "${NumPrefOnt}";
-	}*/
+	/*
+	 * if ("${NumPrefOnt}" === "") {
+	 * document.getElementById('PreferedOnt').value = "equal"; } else {
+	 * document.getElementById("PreferedOnt").value = "${NumPrefOnt}"; }
+	 */
 }
 
 /** ***************************************************************** */
@@ -34,6 +33,9 @@ function ClearAllR() {
 
 /** code for reading the checkboxes * */
 function readCheckedBoxes() {
+	// reset the file entry
+	// document.getElementsByName("inputFiles").value = "";
+
 	var selectedPlanTypes = [];
 
 	var numSug = document.getElementsByName("numSuggestion");

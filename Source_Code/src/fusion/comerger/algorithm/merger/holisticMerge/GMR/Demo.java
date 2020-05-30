@@ -103,7 +103,8 @@ public class Demo {
 		 * int node2 =random.nextInt(nodes); graph.connect(node1, node2); }
 		 */
 
-		String RuleInfo = "c:\\uploads\\RulesConflictNum.csv";
+//		String RuleInfo = "c:\\uploads\\RulesConflictNum.csv";
+		String RuleInfo = "c:\\uploads\\RulesConflict.csv";
 
 		if (RuleListCreator == false) {
 			RulesListInfo = CSVtoArray(RuleInfo);

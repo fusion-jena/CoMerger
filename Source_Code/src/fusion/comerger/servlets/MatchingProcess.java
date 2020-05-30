@@ -16,73 +16,42 @@ package fusion.comerger.servlets;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
 
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
-import javax.swing.border.EtchedBorder;
-import javax.swing.border.LineBorder;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.logging.Level;
 
 import org.apache.jena.ontology.OntDocumentManager;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.FileDocumentSource;
+import org.semanticweb.owlapi.model.MissingImportHandlingStrategy;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyLoaderConfiguration;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import fusion.comerger.algorithm.matcher.Matching;
-import fusion.comerger.algorithm.merger.holisticMerge.HolisticMerger;
+import fusion.comerger.algorithm.matcher.jacard.JacardSim;
+import fusion.comerger.algorithm.matcher.jacard.Mapp;
+import fusion.comerger.algorithm.matcher.jacard.Parameters;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.algorithm.partitioner.SeeCOnt.EvaluationSeeCOnt;
-import fusion.comerger.algorithm.partitioner.SeeCOnt.Findk.FindOptimalClusterIntractive;
-import fusion.comerger.algorithm.partitioner.SeeCOnt.Findk.SelectCH;
-import fusion.comerger.general.analysis.AnalyzingTest;
-import fusion.comerger.general.cc.BuildModel;
-import fusion.comerger.general.cc.Cleaning_Allthings;
 import fusion.comerger.general.cc.Configuration;
-import fusion.comerger.general.cc.Controller;
-import fusion.comerger.general.cc.Data;
-import fusion.comerger.general.gui.AnalysisPanel;
-import fusion.comerger.general.gui.MainFrame;
-import fusion.comerger.general.gui.PartitioningPanel;
-import fusion.comerger.general.gui.TablePanel;
 import fusion.comerger.general.output.Alignment;
+import fusion.comerger.general.output.AlignmentOwl;
 import fusion.comerger.general.output.AlignmentReader2;
 import fusion.comerger.general.output.AlignmentWriter2;
+import fusion.comerger.general.output.AlignmentWriterOwl;
 import fusion.comerger.general.output.Evaluator;
+import fusion.comerger.general.output.MappingOwl;
 import fusion.comerger.general.output.ResultData;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 
 public class MatchingProcess {
 	private static Alignment alignment = null;
@@ -147,11 +116,195 @@ public class MatchingProcess {
 		return resEvalMatch;
 	}
 
-	public static String CreateMap(String OntList, String ch1, String ch2, String path) {
+	public static String CreateMap(String OntList, String ch1, String ch2, String path, String MatchType)
+			throws OWLOntologyCreationException {
+		String MapFileAddress = "";
+		if (MatchType.equals("SeeCOnt")) {
+			MapFileAddress = CreateSeeCOntMap(OntList, ch1, ch2, path);
+		} else {
+			MapFileAddress = CreateJacardMap(OntList, path);
+		}
+		return MapFileAddress;
+	}
+
+	private static String CreateJacardMap(String OntList, String path) throws OWLOntologyCreationException {
+		long startTime = System.currentTimeMillis();
+		double sim = Parameters.simThreshold;
+		// read all ontologies only one time
+		String[] nm = OntList.split(";");
+		// OWLOntology[] OwlOnt = new OWLOntology[nm.length]();
+		ArrayList<OWLOntology> OwlOnt = new ArrayList<OWLOntology>();
+
+		for (int i = 0; i < nm.length; i++) {
+			String Ont = nm[i];
+			if (!Ont.equals("null")) {
+				File file = new File(Ont);
+
+				OWLOntology tempOntology;
+
+				OWLOntologyManager tempManager = OWLManager.createOWLOntologyManager();
+
+				OWLOntologyLoaderConfiguration loadingConfig = new OWLOntologyLoaderConfiguration();
+				loadingConfig = loadingConfig.setMissingImportHandlingStrategy(MissingImportHandlingStrategy.SILENT);
+				tempOntology = tempManager.loadOntologyFromOntologyDocument(new FileDocumentSource(file),
+						loadingConfig);
+				OwlOnt.add(tempOntology);
+
+			}
+		}
+		Mapp temp = null;
+		ArrayList<Mapp> mappedClasses = new ArrayList<Mapp>();
+		for (int i = 0; i < OwlOnt.size(); i++) {
+			OWLOntology Ont1 = OwlOnt.get(i);
+			if (!Ont1.equals("null")) {
+				for (int j = i + 1; j < OwlOnt.size(); j++) {
+					OWLOntology Ont2 = OwlOnt.get(j);
+					if (!Ont2.equals("null")) {
+						// compare classes
+						Iterator<OWLClass> Class1 = Ont1.getClassesInSignature().iterator();
+						while (Class1.hasNext()) {
+							OWLClass c1 = Class1.next();
+							temp = new Mapp();
+
+							Iterator<OWLClass> Class2 = Ont2.getClassesInSignature().iterator();
+							while (Class2.hasNext()) {
+								OWLClass c2 = Class2.next();
+								double jac = JacardSim.run(c1.getIRI().getFragment(), c2.getIRI().getFragment());
+								if (jac > sim) {
+									sim = jac;
+									temp = new Mapp();
+									temp.setEntity1(c1.getIRI().toString());
+									temp.setEntity2(c2.getIRI().toString());
+									temp.setSim(sim);
+								}
+							}
+							// it add the highest similar entities
+							if (temp.getEntity1() != null)
+								mappedClasses.add(temp);
+						}
+						// compare object properties
+						Iterator<OWLObjectProperty> pro1 = Ont1.getObjectPropertiesInSignature().iterator();
+						while (pro1.hasNext()) {
+							OWLObjectProperty p1 = pro1.next();
+							temp = new Mapp();
+							Iterator<OWLObjectProperty> pro2 = Ont2.getObjectPropertiesInSignature().iterator();
+							while (pro2.hasNext()) {
+								OWLObjectProperty p2 = pro2.next();
+								double jac = JacardSim.run(p1.getIRI().getFragment(), p2.getIRI().getFragment());
+								if (jac > sim) {
+									sim = jac;
+									temp = new Mapp();
+									temp.setEntity1(p1.getIRI().toString());
+									temp.setEntity2(p2.getIRI().toString());
+									temp.setSim(sim);
+								}
+							}
+							// it add the highest similar entities
+							if (temp.getEntity1() != null)
+								mappedClasses.add(temp);
+						}
+
+						// compare datatype properties
+						Iterator<OWLDataProperty> dPro1 = Ont1.getDataPropertiesInSignature().iterator();
+						while (pro1.hasNext()) {
+							OWLDataProperty p1 = dPro1.next();
+							temp = new Mapp();
+							Iterator<OWLDataProperty> dPro2 = Ont2.getDataPropertiesInSignature().iterator();
+							while (dPro2.hasNext()) {
+								OWLDataProperty p2 = dPro2.next();
+								double jac = JacardSim.run(p1.getIRI().getFragment(), p2.getIRI().getFragment());
+								if (jac > sim) {
+									sim = jac;
+									temp = new Mapp();
+									temp.setEntity1(p1.getIRI().toString());
+									temp.setEntity2(p2.getIRI().toString());
+									temp.setSim(sim);
+								}
+							}
+							// it add the highest similar entities
+							if (temp.getEntity1() != null)
+								mappedClasses.add(temp);
+						}
+					}
+				}
+			}
+		}
+		// createAlignmentFile for them
+		// each classes may map to several classes, so we keep the highest value
+		Iterator<Mapp> mappedClassesRefined = getHighestMap(mappedClasses).iterator();
+		AlignmentOwl align = new AlignmentOwl();
+		while (mappedClassesRefined.hasNext()) {
+			Mapp mp = mappedClassesRefined.next();
+			if (mp != null) {
+				String mp1 = mp.getEntity1();
+				String mp2 = mp.getEntity2();
+				double simi = mp.getSim();
+				align.addMapping(new MappingOwl(mp1, mp2, simi));
+			}
+		}
+		Random rand = new Random();
+		int id = rand.nextInt(1000 - 0 + 1) + 0;
+		String MapFileAddress = path + "align" + id + ".rdf";
+		AlignmentWriterOwl writer = new AlignmentWriterOwl(align, MapFileAddress);
+		writer.write("onto1", "onto2", "onto1", "onto2");
+
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = stopTime - startTime;
+		MyLogging.log(Level.INFO,
+				"*** done! Congratulation. Generating the alignment between input ontologies has been done automatically by the system. Total time  "
+						+ elapsedTime + " ms. \n");
+		System.gc();
+		return MapFileAddress;
+	}
+
+	private static HashSet<Mapp> getHighestMap(ArrayList<Mapp> mc) {
+		HashSet<Mapp> res = new HashSet<Mapp>();
+		ArrayList<Mapp> duplicated = new ArrayList<Mapp>();
+		Mapp temp = new Mapp();
+		for (int i = 0; i < mc.size(); i++) {
+			temp = new Mapp();
+			for (int j = i + 1; j < mc.size(); j++) {
+				if (mc.get(i).getEntity1().equals(mc.get(j).getEntity1())
+						|| mc.get(i).getEntity1().equals(mc.get(j).getEntity2())
+						|| mc.get(i).getEntity2().equals(mc.get(j).getEntity1())
+						|| mc.get(i).getEntity2().equals(mc.get(j).getEntity2())) {
+					if (mc.get(i).getSim() >= mc.get(j).getSim()) {
+						if (mc.get(i).getSim() >= temp.getSim()) {
+							temp = mc.get(i);
+							duplicated.add(mc.get(j));
+						} else {
+							duplicated.add(mc.get(i));
+							duplicated.add(mc.get(j));
+						}
+					} else if (mc.get(j).getSim() > mc.get(i).getSim()) {
+						if (mc.get(j).getSim() >= temp.getSim()) {
+							temp = mc.get(j);
+							duplicated.add(mc.get(i));
+						} else {
+							duplicated.add(mc.get(i));
+							duplicated.add(mc.get(j));
+						}
+					}
+
+				}
+			}
+			if (temp.getEntity1() == null) {
+				if (!duplicated.contains(mc.get(i))) {
+					res.add(mc.get(i));
+				}
+			} else if (!duplicated.contains(temp)) {
+				res.add(temp);
+			}
+		}
+
+		return res;
+	}
+
+	private static String CreateSeeCOntMap(String OntList, String ch1, String ch2, String path) {
 		// Partition and match ontologies with CH=1
 		long startTime = System.currentTimeMillis();
 
-		String MapFileAddress = null;
+		String MapFileAddress = "";
 		String[] nm = OntList.split(";");
 		for (int i = 0; i < nm.length; i++) {
 			String Ont1 = nm[i];
@@ -189,7 +342,7 @@ public class MatchingProcess {
 		MyLogging.log(Level.INFO,
 				"*** done! Congratulation. Generating the alignment between input ontologies has been done automatically by the system. Total time  "
 						+ elapsedTime + " ms. \n");
-System.gc();
+		System.gc();
 		return MapFileAddress;
 	}
 
@@ -201,10 +354,10 @@ System.gc();
 	}
 
 	private static void TestMatching() {
-		String ont1 = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\confOf.owl";
-		String ont2 = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\edas.owl";
-		String alignRef = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\confOf-edas.rdf";
-		String path = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\";
+		String ont1 = "C:\\LOCAL_FOLDER\\confOf.owl";
+		String ont2 = "C:\\LOCAL_FOLDER\\edas.owl";
+		String alignRef = "C:\\LOCAL_FOLDER\\confOf-edas.rdf";
+		String path = "C:\\LOCAL_FOLDER\\";
 		String fileResult = DoMatch(path, ont1, ont2, "1", "1");
 
 		OntDocumentManager mgr = new OntDocumentManager();
@@ -229,11 +382,11 @@ System.gc();
 	}
 
 	private static void TestAlignmentAccuracy() {
-		String align = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\SeeCOnt\\inferredMapping\\all.rdf";
-		String alignRef = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\SeeCOnt\\inferredMapping\\AllBench.rdf";
+		String align = "C:\\LOCAL_FOLDER\\all.rdf";
+		String alignRef = "C:\\LOCAL_FOLDER\\AllBench.rdf";
 
-		String ont1 = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\cmt.owl";
-		String ont2 = "C:\\Users\\Samira\\Desktop\\mergeDataset\\mappingTest\\conference.owl";
+		String ont1 = "C:\\LOCAL_FOLDER\\cmt.owl";
+		String ont2 = "C:\\LOCAL_FOLDER\\conference.owl";
 
 		OntDocumentManager mgr = new OntDocumentManager();
 		mgr.setProcessImports(false);

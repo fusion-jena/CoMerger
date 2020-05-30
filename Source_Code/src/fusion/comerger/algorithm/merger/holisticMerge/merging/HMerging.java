@@ -52,6 +52,7 @@ import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataPropertyDomainAxiom;
 import org.semanticweb.owlapi.model.OWLDataPropertyExpression;
 import org.semanticweb.owlapi.model.OWLDataRange;
+import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLDisjointClassesAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLFunctionalDataPropertyAxiom;
@@ -101,11 +102,6 @@ public class HMerging {
 		// 2- merge between clusters: inter
 		ontM = interMerge(ontM, selectedUserItem);
 
-		// Act with equal elements- TO DO: should go to intraMerge
-		// it moves to one level before, i.e. before doing clustering and
-		// merging
-		// ontM = equalProcess(ontM);
-
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
 		MyLogging.log(Level.INFO, "Merger phase (intra and inter merge) has been done successfully. Total time  "
@@ -122,9 +118,10 @@ public class HMerging {
 		// refine clusters
 		if (selectedUserItem != null && selectedUserItem.contains("localRefinement")) {
 			if (ontM.getClusters().size() > 1) {
-				// if cluster size is 1, we do not
-				// refine this one cluster and only let that global refinements
-				// will be done
+				/*
+				 * if cluster size is 1, we do not refine this one cluster and
+				 * only let that global refinements will be done
+				 */
 				HBlockRefine hcr = new HBlockRefine();
 				ontM = hcr.run(ontM, selectedUserItem);
 			}
@@ -146,7 +143,7 @@ public class HMerging {
 		 * anchor between clusters
 		 */
 		int totalAx = 0;// ontM.getOwlModel().getAxioms().size();
-		for (int x = 0; x < ontM.getInputOntNumber(); x++) {
+		for (int x = 0; x < ontM.getInputOwlOntModel().size(); x++) {
 			totalAx = totalAx + ontM.getInputOwlOntModel().get(x).getAxiomCount();
 		}
 		StatisticTest.result.put("total_axioms", String.valueOf(totalAx));
@@ -155,6 +152,7 @@ public class HMerging {
 			ontM.SetManager(ontM.getClusters().get(0).getManager());
 			StatisticTest.result.put("Breaking_isA", "0");
 			StatisticTest.result.put("Breaking_other", "0");
+			
 		} else if (ontM.getClusters() != null) {
 
 			// 1 -- add all cluster to OM (OM is new ontology)
@@ -167,6 +165,10 @@ public class HMerging {
 				OMManager.addAxioms(OM, ClusterAx);
 			}
 
+			/* declaration axioms are not to any clusters, so we extract them from OM manger */
+			Set<OWLDeclarationAxiom> decAx = ontM.getOwlModel().getAxioms(AxiomType.DECLARATION);
+			OMManager.addAxioms(OM, decAx);
+			
 			// 2 -- add Anchor
 			// Add all without any condition
 			Set<OWLAxiom> anchorAxioms = ontM.getISABreakingAxiom();
@@ -175,7 +177,10 @@ public class HMerging {
 			Set<OWLAxiom> otherAxioms = ontM.getOtherBreakingAxiom();
 			if (otherAxioms != null)
 				OMManager.addAxioms(OM, otherAxioms);
-
+			Set<OWLAxiom> unConnAxioms = ontM.getUnconnectedAxiom();
+			if (unConnAxioms != null)
+				OMManager.addAxioms(OM, unConnAxioms);
+			
 			int brO = ontM.getOtherBreakingAxiom().size();
 			double brp = (double) (brO) / (double) (totalAx) * 100;
 			brp = Math.round(brp * 100.0) / 100.0;
@@ -188,6 +193,13 @@ public class HMerging {
 			StatisticTest.result.put("Breaking_isA_percentage", String.valueOf(brpIsa));
 			StatisticTest.result.put("Breaking_isA", String.valueOf(brIsa));
 
+			
+			int unAx = ontM.getUnconnectedAxiom().size();
+			double unAxd = (double) (unAx) / (double) (totalAx) * 100;
+			unAxd = Math.round(unAxd * 100.0) / 100.0;
+			StatisticTest.result.put("Breaking_UnCon_percentage", String.valueOf(unAxd));
+			StatisticTest.result.put("Breaking_UnCon", String.valueOf(unAx));
+			
 			ontM.SetOwlModel(OM);
 			ontM.SetManager(OMManager);
 		}
@@ -197,12 +209,14 @@ public class HMerging {
 		ontM = hr.run(ontM, selectedUserItem);
 
 		// 5 -- Save OM
+		System.out.println("\t Strat to do save OM");
 		HSave hs = new HSave();
 		ontM = hs.run(ontM, ontM.getMergeOutputType());
 		String MergedOntZip = Zipper.zipFiles(ontM.getOntName());
 		ontM.setOntZipName(MergedOntZip);
 
 		// 5-1: Save sub-merged ontology
+		System.out.println("\t Strat to do save subMerged");
 		hs = new HSave();
 		hs.runSubMerged(ontM);
 		String MergedSubOntZip = Zipper.zipAllFiles(ontM);
@@ -300,11 +314,15 @@ public class HMerging {
 				manager = SymmetricObjectPropertyProcessor(oldAxiom, ontM, ontology, manager, factory);
 				break;
 
+			case "Declaration":
+				manager = DeclarationProcessor(oldAxiom, ontM, ontology, manager, factory); 
+				break;
+			
 			default:
 
 			{
-				if (axiomType != "Declaration")
-					System.out.println("procees me in HMerging" + oldAxiom); // TODO
+				// if (axiomType != "Declaration")
+				// System.out.println("procees me in HMerging" + oldAxiom); //
 
 			}
 			}
@@ -328,7 +346,7 @@ public class HMerging {
 						+ elapsedTime + " ms. \n");
 
 		int totalAx = 0;
-		for (int x = 0; x < ontM.getInputOntNumber(); x++) {
+		for (int x = 0; x < ontM.getInputOwlOntModel().size(); x++) {
 			totalAx = totalAx + ontM.getInputOwlOntModel().get(x).getAxiomCount();
 		}
 
@@ -363,6 +381,31 @@ public class HMerging {
 			int r = ontM.getNumRewriteAxioms();
 			ontM.setNumRewriteAxioms(r + 1);
 		}
+		return manager;
+
+	}
+
+	private static OWLOntologyManager DeclarationProcessor(OWLAxiom oldAxiom, HModel ontM,
+			OWLOntology ontology, OWLOntologyManager manager, OWLDataFactory factory) {
+//		boolean change = false;
+//		OWLObjectPropertyExpression subProperty = ((OWLSymmetricObjectPropertyAxiom) oldAxiom).getProperty();
+//		OWLObjectProperty eqObj = ontM.getKeyValueEqObjProperty().get(subProperty.asOWLObjectProperty());
+//		if (eqObj != null) {
+//			subProperty = eqObj;
+//			change = true;
+//		}
+
+//		if (change) {
+//			OWLAxiom newAxiom = factory.getOWLTransitiveObjectPropertyAxiom(subProperty);
+//			manager.removeAxiom(ontology, oldAxiom);
+			manager.addAxiom(ontology, oldAxiom);
+//			HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+//			eqAx.put(oldAxiom, newAxiom);
+
+//			ontM.setEqAxioms(eqAx);
+//			int r = ontM.getNumRewriteAxioms();
+//			ontM.setNumRewriteAxioms(r + 1);
+//		}
 		return manager;
 
 	}
@@ -614,8 +657,8 @@ public class HMerging {
 
 	private static OWLOntologyManager DifferentIndividualsProcessor(OWLAxiom oldAxiom, HModel ontM,
 			OWLOntology ontology, OWLOntologyManager manager, OWLDataFactory factory) {
-		System.out.println(oldAxiom + " process me in DifferentIndividualsProcessor in HMerging.java");
-		// TODO
+		// System.out.println(oldAxiom + " process me in
+		// DifferentIndividualsProcessor in HMerging.java");
 		return manager;
 	}
 
@@ -816,7 +859,9 @@ public class HMerging {
 					}
 
 				} else {
-					System.out.println("Process me in HMerging_EquivalentClassesProcessor, type of " + cls);
+					int w = 0;
+					// System.out.println("Process me in
+					// HMerging_EquivalentClassesProcessor, type of " + cls);
 				}
 			}
 		}
@@ -1283,7 +1328,9 @@ public class HMerging {
 				ontM.setNumRewriteAxioms(r + 1);
 			}
 		} else {
-			System.out.println("Process me in HMerging.java in SubClassProcessor");
+			int w = 0;
+			// System.out.println("Process me in HMerging.java in
+			// SubClassProcessor");
 		}
 		return manager;
 	}

@@ -120,7 +120,7 @@ public class BinaryBalance {
 				 */
 
 				UPLOAD_DIRECTORY = UPLOAD_DIRECTORY + "temp\\";
-
+				String matchType = "Jacard"; // "SeeCOnt";
 				ArrayList<String> newInputOnt = new ArrayList<String>();
 				boolean done = true;
 				while (done) {
@@ -134,7 +134,8 @@ public class BinaryBalance {
 							String currentTime = new SimpleDateFormat("yyyyMMdd_HHmmss")
 									.format(Calendar.getInstance().getTime());
 							System.out.println("start creating mapping for " + inputOntList + "\t" + currentTime);
-							mappingFile = MatchingProcess.CreateMap(inputOntList, ch[0], ch[1], UPLOAD_DIRECTORY);
+							mappingFile = MatchingProcess.CreateMap(inputOntList, ch[0], ch[1], UPLOAD_DIRECTORY,
+									matchType);
 							System.out.println("Finished create mapping for " + inputOntList);
 						} catch (Exception e) {
 							System.out.println("Error for " + inputOntList + "\n" + e);

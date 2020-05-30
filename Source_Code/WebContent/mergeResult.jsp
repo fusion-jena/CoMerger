@@ -25,74 +25,76 @@ Licence URI: http://www.os-templates.com/template-terms
 	src="https://www.google.com/recaptcha/api.js?render=6Lc5rrUUAAAAAKBNdawrac6WLfCWmtTHiqWd4vCH"></script>
 </head>
 <body id="top" onload="initialise();">
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row0">
-		<div id="topbar" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<div id="logo" class="fl_left">
-				<h1>
-					<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
-				</h1>
-				<p>Holistic Multiple Ontologies Merger</p>
+	<form method="post"
+		action="${pageContext.request.contextPath}/MergingServlet"
+		enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row0">
+			<div id="topbar" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<div id="logo" class="fl_left">
+					<h1>
+						<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
+					</h1>
+					<p>Multiple Ontologies Merger</p>
+				</div>
+				<!-- ################################################################################################ -->
+				<nav id="mainav" class="fl_right">
+					<ul class="clear">
+						<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoMerger">Merger</button></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoEvaluator">Evaluator</button></li>
+						<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
+								Us</a></li>
+						<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
+								Us</a></li>
+						<li><a class="drop"
+							href="${pageContext.request.contextPath}/help.jsp">User Help</a>
+							<ul>
+								<li><a
+									href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
+								<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
+										Framework</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
+										Catalogue</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
+										Catalogue</a></li>
+											<li><a
+									href="${pageContext.request.contextPath}/OMstandard.jsp">Standard for Evaluation</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+				<!-- ################################################################################################ -->
 			</div>
-			<!-- ################################################################################################ -->
-			<nav id="mainav" class="fl_right">
-				<ul class="clear">
-					<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-					<li><a class="drop"
-						href="${pageContext.request.contextPath}/merging.jsp">Merger</a>
-						<ul>
-							<li><a
-								href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
-							<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
-									Framework</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
-									Catalogue</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
-									Catalogue</a></li>
-						</ul></li>
-					<li class="active"><a
-						href="${pageContext.request.contextPath}/mergingEval.jsp">Evaluator</a>
-					</li>
-					<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/help.jsp">User
-							Help</a></li>
+		</div>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper bgded overlay"
+			style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
+			<div id="breadcrumb" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Merger</a></li>
+					<li><a href="#">Merge Result</a></li>
 				</ul>
-			</nav>
-			<!-- ################################################################################################ -->
+				<!-- ################################################################################################ -->
+			</div>
 		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper bgded overlay"
-		style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
-		<div id="breadcrumb" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Merger</a></li>
-				<li><a href="#">Merge Result</a></li>
-			</ul>
-			<!-- ################################################################################################ -->
-		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row3">
-		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row3">
+			<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
 
-		<form method="post"
-			action="${pageContext.request.contextPath}/MergingServlet"
-			enctype="multipart/form-data" onsubmit='showLoading();'>
+
 			<input type="hidden" id="g-recaptcha-response"
 				name="g-recaptcha-response"> <input type="hidden"
 				name="action" value="validate_captcha"> <input type="hidden"
@@ -100,7 +102,16 @@ Licence URI: http://www.os-templates.com/template-terms
 				name="selectedUserItem" id="selectedUserItem" /> <input
 				type="hidden" name="SecGMR" id="SecGMR" /> <input type="hidden"
 				name="SecEval" id="SecEval" /> <input type="hidden"
-				name="selectedConsParam" id="selectedConsParam" />
+				name="selectedConsParam" id="selectedConsParam" /> <input
+				name="uploadedInputFiles" id="uploadedInputFiles" type="text"
+				value="${uploadedInputFiles}" style="display: none;"> <input
+				name="uploadedmapFiles" id="uploadedmapFiles" type="text"
+				value="${uploadedmapFiles}" style="display: none;"> <input
+				name="uploadedMergeFile" id="uploadedMergeFile" type="text"
+				value="${uploadedMergeFile}" style="display: none;"> <input type="hidden"
+				name="showGMRSectionValue" id="showGMRSectionValue"
+				value="${showGMRSectionValue}" />
+
 			<div id="showMessage" class="messageSection">
 				<span style="font-weight: bold; color: green; margin: 10px;">${msg}</span>
 			</div>
@@ -117,9 +128,10 @@ Licence URI: http://www.os-templates.com/template-terms
 			</section>
 			<!-- ###################################################################################################################### -->
 			<div id="SectionGMR_container">
-				<div class="showcell">
-					<h2>Apply Refinement</h2>
+				<div id="SectionGMR_Class" class="showcell">
+					<h2>Adjust Refinement</h2>
 				</div>
+
 				<div id="SectionGMR" class="hidecell">
 					<table class="myTable">
 						<tr>
@@ -135,7 +147,7 @@ Licence URI: http://www.os-templates.com/template-terms
 										<td align="left"><small><span align="left">${guidline}</span></small></td>
 									</tr>
 									<tr>
-										<td align="right">Suggested compatible sets:<input
+										<td align="right">Maximum number of suggested compatible sets:<input
 											type="number" id="numSuggestion" name="numSuggestion" min="1"
 											max="1000" value="${numberOfSuggestion}">
 											<button class="btn small" type="submit" name="submit"
@@ -163,7 +175,7 @@ Licence URI: http://www.os-templates.com/template-terms
 										Local Refinement</b></span></td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Completeness Aspect</td>
+							<td colspan="2"><hh>Completeness</hh></td>
 						</tr>
 						<tr>
 							<td><input ${ClassCh} id="1" idname="ClassCheck"
@@ -197,7 +209,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Structure Preservation</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Minimality Aspect</td>
+							<td colspan="2"><hh>Minimality</td>
 						</tr>
 						<tr>
 							<td><input ${ClRedCh} id="8" idname="ClRedCheck"
@@ -216,7 +228,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Extraneous Entity Prohibition</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Deduction Aspect</td>
+							<td colspan="2"><hh>Deduction</td>
 						</tr>
 						<tr>
 							<td colspan="2"><input ${EntCh} id="12" idname="EntCheck"
@@ -224,7 +236,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Entailment Deduction Satisfaction</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Constraint Aspect</td>
+							<td colspan="2"><hh>Constraint</td>
 						</tr>
 
 						<tr>
@@ -242,7 +254,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Domain and Range Oneness</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Acyclicity Aspect</td>
+							<td colspan="2"><hh>Acyclicity</td>
 						</tr>
 						<tr>
 							<td><input ${AcyClCh} id="16" idname="AcyClCheck"
@@ -259,7 +271,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Inverses of Themselves</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Connectivity Aspect</td>
+							<td colspan="2"><hh>Connectivity</td>
 						</tr>
 						<tr>
 							<td><input ${UnconnClCh} id="19" idname="UnconnClCheck"
@@ -298,10 +310,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 					<table class="myTable">
 						<tr>
-							<td>
-								<h2>Selecting Evaluation Criteria</h2>
-							</td>
-							<td colspan="2"><span onclick="SelectAll()"
+							<td align="center" colspan="3"><span onclick="SelectAll()"
 								style="cursor: pointer; width: 60px;"> <font size="1"><u>[Select
 											All]</u></font></span><span onclick="ClearAll()" style="cursor: pointer;"><font
 									size="1"><u>[Clear All]</u></font></span></td>
@@ -312,24 +321,24 @@ Licence URI: http://www.os-templates.com/template-terms
 						<tr>
 							<td><input ${CompletenessCh} id="CompletenessCheck"
 								name="selectedItem" value="CompletenessCheck" type="checkbox">
-								Completeness Aspect &emsp;</td>
+								Completeness &emsp;</td>
 							<td><input ${MinimalityCh} id="MinimalityCheck"
 								name="selectedItem" value="MinimalityCheck" type="checkbox">
-								Minimality Aspect &emsp;</td>
+								Minimality &emsp;</td>
 							<td><input ${DeductionCh} id="DeductionCheck"
 								name="selectedItem" value="DeductionCheck" type="checkbox">
-								Deduction Aspect&emsp;</td>
+								Deduction&emsp;</td>
 						</tr>
 						<tr>
 							<td><input ${ConstraintCh} id="ConstraintCheck"
 								name="selectedItem" value="ConstraintCheck" type="checkbox">
-								Constraint Aspect &emsp;</td>
+								Constraint &emsp;</td>
 							<td><input ${AcyclicityCh} id="AcyclicityCheck"
 								name="selectedItem" value="AcyclicityCheck" type="checkbox">
-								Acyclicity Aspect &emsp;</td>
+								Acyclicity &emsp;</td>
 							<td><input ${ConnectivityCh} id="ConnectivityCheck"
 								name="selectedItem" value="ConnectivityCheck" type="checkbox">
-								Connectivity Aspect&emsp;</td>
+								Connectivity&emsp;</td>
 						</tr>
 						<tr>
 							<td colspan="3"><hh>Gernarl evaluation<hh></td>
@@ -414,10 +423,10 @@ Licence URI: http://www.os-templates.com/template-terms
 			</div>
 			<!-- ###################################################################################################################### -->
 			<!-- ////////////////////*BAR CHART*/////////////////// -->
-			<div id="barChart"></div>
+			<h2>Evaluation Result</h2>
+			<hh>Overall Result Demonstration </hh>
 			<div id="barChartNew"></div>
 			<div id="SecEvalResult">
-				<h2>Merging Evaluation Result</h2>
 				<!-- //////////////////idSecCompleteness///////////////////// -->
 				${res0}
 				<!-- //////////////////idSecMinimality///////////////////// -->
@@ -450,9 +459,11 @@ Licence URI: http://www.os-templates.com/template-terms
 					value="DoEvalRepairErrors" onClick="processRepairPlan()">Repair
 					Errors</button>
 			</div>
-			<br> 
-			<br> <span><br> <sup>-</sup> means it is not
-				implemented yet within the system</span> <br> <br>
+			<br>
+			<br>
+			<span><br> <sup>-</sup> means it is not implemented yet
+				within the system</span> <br>
+			<br>
 			<div id="SecReference" style="font-size: 12px;">
 				<span><hh>References:</hh> <br>[1] F. Duchateau, and Z.
 					Bellahsene. <i>Measuring the quality of an integrated schema.</i>
@@ -491,12 +502,14 @@ Licence URI: http://www.os-templates.com/template-terms
 					border="0" />
 			</div>
 			<div id="loadingover" style="display: none;"></div>
-		</form>
+			<div class="g-recaptcha"
+				data-sitekey="6LfFuU4UAAAAAN-_yVxOMIBF955f-EwAI4EQmfBB"></div>
+	</form>
 
-		<!-- ################################################################################################ -->
-		<!-- / main body -->
-		<div class="clear"></div>
-		</main>
+	<!-- ################################################################################################ -->
+	<!-- / main body -->
+	<div class="clear"></div>
+	</main>
 	</div>
 	<!-- ################################################################################################ -->
 	<!-- ################################################################################################ -->
@@ -507,7 +520,7 @@ Licence URI: http://www.os-templates.com/template-terms
 	<!-- ################################################################################################ -->
 
 	<script type="text/javascript" src="../js/mergeResult.js"></script>
-
+	
 	<script>
 		function initialise() {
 			var info = "${chartInfo}";
@@ -525,7 +538,7 @@ Licence URI: http://www.os-templates.com/template-terms
 				"date" : "Constraint",
 				"value" : res[3]
 			}, {
-				"date" : "Acyclity",
+				"date" : "Acyclicity",
 				"value" : res[4]
 			}, {
 				"date" : "Connectivity",
@@ -537,6 +550,20 @@ Licence URI: http://www.os-templates.com/template-terms
 			showBarChartNew(data);
 			if ("${msg}" === "") {
 				document.getElementById("showMessage").style.display = "none";
+			}
+			
+			var showGMRSection = document.getElementById('showGMRSectionValue').value;
+			if (showGMRSection === "")
+				document.getElementById('SectionGMR_Class').setAttribute(
+						"class", "showcell");
+			if (showGMRSection) {
+				document.getElementById('SectionGMR_Class').setAttribute(
+						"class", "showcell active");
+				document.getElementById('SectionGMR_Class').style.display = "block";
+				document.getElementById('SectionGMR').style.display = "block";
+			} else {
+				document.getElementById('SectionGMR_Class').setAttribute(
+						"class", "showcell");
 			}
 		}
 	</script>

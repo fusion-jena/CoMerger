@@ -28,7 +28,7 @@ public class GuiOutput {
 
 	public static String createCompletenessGui(String[] res) {
 		String gui = "";
-		gui += "<div id=\"idSecCompleteness\"><br> " + "<hh>Completeness	Aspect</hh> "
+		gui += "<div id=\"idSecCompleteness\"><br> " + "<hh>Completeness</hh> "
 				+ "	<div class=\"showcell\">" + "	<span>Class preservation</span> <span style=\"float: right;\">"
 				+ res[0] + "</span>" + "	</div>	<div class=\"hidecell\">	<p>"
 				+ "			Each class in the (all/target) input ontologies should have a		mapped class in the merged ontology [1,3,6,7,10]. <br>"
@@ -61,7 +61,7 @@ public class GuiOutput {
 
 	public static String createMinimalityGui(String[] res) {
 		String gui = "";
-		gui += "<div id=\"idSecMinimality\">" + "	<br> " + "<hh>Minimality	Aspect</hh>		"
+		gui += "<div id=\"idSecMinimality\">" + "	<br> " + "<hh>Minimality</hh>		"
 				+ "		<div class=\"showcell\">" + "		<span>Class redundancy prohibition</span> <span"
 				+ "				style=\"float: right;\">" + res[0] + "</span>		</div>"
 				+ "		<div class=\"hidecell\">			<p>"
@@ -86,7 +86,7 @@ public class GuiOutput {
 
 	public static String createDeductionGui(String[] res) {
 		String gui = "";
-		gui += "<div id=\"idSecDeduction\">" + "<br> " + " <hh>Deduction " + "Aspect</hh>		"
+		gui += "<div id=\"idSecDeduction\">" + "<br> " + " <hh>Deduction</hh>		"
 				+ "		<div class=\"showcell\">			<span>Entailments deduction satisfaction</span> <span"
 				+ "	style=\"float: right;\">" + res[0] + "</span>		</div>	<div class=\"hidecell\">	<p>"
 				+ "	The merged ontology should be able to entail all entailments of	(all/target) input ontologies. As the semantic consequences of"
@@ -97,7 +97,7 @@ public class GuiOutput {
 
 	public static String createConstraintGui(String[] res) {
 		String gui = "";
-		gui += "<div id=\"idSecConstraint\">" + "	<br> " + "<hh>Constraint" + "	Aspect</hh>	"
+		gui += "<div id=\"idSecConstraint\">" + "	<br> " + "<hh>Constraint</hh>	"
 				+ "	<div class=\"showcell\">		<span>One type restriction</span> <span style=\"float: right;\">"
 				+ res[0] + "</span>	</div>	<div class=\"hidecell\">	<p>"
 				+ "Two corresponding entities should follow the same data type [7];	e.g., if the range of ``authorId'' in one of the input ontology	is String and in the other one is Integer, then the range of the merged entity ``authorId'' in the merged ontology cannot have	both types. <br>"
@@ -114,7 +114,7 @@ public class GuiOutput {
 
 	public static String createAcyclicityGui(String[] res) {
 		String gui = "";
-		gui += "<div id=\"idSecAcyclicity\"> <br> " + "<hh>Acyclicity	Aspect</hh>	"
+		gui += "<div id=\"idSecAcyclicity\"> <br> " + "<hh>Acyclicity</hh>	"
 				+ "<div class=\"showcell\">	<span>Acyclicity in the class hierarchy</span> <span style=\"float: right;\">"
 				+ res[0] + "</span></div>	<div class=\"hidecell\">	"
 				+ "<p>A cycle of is-a relationships implies equality of all of the	classes in the cycle, since is-a is transitive. Therefore, the merge process should not produce a cycle in the class hierarchy[1,3,5,7,8,10]. <br>"
@@ -132,7 +132,7 @@ public class GuiOutput {
 	public static String createConnectivityGui(String[] res) {
 		String gui = "";
 		gui += "<div id=\"idSecConnectivity\">" + "<br> <hh>Connectivity"
-				+ "		Aspect</hh>			<div class=\"showcell\">"
+				+ "	</hh>			<div class=\"showcell\">"
 				+ "			<span>Unconnected class prohibition</span> <span" + "			style=\"float: right;\">"
 				+ res[0] + "</span>		</div>		<div class=\"hidecell\">		<p>"
 				+ "The merge process should not make the classes unconnected [3,7].	Every class that had some connections in the input ontologies before the merge process, should not be unconnected after merge process in the merged ontology. <br>"

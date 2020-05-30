@@ -38,6 +38,7 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 .btn{cursor: pointer; display:inline-block; padding:15px 25px 17px; text-transform:uppercase; border:1px solid;}
 .btn.medium{padding:10px 60px 12px;}
 .btn.small{padding:8px 18px 10px; text-transform:none;}
+.btn.menu{background-color:#F7F7F7; border-color:#F7F7F7; color:#474747; padding: 0;}
 
 .clear, .group{display:block;}
 .clear::before, .clear::after, .group::before, .group::after{display:table; content:"";}

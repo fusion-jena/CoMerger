@@ -16,14 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.divideConquer;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -53,13 +53,16 @@ public class HDivideConquer {
 		long startTime = System.currentTimeMillis();
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		/* Step1: determine the cores */
+		System.out.println("\t Strat to find core");
 		ArrayList<HMappedClass> coreList = new ArrayList<HMappedClass>();
 		coreList = FindCores(ontM, adjacentList);
 
 		/* Step2: divide it */
+		System.out.println("\t Strat to do division");
 		ontM = division(ontM, coreList, adjacentList);
 
 		/* Setp 3: add properrties */
+		System.out.println("\t Strat to do properties assigner");
 		AssignBlockProperties acp = new AssignBlockProperties();
 		ontM = acp.run(ontM);
 
@@ -85,7 +88,6 @@ public class HDivideConquer {
 		if (coreList.size() < 1)
 			return ontM;
 
-
 		boolean breakDown = true;
 		int numBlock = 0;
 
@@ -106,7 +108,7 @@ public class HDivideConquer {
 			coreList.get(numBlock).setSelectedStatus(true);
 			cm.SetCore(c);
 
-			ArrayList<OWLClassExpression> elm = new ArrayList<OWLClassExpression>();
+			HashSet<OWLClassExpression> elm = new HashSet<OWLClassExpression>();
 			elm.add(c.getRefClass());
 
 			alreadyAdded.add(c.getRefClass());
@@ -162,7 +164,7 @@ public class HDivideConquer {
 					break;
 				}
 				cm.SetCore(c);
-				ArrayList<OWLClassExpression> elm = new ArrayList<OWLClassExpression>();
+				HashSet<OWLClassExpression> elm = new HashSet<OWLClassExpression>();
 				elm.add(c.getRefClass());
 
 				alreadyAdded.add(c.getRefClass());
@@ -176,9 +178,8 @@ public class HDivideConquer {
 					recentlyAdded = new HashSet<OWLClassExpression>();
 					while (iter.hasNext()) {
 						OWLClassExpression cc = iter.next();
-						Iterator<OWLClassExpression> newRecent = adjacentList.get(cc).iterator();// #adjacentList
-																									// has
-																									// error
+						
+						Iterator<OWLClassExpression> newRecent = adjacentList.get(cc).iterator();
 						while (newRecent.hasNext()) {
 							OWLClassExpression cep = newRecent.next();
 							if (!alreadyAdded.contains(cep)) {
@@ -249,7 +250,7 @@ public class HDivideConquer {
 			 * we do not create a block for a mapped entities which does not
 			 * have any connection to other classes
 			 */
-			if (coreList.get(i).getConnection() == 0)
+			if (coreList.get(i).getIsaConnection() < 2)
 				break;
 
 			if (coreList.get(i).getSelectedStatus() != true) {
@@ -294,32 +295,70 @@ public class HDivideConquer {
 		long stTime = System.currentTimeMillis();
 		ArrayList<HMappedClass> mapList = ontM.getEqClasses();
 
+		System.out.println("mapping size: " + mapList.size());
+
 		if (mapList.size() < 1) {
+			int n = 0;
 			Iterator<OWLClass> iter = ontM.getOwlModel().getClassesInSignature().iterator();
-			if (iter.hasNext()) {
-				OWLClass c = iter.next();
+			while (iter.hasNext()) {
+				if (n < ontM.getInputOntNumber()) {
+					OWLClass c = iter.next();
 
-				HMappedClass mp = new HMappedClass();
-				mp.setRefClass(c);
-				Set<OWLClass> s = new HashSet<OWLClass>();
-				s.add(c);
-				mp.setMappedClass(s);
-				mapList.add(mp);
-
-				return mapList;
+					HMappedClass mp = new HMappedClass();
+					mp.setRefClass(c);
+					Set<OWLClass> s = new HashSet<OWLClass>();
+					s.add(c);
+					mp.setMappedClass(s);
+					mapList.add(mp);
+					n++;
+				} else {
+					break;
+				}
 			}
+			return mapList;
 		}
 
-		// set goodness degree
+		// set goodness degree: old-version: connection degree based on sub
+		// class relations :
+		// int maxLen = 0;
+		// for (int i = 0; i < mapList.size(); i++) {
+		// if (adjacentList.get(mapList.get(i).getRefClass()) != null) {
+		// int con = adjacentList.get(mapList.get(i).getRefClass()).size();
+		// mapList.get(i).setConnection(con);
+		// int len = mapList.get(i).getLenClass();
+		// if (len > maxLen)
+		// maxLen = len;
+		// mapList.get(i).setGoodness((double) (len * con));
+		// } else {
+		// mapList.get(i).setGoodness((double) 0.0);
+		// // since the connection of this class is 0
+		// }
+		// }
+		// StatisticTest.result.put("Max-Cardinality", String.valueOf(maxLen));
+
+		// set goodness degree: new version: using all type of properties as a
+		// connection of a class
+		// we assume same weight for taxonomy and non-taxonomic realtion of a
+		// class
 		int maxLen = 0;
+		double w1 = Parameters.weight_taxonomy, w2 = Parameters.weight_non_taxonomy;
 		for (int i = 0; i < mapList.size(); i++) {
-			if (adjacentList.get(mapList.get(i).getRefClass()) != null) {
-				int con = adjacentList.get(mapList.get(i).getRefClass()).size();
-				mapList.get(i).setConnection(con);
+			if (ontM.getOwlModel().getAxioms(mapList.get(i).getRefClass()) != null) {
+				int AllCon = ontM.getOwlModel().getAxioms(mapList.get(i).getRefClass()).size();
+				mapList.get(i).setAllConnection(AllCon);
+				int isaCon = 0;
+				if (adjacentList.get(mapList.get(i).getRefClass()) != null) {
+					isaCon = adjacentList.get(mapList.get(i).getRefClass()).size();
+					mapList.get(i).setIsaConnection(isaCon);
+				} else {
+					mapList.get(i).setIsaConnection(0.0);
+				}
 				int len = mapList.get(i).getLenClass();
 				if (len > maxLen)
 					maxLen = len;
-				mapList.get(i).setGoodness((double) (len * con));
+
+				double goodness = len * (isaCon * w1 + AllCon * w2);
+				mapList.get(i).setGoodness(goodness);
 			} else {
 				mapList.get(i).setGoodness((double) 0.0);
 				// since the connection of this class is 0

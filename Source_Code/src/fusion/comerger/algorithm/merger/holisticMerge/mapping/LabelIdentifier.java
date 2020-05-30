@@ -25,7 +25,12 @@ package fusion.comerger.algorithm.merger.holisticMerge.mapping;
 * Date: 17/12/2019
 */
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
+
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
 
 public class LabelIdentifier {
 	static Set<String> generatedLabels = new HashSet<String>();
@@ -102,7 +107,65 @@ public class LabelIdentifier {
 		return commonStr;
 	}
 
-	public static String createLabel(String[] sList, String type) {
+	public static String createLabelClass(Set<OWLClass> cList) {
+		Iterator<OWLClass> iter = cList.iterator();
+		String label = "";
+		int max = 0;
+		while (iter.hasNext()) {
+			OWLClass c = iter.next();
+			String s = c.getIRI().getFragment().toString();
+			if (s.length() > max) {
+				max = s.length();
+				label = s;
+			}
+		}
+
+		if (label.length() > 0)
+			label = label.substring(0, 1).toUpperCase() + label.substring(1);
+
+		return label;
+	}
+
+	public static String createLabelObjPro(Set<OWLObjectProperty> cList) {
+		Iterator<OWLObjectProperty> iter = cList.iterator();
+		String label = "";
+		int max = 0;
+		while (iter.hasNext()) {
+			OWLObjectProperty c = iter.next();
+			String s = c.getIRI().getFragment().toString();
+			if (s.length() > max) {
+				max = s.length();
+				label = s;
+			}
+		}
+
+		if (label.length() > 0)
+
+			label = label.substring(0, 1).toLowerCase() + label.substring(1);
+
+		return label;
+	}
+
+	public static String createLabelDPro(Set<OWLDataProperty> cList) {
+		Iterator<OWLDataProperty> iter = cList.iterator();
+		String label = "";
+		int max = 0;
+		while (iter.hasNext()) {
+			OWLDataProperty c = iter.next();
+			String s = c.getIRI().getFragment().toString();
+			if (s.length() > max) {
+				max = s.length();
+				label = s;
+			}
+		}
+
+		if (label.length() > 0)
+			label = label.substring(0, 1).toLowerCase() + label.substring(1);
+
+		return label;
+	}
+
+	public static String createLabelOld(String[] sList, String type) {
 		String label = "";
 		int max = 0;
 		for (String s : sList) {

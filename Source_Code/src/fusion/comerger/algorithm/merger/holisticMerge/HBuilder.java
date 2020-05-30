@@ -32,13 +32,16 @@ import java.util.Set;
 import java.util.logging.Level;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.FileDocumentSource;
 import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.MissingImportHandlingStrategy;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyID;
+import org.semanticweb.owlapi.model.OWLOntologyLoaderConfiguration;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.SetOntologyID;
 
@@ -53,7 +56,7 @@ public class HBuilder {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	public static HModel run(HModel m) {
+	public static HModel run(HModel m) throws OWLOntologyCreationException {
 		long startTime = System.currentTimeMillis();
 		ArrayList<Integer> classSize = new ArrayList<Integer>();
 		ArrayList<Integer> objectSize = new ArrayList<Integer>();
@@ -94,19 +97,23 @@ public class HBuilder {
 		String sucssefullFiles = "", failedFiles = "";
 		for (int ontID = 0; ontID < nm.length; ontID++) {
 			if (!nm[ontID].toString().equals("null")) {
-				try {
+//				try {
 
 					String OntName = nm[ontID];
-//					System.out.println("Start reading file: " + ontID + "\t" + OntName);
 					File file = new File(OntName);
 					msg = msg + "\n Ontology: " + file.getName() + " has been read. \n";
 					st = st + file.getName();
-
+					
 					OWLOntologyManager tempManager = OWLManager.createOWLOntologyManager();
 					// tempManager.setProcessImports(true);
-					OWLOntology tempOntology;
+					
 
-					tempOntology = tempManager.loadOntologyFromOntologyDocument(file);
+			        OWLOntologyLoaderConfiguration loadingConfig = new OWLOntologyLoaderConfiguration();
+			        loadingConfig = loadingConfig.setMissingImportHandlingStrategy(MissingImportHandlingStrategy.SILENT);
+
+					OWLOntology tempOntology;			
+					
+					tempOntology = tempManager.loadOntologyFromOntologyDocument(new FileDocumentSource(file),loadingConfig);
 
 					inputOWLmodels.add(tempOntology);
 
@@ -161,14 +168,7 @@ public class HBuilder {
 
 					file = null;
 					sucssefullFiles = sucssefullFiles + ";" + OntName;
-				} catch (OWLOntologyCreationException e) {
-					failedFiles = failedFiles + ";" + nm[ontID];
-					System.out.println("Error during reading file: \t" + nm[ontID]);
-					e.printStackTrace();
-					MyLogging.log(Level.SEVERE,
-							"OWLOntologyCreationException in reading input ontologies" + e.toString() + "\n");
 
-				}
 			}
 		}
 
@@ -189,13 +189,6 @@ public class HBuilder {
 		m.setCheckBuildModel(true);
 		m.setOntIRI(IRI.create("http://merged#"));
 
-		// TO DO: assign roots:
-		/*
-		 * OWLOntology ont = ontM.getOwlModel(); Set<OWLOntology> ontList = new
-		 * HashSet<OWLOntology>(); ontList.add(ont); SimpleRootClassChecker root
-		 * = new SimpleRootClassChecker(ontList); boolean a=
-		 * root.isRootClass(c); if (a){ int wait=0; }
-		 */
 
 		MyLogging.log(Level.INFO, msg);
 
@@ -245,11 +238,148 @@ public class HBuilder {
 
 		MyLogging.log(Level.INFO, msg);
 
-		StatisticTest.result.put("Tbox_OM", String.valueOf(OM.getTBoxAxioms(false).size()));
-		StatisticTest.result.put("Abox_OM", String.valueOf(OM.getABoxAxioms(false).size()));
+		StatisticTest.result.put("Tbox_OM", String.valueOf(OM.getTBoxAxioms(true).size()));
+		StatisticTest.result.put("Abox_OM", String.valueOf(OM.getABoxAxioms(true).size()));
 		StatisticTest.result.put("class_OM", String.valueOf(cl));
 		StatisticTest.result.put("property_OM", String.valueOf((obj + dp)));
 		StatisticTest.result.put("instance_OM", String.valueOf(ins));
+
+	}
+	
+	public static HModel singleRun(HModel m) throws OWLOntologyCreationException {
+		long startTime = System.currentTimeMillis();
+		ArrayList<Integer> classSize = new ArrayList<Integer>();
+		ArrayList<Integer> objectSize = new ArrayList<Integer>();
+		ArrayList<Integer> dataProSize = new ArrayList<Integer>();
+		ArrayList<Integer> instanceSize = new ArrayList<Integer>();
+		ArrayList<Integer> annoSize = new ArrayList<Integer>();
+		Set<OWLAxiom> tempAnno = new HashSet<OWLAxiom>();
+		ArrayList<OWLOntology> inputOWLmodels = new ArrayList<OWLOntology>();
+		int classesSize = 0;
+		int propertiesSize = 0;
+		String prefOnt = m.getPreferedOnt();
+		String msg = "";
+		String st = "";
+
+		OWLOntologyManager MergedManager = OWLManager.createOWLOntologyManager();
+		File fileM = new File(m.getOntName());
+		OWLOntology MergedOntology = null;
+
+		
+        OWLOntologyLoaderConfiguration loadingConfig = new OWLOntologyLoaderConfiguration();
+        loadingConfig = loadingConfig.setMissingImportHandlingStrategy(MissingImportHandlingStrategy.SILENT);
+		
+        MergedOntology = MergedManager.loadOntologyFromOntologyDocument(new FileDocumentSource(fileM),loadingConfig);
+
+		if (prefOnt.contains(".")) {
+			String[] sPrefOnt = prefOnt.split("\\.");
+			prefOnt = sPrefOnt[0];
+		}
+		IRI ontIRm = MergedOntology.getOntologyID().getOntologyIRI();
+		if (ontIRm != null && ontIRm.toString().toLowerCase().contains(prefOnt.toLowerCase())) 
+			m.SetPreferedOnt(ontIRm.toString() + "#");
+		
+		
+		//##########################read input files
+		String[] nm = m.getlistOntName().split(";");
+		MyLogging.log(Level.INFO, nm.length + " input ontologies has been read and parsed into merged model. \n");
+
+		// test:
+		String sucssefullFiles = "", failedFiles = "";
+		for (int ontID = 0; ontID < nm.length; ontID++) {
+			if (!nm[ontID].toString().equals("null")) {
+					String OntName = nm[ontID];
+					File file = new File(OntName);
+					msg = msg + "\n Ontology: " + file.getName() + " has been read. \n";
+					st = st + file.getName();
+					
+					OWLOntologyManager tempManager = OWLManager.createOWLOntologyManager();
+					
+					OWLOntology tempOntology;			
+					
+					tempOntology = tempManager.loadOntologyFromOntologyDocument(new FileDocumentSource(file),loadingConfig);
+
+					inputOWLmodels.add(tempOntology);
+
+					if (prefOnt.contains(".")) {
+						String[] sPrefOnt = prefOnt.split("\\.");
+						prefOnt = sPrefOnt[0];
+					}
+					IRI ontIR = tempOntology.getOntologyID().getOntologyIRI();
+					if (ontIR != null && ontIR.toString().toLowerCase().contains(prefOnt.toLowerCase())) 
+						m.SetPreferedOnt(ontIR.toString() + "#");
+					
+					int cl = tempOntology.getClassesInSignature().size();
+					classSize.add(cl);
+					msg = msg + "\t Number of classes: " + cl;
+					st = st + "-" + cl;
+
+					int obj = tempOntology.getObjectPropertiesInSignature().size();
+					objectSize.add(obj);
+					msg = msg + "\t Number of objectProperties: " + obj;
+
+					int dp = tempOntology.getDataPropertiesInSignature().size();
+					dataProSize.add(dp);
+					msg = msg + "\t Number of dataProperties: " + dp;
+					st = st + "-" + (obj + dp);
+
+					int ins = tempOntology.getIndividualsInSignature().size();
+					instanceSize.add(ins);
+					msg = msg + "\t Number of instances: " + ins;
+					st = st + "-" + ins;
+
+					classesSize = classesSize + tempOntology.getClassesInSignature().size();
+					propertiesSize = propertiesSize + tempOntology.getObjectPropertiesInSignature().size()
+							+ tempOntology.getDataPropertiesInSignature().size();
+
+					Set<OWLAnnotationAssertionAxiom> t = tempOntology.getAxioms(AxiomType.ANNOTATION_ASSERTION);
+					tempAnno.addAll(t);
+					annoSize.add(t.size());
+					msg = msg + "\t Number of annotations: " + t.size();
+
+					String ta = printTAbox(OntName, tempOntology);
+					msg = msg + "\t " + ta;
+					st = st + "-" + tempOntology.getABoxAxioms(true).size() + "-"
+							+ tempOntology.getTBoxAxioms(true).size();
+
+					st = st + "-" + tempOntology.getAxiomCount();
+
+					st = st + ";";
+
+					file = null;
+					sucssefullFiles = sucssefullFiles + ";" + OntName;
+
+			}
+		}
+
+
+		StatisticTest.result.put("input_ontology_size", st);
+		m.SetInputOntNumber(nm.length);
+		m.SetInputClassSize(classSize);
+		m.SetInputObjectSize(objectSize);
+		m.SetInputDataProSize(dataProSize);
+		m.SetInputInstanceSize(instanceSize);
+		m.SetInputAnnoSize(annoSize);
+		m.setInputOwlOntModel(inputOWLmodels);
+		m.SetAllAnnotations(tempAnno);
+		m.SetInputClassSizeTotal(classesSize);
+		m.SetInputPropertySizeTotal(propertiesSize);
+		m.SetManager(MergedManager);
+		m.SetOwlModel(MergedOntology);
+		m.setCheckBuildModel(true);
+		m.setOntIRI(IRI.create("http://merged#"));
+
+		MyLogging.log(Level.INFO, msg);
+
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = stopTime - startTime;
+		MyLogging.log(Level.INFO,
+				"Total time for reading all input ontologies and save their entities into the merged model is: "
+						+ elapsedTime + " ms. \n");
+
+		StatisticTest.result.put("time_reading_input_ontologies", Long.toString(elapsedTime));
+
+		return m;
 
 	}
 }

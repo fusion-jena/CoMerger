@@ -16,14 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.divideConquer;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -91,19 +91,21 @@ public class AssignBlockProperties {
 		 */
 		HashSet<OWLAxiom> brIsaAx = new HashSet<OWLAxiom>();
 		HashSet<OWLAxiom> brAllAx = new HashSet<OWLAxiom>();
+		HashSet<OWLAxiom> UnconAllAx = new HashSet<OWLAxiom>();
 		ontM.SetOtherBreakingAxiom(brAllAx);
 		ontM.SetISABreakingAxiom(brIsaAx);
+		ontM.SetUnconnectedAxiom(UnconAllAx);
 		if (ontM.getClusters() != null && ontM.getClusters().size() == 1) {
 			ontM.getClusters().get(0).setManager(ontM.getManager());
 			ontM.getClusters().get(0).setOntology(ontM.getOwlModel());
-			ArrayList<OWLClassExpression> elm = new ArrayList<OWLClassExpression>(
+			HashSet<OWLClassExpression> elm = new HashSet<OWLClassExpression>(
 					ontM.getOwlModel().getClassesInSignature());
 			ontM.getClusters().get(0).SetClasses(elm);
 		} else if (ontM.getClusters() != null) {
 			ontM = processAxiomsWithOrder(ontM);
 		}
 
-		ontM.SetClusters(clusterList);
+//		ontM.SetClusters(clusterList);
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
@@ -118,11 +120,15 @@ public class AssignBlockProperties {
 	private HModel processAxiomsWithOrder(HModel ontM) {
 
 		OWLOntology Om = ontM.getOwlModel();
+	
 
+		
 		Iterator<OWLSubClassOfAxiom> axiter = Om.getAxioms(AxiomType.SUBCLASS_OF).iterator();
 		while (axiter.hasNext())
 			ontM = SubClassAdder(axiter.next(), ontM);
 
+		
+		
 		Iterator<OWLEquivalentClassesAxiom> axiter2 = Om.getAxioms(AxiomType.EQUIVALENT_CLASSES).iterator();
 		while (axiter2.hasNext())
 			ontM = EquivalentClassesAdder(axiter2.next(), ontM);
@@ -620,7 +626,6 @@ public class AssignBlockProperties {
 		OWLOntology ClusterOntology;
 		OWLOntologyManager ClusterManager;
 
-		
 		OWLClassExpression c = ((OWLClassAssertionAxiom) myAxiom).getClassExpression();
 		OWLClass cc = c.asOWLClass();
 		if (cc instanceof OWLClass) {
@@ -812,7 +817,7 @@ public class AssignBlockProperties {
 
 		OWLOntology ClusterOntology;
 		OWLOntologyManager ClusterManager;
-		
+
 		OWLClassExpression SuperClass = ((OWLSubClassOfAxiom) myAxiom).getSuperClass();
 		OWLClassExpression SubClass = ((OWLSubClassOfAxiom) myAxiom).getSubClass();
 
@@ -834,6 +839,11 @@ public class AssignBlockProperties {
 				ClusterOntology = ontM.getClusters().get(clusterIdSub).getOntology();
 				ClusterManager.addAxiom(ClusterOntology, myAxiom);
 				ontM.getClusters().get(clusterIdSub).setManager(ClusterManager);
+			} else if (clusterIdSub == -1 && clusterIdSup == -1) {
+				HashSet<OWLAxiom> unAx = ontM.getUnconnectedAxiom();
+				unAx.add(myAxiom);
+				ontM.SetUnconnectedAxiom(unAx);
+
 			} else {
 				HashSet<OWLAxiom> brAx = ontM.getISABreakingAxiom();
 				brAx.add(myAxiom);
@@ -874,7 +884,6 @@ public class AssignBlockProperties {
 				HashSet<OWLAxiom> brAx = ontM.getISABreakingAxiom();
 				brAx.add(myAxiom);
 				ontM.SetISABreakingAxiom(brAx);
-
 			}
 
 		} else if (SubClass instanceof OWLClassImpl) {
@@ -894,11 +903,16 @@ public class AssignBlockProperties {
 				ClusterManager.addAxiom(ClusterOntology, myAxiom);
 				ontM.getClusters().get(clusterIdSub).setManager(ClusterManager);
 
-			} else {
+			}else if (clusterIdSub == -1){
+				//System.out.println("unconnceted beacuse the element does not exist in the cluster and the axiom is type of dtacardinlaity:" +myAxiom);
+				HashSet<OWLAxiom> unAx = ontM.getUnconnectedAxiom();
+				unAx.add(myAxiom);
+				ontM.SetUnconnectedAxiom(unAx);
+			}
+			else {
 				HashSet<OWLAxiom> brAx = ontM.getISABreakingAxiom();
 				brAx.add(myAxiom);
 				ontM.SetISABreakingAxiom(brAx);
-
 			}
 		} else {
 			String msg = "The subClassOf axiom: " + myAxiom + " could not be added to any clusters!";

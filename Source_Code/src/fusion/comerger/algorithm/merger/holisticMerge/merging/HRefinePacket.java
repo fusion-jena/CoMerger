@@ -259,6 +259,7 @@ public class HRefinePacket {
 		}
 		return res;
 	}
+
 	// *********************************************************************************************************
 	public static HModel PropertiesPreservation(HModel ontM) {
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
@@ -333,7 +334,7 @@ public class HRefinePacket {
 								int r = ontM.getRefineActionOnMerge();
 								ontM.setRefineActionOnMerge(r + 1);
 							} else {
-								// TODO: process it: it requires considering all
+								// process it: it requires considering all
 								// types! or- it only needs checking
 								// ObjectUnionOF
 								// case, not more!
@@ -400,7 +401,7 @@ public class HRefinePacket {
 								ontM.setRefineActionOnMerge(r + 1);
 
 							} else {
-								// TODO: process it: it requires considering all
+								// process it: it requires considering all
 								// types! or- it only needs checking
 								// ObjectUnionOF
 								// case, not more!
@@ -488,7 +489,7 @@ public class HRefinePacket {
 								ontM.setRefineActionOnMerge(r + 1);
 
 							} else {
-								// TODO: process it: it requires considering all
+								// process it: it requires considering all
 								// types! or- it only needs checking
 								// ObjectUnionOF
 								// case, not more!
@@ -545,7 +546,7 @@ public class HRefinePacket {
 
 		}
 
-		// TODO: do it for FunctionalProperty and InverseFunctionalProperty
+		// do it for FunctionalProperty and InverseFunctionalProperty
 		ontM.SetOwlModel(Om);
 		ontM.SetManager(manager);
 
@@ -683,7 +684,7 @@ public class HRefinePacket {
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
 		Set<OWLObjectProperty> OmPro = Om.getObjectPropertiesInSignature();
-		// TODO: do it for object and datatype etc. property
+		// do it for object and datatype etc. property
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
 			OWLOntology Oi = ontM.getInputOwlOntModel().get(i);
 			Iterator<OWLObjectProperty> iter3 = Oi.getObjectPropertiesInSignature().iterator();
@@ -699,7 +700,7 @@ public class HRefinePacket {
 
 					Set<OWLDataProperty> dpro = pOi.getDataPropertiesInSignature();
 					Set<OWLDataProperty> dproRef = pOiRef.getDataPropertiesInSignature();
-					
+
 					if (!dpro.equals(dproRef)) {
 						msg = "The dataproperty: " + " of property: "
 								+ pOi.toString().replace("<", "[").replace(">", "]")
@@ -708,7 +709,7 @@ public class HRefinePacket {
 
 					Set<OWLDatatype> dt = pOi.getDatatypesInSignature();
 					Set<OWLDatatype> dtRef = pOiRef.getDatatypesInSignature();
-			
+
 					if (!dt.equals(dtRef)) {
 						msg = "The datatype: " + " of property: " + pOi.toString().replace("<", "[").replace(">", "]")
 								+ " is skiped, and only the datatype of the reference equal entity is keeped.\n";
@@ -721,7 +722,7 @@ public class HRefinePacket {
 		}
 
 		ArrayList<HMappedDpro> OmEqDataPro = ontM.getEqDataProperties();
-		// TODO:error :How to get type of datatypeproperties in OWL?
+		// to get type of datatypeproperties in OWL?
 		for (int j = 0; j < OmEqDataPro.size(); j++) {
 			OWLDataProperty Dpro = OmEqDataPro.get(j).getRefDpro();
 			Set<OWLDataRange> dataRangeRef = Dpro.getRanges(Om);
@@ -1205,7 +1206,7 @@ public class HRefinePacket {
 	// *********************************************************************************************************
 
 	public static HModel DomainRangeMinimality(HModel ontM) {
-		// TODO: add log info in this function
+		// add log info in this function
 		long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 		long startTime = System.currentTimeMillis();
 		OWLOntology Om = ontM.getOwlModel();
@@ -1407,7 +1408,7 @@ public class HRefinePacket {
 								ee.SetObject((OWLClass) D);
 								ee.SetValue(false);
 								tempParent.add(ee);
-								// TODO: Check it later
+
 								if (D.containsEntityInSignature(c)) {
 									res.add(cc);
 									manager.removeAxiom(Om, cc);
@@ -1628,7 +1629,7 @@ public class HRefinePacket {
 						// exist in the merged ontology. so we should
 						// connected it to the root
 						OWLClass root = new OWLClassImpl(IRI.create(OWL.Thing.getURI()));
-						// TODO: get the root of Om , do not create a new
+						// get the root of Om , do not create a new
 						// root
 						OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(c, root);
 						manager.addAxiom(Om, newAxiom);
@@ -1689,7 +1690,7 @@ public class HRefinePacket {
 							// exist in the merged ontology. so we should
 							// connected it to the root
 							OWLClass root = new OWLClassImpl(IRI.create(OWL.Thing.getURI()));
-							// TODO: get the root of Om , do not create a new
+							// get the root of Om , do not create a new
 							// root
 							OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(c, root);
 							manager.addAxiom(Om, newAxiom);
@@ -1701,7 +1702,7 @@ public class HRefinePacket {
 						}
 					} else {
 						OWLClass root = new OWLClassImpl(IRI.create(OWL.Thing.getURI()));
-						// TODO: get the root of Om , do not create a new
+						// get the root of Om , do not create a new
 						// root
 						OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(c, root);
 						manager.addAxiom(Om, newAxiom);
@@ -1742,7 +1743,6 @@ public class HRefinePacket {
 
 	public static HModel UnconnectedPropertyProhibition(HModel ontM) {
 		long startTime = System.currentTimeMillis();
-		// TODO check it again
 		// every property that had some connection before the merging, should
 		// have some connection after
 		// Properties should not be unconnected- means it should be connected to
@@ -1751,7 +1751,7 @@ public class HRefinePacket {
 		// ArrayList<OWLClass> res = new ArrayList<OWLClass>();
 		OWLOntology Om = ontM.getOwlModel();
 		OWLOntologyManager manager = ontM.getManager();
-		
+
 		String changes = "";
 		OWLEntityRemover remover = new OWLEntityRemover(manager, Collections.singleton(Om));
 		// For Objectproperties
@@ -1984,7 +1984,7 @@ public class HRefinePacket {
 		// OWLDataProperty dp = iterr.next();
 		// Set<OWLDatatype> dataType = dp.getDatatypesInSignature();
 		// }
-		// TODO:error :How to get type of datatypeproperties in OWL?
+		// to get type of datatypeproperties in OWL?
 		for (int j = 0; j < OmEqDataPro.size(); j++) {
 			OWLDataProperty Dpro = OmEqDataPro.get(j).getRefDpro();
 			Set<OWLDatatype> dataTypeRef = Dpro.getDatatypesInSignature();
@@ -2044,7 +2044,6 @@ public class HRefinePacket {
 	// *********************************************************************************************************
 
 	public static HModel ValueConstraint(HModel ontM) {
-		// TODO check it again
 		long startTime = System.currentTimeMillis();
 		String changes = "";
 		OWLOntology Om = ontM.getOwlModel();
@@ -2081,7 +2080,7 @@ public class HRefinePacket {
 											+ SuperClassOm.toString().replace("<", "[").replace(">", "]")
 											+ " in the merged ontology was different with the input ontology. So, it sets to the input ontology value. \n";
 									// sOm should be set as sOi, but if Oi
-									// is the preference one!TODO:check it
+									// is the preference one!
 									OWLDataExactCardinality cardi = factory.getOWLDataExactCardinality(sOi,
 											(OWLDataPropertyExpression) SubClassOm);
 									OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(SubClassOi, cardi);
@@ -2114,7 +2113,7 @@ public class HRefinePacket {
 											+ SuperClassOm.toString().replace("<", "[").replace(">", "]")
 											+ " in the merged ontology was different with the input ontology. So, it sets to the input ontology value. \n";
 									// sOm should be set as sOi, but if Oi
-									// is the preference one!TODO:check it
+									// is the preference one!
 									OWLObjectExactCardinality cardi = factory.getOWLObjectExactCardinality(sOi,
 											(OWLObjectPropertyExpression) SubClassOm);
 									OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(SubClassOi, cardi);
@@ -2148,7 +2147,7 @@ public class HRefinePacket {
 											+ SuperClassOm.toString().replace("<", "[").replace(">", "]")
 											+ " in the merged ontology was different with the input ontology. So, it sets to the input ontology value. \n";
 									// sOm should be set as sOi, but if Oi
-									// is the preference one!TODO:check it
+									// is the preference one!
 									OWLObjectMaxCardinality cardi = factory.getOWLObjectMaxCardinality(sOi,
 											(OWLObjectPropertyExpression) SubClassOm);
 									OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(SubClassOi, cardi);
@@ -2181,7 +2180,7 @@ public class HRefinePacket {
 											+ SuperClassOm.toString().replace("<", "[").replace(">", "]")
 											+ " in the merged ontology was different with the input ontology. So, it sets to the input ontology value. \n";
 									// sOm should be set as sOi, but if Oi
-									// is the preference one!TODO:check it
+									// is the preference one!
 									OWLDataMaxCardinality cardi = factory.getOWLDataMaxCardinality(sOi,
 											(OWLDataPropertyExpression) SubClassOm);
 									OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(SubClassOi, cardi);
@@ -2214,7 +2213,7 @@ public class HRefinePacket {
 											+ SuperClassOm.toString().replace("<", "[").replace(">", "]")
 											+ " in the merged ontology was different with the input ontology. So, it sets to the input ontology value. \n";
 									// sOm should be set as sOi, but if Oi
-									// is the preference one!TODO:check it
+									// is the preference one!
 									OWLDataMinCardinality cardi = factory.getOWLDataMinCardinality(sOi,
 											(OWLDataPropertyExpression) SubClassOm);
 									OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(SubClassOi, cardi);

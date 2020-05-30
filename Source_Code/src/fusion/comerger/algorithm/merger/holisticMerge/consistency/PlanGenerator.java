@@ -62,6 +62,7 @@ public class PlanGenerator {
 			String group = "";
 			int i = 0;
 			Map<String, OWLAxiom> SuggestAx = new HashMap<String, OWLAxiom>();
+			String batchPlan = "";
 
 			for (int index = 0; index < allErrAx.size(); index++) {
 				String rows = "";
@@ -92,7 +93,8 @@ public class PlanGenerator {
 						String rewritedAxiomStr = "";
 						String repair = "";
 						OWLAxiom rewritedAxiom = null;
-						if (m == 0) {// 1st element is the min and should revise
+						if (m == 0) { // 1st element is the min and should
+										// revise
 							check = "checked=\"checked\"";
 							rewritedAxiom = suggestRewrite(myAxiom, ontM);
 							if (rewritedAxiom != null) {
@@ -107,12 +109,23 @@ public class PlanGenerator {
 										+ "<input type=\"radio\" name=\"offer" + i + "\" value=\"rewrite" + i
 										+ "\" checked>Rewrite <input type=\"text\" name=\"rewriteText" + i
 										+ "\" value=\"" + rewritedAxiomStr + "\">";
+
+								// save info for batch file
+								String p = "rewrite" + i;
+								batchPlan = p + "," + axx.getAxiomID() + "," + rewritedAxiom.toString() + ","
+										+ batchPlan;
+
 							} else {
 								repair = "<input type=\"radio\" name=\"offer" + i + "\" value=\"del" + i
 										+ "\" checked>Delete " + "<input type=\"radio\" name=\"offer" + i
 										+ "\" value=\"rewrite" + i
 										+ "\">Rewrite <input type=\"text\" name=\"rewriteText" + i + "\" value=\"\">";
+
+								// save info for batch file
+								String p = "del" + i;
+								batchPlan = p + "," + axx.getAxiomID() + "," + "" + "," + batchPlan;
 							}
+
 						} else {// without checked for radio buttons
 							repair = "<input type=\"radio\" name=\"offer" + i + "\" value=\"del" + i + "\" >Delete "
 									+ "<input type=\"radio\" name=\"offer" + i + "\" value=\"rewrite" + i
@@ -134,13 +147,14 @@ public class PlanGenerator {
 			plan = "<table style=\"border: 1px solid #BEC3EF; width:99%\">" + row1 + group + "</table>";
 
 			ontM.setSuggestedAxioms(SuggestAx);
+			// it will be used for local batch file
+			ontM.setSuggestedPlan(batchPlan);
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}
 		return plan;
 	}
 
-	
 	private static ArrayList<ArrayList<Opinion>> doOrderAxiom(ArrayList<ArrayList<Opinion>> axList) {
 		ArrayList<ArrayList<Opinion>> res = new ArrayList<ArrayList<Opinion>>();
 

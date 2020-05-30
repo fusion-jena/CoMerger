@@ -104,30 +104,12 @@ public class Matching {
 	}
 
 	public Alignment run(String path) {
-		// TODO: put reading in try catch block
 		OntDocumentManager mgr = new OntDocumentManager();
 		mgr.setProcessImports(true);
 		OntModelSpec spec = new OntModelSpec(OntModelSpec.OWL_MEM);
 		spec.setDocumentManager(mgr);
 
 		boolean model1NotBuild = false, model2NotBuild = false;
-		// Data data = new Data();
-		// BuildModel.checkFormat(filepath1, data);
-
-//		try{
-//		org.apache.jena.rdf.model.Model model =  ModelFactory.createDefaultModel();
-//		InputStream file = FileManager.get().open( filepath1);
-//		model.read(file,null);
-////		model1= (OntModel) model;
-////		model1.write(System.out);
-//		model1NotBuild = true;
-//	} catch (Exception e) {
-//		model1NotBuild = false;
-//	}
-		
-		
-//		convertOntModelToOwl();
-		
 		
 		try {
 			model1 = ModelFactory.createOntologyModel(spec, null);
@@ -149,10 +131,7 @@ public class Matching {
 		try {
 			model2 = ModelFactory.createOntologyModel(spec, null);
 			model2.read(filepath2);
-//			org.apache.jena.rdf.model.Model model2 =  ModelFactory.createDefaultModel();
-//			InputStream file = FileManager.get().open( filepath2);
-//			model2.read(file,null);
-//			model2.write(System.out);
+
 			model2NotBuild = true;
 		} catch (Exception e) {
 			model2NotBuild = false;
@@ -167,24 +146,9 @@ public class Matching {
 			}
 		}
 
-		// model2 = ModelFactory.createOntologyModel(spec);//
-		// OntModelSpec.OWL_DL_MEM);
-		// model2.read("file:" + filepath2);// new FileInputStream(filepath2),
-		// null,
-		// RDFLanguages.strLangTurtle);
-
-		// OntDocumentManager mgr = new OntDocumentManager();
-		// mgr.setProcessImports(true);
-		// OntModelSpec spec = new OntModelSpec(OntModelSpec.OWL_MEM);
-		// spec.setDocumentManager(mgr);
-		// // System.out.println(filepath1+"\t the file path\t"+filepath2);
-		// model1 = ModelFactory.createOntologyModel(spec, null);
-		// model1.read(filepath1);
-		// model2 = ModelFactory.createOntologyModel(spec, null);
-		// model2.read(filepath2);
 
 		int size1 = model1.listStatements().toList().size(), size2 = model2.listStatements().toList().size();
-		Parameters.largeOnto = 1000000000;//1000;
+		Parameters.largeOnto = 100000000;
 		if (size1 >= Parameters.largeOnto || size2 >= Parameters.largeOnto) {
 			// If the ontology size is small, it use GMO and VDOC , otherwise it
 			// uses SeeCOnt
@@ -200,10 +164,8 @@ public class Matching {
 			if (file.exists() == false) {
 				file.mkdir();
 			}
-			String fn1 = filepath1.substring(5, filepath1.length());// new
-																	// File(filepath1).getName();
-			String fn2 = filepath2.substring(5, filepath2.length());// new
-																	// File(filepath2).getName();
+			String fn1 = filepath1.substring(5, filepath1.length());
+			String fn2 = filepath2.substring(5, filepath2.length());
 
 			/*
 			 * // In Falcon, It call PBM method and get anchors and block
@@ -221,28 +183,15 @@ public class Matching {
 			// Number of Partition for 1st ontology ");
 			String fileName1;
 			String fileName2;
-			// if(MatchingPanel.textFieldOnto1!=null)
-			// {
-			// fileName1 = MatchingPanel.textFieldOnto1.getText();
-			// fileName2 = MatchingPanel.textFieldOnto2.getText();
-			// }
-			// else{
-			// fileName1=fn1;
-			// fileName2=fn2;
-			// }
+		
 			fileName1 = fn1;
 			Data data1 = new Data();
 			data1.setOntName(fileName1);
 			data1.setPath(path);
 			BuildModel.BuildModelOnt(data1);
-			String name1 = data1.getOntName();// BuildModel.fn1;
+			String name1 = data1.getOntName();
 			data1.setNumCH(Integer.parseInt(NumCHMatchFile1));
-			CClustering C_Ont1 = new CClustering(); // we should call it by the
-													// textbox of matching
-													// panel, so when we call
-													// BuildModel (in previous
-													// lines, we can reach to
-													// this goal)
+			CClustering C_Ont1 = new CClustering(); 
 			C_Ont1.StepsCClustering(data1, 0); // 0 means call to main
 												// partitioning process
 
@@ -319,10 +268,7 @@ public class Matching {
 		InputStream file = FileManager.get().open( filepath1);
 		model2.read(file,null);
 		model2.write(System.out);
-		
-		
-		
-		///
+	
 		org.apache.jena.rdf.model.Model model = ModelFactory.createDefaultModel();
 
 		    try (PipedInputStream is = new PipedInputStream(); PipedOutputStream os = new PipedOutputStream(is)) {
@@ -374,22 +320,6 @@ public class Matching {
 	}
 
 	private Alignment run(String path, OntModel model1, OntModel model2) {
-//		RBGModel rbgmVDoc1 = RBGModelFactory.createModel("VDOC_MODEL");
-//		rbgmVDoc1.setOntModel(model1);
-//		RBGModel rbgmVDoc2 = RBGModelFactory.createModel("VDOC_MODEL");
-//		rbgmVDoc2.setOntModel(model2);
-//		VDocMatcher vdoc = new VDocMatcher(rbgmVDoc1, rbgmVDoc2);
-//		vdoc.match();
-//		Alignment vdocAS = vdoc.getAlignment();
-//		Alignment classVDocAS = vdoc.getClassAlignment();
-//		Alignment propertyVDocAS = vdoc.getPropertyAlignment();
-//		Alignment schemaVDocAS = combine(classVDocAS, propertyVDocAS);
-//		LingComp comp1 = new LingComp(rbgmVDoc1, rbgmVDoc2);
-//		vdocComp1 = comp1.estimate1(schemaVDocAS);
-//		vdocComp2 = comp1.estimate2(vdocAS);
-
-		
-	
 		
 		RBGModel rbgmString1 = RBGModelFactory.createModel("STRING_MODEL");
 		rbgmString1.setOntModel(model1);

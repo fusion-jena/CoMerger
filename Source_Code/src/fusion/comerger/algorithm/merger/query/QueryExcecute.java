@@ -73,7 +73,7 @@ public class QueryExcecute {
 			PrintStream ps = new PrintStream(baos);
 			ResultSetFormatter.out(ps, results, query);
 			res = new String(baos.toByteArray(), "UTF-8");
-			System.out.println(res);
+			//System.out.println(res);
 			qe.close();
 		} catch (Exception e) {
 			res = "Query is not processable";
@@ -194,9 +194,9 @@ public class QueryExcecute {
 			PrintStream ps = new PrintStream(baos);
 			ResultSetFormatter.out(ps, results, query);
 			String res = new String(baos.toByteArray(), "UTF-8");
-			System.out.println(res);
+			//System.out.println(res);
 			qe.close();
-			Answer[0] = "<h2>Result on merged ontology</h2> <textarea	id=\"resultQueryM\" name=\"resultQueryM\" style=\"width: 100%; font-size: 10px; height: 300px;\">"
+			Answer[0] = "<h2>Result on merged ontology</h2> <textarea	id=\"resultQueryM\" name=\"resultQueryM\" style=\"width: 100%; font-size: 14px; height: 660px;\">"
 					+ res + "</textarea>";
 
 			String[] fileName = inputFile.split(";");
@@ -218,10 +218,11 @@ public class QueryExcecute {
 					ps = new PrintStream(baos);
 					ResultSetFormatter.out(ps, results, query);
 					res = new String(baos.toByteArray(), "UTF-8");
-					System.out.println(res);
+					//System.out.println(res);
 					qe.close();
-					res = "<h2>Result on ontology " + i
-							+ "</h2> <textarea id=\"resultQueryO\" name=\"resultQueryO\" style=\"width: 100%; font-size: 10px; height: 300px;\">"
+					int indexer = i+1;
+					res = "<h2>Result on ontology " + indexer
+							+ "</h2> <textarea id=\"resultQueryO\" name=\"resultQueryO\" style=\"width: 100%; font-size: 14px; height: 300px;\">"
 							+ res + "</textarea>";
 					if (Answer[1] == null) {
 						Answer[1] = res;
@@ -244,36 +245,3 @@ public class QueryExcecute {
 		return Answer;
 	}
 }
-/*
- * public static void main( String[] args ) { OntModel model =
- * ModelFactory.createOntologyModel( OntModelSpec.OWL_MEM_MICRO_RULE_INF);
- * //String inputFileName="pizza.owl"; String
- * inputFileName="C:\\Doc\\Dataset\\conf2013\\cmt.owl"; InputStream in =
- * FileManager.get().open( inputFileName ); if (in == null) { throw new
- * IllegalArgumentException( "File: " + inputFileName + " not found"); }
- * model.read(in, null);
- * 
- * String queryString =
- * "prefix pizza: <www.co-ode.org/ontologies/pizza/pizza.owl#Pizza> "+
- * "prefix rdfs: <" + RDFS.getURI() + "> " + "prefix owl: <" + OWL.getURI() +
- * "> " + "select ?pizza where {?pizza a owl:Class ; " +
- * "rdfs:subClassOf ?restriction. " +
- * "?restriction owl:onProperty pizza:hasTopping ;" +
- * "owl:someValuesFrom pizza:PeperoniSausageTopping" + "}";
- * com.hp.hpl.jena.query.Query query = QueryFactory.create(queryString);
- * QueryExecution qe = QueryExecutionFactory.create(query, model);
- * com.hp.hpl.jena.query.ResultSet results = qe.execSelect();
- * 
- * ResultSetFormatter.out(System.out, results, query); qe.close(); }
- */
-// https://stackoverflow.com/questions/13255744/trying-to-create-a-sparql-query-using-jenas-java-api
-
-/*
- * String queryString =
- * "prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> " +
- * "prefix rdfs: <" + RDFS.getURI() + "> " + "prefix owl: <" + OWL.getURI() +
- * "> " + "select ?pizza where {?pizza a owl:Class ; " +
- * "rdfs:subClassOf ?restriction. " +
- * "?restriction owl:onProperty pizza:hasTopping ;" +
- * "owl:someValuesFrom pizza:PeperoniSausageTopping" + "}";
- */

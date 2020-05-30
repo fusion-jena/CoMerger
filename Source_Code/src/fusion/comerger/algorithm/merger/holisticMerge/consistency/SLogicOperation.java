@@ -123,19 +123,6 @@ public class SLogicOperation {
 
 		case "AnnotationAssertion":
 			// it does not have OWLClass axiom
-			// OWLAnnotationProperty property = ((OWLAnnotationAssertionAxiom)
-			// currentAxiom).getProperty();
-			// OWLAnnotationSubject subject = ((OWLAnnotationAssertionAxiom)
-			// currentAxiom).getSubject();
-			// OWLAnnotationValue value = ((OWLAnnotationAssertionAxiom)
-			// currentAxiom).getValue();
-			// if (subject instanceof IRI) {
-			// OWLDataFactory df = ontM.getManager().getOWLDataFactory();
-			// OWLClass cl = df.getOWLClass((IRI) subject);
-			// if (cl != null) {
-			// elm.add(cl);
-			// }
-			// }
 			break;
 
 		case "ClassAssertion":
@@ -174,7 +161,6 @@ public class SLogicOperation {
 
 	private Set<OWLClass> DifferentIndividualsElm(OWLAxiom ax) {
 		Set<OWLClass> elm = new HashSet<OWLClass>();
-		// TODO
 		return elm;
 	}
 
@@ -234,7 +220,9 @@ public class SLogicOperation {
 					elm.addAll(cls.getClassesInSignature());
 				} else if (cls instanceof OWLObjectSomeValuesFrom) {
 					OWLClassExpression rang = ((OWLObjectSomeValuesFrom) cls).getFiller();
-					elm.add(rang.asOWLClass());
+					if (rang instanceof OWLClass) {
+						elm.add(rang.asOWLClass());
+					}
 					elm.addAll(((OWLObjectSomeValuesFrom) cls).getClassesInSignature());
 					if (rang instanceof OWLObjectUnionOf)
 						elm.addAll(rang.getClassesInSignature());
@@ -372,17 +360,6 @@ public class SLogicOperation {
 
 		if (ontM.getEqAxioms().get(ax) != null)
 			return true;
-		// ArrayList<ArrayList<OWLAxiom>> eqAx = ontM.getEqAxioms();
-		// for (int i = 0; i < eqAx.size(); i++) {
-		// ArrayList<OWLAxiom> eqAxx = eqAx.get(i);
-		// if (eqAxx.contains(ax)) {
-		// for (int j = 0; j < eqAxx.size(); j++) {
-		// if (oi.getAxioms().contains(eqAxx.get(j)))
-		// return true;
-		// }
-		// }
-		// }
-
 		return false;
 	}
 

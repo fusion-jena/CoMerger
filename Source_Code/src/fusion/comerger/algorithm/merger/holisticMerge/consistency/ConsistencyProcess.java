@@ -17,19 +17,6 @@ package fusion.comerger.algorithm.merger.holisticMerge.consistency;
  * limitations under the License.
  */
 
-/**
-* Author: Samira Babalou<br>
-* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
-* Heinz-Nixdorf Chair for Distributed Information Systems<br>
-* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
-* Date: 17/12/2019
-*/
-/**
- * CoMerger: Holistic Multiple Ontology Merger.
- * Consistency checker sub package based on the Subjective Logic theory.
- * @author Samira Babalou (samira[dot]babalou[at]uni_jean[dot]de)
- */
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,6 +24,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.logging.Level;
 
+import org.semanticweb.HermiT.Configuration;
 import org.semanticweb.owl.explanation.impl.rootderived.CompleteRootDerivedReasoner;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLAxiom;
@@ -52,13 +40,14 @@ import com.clarkparsia.owlapi.explanation.BlackBoxExplanation;
 import com.clarkparsia.owlapi.explanation.HSTExplanationGenerator;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 
-import fusion.comerger.servlets.MatchingProcess;
-import fusion.comerger.servlets.MergingProcess;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.merger.holisticMerge.general.HSave;
 import fusion.comerger.algorithm.merger.holisticMerge.general.SaveTxt;
 import fusion.comerger.algorithm.merger.holisticMerge.general.Zipper;
+import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.model.HModel;
+import fusion.comerger.servlets.MatchingProcess;
+import fusion.comerger.servlets.MergingProcess;
 
 public class ConsistencyProcess {
 
@@ -67,7 +56,8 @@ public class ConsistencyProcess {
 		String ontList = "C:\\YOUR_LOCAL_FOLDER\\cmt.owl";
 		ontList = ontList + ";" + "C:\\YOUR_LOCAL_FOLDER\\conference.owl";
 		ontList = ontList + ";" + "C:\\YOUR_LOCAL_FOLDER\\confOf.owl";
-		String mappingFile = MatchingProcess.CreateMap(ontList, "1", "1", directory);
+		String matchType = "Jacard"; // "SeeCOnt";
+		String mappingFile = MatchingProcess.CreateMap(ontList, "1", "1", directory, matchType);
 		String[][] Rules = new String[8][2];
 		Rules[0][0] = "ClassCheck";
 		Rules[1][0] = "RealtionCheck";
@@ -85,8 +75,7 @@ public class ConsistencyProcess {
 		String[] EvalDim = new String[10];
 		for (int i = 0; i < 10; i++)
 			EvalDim[i] = "on";
-		HModel ontM = MergingProcess.DoMerge(ontList, mappingFile, directory, "HolisticMerge", userItem, "equal",
-				"RDF/XML");
+		HModel ontM = MergingProcess.DoMerge(ontList, mappingFile, directory, userItem, "equal", "RDF/XML");
 
 		String param = "root,5";
 		// Run
@@ -126,20 +115,29 @@ public class ConsistencyProcess {
 		res[0] = "Pellet"; // name of reasnoer
 		res[1] = "Pellet is one of promising reasoner."; // description
 		OWLReasonerFactory reasonerFactory = new PelletReasonerFactory();
-		OWLReasoner reasoner = reasonerFactory.createNonBufferingReasoner(ont);
+		Configuration configuration = new Configuration();
+		configuration.throwInconsistentOntologyException = false;
+		OWLReasoner reasoner = reasonerFactory.createNonBufferingReasoner(ont, configuration);
+
+		System.out.println("finished creating reasoner");
+		System.out.println("start to test reasoner.isConsistent()");
 		if (reasoner.isConsistent()) {
 			// an ontology can be consistent, but have unsatisfiable classes.
-			if (reasoner.getUnsatisfiableClasses().getEntitiesMinusBottom().size() > 0) {
+			System.out.println("start to test getUnsatisfiableClasses");
+			Set<OWLClass> rs = reasoner.getUnsatisfiableClasses().getEntitiesMinusBottom();
+			if (rs.size() > 0) {
 				// means: an ontology is consistent but unsatisfiable!
 				res[2] = "<span style=\"font-weight: bold; color: red; width: 100%;\"> FAILED </span>";
 				res[3] = "Your ontology is consistent but unsatisfiable!";
-				Set<OWLClass> unClassList = reasoner.getUnsatisfiableClasses().getEntitiesMinusBottom();
+				StatisticTest.result.put("satisfiability", "FAILED");
+				System.out.println("Failed. start to get unsatisfibale classes");
+				Set<OWLClass> unClassList = rs;
 				int ns = unClassList.size();
 				res[4] = Integer.toString(ns);
 				System.out.println(
 						"The ontology FAILED satisfiability test with Pellet reasoner. \n Unsatisfiable classes detected: "
 								+ ns);
-
+				StatisticTest.result.put("unsatisfiable_class", String.valueOf(ns));
 				Iterator<OWLClass> aList = unClassList.iterator();
 				String list = "";
 				while (aList.hasNext()) {
@@ -148,15 +146,18 @@ public class ConsistencyProcess {
 				}
 				res[5] = "The list of unsatisfiable classes: <br>" + list;
 
+				System.out.println("Create BlackBoxExplanation to find roots.....");
 				BlackBoxExplanation bb = new BlackBoxExplanation(ont, reasonerFactory, reasoner);
 				HSTExplanationGenerator multExplanator = new HSTExplanationGenerator(bb);
 
 				if (rootAll.equals("root")) {
+					System.out.println("Strat to find roots.....");
 					CompleteRootDerivedReasoner rdr = new CompleteRootDerivedReasoner(ontManager, reasoner,
 							reasonerFactory);
 					int numRoot = 0;
 					String nameRoot = "";
 					Set<OWLClass> clsSet = rdr.getRootUnsatisfiableClasses();
+					System.out.println("Strat to get explanastions for roots.....");
 					Iterator<OWLClass> clsList = clsSet.iterator();
 					while (clsList.hasNext()) {
 						OWLClass cls = clsList.next();
@@ -174,6 +175,7 @@ public class ConsistencyProcess {
 					System.out.println("Root: " + numRoot);
 					res[6] = Integer.toString(numRoot);
 					res[7] = "The root classes, where are the main caused for inconsistencies are: <br>" + nameRoot;
+					StatisticTest.result.put("root_unsatisfiable_class", String.valueOf(numRoot));
 
 				} else { // calculates all unsatisfiable concepts
 					Iterator<OWLClass> clsList = unClassList.iterator();
@@ -198,12 +200,17 @@ public class ConsistencyProcess {
 				res[9] = "A justification is a minimal subset of an ontology that causes it to be inconsistent.";
 				res[10] = Double.toString(jSize[1]);
 				res[11] = "Total number of axioms which caused errors";
+
+				StatisticTest.result.put("justification", String.valueOf(jSize[0]));
+				StatisticTest.result.put("conflicting_axioms", String.valueOf(jSize[1]));
+
 				long stopTimeReasoner = System.currentTimeMillis();
 				long elapsedTimeReasoner = stopTimeReasoner - startTime;
 				System.out.println(" Reasoner time: " + elapsedTimeReasoner);
 
 				// Rank the erroneous axioms based on the Subjective Logic
 				// theory.
+				System.out.println("Start to rank....");
 				RankerSL sr = new RankerSL();
 				allErrAx = sr.rankAxiom(allErrAx, jSize, ontM);
 				long stopTimeRanker = System.currentTimeMillis();
@@ -222,6 +229,10 @@ public class ConsistencyProcess {
 				res[13] = Long.toString(elapsedTimeRanker);
 				res[14] = Long.toString(elapsedTimePlan);
 
+				StatisticTest.result.put("reasoner_time", String.valueOf(elapsedTimeReasoner));
+				StatisticTest.result.put("ranker_time", String.valueOf(elapsedTimeRanker));
+				StatisticTest.result.put("plan_time", String.valueOf(elapsedTimePlan));
+
 				res[15] = "<span style=\"font-weight: bold; color: red;\">You need to revise below axioms. </span> <br> The most untrustable axioms show on the top. <br>";
 				res[16] = plan;
 			} else {
@@ -233,8 +244,16 @@ public class ConsistencyProcess {
 				res[7] = "There is no root unsatisfiable classes.";
 				res[15] = "Your ontology does not need any more revise edition.";
 				res[16] = "  ";
+				StatisticTest.result.put("satisfiability", "PASSED");
 			}
 		} else {
+			/*
+			 * the ontology is inconsistent, so with normal reasoner we cannot
+			 * find its unsatisfiable classes
+			 */
+			// System.out.println("calling new function");
+			GetInconsistency.run(ontM);
+
 			res[2] = "<span style=\"font-weight: bold; color: red;   width: 100%;\"> FAILED </span>";
 			res[3] = "The ontology FAILED the consistency test, but it does not have any unsatisfiable classes! \n please review the Axioms or debug using Protege.";
 			res[4] = "-";
@@ -246,6 +265,7 @@ public class ConsistencyProcess {
 			res[14] = "0";
 			res[15] = "There is no revise plan. ";
 			res[16] = "  ";
+			StatisticTest.result.put("satisfiability", "FAILED-NotUnsatisfiable");
 		}
 		reasoner.dispose();
 

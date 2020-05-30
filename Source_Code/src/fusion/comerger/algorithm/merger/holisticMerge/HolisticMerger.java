@@ -89,22 +89,30 @@ public class HolisticMerger {
 		ontM = hp.run(ontM, alignFile);
 
 		// collapse! translate the axioms with their equal elements
+		System.out.println("\t Strat to do equal process");
 		ontM = HMerging.equalProcess(ontM);
-
+		
+		System.out.println("\t Strat to do adjacentList");
 		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> adjacentList = BlockShareFunc
 				.createAdjacentClassesList(ontM);
 
 		// 3 -- divide and conquer
+		System.out.println("\t Strat to do divide");
 		HDivideConquer dc = new HDivideConquer();
 		ontM = dc.run(ontM, adjacentList);
 
 		// 4 -- Merger
+		System.out.println("\t Strat to do merging");
 		HMerging hm = new HMerging();
 		ontM = hm.run(ontM, selectedUserItem);
 
 		// Log information for compactness
 		HBuilder.logCompactnessInfo(ontM);
 
+		//new test
+		int totalAx = ontM.getOwlModel().getAxiomCount();
+		StatisticTest.result.put("total_axioms", String.valueOf(totalAx));
+		
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
 		MyLogging.log(Level.INFO,

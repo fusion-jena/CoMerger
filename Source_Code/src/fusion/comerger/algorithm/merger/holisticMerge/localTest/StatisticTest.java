@@ -42,7 +42,7 @@ import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.merger.holisticMerge.evaluator.HEvaluator;
 import fusion.comerger.algorithm.merger.model.HModel;
 
-public class StatisticTest {
+public class StatisticTestGit {
 	public static HashMap<String, String> result = new HashMap<String, String>();
 	public static int k = -1;
 	public static String manualChanges = "NoChanges";
@@ -71,8 +71,8 @@ public class StatisticTest {
 		String ResultPath = "C:\\LOCAL_FOLDER\\HolisticDataSet\\result.csv";
 		GenerateOutput.createOutputHeader(ResultPath);
 
-		int currentNumberDataSet = 12;
-		int startIndex = 1;
+		int currentNumberDataSet = 3;
+		int startIndex = 3;
 		String[] address = new String[currentNumberDataSet + 1];
 		String baseAddress = "C:\\LOCAL_FOLDER\\HolisticDataSet\\";
 		for (int j = startIndex; j <= currentNumberDataSet; j++)

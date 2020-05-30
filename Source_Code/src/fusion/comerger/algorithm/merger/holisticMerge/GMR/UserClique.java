@@ -104,6 +104,9 @@ public class UserClique {
 
 		}
 
+		rankRes = normalize(rankRes);
+
+		// sort
 		List<Entry<String, Double>> nn = newSort(rankRes);
 		Iterator<Entry<String, Double>> entry = nn.iterator();
 
@@ -133,6 +136,37 @@ public class UserClique {
 		}
 
 		return Res;
+	}
+
+	private static HashMap<String, Double> normalize(HashMap<String, Double> rankRes) {
+		HashMap<String, Double> normalizedRankRes = new HashMap<String, Double>();
+		double[] maxMin = findMaxMin(rankRes);
+		double max = maxMin[0];
+		double min = maxMin[1];
+
+		for (Map.Entry<String, Double> entry : rankRes.entrySet()) {
+			double norm = getNormal(entry.getValue(), min, max);
+			normalizedRankRes.put(entry.getKey(), norm);
+		}
+		return normalizedRankRes;
+	}
+
+	private static double[] findMaxMin(HashMap<String, Double> rankRes) {
+		double[] maxMin = new double[2];
+		double max = 0.0, min = 0.0;
+		for (Map.Entry<String, Double> entry : rankRes.entrySet()) {
+			if (entry.getValue() > max)
+				max = entry.getValue();
+			if (entry.getValue() < min)
+				min = entry.getValue();
+		}
+		maxMin[0] = max;
+		maxMin[1] = min;
+		return maxMin;
+	}
+
+	public static double getNormal(double inValue, double min, double max) {
+		return (inValue - min) / (max - min);
 	}
 
 	private static List<Map.Entry<String, Double>> newSort(HashMap<String, Double> rankRes) {
@@ -237,7 +271,7 @@ public class UserClique {
 		case 7:
 			return "completness";
 		case 8:
-			return "completness";
+			return "minimality";
 		case 9:
 			return "minimality";
 		case 10:
@@ -245,27 +279,24 @@ public class UserClique {
 		case 11:
 			return "minimality";
 		case 12:
-			return "minimality";
+			return "deduction";
 		case 13:
-			return "acycility";
+			return "constraint";
 		case 14:
-			return "acycility";
+			return "constraint";
 		case 15:
-			return "acycility";
+			return "constraint";
 		case 16:
 			return "acycility";
 		case 17:
-			return "connectivity";
+			return "acycility";
 		case 18:
-			return "connectivity";
+			return "acycility";
 		case 19:
 			return "connectivity";
 		case 20:
-			return "deduction";
-		case 21:
-			return "constraint";
-		case 22:
-			return "constraint";
+			return "connectivity";
+
 		}
 		return null;
 	}
@@ -283,49 +314,45 @@ public class UserClique {
 	private static double getCompatibleDegree(Integer rule) {
 		switch (rule) {
 		case 1:
-			return 0.81;
+			return 0.89;
 		case 2:
-			return 0.5;
+			return 0.79;
 		case 3:
-			return 0.77;
+			return 1.0;
 		case 4:
-			return 0.73;
+			return 0.74;
 		case 5:
-			return 0.32;
+			return 0.79;
 		case 6:
-			return 0.68;
+			return 0.89;
 		case 7:
-			return 0.68;
+			return 0.79;
 		case 8:
-			return 0.5;
+			return 1.0;
 		case 9:
-			return 0.77;
+			return 0.89;
 		case 10:
-			return 0.55;
+			return 1.0;
 		case 11:
-			return 0.64;
+			return 0.89;
 		case 12:
-			return 0.5;
+			return 0.74;
 		case 13:
-			return 0.59;
+			return 0.95;
 		case 14:
-			return 0.82;
+			return 0.95;
 		case 15:
-			return 0.73;
+			return 0.84;
 		case 16:
-			return 0.68;
+			return 0.63;
 		case 17:
-			return 0.68;
+			return 0.63;
 		case 18:
-			return 0.59;
+			return 0.63;
 		case 19:
-			return 0.73;
+			return 0.68;
 		case 20:
-			return 0.73;
-		case 21:
-			return 0.64;
-		case 22:
-			return 0.73;
+			return 0.68;
 		}
 		return 0;
 	}

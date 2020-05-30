@@ -18,7 +18,7 @@ package fusion.comerger.general.analysis;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 import fusion.comerger.general.cc.Data;
-import fusion.comerger.general.gui.OPATgui;
+
 
 public class AnalyzingTest
 {	

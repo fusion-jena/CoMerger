@@ -36,14 +36,24 @@ import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
+import org.semanticweb.owlapi.model.OWLDataExactCardinality;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLDataMaxCardinality;
+import org.semanticweb.owlapi.model.OWLDataMinCardinality;
 import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataPropertyExpression;
 import org.semanticweb.owlapi.model.OWLDataRange;
 import org.semanticweb.owlapi.model.OWLDatatype;
 import org.semanticweb.owlapi.model.OWLInverseObjectPropertiesAxiom;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLObjectAllValuesFrom;
+import org.semanticweb.owlapi.model.OWLObjectExactCardinality;
+import org.semanticweb.owlapi.model.OWLObjectMaxCardinality;
+import org.semanticweb.owlapi.model.OWLObjectMinCardinality;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
+import org.semanticweb.owlapi.model.OWLObjectSomeValuesFrom;
+import org.semanticweb.owlapi.model.OWLObjectUnionOf;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.model.OWLSubDataPropertyOfAxiom;
@@ -64,6 +74,8 @@ public class HEvaluator {
 
 	public String[] run(HModel ontM, String evalDim) {
 		long startTime = System.currentTimeMillis();
+		HashMap<String, String> eval = new HashMap<String, String>();
+		ontM.setEvalHashResult(eval);
 		String[] gui = new String[14];
 		HashMap<String, String> dimensionLabel = new HashMap<String, String>();
 		String[] tempRes = null;
@@ -74,30 +86,37 @@ public class HEvaluator {
 			switch (dim[i]) {
 			case "CompletenessCheck":
 				tempResAspect = new String[40];
+				System.out.println("Start Evaluation for ClassPreservationEval");
 				tempRes = ClassPreservationEval(ontM);
 				tempResAspect[0] = tempRes[0];
 				tempResAspect[1] = tempRes[1];
 
+				System.out.println("Start Evaluation for PropertyPreservationEval");
 				tempRes = PropertyPreservationEval(ontM);
 				tempResAspect[2] = tempRes[0];
 				tempResAspect[3] = tempRes[1];
 
+				System.out.println("Start Evaluation for InstancePreservationEval");
 				tempRes = InstancePreservationEval(ontM);
 				tempResAspect[4] = tempRes[0];
 				tempResAspect[5] = tempRes[1];
 
+				System.out.println("Start Evaluation for CorrespondencePreservationEval");
 				tempRes = CorrespondencePreservationEval(ontM);
 				tempResAspect[6] = tempRes[0];
 				tempResAspect[7] = tempRes[1];
 
+				System.out.println("Start Evaluation for CorrespondencePropertyPreservationEval");
 				tempRes = CorrespondencePropertyPreservationEval(ontM);
 				tempResAspect[8] = tempRes[0];
 				tempResAspect[9] = tempRes[1];
 
+				System.out.println("Start Evaluation for ValuePreservationEval");
 				tempRes = ValuePreservationEval(ontM);
 				tempResAspect[10] = tempRes[0];
 				tempResAspect[11] = tempRes[1];
 
+				System.out.println("Start Evaluation for StructurePreservationEval");
 				tempRes = StructurePreservationEval(ontM);
 				tempResAspect[12] = tempRes[0];
 				tempResAspect[13] = tempRes[1];
@@ -162,15 +181,17 @@ public class HEvaluator {
 
 			case "AcyclicityCheck":
 				tempResAspect = new String[40];
-
+				System.out.println("Start Evaluation for ClassAcyclicityEval");
 				tempRes = ClassAcyclicityEval(ontM);
 				tempResAspect[0] = tempRes[0];
 				tempResAspect[1] = tempRes[1];
 
+				System.out.println("Start Evaluation for PropertyAcyclicityEval");
 				tempRes = PropertyAcyclicityEval(ontM);
 				tempResAspect[2] = tempRes[0];
 				tempResAspect[3] = tempRes[1];
 
+				System.out.println("Start Evaluation for InversePropertyProhibitionEval");
 				tempRes = InversePropertyProhibitionEval(ontM);
 				tempResAspect[4] = tempRes[0];
 				tempResAspect[5] = tempRes[1];
@@ -183,10 +204,12 @@ public class HEvaluator {
 
 			case "ConnectivityCheck":
 				tempResAspect = new String[40];
+				System.out.println("Start Evaluation for UnconnectedClassProhibitionEval");
 				tempRes = UnconnectedClassProhibitionEval(ontM);
 				tempResAspect[0] = tempRes[0];
 				tempResAspect[1] = tempRes[1];
 
+				System.out.println("Start Evaluation for UnconnectedPropertyProhibitionEval");
 				tempRes = UnconnectedPropertyProhibitionEval(ontM);
 				tempResAspect[2] = tempRes[0];
 				tempResAspect[3] = tempRes[1];
@@ -209,11 +232,13 @@ public class HEvaluator {
 				break;
 
 			case "CompactnessCheck":
+				System.out.println("Start Evaluation for EvalCompactness");
 				tempResAspect = EvalCompactness(ontM);
 				gui[8] = GuiOutput.createCompactnessGui(tempResAspect);
 				break;
 
 			case "CoverageCheck":
+				System.out.println("Start Evaluation for EvalCoverage");
 				tempResAspect = EvalCoverage(ontM);
 				gui[9] = GuiOutput.createCoverageGui(tempResAspect);
 				break;
@@ -222,6 +247,7 @@ public class HEvaluator {
 
 		}
 
+		System.out.println("Start Evaluation for makesLabels");
 		String lables = makesLabels(dimensionLabel);
 		ontM.setEvalTotalLabel(lables);
 
@@ -453,6 +479,11 @@ public class HEvaluator {
 		res[3] = String.valueOf(propSize);
 		res[5] = String.valueOf(instanceSize);
 		res[7] = String.valueOf(annoSize);
+
+		StatisticTest.result.put("classSize", String.valueOf(classSize));
+		StatisticTest.result.put("propSize", String.valueOf(propSize));
+		StatisticTest.result.put("instanceSize", String.valueOf(instanceSize));
+		StatisticTest.result.put("annoSize", String.valueOf(annoSize));
 
 		// relative size
 		// all +1 till do not face divided by 0.
@@ -811,7 +842,7 @@ public class HEvaluator {
 
 		OWLOntology Om = ontM.getOwlModel();
 		Set<OWLObjectProperty> OmPro = Om.getObjectPropertiesInSignature();
-		// TODO: do it for object and datatype etc. property
+		// do it for object and datatype etc. property
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
 			OWLOntology Oi = ontM.getInputOwlOntModel().get(i);
 			Iterator<OWLObjectProperty> iter3 = Oi.getObjectPropertiesInSignature().iterator();
@@ -846,11 +877,11 @@ public class HEvaluator {
 		}
 
 		ArrayList<HMappedDpro> OmEqDataPro = ontM.getEqDataProperties();
-		// TODO:error :How to get type of datatypeproperties in OWL?
+		// to get type of datatypeproperties in OWL?
 		for (int j = 0; j < OmEqDataPro.size(); j++) {
 			OWLDataProperty Dpro = OmEqDataPro.get(j).getRefDpro();
 			Set<OWLDataRange> dataRangeRef = Dpro.getRanges(Om);
-//			Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
+			// Set<OWLClassExpression> dataDomainRef = Dpro.getDomains(Om);
 
 			Iterator<OWLDataProperty> iter = OmEqDataPro.get(j).getMappedDpro().iterator();
 			while (iter.hasNext()) {
@@ -925,6 +956,76 @@ public class HEvaluator {
 		String e1 = "", e2 = "";
 
 		Set<OWLSubClassOfAxiom> OmSubclassAxiom = ontM.getOwlModel().getAxioms(AxiomType.SUBCLASS_OF);
+		// HashMap<OWLAxiom, OWLAxiom> equalAxioms = ontM.getEqAxioms();
+		// Set<OWLSubClassOfAxiom> OiAxAll = new HashSet<OWLSubClassOfAxiom>();
+		// for (int i = 0; i < ontM.getInputOntNumber(); i++) {
+		// OWLOntology Oi = ontM.getInputOwlOntModel().get(i);
+		// OiAxAll.addAll(Oi.getAxioms(AxiomType.SUBCLASS_OF));
+		// }
+
+		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
+			OWLOntology Oi = ontM.getInputOwlOntModel().get(i);
+			Iterator<OWLSubClassOfAxiom> iterOi = Oi.getAxioms(AxiomType.SUBCLASS_OF).iterator();
+			while (iterOi.hasNext()) {
+				OWLSubClassOfAxiom ax = iterOi.next();
+				if (!OmSubclassAxiom.contains(ax)) {
+					OWLAxiom eq = ontM.getEqAxioms().get(ax);
+					if (eq == null) {
+						/*
+						 * it means even the axiom or the equal-form of this
+						 * axiom do not exist in Om
+						 */
+						missStr++;
+						MissArray.add(ax.toString());
+					}
+				}
+			}
+
+		}
+
+		StatisticTest.result.put("structure_preservation", String.valueOf(missStr));
+		if (missStr > 0) {
+			if (missStr == 1) {
+				res[0] = missStr + " case " + cross;
+			} else {
+				res[0] = missStr + " cases " + cross;
+			}
+			e1 = missStr + " structures are not preserved!\n";
+		} else {
+			res[0] = tick;
+			e1 = "All classes preserve the same structure as the input models. \n";
+		}
+
+		if (missStr > 0) {
+			e2 = "The classes which do not follow the same structrue as the input ontologies' hierarchy are:";
+			res[1] = "<span style=\"color: red;\">The classes which do not follow the same structrue as the input ontologies' hierarchy are:";
+			Iterator<String> arrayIter = MissArray.iterator();
+			while (arrayIter.hasNext()) {
+				String cc = arrayIter.next();
+				res[1] = res[1] + "<br>  -> " + cc.replaceAll("<", "[").replaceAll(">", "]");
+				e2 = e2 + "\n " + cc.toString();
+			}
+			res[1] = res[1] + "</span>";
+			String id = "StrCheck";
+			String correctIt = "<br> <br> <p><b><u><input type=\"checkbox\" name=\"repairs\" value=\"" + id + "\" "
+					+ ">" + msgCorrectness + "</u></b></p>";
+			res[1] = res[1] + correctIt;
+		} else {
+			res[1] = "<span style=\"color: green;\">All classes preserve the same structure as the input models.</span>";
+		}
+		eval.put("StructurePreservation", e1 + e2);
+		ontM.setEvalHashResult(eval);
+		return res;
+	}
+
+	private String[] StructurePreservationEvalOld(HModel ontM) {
+		String[] res = new String[2];
+		int missStr = 0;
+		HashSet<String> MissArray = new HashSet<String>();
+		HashMap<String, String> eval = ontM.getEvalHashResult();
+		String e1 = "", e2 = "";
+
+		Set<OWLSubClassOfAxiom> OmSubclassAxiom = ontM.getOwlModel().getAxioms(AxiomType.SUBCLASS_OF);
 		HashMap<OWLAxiom, OWLAxiom> equalAxioms = ontM.getEqAxioms();
 
 		for (int i = 0; i < ontM.getInputOntNumber(); i++) {
@@ -933,14 +1034,16 @@ public class HEvaluator {
 			while (iterOi.hasNext()) {
 				OWLSubClassOfAxiom ax = iterOi.next();
 				if (!OmSubclassAxiom.contains(ax)) {
-					OWLAxiom as = equalAxioms.get(ax);
-					if (as == null) {
-						/*
-						 * it means this subclass axiom or its equal axiom does
-						 * not exist in Om.
-						 */
-						missStr++;
-						MissArray.add(ax.toString());
+					if (!structureCheckingOS(ontM, ax)) {
+						OWLAxiom as = equalAxioms.get(ax);
+						if (as == null) {
+							/*
+							 * it means this subclass axiom or its equal axiom
+							 * does not exist in Om.
+							 */
+							missStr++;
+							MissArray.add(ax.toString());
+						}
 					}
 				}
 
@@ -980,6 +1083,390 @@ public class HEvaluator {
 		eval.put("StructurePreservation", e1 + e2);
 		ontM.setEvalHashResult(eval);
 		return res;
+	}
+
+	private boolean structureCheckingOS(HModel ontM, OWLSubClassOfAxiom currentAxiom) {
+
+		for (OWLOntology OS : ontM.getInputOwlOntModel()) {
+			Iterator<OWLSubClassOfAxiom> OsAxiom = OS.getAxioms(AxiomType.SUBCLASS_OF).iterator();
+			while (OsAxiom.hasNext()) {
+				OWLSubClassOfAxiom osAx = OsAxiom.next();
+				if (OS.getAxioms(AxiomType.SUBCLASS_OF).contains(currentAxiom))
+					return true;
+				if (osAx.equals(currentAxiom))
+					return true;
+			}
+		}
+
+		for (OWLOntology OS : ontM.getInputOwlOntModel()) {
+			Iterator<OWLSubClassOfAxiom> OsAxiom = OS.getAxioms(AxiomType.SUBCLASS_OF).iterator();
+			while (OsAxiom.hasNext()) {
+				OWLSubClassOfAxiom osAx = OsAxiom.next();
+				if (checkOSstr(ontM, osAx, currentAxiom))
+					return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean checkOSstr(HModel ontM, OWLSubClassOfAxiom osAx, OWLSubClassOfAxiom currentAxiom) {
+		OWLDataFactory factory = ontM.getManager().getOWLDataFactory();
+
+		OWLClassExpression SuperClass = ((OWLSubClassOfAxiom) osAx).getSuperClass();
+		OWLClassExpression SubClass = ((OWLSubClassOfAxiom) osAx).getSubClass();
+		boolean changes = false;
+		if (SuperClass instanceof OWLClassImpl && SubClass instanceof OWLClassImpl) {
+			OWLClass eqSup = SuperClass.asOWLClass();
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSup);
+			if (refClass != null) {
+				eqSup = refClass;
+				changes = true;
+			}
+
+			OWLClass eqSub = SubClass.asOWLClass();
+			refClass = ontM.getKeyValueEqClass().get(eqSub);
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+
+			// if (changes) {
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, eqSup);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLObjectUnionOf && SubClass instanceof OWLClassImpl) {
+			OWLClass eqSub = SubClass.asOWLClass();
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub);
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+
+			Set<OWLClassExpression> tempObj = new HashSet<OWLClassExpression>();
+			Iterator<OWLClassExpression> rangExist = ((OWLObjectUnionOf) SuperClass).getOperands().iterator();
+			while (rangExist.hasNext()) {
+				OWLClassExpression ex = rangExist.next();
+				if (ex instanceof OWLClassImpl) {
+					OWLClass eq = ex.asOWLClass();
+					refClass = ontM.getKeyValueEqClass().get(ex);
+					if (refClass != null) {
+						eq = refClass;
+						changes = true;
+					}
+
+					tempObj.add(eq);
+				}
+			}
+			// if (changes) {
+			// OWLObjectUnionOf ob = factory.getOWLObjectUnionOf(tempObj);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, ob);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SubClass instanceof OWLObjectUnionOf) {
+			// never happend
+		} else if (SuperClass instanceof OWLDataExactCardinality && SubClass instanceof OWLClassImpl) {
+			int cd = ((OWLDataExactCardinality) SuperClass).getCardinality();
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLDataPropertyExpression SuperClassProp = ((OWLDataExactCardinality) SuperClass).getProperty();
+			OWLDataPropertyExpression eqSuperClassPro = SuperClassProp;
+			OWLDataProperty RefSuperClassPro = ontM.getKeyValueEqDataPro().get(SuperClassProp);
+			if (RefSuperClassPro != null) {
+				eqSuperClassPro = RefSuperClassPro;
+				changes = true;
+			}
+			// if (changes) {
+			// OWLDataExactCardinality cardi =
+			// factory.getOWLDataExactCardinality(cd, eqSuperClassPro);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, cardi);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLObjectExactCardinality && SubClass instanceof OWLClassImpl) {
+			int cd = ((OWLObjectExactCardinality) SuperClass).getCardinality();
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLObjectPropertyExpression SuperClassProp = ((OWLObjectExactCardinality) SuperClass).getProperty();
+			OWLObjectPropertyExpression eqSuperClassPro = SuperClassProp;
+			OWLObjectProperty RefSuperClassPro = ontM.getKeyValueEqObjProperty().get(SuperClassProp);
+			if (RefSuperClassPro != null) {
+				eqSuperClassPro = RefSuperClassPro;
+				changes = true;
+			}
+			// if (changes) {
+			// OWLObjectExactCardinality cardi =
+			// factory.getOWLObjectExactCardinality(cd, eqSuperClassPro);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, cardi);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLObjectMaxCardinality && SubClass instanceof OWLClassImpl) {
+			int cd = ((OWLObjectMaxCardinality) SuperClass).getCardinality();
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLObjectPropertyExpression SuperClassProp = ((OWLObjectMaxCardinality) SuperClass).getProperty();
+			OWLObjectPropertyExpression eqSuperClassPro = SuperClassProp;
+			OWLObjectProperty RefSuperClassPro = ontM.getKeyValueEqObjProperty().get(SuperClassProp);
+			if (RefSuperClassPro != null) {
+				eqSuperClassPro = RefSuperClassPro;
+				changes = true;
+			}
+			// if (changes) {
+			// OWLObjectMaxCardinality cardi =
+			// factory.getOWLObjectMaxCardinality(cd, eqSuperClassPro);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, cardi);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLDataMaxCardinality && SubClass instanceof OWLClassImpl) {
+			int cd = ((OWLDataMaxCardinality) SuperClass).getCardinality();
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLDataPropertyExpression SuperClassProp = ((OWLDataMaxCardinality) SuperClass).getProperty();
+			OWLDataPropertyExpression eqSuperClassPro = SuperClassProp;
+			OWLDataProperty RefSuperClassPro = ontM.getKeyValueEqDataPro().get(SuperClassProp);
+			if (RefSuperClassPro != null) {
+				eqSuperClassPro = RefSuperClassPro;
+				changes = true;
+			}
+			// if (changes) {
+			// OWLDataMaxCardinality cardi =
+			// factory.getOWLDataMaxCardinality(cd, eqSuperClassPro);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, cardi);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLDataMinCardinality && SubClass instanceof OWLClassImpl) {
+			int cd = ((OWLDataMinCardinality) SuperClass).getCardinality();
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLDataPropertyExpression SuperClassProp = ((OWLDataMinCardinality) SuperClass).getProperty();
+			OWLDataPropertyExpression eqSuperClassPro = SuperClassProp;
+			OWLDataProperty RefSuperClassPro = ontM.getKeyValueEqDataPro().get(SuperClassProp);
+			if (RefSuperClassPro != null) {
+				eqSuperClassPro = RefSuperClassPro;
+				changes = true;
+			}
+			// if (changes) {
+			// OWLDataMinCardinality cardi =
+			// factory.getOWLDataMinCardinality(cd, eqSuperClassPro);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, cardi);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLObjectSomeValuesFrom && SubClass instanceof OWLClassImpl) {
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLObjectPropertyExpression pro = ((OWLObjectSomeValuesFrom) SuperClass).getProperty();
+			OWLObjectPropertyExpression eqPro = pro;
+			OWLObjectPropertyExpression pp = ontM.getKeyValueEqObjProperty().get(pro);
+			if (pp != null) {
+				eqPro = pp;
+				changes = true;
+			}
+			Set<OWLClass> clSet = ((OWLObjectSomeValuesFrom) SuperClass).getClassesInSignature();
+			Iterator<OWLClass> cl = clSet.iterator();
+			OWLClass cls = null;
+			Set<OWLClass> eqClSet = new HashSet<OWLClass>();
+			OWLClass eqCls = null;
+			OWLObjectSomeValuesFrom sv = null;
+			if (clSet.size() > 1) {
+				while (cl.hasNext()) {
+					OWLClass c = cl.next();
+					OWLClass cq = ontM.getKeyValueEqClass().get(c);
+					if (cq != null) {
+						eqClSet.add(cq);
+						changes = true;
+					} else {
+						eqClSet.add(c);
+					}
+				}
+				OWLObjectUnionOf uo = factory.getOWLObjectUnionOf(eqClSet);
+				sv = factory.getOWLObjectSomeValuesFrom(eqPro, uo);
+			} else {
+				if (cl.hasNext())
+					cls = cl.next();
+				eqCls = cls;
+				OWLClass cc = ontM.getKeyValueEqClass().get(cls);
+				if (cc != null) {
+					eqCls = cc;
+					changes = true;
+				}
+				sv = factory.getOWLObjectSomeValuesFrom(eqPro, eqCls);
+			}
+			// if (changes) {
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, sv);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLObjectAllValuesFrom && SubClass instanceof OWLClassImpl) {
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLObjectPropertyExpression pro = ((OWLObjectAllValuesFrom) SuperClass).getProperty();
+			OWLObjectPropertyExpression eqPro = pro;
+			OWLObjectPropertyExpression pp = ontM.getKeyValueEqObjProperty().get(pro);
+			if (pp != null) {
+				eqPro = pp;
+				changes = true;
+			}
+			Set<OWLClass> clSet = ((OWLObjectAllValuesFrom) SuperClass).getClassesInSignature();
+			Iterator<OWLClass> cl = clSet.iterator();
+			OWLClass cls = null;
+			Set<OWLClass> eqClSet = new HashSet<OWLClass>();
+			OWLClass eqCls = null;
+			OWLObjectAllValuesFrom sv = null;
+			if (clSet.size() > 1) {
+				while (cl.hasNext()) {
+					OWLClass c = cl.next();
+					OWLClass cq = ontM.getKeyValueEqClass().get(c);
+					if (cq != null) {
+						eqClSet.add(cq);
+						changes = true;
+					} else {
+						eqClSet.add(c);
+					}
+				}
+				OWLObjectUnionOf uo = factory.getOWLObjectUnionOf(eqClSet);
+				sv = factory.getOWLObjectAllValuesFrom(eqPro, uo);
+			} else {
+				if (cl.hasNext())
+					cls = cl.next();
+				eqCls = cls;
+				OWLClass cc = ontM.getKeyValueEqClass().get(cls);
+				if (cc != null) {
+					eqCls = cc;
+					changes = true;
+				}
+				sv = factory.getOWLObjectAllValuesFrom(eqPro, eqCls);
+			}
+			// if (changes) {
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, sv);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else if (SuperClass instanceof OWLObjectMinCardinality && SubClass instanceof OWLClassImpl) {
+			int cd = ((OWLObjectMinCardinality) SuperClass).getCardinality();
+			OWLClassExpression eqSub = SubClass;
+			OWLClass refClass = ontM.getKeyValueEqClass().get(eqSub.asOWLClass());
+			if (refClass != null) {
+				eqSub = refClass;
+				changes = true;
+			}
+			OWLObjectPropertyExpression SuperClassProp = ((OWLObjectMinCardinality) SuperClass).getProperty();
+			OWLObjectPropertyExpression eqSuperClassPro = SuperClassProp;
+			OWLObjectProperty RefSuperClassPro = ontM.getKeyValueEqObjProperty().get(SuperClassProp);
+			if (RefSuperClassPro != null) {
+				eqSuperClassPro = RefSuperClassPro;
+				changes = true;
+			}
+			// if (changes) {
+			// OWLObjectMinCardinality cardi =
+			// factory.getOWLObjectMinCardinality(cd, eqSuperClassPro);
+			// OWLAxiom newAxiom = factory.getOWLSubClassOfAxiom(eqSub, cardi);
+			// manager.removeAxiom(ontology, oldAxiom);
+			// manager.addAxiom(ontology, newAxiom);
+			// HashMap<OWLAxiom, OWLAxiom> eqAx = ontM.getEqAxioms();
+			// eqAx.put(oldAxiom, newAxiom);
+			//
+			// ontM.setEqAxioms(eqAx);
+			// int r = ontM.getNumRewriteAxioms();
+			// ontM.setNumRewriteAxioms(r + 1);
+			// }
+		} else {
+			int w = 0;
+			// System.out.println("Process me in HMerging.java in
+			// SubClassProcessor");
+		}
+
+		// if (changes==true &&)
+		if (osAx.equals(currentAxiom))
+			return true;
+
+		return false;
 	}
 
 	// ************************************************************************
@@ -1375,7 +1862,6 @@ public class HEvaluator {
 
 	// ************************************************************************
 	private String[] UnconnectedPropertyProhibitionEval(HModel ontM) {
-		// TODO check it again
 		String[] res = new String[2];
 		HashSet<String> MissArray = new HashSet<String>();
 		int counter = 0;

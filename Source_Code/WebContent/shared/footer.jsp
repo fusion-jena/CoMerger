@@ -27,7 +27,7 @@
 					Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain
 						Name</a>
 				</p>-->
-				<p>Latest revision January 2020</p>
+				<p>Latest revision June 2020</p>
 			</div>
 			<p class="font-xs">
 					Template by <a target="_blank" href="http://www.os-templates.com/"

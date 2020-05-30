@@ -16,14 +16,14 @@ package fusion.comerger.algorithm.merger.holisticMerge.mapping;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,7 +33,8 @@ public class HMappedClass {
 	OWLClass refClass;
 	Set<OWLClass> mappedClass = new HashSet<OWLClass>();
 	int LenClass = 0;
-	double connection = 0.0;
+	double allConnection = 0.0;
+	double isaConnection = 0.0;
 	Double goodness = 0.0;
 	Double centrality = 0.0;
 	boolean selected = false;
@@ -62,12 +63,20 @@ public class HMappedClass {
 		LenClass = L;
 	}
 
-	public double getConnection() {
-		return connection;
+	public double getAllConnection() {
+		return allConnection;
 	}
 
-	public void setConnection(double c) {
-		connection = c;
+	public void setAllConnection(double c) {
+		allConnection = c;
+	}
+
+	public double getIsaConnection() {
+		return isaConnection;
+	}
+
+	public void setIsaConnection(double c) {
+		isaConnection = c;
 	}
 
 	public void setGoodness(Double g) {
@@ -89,10 +98,10 @@ public class HMappedClass {
 	}
 
 	public void setSelectedStatus(boolean b) {
-		selected = b;		
+		selected = b;
 	}
-	
-	public boolean getSelectedStatus(){
+
+	public boolean getSelectedStatus() {
 		return selected;
 	}
 }

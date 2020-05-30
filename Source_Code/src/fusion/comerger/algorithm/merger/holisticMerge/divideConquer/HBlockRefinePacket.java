@@ -102,7 +102,7 @@ public class HBlockRefinePacket {
 		OWLDataFactory factory;
 		OWLOntology clusterOnt;
 
-		if (ontM.getAlterStatus() == false) {
+		if (ontM.getAlterStatus() == false || ontM.getParentList().isEmpty()) {
 			// create
 			listParent = ShareMergeFunction.createParentList(ontM.getOwlModel());
 			ontM.setParentList(listParent);

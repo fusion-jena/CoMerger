@@ -245,7 +245,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#0415AD;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#0415AD; border-color:#0415AD;}
-.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+.btn:hover, .btn.inverse{color:#0415AD; background-color:transparent; border-color:inherit;}
 
 
 /* Rows */

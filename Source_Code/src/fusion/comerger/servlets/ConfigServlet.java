@@ -16,14 +16,14 @@ package fusion.comerger.servlets;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
- /**
- * Author: Samira Babalou<br>
- * email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
- * Heinz-Nixdorf Chair for Distributed Information Systems<br>
- * Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
- * Date: 17/12/2019
- */
+
+/**
+* Author: Samira Babalou<br>
+* email: samira[dot]babalou[at]uni[dash][dot]jena[dot]de
+* Heinz-Nixdorf Chair for Distributed Information Systems<br>
+* Institute for Computer Science, Friedrich Schiller University Jena, Germany<br>
+* Date: 17/12/2019
+*/
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
@@ -53,19 +53,10 @@ public class ConfigServlet {
 		if (MergeOutputType.equals("RDFtype"))
 			req.setAttribute("RDFsel", "Selected");
 
-		if (type.equals("RuleMerge"))
-			req.setAttribute("RuleMergeSel", "Selected");
-		if (type.equals("HolisticMerge"))
-			req.setAttribute("HolisticMergeSel", "Selected");
-
-		if (type.equals("GraphMerge"))
-			req.setAttribute("GraphMergeSel", "Selected");
-		if (type.equals("APIMerge"))
-			req.setAttribute("APIMergeSel", "Selected");
-		if (type.equals("MatchingMerge"))
-			req.setAttribute("MatchingMergeSel", "Selected");
-		if (type.equals("GenericMerge"))
-			req.setAttribute("GenericMergeSel", "Selected");
+		if (type.equals("Jacard"))
+			req.setAttribute("JacardSel", "Selected");
+		if (type.equals("SeeCOnt"))
+			req.setAttribute("SeeCOntSel", "Selected");
 
 		req = checkedUserSelectedBox(req, selectedUserItem);
 		return req;

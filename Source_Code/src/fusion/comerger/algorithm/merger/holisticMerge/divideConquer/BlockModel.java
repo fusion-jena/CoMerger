@@ -38,18 +38,18 @@ import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMappedClass;
 public class BlockModel {
 	int ID;
 	int size;
-	ArrayList<OWLClassExpression> classes;
+	HashSet<OWLClassExpression> classes;
 	ArrayList<OWLAxiom> axioms;
 	HMappedClass core;
 	HashMap<HashSet<String>, Integer> elementOriginalCounter;
 	OWLOntologyManager ClManager;
 	OWLOntology ClOntology;
 
-	public ArrayList<OWLClassExpression> getClasses() {
+	public HashSet<OWLClassExpression> getClasses() {
 		return classes;
 	}
 
-	public void SetClasses(ArrayList<OWLClassExpression> elm) {
+	public void SetClasses(HashSet<OWLClassExpression> elm) {
 		classes = elm;
 	}
 

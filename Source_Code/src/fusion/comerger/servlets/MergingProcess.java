@@ -25,42 +25,27 @@ package fusion.comerger.servlets;
 * Date: 17/12/2019
 */
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 import java.util.logging.Level;
 
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
-import com.ibm.icu.text.DecimalFormat;
-
-import au.com.bytecode.opencsv.CSVReader;
 import fusion.comerger.algorithm.merger.holisticMerge.HolisticMerger;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
-import fusion.comerger.algorithm.merger.holisticMerge.GMR.GMR;
-import fusion.comerger.algorithm.merger.holisticMerge.GMR.RuleSets;
-import fusion.comerger.algorithm.merger.holisticMerge.GMR.UserCliqueExtractor;
 import fusion.comerger.algorithm.merger.holisticMerge.evaluator.HEvaluator;
 import fusion.comerger.algorithm.merger.holisticMerge.general.SaveTxt;
 import fusion.comerger.algorithm.merger.model.HModel;
 
 public class MergingProcess {
 
-	public static HModel DoMerge(String NameAddressOnt, String alignFile, String UPLOAD_DIRECTORY, String MergeType,
+	public static HModel DoMerge(String NameAddressOnt, String alignFile, String UPLOAD_DIRECTORY,
 			String selectedUserItem, String preferedOnt, String MergeOutputType) throws Exception {
 
 		HModel ontM = null;
-		switch (MergeType) {
-		case "HolisticMerge":
-			MyLogging.log(Level.INFO, "Initialise the running of Holistic Merge:");
-			HolisticMerger HM = new HolisticMerger();
-			ontM = HM.run(NameAddressOnt, alignFile, UPLOAD_DIRECTORY, selectedUserItem, preferedOnt, MergeOutputType);
-		}
+
+		MyLogging.log(Level.INFO, "Initialise the running of Holistic Merge:");
+		HolisticMerger HM = new HolisticMerger();
+		ontM = HM.run(NameAddressOnt, alignFile, UPLOAD_DIRECTORY, selectedUserItem, preferedOnt, MergeOutputType);
 
 		return ontM;
 
@@ -70,9 +55,9 @@ public class MergingProcess {
 			throws FileNotFoundException, OWLOntologyStorageException {
 		long startTime = System.currentTimeMillis();
 
-		HashMap<String, String> evalHashResult = new HashMap<String,String>();
+		HashMap<String, String> evalHashResult = new HashMap<String, String>();
 		ontM.setEvalHashResult(evalHashResult);
-		
+
 		HEvaluator hr = new HEvaluator();
 		String[] res = hr.run(ontM, evalDimension);
 

@@ -40,7 +40,7 @@ import au.com.bytecode.opencsv.CSVReader;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 
 public class CompatibilityChecker {
-	static int RulesListInfoSize = 232;
+	//static int RulesListInfoSize = 232;
 	static HashMap<String, Integer> RulesListInfo = new HashMap<String, Integer>();
 	static boolean RuleListCreator = false;
 	
@@ -63,7 +63,7 @@ public class CompatibilityChecker {
 		for (int i = 0; i < RSet.size(); i++) {
 			GMR gmr = RSet.get(i);
 			rs.add(gmr.getRuleSetInteger());
-			double rank = Double.parseDouble(new DecimalFormat("##.####").format(gmr.getRank()));
+			double rank = Double.parseDouble(new DecimalFormat("##.###").format(gmr.getRank()));
 			ArrayList<Integer> set = gmr.getRuleSetInteger();
 			ArrayList<ArrayList<Integer>> colorSet = findColorofSet(set, userGMR);
 			ArrayList<Integer> compatible = colorSet.get(0);
@@ -77,25 +77,25 @@ public class CompatibilityChecker {
 				message = message + "<input type=\"checkbox\" name=\"ruleSet\" ids=\"" + ids
 						+ "\" onclick=\"handleClick(this)\";>";
 			}
-			message = message + "<span style=\"font-weight: bold;\">The maximum compatible set: {";
+			message = message + "<span style=\"font-weight: bold;\">Maximum compatible set: {";
 			String temp = "";
 			for (int j = 0; j < set.size(); j++) {
 				if (compatible.contains(set.get(j))) {
-					temp = temp + "-" + "<font color=\"green\">" + set.get(j) + "</font>";
+					temp = temp + "," + "<font color=\"green\">" + set.get(j) + "</font>";
 				} else if (!incompatible.contains(set.get(j))) {
-					temp = temp + "-" + "<font color=\"orange\">" + set.get(j) + "</font>";
+					temp = temp + "," + "<font color=\"orange\">" + set.get(j) + "</font>";
 				}
 			}
 			message = message + temp.substring(1) + "},  </span>";
 			if (incompatible.size() > 0) {
-				message = message + "<span style=\"font-weight: bold;\">Incomaptible rules: {";
+				message = message + "<span style=\"font-weight: bold;\">Incompatible GMR: {";
 				String inCompTemp = "";
 				for (int j = 0; j < incompatible.size(); j++) {
-					inCompTemp = inCompTemp + "-" + "<font color=\"red\">" + incompatible.get(j) + "</font>";
+					inCompTemp = inCompTemp + "," + "<font color=\"red\">" + incompatible.get(j) + "</font>";
 				}
 				message = message + inCompTemp.substring(1) + "}, </span>";
 			} else {
-				message = message + "<span style=\"font-weight: bold;\"> no incompatible rule. </span>";
+				message = message + "<span style=\"font-weight: bold;\"> no incompatible GMR. </span>";
 			}
 
 			message = message + "<span style=\"font-weight: bold;\"> Rank:" + rank + "</span><br>";

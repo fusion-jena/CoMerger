@@ -49,6 +49,7 @@ import org.json.JSONObject;
 
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.merger.holisticMerge.Parameter;
+import fusion.comerger.algorithm.merger.holisticMerge.SingleBuilder;
 import fusion.comerger.algorithm.merger.holisticMerge.GMR.CompatibilityChecker;
 import fusion.comerger.algorithm.merger.holisticMerge.GMR.RuleSets;
 import fusion.comerger.algorithm.merger.holisticMerge.consistency.ConsistencyProcess;
@@ -56,7 +57,6 @@ import fusion.comerger.algorithm.merger.holisticMerge.evaluator.EvaluationRepair
 import fusion.comerger.algorithm.merger.holisticMerge.general.Zipper;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.model.HModel;
-import fusion.comerger.algorithm.merger.model.ModelReader;
 import fusion.comerger.algorithm.merger.query.QueryExcecute;
 
 /**
@@ -71,7 +71,7 @@ public class MergingServlet extends HttpServlet {
 	public static HModel mergedModel = null;
 	public static String mergedOnt = new String();
 	public static RuleSets RSets = new RuleSets();
-	private static final String secretKey = "";
+	private static final String secretKey = "myKey";
 	String previousUserItem;
 
 	/**
@@ -98,7 +98,7 @@ public class MergingServlet extends HttpServlet {
 			String UPLOAD_DIRECTORY = getServletContext().getRealPath("/") + "uploads\\";
 			Parameter.setFilePathDirectory(UPLOAD_DIRECTORY);
 
-			String submitType = "", mergeType = "", MergeOutputType = "", preferedOnt = "equal", queryStringAll = "",
+			String submitType = "", matchType = "", MergeOutputType = "", preferedOnt = "equal", queryStringAll = "",
 					ListOntsQ = "", queryStringM = "", queryStringO = "", resultQueryM = "", resultQueryO = "",
 					selectedRepair = "", selectedUserItem = "", selectedUserPlan = "", userConsParam = "", SelOntQ = "",
 					gRecaptchaResponse = "", uploadedInputFiles = null, uploadedmapFiles = null,
@@ -128,8 +128,8 @@ public class MergingServlet extends HttpServlet {
 					}
 				}
 
-				else if (item.getFieldName().equals("MergeTypeComboBox"))
-					mergeType = item.getString();
+				else if (item.getFieldName().equals("MatchTypeComboBox"))
+					matchType = item.getString();
 
 				else if (item.getFieldName().equals("mapFiles")) {
 					if (item.getName() != null) {
@@ -244,17 +244,17 @@ public class MergingServlet extends HttpServlet {
 						String logFile = "/uploads/" + new File(logZip).getName();
 						request.setAttribute("logFile", logFile);
 						request.setAttribute("msg", msg);
-						request = ConfigServlet.requestConfigMerge(request, mergeType, MergeOutputType,
+						request = ConfigServlet.requestConfigMerge(request, matchType, MergeOutputType,
 								selectedUserItem);
 						request.setAttribute("NumPrefOnt", preferedOnt);
 						request.getRequestDispatcher("/merging.jsp").forward(request, response);
 					} else {
 						if (mapOnts.length() < 1) {
-							String ch1 = "1", ch2 = "1"; 
-							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+							String ch1 = "1", ch2 = "1";
+							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY, matchType);
 						}
-						mergedModel = MergingProcess.DoMerge(inputOnts, mapOnts, UPLOAD_DIRECTORY, mergeType,
-								selectedUserItem, preferedOnt, MergeOutputType);
+						mergedModel = MergingProcess.DoMerge(inputOnts, mapOnts, UPLOAD_DIRECTORY, selectedUserItem,
+								preferedOnt, MergeOutputType);
 
 						mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
 						previousUserItem = selectedUserItem;
@@ -262,6 +262,7 @@ public class MergingServlet extends HttpServlet {
 						for (int i = 0; i < 14; i++)
 							request.setAttribute("res" + i, result[i]);
 
+						//String chartInfo = "100;80;20;50;100;40;80;"; for test
 						String chartInfo = mergedModel.getEvalTotalLabel();
 						request.setAttribute("chartInfo", chartInfo);
 						String MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
@@ -269,7 +270,10 @@ public class MergingServlet extends HttpServlet {
 						String MergedSubOntZip = "/uploads/" + new File(mergedModel.getSubMergedOntZipName()).getName();
 						request.setAttribute("MergedSubOntZip", MergedSubOntZip);
 						request.setAttribute("SavedPreferedOnt", preferedOnt);
-						request.setAttribute("inputFile", inputOnts);
+						// request.setAttribute("inputFile", inputOnts);
+						request.setAttribute("uploadedInputFiles", inputOnts); 
+						request.setAttribute("uploadedmapFiles", mapOnts);
+						request.setAttribute("uploadedMergeFile", mergedOnt);
 						String mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
 						request.setAttribute("zipResultTxt", mergeEvalTxt);
 						request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
@@ -277,7 +281,8 @@ public class MergingServlet extends HttpServlet {
 						String logFile = "/uploads/" + new File(logZip).getName();
 						request.setAttribute("logFile", logFile);
 						request.getRequestDispatcher("/mergeResult.jsp").forward(request, response);
-						// clear();
+						clear(); // it should not be clear, since maybe the user
+									// want to refine or evaluate them
 					}
 				}
 				break;
@@ -290,13 +295,14 @@ public class MergingServlet extends HttpServlet {
 				request.setAttribute("uploadedmapFiles", mapOnts);
 				request.setAttribute("numberOfSuggestion", numSuggestion);
 				request.setAttribute("conflictRes", RSets.getMessage());
-				request = ConfigServlet.requestConfigMerge(request, mergeType, MergeOutputType, selectedUserItem);
+				request = ConfigServlet.requestConfigMerge(request, matchType, MergeOutputType, selectedUserItem);
 				request = ConfigServlet.setGMRcheckboxes(request, RSets);
 				request.setAttribute("NumPrefOnt", preferedOnt);
 				request.setAttribute("SecGMR", "SecGMRshow");
 				String logZip = Zipper.zipFiles(Parameter.getLogFile());
 				String logFile = "/uploads/" + new File(logZip).getName();
 				request.setAttribute("logFile", logFile);
+				request.setAttribute("showGMRSectionValue", true);
 				request.getRequestDispatcher("/merging.jsp").forward(request, response);
 				break;
 
@@ -307,7 +313,7 @@ public class MergingServlet extends HttpServlet {
 				request.setAttribute("uploadedmapFiles", mapOnts);
 				request.setAttribute("numberOfSuggestion", numSuggestion);
 				request.setAttribute("conflictRes", RSets.getMessage());
-				request = ConfigServlet.requestConfigMerge(request, mergeType, MergeOutputType, selectedUserItem);
+				request = ConfigServlet.requestConfigMerge(request, matchType, MergeOutputType, selectedUserItem);
 				request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
 				request.setAttribute("NumPrefOnt", preferedOnt);
 				request = ConfigServlet.setGMRcheckboxes(request, RSets);
@@ -318,6 +324,16 @@ public class MergingServlet extends HttpServlet {
 				String chartInfo = mergedModel.getEvalTotalLabel();
 				request.setAttribute("chartInfo", chartInfo);
 				request.getRequestDispatcher("/mergeResult.jsp").forward(request, response);
+				break;
+
+			case "GoEvaluator":
+				clear();
+				request.getRequestDispatcher("/mergingEval.jsp").forward(request, response);
+				break;
+
+			case "GoMerger":
+				clear();
+				request.getRequestDispatcher("/merging.jsp").forward(request, response);
 				break;
 
 			case "DoMergeEval":
@@ -361,9 +377,11 @@ public class MergingServlet extends HttpServlet {
 					} else {
 						if (mapOnts.length() < 1) {
 							String ch1 = "1", ch2 = "1";
-							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY, matchType);
 						}
-						mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt);
+//						mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt,MergeOutputType);
+						mergedModel = SingleBuilder.run(mergedOnt, inputOnts, mapOnts, "equal", MergeOutputType);
+						
 						mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
 						previousUserItem = selectedUserItem;
 						String[] result = mergedModel.getEvalResult();
@@ -390,7 +408,7 @@ public class MergingServlet extends HttpServlet {
 
 			case "DoEvalAfterMerge":
 				mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
-				clear();
+				// clear();
 				previousUserItem = selectedUserItem;
 				String[] result = mergedModel.getEvalResult();
 				for (int i = 0; i < 14; i++)
@@ -401,7 +419,10 @@ public class MergingServlet extends HttpServlet {
 				String MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
 				request.setAttribute("MergedOntZip", MergedOntZip);
 				request.setAttribute("SavedPreferedOnt", preferedOnt);
-				request.setAttribute("inputFile", inputOnts);
+				// request.setAttribute("inputFile", inputOnts);
+				// request.setAttribute("uploadedInputFiles", inputOnts);
+				// request.setAttribute("uploadedmapFiles", mapOnts);
+				// request.setAttribute("uploadedMergeFile", mergedOnt);
 				String mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
 				request.setAttribute("zipResultTxt", mergeEvalTxt);
 				request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
@@ -429,9 +450,9 @@ public class MergingServlet extends HttpServlet {
 				request.setAttribute("chartInfo", chartInfo);
 				MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
 				request.setAttribute("MergedOntZip", MergedOntZip);
-				request.setAttribute("uploadedmapFiles", mapOnts);
-				request.setAttribute("uploadedMergeFile", mergedOnt);
-				request.setAttribute("uploadedInputFiles", inputOnts);
+				// request.setAttribute("uploadedmapFiles", mapOnts);
+				// request.setAttribute("uploadedMergeFile", mergedOnt);
+				// request.setAttribute("uploadedInputFiles", inputOnts);
 				request.setAttribute("SecDW", "hide");
 				mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
 				request.setAttribute("zipResultTxt", mergeEvalTxt);
@@ -446,7 +467,7 @@ public class MergingServlet extends HttpServlet {
 			case "DoRefine":
 				mergedModel = MergingProcess.DoRefine(mergedModel, UPLOAD_DIRECTORY, selectedUserItem, preferedOnt);
 				mergedModel = MergingProcess.DoMergeEval(mergedModel, selectedUserItem);
-				clear();
+				// clear();
 				String[] resultEval = mergedModel.getEvalResult();
 				for (int i = 0; i < 14; i++)
 					request.setAttribute("res" + i, resultEval[i]);
@@ -456,7 +477,10 @@ public class MergingServlet extends HttpServlet {
 				MergedOntZip = "/uploads/" + new File(mergedModel.getOntZipName()).getName();
 				request.setAttribute("MergedOntZip", MergedOntZip);
 				request.setAttribute("SavedPreferedOnt", preferedOnt);
-				request.setAttribute("inputFile", inputOnts);
+				// request.setAttribute("inputFile", inputOnts);
+				// request.setAttribute("uploadedInputFiles", inputOnts);
+				// request.setAttribute("uploadedmapFiles", mapOnts);
+				// request.setAttribute("uploadedMergeFile", mergedOnt);
 				mergeEvalTxt = "/uploads/" + new File(mergedModel.getEvalResultTxt()).getName();
 				request.setAttribute("zipResultTxt", mergeEvalTxt);
 				request = ConfigServlet.mergeEvaluationResultConfig(request, selectedUserItem);
@@ -506,9 +530,10 @@ public class MergingServlet extends HttpServlet {
 					} else {
 						if (mapOnts.length() < 1) {
 							String ch1 = "1", ch2 = "1";
-							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY);
+							mapOnts = MatchingProcess.CreateMap(inputOnts, ch1, ch2, UPLOAD_DIRECTORY, matchType);
 						}
-						mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt);
+//						mergedModel = ModelReader.createReadModel(inputOnts, mapOnts, mergedOnt, preferedOnt,MergeOutputType);
+						mergedModel = SingleBuilder.run(mergedOnt, inputOnts, mapOnts, "equal", MergeOutputType);
 						mergedModel = ConsistencyProcess.DoConsistencyCheck(mergedModel, userConsParam);
 						String[] resultC = mergedModel.getConsResult();
 						for (int i = 0; i < resultC.length; i++)
@@ -609,10 +634,12 @@ public class MergingServlet extends HttpServlet {
 						String[] fileName = inputOnts.split(";");
 						String ListOnts = null;
 						for (int i = 0; i < fileName.length; i++) {
+							int indexer = i + 1;
 							if (ListOnts == null) {
-								ListOnts = "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + i + "</option>";
+								ListOnts = "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + indexer
+										+ "</option>";
 							} else {
-								ListOnts = ListOnts + "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + i
+								ListOnts = ListOnts + "<option ${SelOnt" + i + "} value=" + i + ">Ontology " + indexer
 										+ "</option>";
 							}
 						}

@@ -20,72 +20,74 @@ Licence URI: http://www.os-templates.com/template-terms
 	src="https://www.google.com/recaptcha/api.js?render=6Lc5rrUUAAAAAKBNdawrac6WLfCWmtTHiqWd4vCH"></script>
 </head>
 <body id="top">
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row0">
-		<div id="topbar" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<div id="logo" class="fl_left">
-				<h1>
-					<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
-				</h1>
-				<p>Holistic Multiple Ontologies Merger</p>
+	<form method="post"
+		action="${pageContext.request.contextPath}/MergingServlet"
+		enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row0">
+			<div id="topbar" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<div id="logo" class="fl_left">
+					<h1>
+						<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
+					</h1>
+					<p>Multiple Ontologies Merger</p>
+				</div>
+				<!-- ################################################################################################ -->
+				<nav id="mainav" class="fl_right">
+					<ul class="clear">
+						<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoMerger">Merger</button></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoEvaluator">Evaluator</button></li>
+						<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
+								Us</a></li>
+						<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
+								Us</a></li>
+						<li><a class="drop"
+							href="${pageContext.request.contextPath}/help.jsp">User Help</a>
+							<ul>
+								<li><a
+									href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
+								<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
+										Framework</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
+										Catalogue</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
+										Catalogue</a></li>
+											<li><a
+									href="${pageContext.request.contextPath}/OMstandard.jsp">Standard for Evaluation</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+				<!-- ################################################################################################ -->
 			</div>
-			<!-- ################################################################################################ -->
-			<nav id="mainav" class="fl_right">
-				<ul class="clear">
-					<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-					<li><a class="drop"
-						href="${pageContext.request.contextPath}/merging.jsp">Merger</a>
-						<ul>
-							<li><a
-								href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
-							<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
-									Framework</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
-									Catalogue</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
-									Catalogue</a></li>
-						</ul></li>
-					<li class="active"><a
-						href="${pageContext.request.contextPath}/mergingEval.jsp">Evaluator</a>
-					</li>
-					<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/help.jsp">User
-							Help</a></li>
+		</div>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper bgded overlay"
+			style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
+			<div id="breadcrumb" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Merger</a></li>
 				</ul>
-			</nav>
-			<!-- ################################################################################################ -->
+				<!-- ################################################################################################ -->
+			</div>
 		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper bgded overlay"
-		style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
-		<div id="breadcrumb" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Merger</a></li>
-			</ul>
-			<!-- ################################################################################################ -->
-		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row3">
-		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
-		<form method="post"
-			action="${pageContext.request.contextPath}/MergingServlet"
-			enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row3">
+			<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+
 			<input type="hidden" id="g-recaptcha-response"
 				name="g-recaptcha-response"> <input type="hidden"
 				name="action" value="validate_captcha"> <input
@@ -101,33 +103,43 @@ Licence URI: http://www.os-templates.com/template-terms
 					See query catalog </a>
 				<table class="myTable">
 					<tr>
-						<td colspan="2">Write one query, it runs on the merged ontologies and all
-							source ontologies.</td>
+						<td colspan="2">Write one query, it will be run on the merged
+							ontology and all source ontologies.</td>
 					</tr>
 					<tr>
-						<td>Query category </td><td> <select id="text-one">
-								<option selected value="empty">-- Select a template --</option>
-								<option value="beverages">Classes</option>
-								<option value="base">Properties</option>
-								<option value="snacks">Individuals</option>
-						</select>
-						</td>
+						<td>Load template</td>
+						<td><select id="template" onchange="showQueryTemplate(this);">
+								<option>Select one template from the list</option>
+								<option>Retrieve all classes</option>
+								<option>Retrieve subclass relations between classes</option>
+								<option>Retrieve all subclasses of a specific class</option>
+								<option>Check whether two classes have a subclass
+									relations</option>
+								<option>Retrieve all SubCalss and SuperClass of a
+									specific class</option>
+								<option>Retrieve only SubClasses of a specific class</option>
+								<option>Retrieve only SuperClasses of a specific class</option>
+								<option>Check whether a specific element exists</option>
+								<option>Retrieve all subProperty of a specific property</option>
+								<option>Retrieve all individuals of a specific class</option>
+
+
+						</select></td>
 					</tr>
 					<tr>
-						<td >Load template </td> <td> <select id="text-two"
-							onchange="showfile(this);">
-								<option>-- Please choose from above --</option>
-						</select>
-						</td>
+						<td colspan="2"><lable id="queryStringDescription"
+								style="color: blue;"></lable></td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><textarea id="queryStringAll"
+								name="queryStringAll" title="Edit your query here"
+								style="width: 100%; font-size: 14px; height: 120px;">${queryStringAll}</textarea></td>
 					</tr>
 					<tr>
-						<td colspan="2"><textarea id="queryStringAll" name="queryStringAll"
-								title="Edit your query here"
-								style="width: 100%; font-size: 10px; height: 120px;">${queryStringAll}</textarea></td>
-					</tr>
-					<tr>
-						<td colspan="2" align="center"><button class="btn small" type="submit" name="submit"
-								value="DoQueryAll">Run Query</button></td>
+						<td colspan="2" align="center"><button class="btn small"
+								type="submit" name="submit" value="DoQueryAll">Run
+								Query</button></td>
 					</tr>
 				</table>
 				<table id="queryOutput" class="myTable">
@@ -136,19 +148,18 @@ Licence URI: http://www.os-templates.com/template-terms
 							<table>
 								<tr>
 									<td>
-										<!-- <h2>Result on merged ontology</h2> <textarea
-											id="resultQueryM" name="resultQueryM"
-											style="width: 100%; font-size: 10px; height: 300px;">${resultQueryM}</textarea> -->
-										${resultQueryM}
+										<table>
+											<tr>
+												<td>${resultQueryM}</td>
+											</tr>
+										</table>
 									</td>
 									<td>
-										<!-- <h2>Result on 1st ontology</h2> <textarea
-											id="resultQueryO1" name="resultQueryO1"
-											style="width: 100%; font-size: 10px; height: 300px;">${resultQueryO1}</textarea>
-										<h2>Result on 2nd ontology</h2> <textarea id="resultQueryO2"
-											name="resultQueryO2"
-											style="width: 100%; font-size: 10px; height: 300px;">${resultQueryO2}</textarea>-->
-										${resultQueryO}
+										<table>
+											<tr>
+												<td>${resultQueryO}</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
@@ -173,13 +184,19 @@ Licence URI: http://www.os-templates.com/template-terms
 				</div>
 				<div id="loadingover" style="display: none;"></div>
 			</div>
+			<div class="g-recaptcha"
+				data-sitekey="6LfFuU4UAAAAAN-_yVxOMIBF955f-EwAI4EQmfBB"></div>
 
 
-		</form>
-		<!-- ################################################################################################ -->
-		<!-- / main body -->
-		<div class="clear"></div>
-		</main>
+			<div id="loadingmsg" style="display: none;">
+				<img src="${pageContext.request.contextPath}/layout/images/load.gif"
+					border="0" />
+			</div>
+	</form>
+	<!-- ################################################################################################ -->
+	<!-- / main body -->
+	<div class="clear"></div>
+	</main>
 	</div>
 	<!-- ################################################################################################ -->
 	<!-- ################################################################################################ -->
@@ -199,68 +216,53 @@ Licence URI: http://www.os-templates.com/template-terms
 		};
 	</script>
 	<script>
-		function showfile(sel) {
-			files = [
-					"PREFIX  myont: <http://www.co-ode.org/ontologies/cmt/cmt.owl#>   PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>    	  PREFIX  owl:  <http://www.w3.org/2002/07/owl#>Select DISTINCT ?class    	  WHERE { ?class a owl:Class}",
-					"PREFIX  myont: <http://www.co-ode.org/ontologies/cmt/cmt.owl#>   PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>    	  PREFIX  owl:  <http://www.w3.org/2002/07/owl#>Select DISTINCT ?class    	  WHERE { ?class a owl:Class}",
-					" display file c.txt", "display file d.txt", ];
+		function showQueryTemplate(sel) {
+			pref = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>&#13;&#10;PREFIX owl: <http://www.w3.org/2002/07/owl#>&#13;&#10;PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>&#13;&#10;PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>&#13;&#10;";
+			q1 = pref
+					+ "Select DISTINCT ?class  &#13;&#10;   WHERE { ?class a owl:Class}";
+			q2 = pref
+					+ "SELECT ?subject ?object &#13;&#10;  	WHERE { ?subject rdfs:subClassOf ?object }";
+			q3 = pref
+					+ "SELECT ?allSubClass  &#13;&#10;     WHERE {?allSubClass rdfs:subClassOf   <http://merged#sample>}";
+			q4 = pref
+					+ "ASK { <http://merged#child> rdfs:subClassOf <http://merged#father> }";
+			q5 = pref
+					+ "SELECT ?class WHERE  { { &#13;&#10;    SELECT ?class WHERE {  <http://ont#sample> rdfs:subClassOf ?class} &#13;&#10;	} UNION {&#13;&#10;		    SELECT ?class WHERE {?class rdfs:subClassOf    <http://ont#sample> }&#13;&#10; } }";
+			q6 = pref
+					+ "SELECT ?class  WHERE {  ?class rdfs:subClassOf    <http://ont#sample>}";
+			q7 = pref
+					+ "SELECT ?class WHERE {?class rdfs:subClassOf <http://ont#sample>}";
+			q8 = pref + "ASK {  <http://ont#sample> rdf:type  owl:Class }";
+			q9 = pref
+					+ "SELECT ?property WHERE{ ?property  rdfs:subPropertyOf <http://ont#sample> }";
+			q10 = pref
+					+ "SELECT ?individual WHERE{ ?individual  rdf:type <http://ont#sample> }";
+
+			files = [ "", q1, q2, q3, q4, q5, q6, q7, q8, q9, q10 ];
+			description = [
+					"",
+					"This query returns all classes, requiring some prefix definitions. You can replace variable ?class with any desired name.",
+					"This query returns the subclass relationship between the classes. You can replace variables ?subject and ?object with any desired names.",
+					"This query returns all subclasses of a specific class. You must replace 'http://merged#sample' with a specific class in your ontology.",
+					"This query checks whether two classes have a subclass relations. You must replace 'http://merged#child' and 'http://merged#father' with the specific classes in your ontologies.",
+					"This query returns all SubClasses and SuperClasses of a specific class. You must replace 'http://ont#sample' with the specific class in your ontology.",
+					"This query returns only SubClasses of a specific class. You must replace 'http://ont#sample' with the specific class in your ontology.",
+					"This query returns only SuperClasses of a specific class. You must replace 'http://ont#sample' with the specific class in your ontology.",
+					"This query asks whether a specific element exists in the ontology and its type is OWL-CLASS. You must replace 'http://ont#sample' with the specific class in your ontology.",
+					"This query returns all subProperty of a specific property. You must replace 'http://ont#sample' with the specific property in your ontology.",
+					"This query return all individuals of a specific class. You must replace 'http://ont#sample' with the specific class in your ontology.", ];
+
 			srcfile = files[sel.selectedIndex];
 			if (srcfile != undefined && srcfile != "") {
 				document.getElementById('queryStringAll').innerHTML = srcfile;
 			}
+
+			srcDesc = description[sel.selectedIndex];
+			if (srcDesc != undefined && srcDesc != "") {
+				document.getElementById('queryStringDescription').innerHTML = srcDesc;
+			}
 		}
 	</script>
-	<!-- 	<script>
-			var carsAndModels = {};
-			carsAndModels['CQ'] = [ 'V70', 'XC60', 'XC90' ];
-			carsAndModels['PQ'] = [ 'Golf', 'Polo', 'Scirocco', 'Touareg' ];
-			carsAndModels['IQ'] = [ 'M6', 'X5', 'Z3' ];
-
-			function ChangeQueryListM() {
-				var carList = document.getElementById("QueryGroupM");
-				var modelList = document.getElementById("ListTemplateM");
-				var selCar = carList.options[carList.selectedIndex].value;
-				while (modelList.options.length) {
-					modelList.remove(0);
-				}
-				var cars = carsAndModels[selCar];
-				if (cars) {
-					var i;
-					for (i = 0; i < cars.length; i++) {
-						var car = new Option(cars[i], i);
-						modelList.options.add(car);
-					}
-				}
-			}
-
-			function ChangeQueryListO() {
-				var carList = document.getElementById("QueryGroupO");
-				var modelList = document.getElementById("ListTemplateO");
-				var selCar = carList.options[carList.selectedIndex].value;
-				while (modelList.options.length) {
-					modelList.remove(0);
-				}
-				var cars = carsAndModels[selCar];
-				if (cars) {
-					var i;
-					for (i = 0; i < cars.length; i++) {
-						var car = new Option(cars[i], i);
-						modelList.options.add(car);
-					}
-				}
-			}
-		</script> -->
-	<script>
-		$(function() {
-			$("#text-one").change(
-					function() {
-						$("#text-two").load(
-								"${pageContext.request.contextPath}/textdata/"
-										+ $(this).val() + ".txt");
-					});
-		});
-	</script>
-
 	<script src="${pageContext.request.contextPath}/dist/filepond.js"></script>
 </body>
 </html>

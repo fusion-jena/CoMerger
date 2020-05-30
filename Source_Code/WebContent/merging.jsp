@@ -18,81 +18,83 @@ Licence URI: http://www.os-templates.com/template-terms
 	rel="stylesheet">
 
 <script
-	src="https://www.google.com/recaptcha/api.js?render=6Lc5rrUUAAAAAKBNdawrac6WLfCWmtTHiqWd4vCH"></script>
+	src="https://www.google.com/recaptcha/api.js?render=myKey"></script>
 </head>
 <body id="top">
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row0">
-		<div id="topbar" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<div id="logo" class="fl_left">
-				<h1>
-					<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
-				</h1>
-				<p>Holistic Multiple Ontologies Merger</p>
+	<form method="post"
+		action="${pageContext.request.contextPath}/MergingServlet"
+		enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row0">
+			<div id="topbar" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<div id="logo" class="fl_left">
+					<h1>
+						<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
+					</h1>
+					<p>Multiple Ontologies Merger</p>
+				</div>
+				<!-- ################################################################################################ -->
+				<nav id="mainav" class="fl_right">
+					<ul class="clear">
+						<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoMerger">Merger</button></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoEvaluator">Evaluator</button></li>
+						<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
+								Us</a></li>
+						<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
+								Us</a></li>
+						<li><a class="drop"
+							href="${pageContext.request.contextPath}/help.jsp">User Help</a>
+							<ul>
+								<li><a
+									href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
+								<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
+										Framework</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
+										Catalogue</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
+										Catalogue</a></li>
+											<li><a
+									href="${pageContext.request.contextPath}/OMstandard.jsp">Standard for Evaluation</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+				<!-- ################################################################################################ -->
 			</div>
-			<!-- ################################################################################################ -->
-			<nav id="mainav" class="fl_right">
-				<ul class="clear">
-					<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-					<li class="active"><a class="drop"
-						href="${pageContext.request.contextPath}/merging.jsp">Merger</a>
-						<ul>
-							<li><a
-								href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
-							<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
-									Framework</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
-									Catalogue</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
-									Catalogue</a></li>
-						</ul></li>
-					<li><a
-						href="${pageContext.request.contextPath}/mergingEval.jsp">Evaluator</a>
-					</li>
-					<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/help.jsp">User
-							Help</a></li>
+		</div>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper bgded overlay"
+			style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
+			<div id="breadcrumb" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Merger</a></li>
 				</ul>
-			</nav>
-			<!-- ################################################################################################ -->
+				<!-- ################################################################################################ -->
+			</div>
 		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper bgded overlay"
-		style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
-		<div id="breadcrumb" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Merger</a></li>
-			</ul>
-			<!-- ################################################################################################ -->
-		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row3">
-		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
-		<div id="showMessage" class="messageSection">
-			<span style="font-weight: bold; color: red; margin: 10px;">${msg}</span>
-			<span style="margin: 10px;" id="msgOldFile">Using your last
-				uploaded file if you do not enter a new file</span> <br>
-		</div>
-		<h1>Ontology Merging</h1>
-		<form method="post"
-			action="${pageContext.request.contextPath}/MergingServlet"
-			enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row3">
+			<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+			<div id="showMessage" class="messageSection">
+				<span style="font-weight: bold; color: red; margin: 10px;">${msg}</span>
+				<span style="margin: 10px;" id="msgOldFile">Using your last
+					uploaded file if you do not enter a new file</span> <br>
+			</div>
+			<h1>Ontology Merging</h1>
+
 
 			<input type="hidden" id="g-recaptcha-response"
 				name="g-recaptcha-response"> <input type="hidden"
@@ -105,18 +107,20 @@ Licence URI: http://www.os-templates.com/template-terms
 				style="display: none;"> <input type="hidden"
 				name="selectedUserItem" id="selectedUserItem" /> <input
 				type="hidden" name="SecGMR" id="SecGMR" /> <input type="hidden"
-				name="SecEval" id="SecEval" />
+				name="SecEval" id="SecEval" /> <input type="hidden"
+				name="showGMRSectionValue" id="showGMRSectionValue"
+				value="${showGMRSectionValue}" />
 
 			<table class="myTable">
 				<tr>
-					<td><h2>Select input ontologies</h2> Your preferred ontology
-						(null means equal): <input id="PreferedOnt" name="PreferedOnt"
+					<td><h2>Select source ontologies</h2> Your preferred ontology:
+						<input id="PreferedOnt" name="PreferedOnt"
 						style="width: 20%; display: inline-block" value="${NumPrefOnt}"
 						title="Index of your prefered ontology" type="text"> <!-- type="number" step="1"
 						min="0" --></td>
 					<td><h2>Select their mapping files:</h2> <label
-						style="color: gray;">If you do not enter an alignment
-							file, it will be generated automatically. </label></td>
+						style="color: gray;">If you do not enter any, it will be
+							generated automatically. </label></td>
 				</tr>
 				<tr>
 					<td><input name="inputFiles" type="file" multiple="multiple"
@@ -127,18 +131,23 @@ Licence URI: http://www.os-templates.com/template-terms
 			</table>
 			<table class="myTable">
 				<tr>
-					<td><h2>Selecting Measures</h2></td>
+					<td colspan="2"><h2>Selecting Measures</h2></td>
 				</tr>
 				<tr>
-					<td>Type of Merge: <select id="MergeTypeComboBox"
+					<td colspan="2"><label style="color: gray;">In the
+							case of generating mapping by the system</label></td>
+				</tr>
+				<tr>
+					<!-- <td>Type of Merge: <select id="MergeTypeComboBox"
 						name="MergeTypeComboBox">
 							<option ${HolisticMergeSel} value="HolisticMerge">Holistic
 								Merger</option>
-							<!--<option ${RuleMergeSel} value="RuleMerge">Rule Merger</option>
-							 <option ${GraphMergeSel} value="GraphMerge">GraphMerge</option>
-									<option ${APIMergeSel} value="APIMerge">APIMerge</option>
-									<option ${MatchingMergeSel} value="MatchingMerge">MatchingMerge</option>
-									<option ${GenericMergeSel} value="GenericMerge">GenericMerge</option>-->
+					</select>
+					</td>-->
+					<td>Type of Match: <select id="MatchTypeComboBox"
+						name="MatchTypeComboBox">
+							<option ${JacardSel} value="Jacard">Jacard</option>
+							<option ${SeeCOntSel} value="SeeCOnt">SeeCOnt</option>
 					</select>
 					</td>
 					<td>Output: <select id="MergeOutputType"
@@ -150,7 +159,7 @@ Licence URI: http://www.os-templates.com/template-terms
 			</table>
 			<!-- ###################################################################################################################### -->
 			<div id="SectionGMR_container">
-				<div class="showcell">
+				<div id="SectionGMR_Class" class="showcell">
 					<h2>Adjust Refinement</h2>
 				</div>
 
@@ -169,7 +178,7 @@ Licence URI: http://www.os-templates.com/template-terms
 										<td align="left"><small><span align="left">${guidline}</span></small></td>
 									</tr>
 									<tr>
-										<td align="right">Suggested compatible sets:<input
+										<td align="right">Maximum number of suggested compatible sets:<input
 											type="number" id="numSuggestion" name="numSuggestion" min="1"
 											max="1000" value="${numberOfSuggestion}">
 											<button class="btn small" type="submit" name="submit"
@@ -196,7 +205,7 @@ Licence URI: http://www.os-templates.com/template-terms
 										Local Refinement</b></span></td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Completeness Aspect</td>
+							<td colspan="2"><hh>Completeness</td>
 						</tr>
 						<tr>
 							<td><input ${ClassCh} id="1" idname="ClassCheck"
@@ -230,7 +239,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Structure Preservation</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Minimality Aspect</td>
+							<td colspan="2"><hh>Minimality</td>
 						</tr>
 						<tr>
 							<td><input ${ClRedCh} id="8" idname="ClRedCheck"
@@ -249,7 +258,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Extraneous Entity Prohibition</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Deduction Aspect</td>
+							<td colspan="2"><hh>Deduction</td>
 						</tr>
 						<tr>
 							<td colspan="2"><input ${EntCh} id="12" idname="EntCheck"
@@ -257,7 +266,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Entailment Deduction Satisfaction</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Constraint Aspect</td>
+							<td colspan="2"><hh>Constraint</td>
 						</tr>
 
 						<tr>
@@ -275,7 +284,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Domain and Range Oneness</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Acyclicity Aspect</td>
+							<td colspan="2"><hh>Acyclicity</td>
 						</tr>
 						<tr>
 							<td><input ${AcyClCh} id="16" idname="AcyClCheck"
@@ -292,7 +301,7 @@ Licence URI: http://www.os-templates.com/template-terms
 								Inverses of Themselves</td>
 						</tr>
 						<tr>
-							<td colspan="2"><hh>Connectivity Aspect</td>
+							<td colspan="2"><hh>Connectivity</td>
 						</tr>
 						<tr>
 							<td><input ${UnconnClCh} id="19" idname="UnconnClCheck"
@@ -317,10 +326,8 @@ Licence URI: http://www.os-templates.com/template-terms
 
 					<table class="myTable">
 						<tr>
-							<td>
-								<h2>Selecting Evaluation Criteria</h2>
-							</td>
-							<td colspan="2"><span onclick="SelectAll()"
+
+							<td align="center" colspan="3"><span onclick="SelectAll()"
 								style="cursor: pointer; width: 60px;"> <font size="1"><u>[Select
 											All]</u></font></span><span onclick="ClearAll()" style="cursor: pointer;"><font
 									size="1"><u>[Clear All]</u></font></span></td>
@@ -331,24 +338,24 @@ Licence URI: http://www.os-templates.com/template-terms
 						<tr>
 							<td><input ${CompletenessCh} id="CompletenessCheck"
 								name="selectedItem" value="CompletenessCheck" type="checkbox">
-								Completeness Aspect &emsp;</td>
+								Completeness &emsp;</td>
 							<td><input ${MinimalityCh} id="MinimalityCheck"
 								name="selectedItem" value="MinimalityCheck" type="checkbox">
-								Minimality Aspect &emsp;</td>
+								Minimality &emsp;</td>
 							<td><input ${DeductionCh} id="DeductionCheck"
 								name="selectedItem" value="DeductionCheck" type="checkbox">
-								Deduction Aspect&emsp;</td>
+								Deduction &emsp;</td>
 						</tr>
 						<tr>
 							<td><input ${ConstraintCh} id="ConstraintCheck"
 								name="selectedItem" value="ConstraintCheck" type="checkbox">
-								Constraint Aspect &emsp;</td>
+								Constraint  &emsp;</td>
 							<td><input ${AcyclicityCh} id="AcyclicityCheck"
 								name="selectedItem" value="AcyclicityCheck" type="checkbox">
-								Acyclicity Aspect &emsp;</td>
+								Acyclicity  &emsp;</td>
 							<td><input ${ConnectivityCh} id="ConnectivityCheck"
 								name="selectedItem" value="ConnectivityCheck" type="checkbox">
-								Connectivity Aspect&emsp;</td>
+								Connectivity &emsp;</td>
 						</tr>
 						<tr>
 							<td colspan="3"><hh>Gernarl evaluation<hh></td>
@@ -392,7 +399,7 @@ Licence URI: http://www.os-templates.com/template-terms
 			</table>
 
 			<div class="g-recaptcha"
-				data-sitekey="6LfFuU4UAAAAAN-_yVxOMIBF955f-EwAI4EQmfBB"></div>
+				data-sitekey="MyKey"></div>
 
 
 			<div id="loadingmsg" style="display: none;">
@@ -400,77 +407,86 @@ Licence URI: http://www.os-templates.com/template-terms
 					border="0" />
 			</div>
 			<div id="loadingover" style="display: none;"></div>
+	</form>
 
-
-		</form>
-
-		<!-- ################################################################################################ -->
-		<!-- / main body -->
-		<div class="clear"></div>
-		</main>
+	<!-- ################################################################################################ -->
+	<!-- / main body -->
+	<div class="clear"></div>
+	</main>
 	</div>
 </body>
 
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<%@include file="../shared/footer.jsp"%>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<%@include file="../shared/footer.jsp"%>
 
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 
-	<!-- File upload- FilePond library -->
-	<!-- <script src="https://unpkg.com/filepond/dist/filepond.js"></script>-->
+<!-- File upload- FilePond library -->
+<!-- <script src="https://unpkg.com/filepond/dist/filepond.js"></script>-->
 
-	<script type="text/javascript" src="../dist/filepond.js"></script>
-	<script>
-		
-	</script>
+<script type="text/javascript" src="../dist/filepond.js"></script>
+<script>
+	
+</script>
 
 
-	<script type="text/javascript" src="../js/merging.js"></script>
+<script type="text/javascript" src="../js/merging.js"></script>
 
-	<script>
-		window.onload = function() {
-			//if ("${SecGMR}" === "SecGMRshow") {
-			//document.getElementById("SectionGMR").style.display = "block";
-			//}
+<script>
+	window.onload = function() {
+		//if ("${SecGMR}" === "SecGMRshow") {
+		//document.getElementById("SectionGMR").style.display = "block";
+		//}
 
-			//if ("${SecEval}" === "SecEvalshow") {
-			//document.getElementById("SectionEval").style.display = "block";
-			//}
-
-			var a1 = "${NumPrefOnt}"
-			if (a1 === null || a1 === "") {
-				document.getElementById('PreferedOnt').value = "equal";
-			} else {
-				document.getElementById("PreferedOnt").value = "${NumPrefOnt}";
-			}
-
-			var a2 = "${numberOfSuggestion}";
-			if (a2 === null || a2 === "") {
-				document.getElementById('numSuggestion').value = 5;
-			}
-
-			var a3 = "${msg}";
-			if (a3 === null || a3 === "") {
-				document.getElementById("showMessage").style.display = "none";
-			}
-
-			if ("${uploadedInputFiles}" === ""
-					|| "${uploadedInputFiles}" === null
-					|| "${uploadedmapFiles}" === ""
-					|| "${uploadedmapFiles}" === null) {
-				document.getElementById("msgOldFile").style.display = "none";
-			} else {
-				document.getElementById("msgOldFile").style.display = "block";
-				document.getElementById("showMessage").style.display = "block";
-			}
-
+		//if ("${SecEval}" === "SecEvalshow") {
+		//document.getElementById("SectionEval").style.display = "block";
+		//}
+		var showGMRSection = document.getElementById('showGMRSectionValue').value;
+		if (showGMRSection === "")
+			document.getElementById('SectionGMR_Class').setAttribute("class",
+					"showcell");
+		if (showGMRSection) {
+			document.getElementById('SectionGMR_Class').setAttribute("class",
+					"showcell active");
+			document.getElementById('SectionGMR_Class').style.display = "block";
+			document.getElementById('SectionGMR').style.display = "block";
+		} else {
+			document.getElementById('SectionGMR_Class').setAttribute("class",
+					"showcell");
 		}
-	</script>
 
+		var a1 = "${NumPrefOnt}"
+		if (a1 === null || a1 === "") {
+			document.getElementById('PreferedOnt').value = "equal";
+		} else {
+			document.getElementById("PreferedOnt").value = "${NumPrefOnt}";
+		}
+
+		var a2 = "${numberOfSuggestion}";
+		if (a2 === null || a2 === "") {
+			document.getElementById('numSuggestion').value = 5;
+		}
+
+		var a3 = "${msg}";
+		if (a3 === null || a3 === "") {
+			document.getElementById("showMessage").style.display = "none";
+		}
+
+		if ("${uploadedInputFiles}" === "" || "${uploadedInputFiles}" === null
+				|| "${uploadedmapFiles}" === ""
+				|| "${uploadedmapFiles}" === null) {
+			document.getElementById("msgOldFile").style.display = "none";
+		} else {
+			document.getElementById("msgOldFile").style.display = "block";
+			document.getElementById("showMessage").style.display = "block";
+		}
+
+	}
+</script>
 
 
 </html>

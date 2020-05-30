@@ -16,79 +16,85 @@ Licence URI: http://www.os-templates.com/template-terms
 	rel="stylesheet" type="text/css" media="all">
 <link href="${pageContext.request.contextPath}/dist/filepond.css"
 	rel="stylesheet">
+<script
+	src="https://www.google.com/recaptcha/api.js?render=6Lc5rrUUAAAAAKBNdawrac6WLfCWmtTHiqWd4vCH"></script>
+
 </head>
 <body id="top">
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row0">
-		<div id="topbar" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<div id="logo" class="fl_left">
-				<h1>
-					<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
-				</h1>
-				<p>Holistic Multiple Ontologies Merger</p>
+	<form method="post"
+		action="${pageContext.request.contextPath}/MergingServlet"
+		enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row0">
+			<div id="topbar" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<div id="logo" class="fl_left">
+					<h1>
+						<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
+					</h1>
+					<p>Multiple Ontologies Merger</p>
+				</div>
+				<!-- ################################################################################################ -->
+				<nav id="mainav" class="fl_right">
+					<ul class="clear">
+						<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoMerger">Merger</button></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoEvaluator">Evaluator</button></li>
+						<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
+								Us</a></li>
+						<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
+								Us</a></li>
+						<li><a class="drop"
+							href="${pageContext.request.contextPath}/help.jsp">User Help</a>
+							<ul>
+								<li><a
+									href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
+								<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
+										Framework</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
+										Catalogue</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
+										Catalogue</a></li>
+											<li><a
+									href="${pageContext.request.contextPath}/OMstandard.jsp">Standard for Evaluation</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+				<!-- ################################################################################################ -->
 			</div>
-			<!-- ################################################################################################ -->
-			<nav id="mainav" class="fl_right">
-				<ul class="clear">
-					<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-					<li class="active"><a class="drop"
-						href="${pageContext.request.contextPath}/merging.jsp">Merger</a>
-						<ul>
-							<li><a
-								href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/GMR.jsp">GMRs Framework</a></li>
-							<li style="font-weight: bold;"><a
-								href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
-									Catalogue</a></li>
-									<li ><a
-								href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
-									Catalogue</a></li>
-						</ul></li>
-					<li><a
-						href="${pageContext.request.contextPath}/mergingEval.jsp">Evaluator</a>
-					</li>
-					<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/help.jsp">User
-							Help</a></li>
+		</div>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper bgded overlay"
+			style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
+			<div id="breadcrumb" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contact Us</a></li>
 				</ul>
-			</nav>
-			<!-- ################################################################################################ -->
+				<!-- ################################################################################################ -->
+			</div>
 		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper bgded overlay"
-		style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
-		<div id="breadcrumb" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
-			<!-- ################################################################################################ -->
-		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row3">
-		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
-		<div class="inner">
-			<form method="post"
-				action="${pageContext.request.contextPath}/MergeServlet"
-				enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row3">
+			<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+			<div class="inner">
+				<input type="hidden" id="g-recaptcha-response"
+					name="g-recaptcha-response">
 				<div class="form_settings">
 					<h4>List of query catalog</h4>
-					Coming soon ...
-					<span style="font-weight: bold; color: red; width: 100%;">${msg}</span>
+					Coming soon ... <span
+						style="font-weight: bold; color: red; width: 100%;">${msg}</span>
 				</div>
 
 
@@ -99,11 +105,19 @@ Licence URI: http://www.os-templates.com/template-terms
 							border="0" />
 					</div>
 					<div id="loadingover" style="display: none;"></div>
-				</div>
+					<div class="g-recaptcha"
+						data-sitekey="6LfFuU4UAAAAAN-_yVxOMIBF955f-EwAI4EQmfBB"></div>
 
-			</form>
-		</div>
-		</main>
+
+					<div id="loadingmsg" style="display: none;">
+						<img
+							src="${pageContext.request.contextPath}/layout/images/load.gif"
+							border="0" />
+					</div>
+				</div>
+	</form>
+	</div>
+	</main>
 	</div>
 	<!-- ################################################################################################ -->
 	<!-- ################################################################################################ -->

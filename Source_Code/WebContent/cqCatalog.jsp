@@ -20,81 +20,90 @@ Licence URI: http://www.os-templates.com/template-terms
 	rel="stylesheet">
 <!-- <script src="${pageContext.request.contextPath}/dist/filepond.min.js"></script>
 <script src="${pageContext.request.contextPath}/dist/filepond.jquery.js"></script>-->
+<script
+	src="https://www.google.com/recaptcha/api.js?render=6Lc5rrUUAAAAAKBNdawrac6WLfCWmtTHiqWd4vCH"></script>
+
 </head>
 <body id="top">
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row0">
-		<div id="topbar" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<div id="logo" class="fl_left">
-				<h1>
-					<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
-				</h1>
-				<p>Holistic Multiple Ontologies Merger</p>
+	<form method="post"
+		action="${pageContext.request.contextPath}/MergingServlet"
+		enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row0">
+			<div id="topbar" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<div id="logo" class="fl_left">
+					<h1>
+						<a href="${pageContext.request.contextPath}/index.jsp">Co-Merger</a>
+					</h1>
+					<p>Multiple Ontologies Merger</p>
+				</div>
+				<!-- ################################################################################################ -->
+				<nav id="mainav" class="fl_right">
+					<ul class="clear">
+						<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoMerger">Merger</button></li>
+						<li><button class="btn menu" type="submit" name="submit"
+								value="GoEvaluator">Evaluator</button></li>
+						<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
+								Us</a></li>
+						<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
+								Us</a></li>
+						<li><a class="drop"
+							href="${pageContext.request.contextPath}/help.jsp">User Help</a>
+							<ul>
+								<li><a
+									href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
+								<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
+										Framework</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
+										Catalogue</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
+										Catalogue</a></li>
+											<li><a
+									href="${pageContext.request.contextPath}/OMstandard.jsp">Standard for Evaluation</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+				<!-- ################################################################################################ -->
 			</div>
-			<!-- ################################################################################################ -->
-			<nav id="mainav" class="fl_right">
-				<ul class="clear">
-					<li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-					<li class="active"><a class="drop"
-						href="${pageContext.request.contextPath}/merging.jsp">Merger</a>
-						<ul>
-							<li><a
-								href="${pageContext.request.contextPath}/requirement.jsp">Requirements</a></li>
-							<li><a href="${pageContext.request.contextPath}/GMR.jsp">GMRs
-									Framework</a></li>
-							<li><a
-								href="${pageContext.request.contextPath}/queryCatalog.jsp">Query
-									Catalogue</a></li>
-							<li style="font-weight: bold;"><a
-								href="${pageContext.request.contextPath}/cqCatalog.jsp">CQ
-									Catalogue</a></li>
-						</ul></li>
-					<li><a
-						href="${pageContext.request.contextPath}/mergingEval.jsp">Evaluator</a>
-					</li>
-					<li><a href="${pageContext.request.contextPath}/aboutUs.jsp">About
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/contact.jsp">Contact
-							Us</a></li>
-					<li><a href="${pageContext.request.contextPath}/help.jsp">User
-							Help</a></li>
+		</div>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper bgded overlay"
+			style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
+			<div id="breadcrumb" class="hoc clear">
+				<!-- ################################################################################################ -->
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">CQ catalog</a></li>
 				</ul>
-			</nav>
-			<!-- ################################################################################################ -->
+				<!-- ################################################################################################ -->
+			</div>
 		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper bgded overlay"
-		style="background-image: url('${pageContext.request.contextPath}/layout/images/01.png');">
-		<div id="breadcrumb" class="hoc clear">
-			<!-- ################################################################################################ -->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">CQ catalog</a></li>
-			</ul>
-			<!-- ################################################################################################ -->
-		</div>
-	</div>
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<!-- ################################################################################################ -->
-	<div class="wrapper row3">
-		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
-		<div class="inner">
-			<form method="post"
-				action="${pageContext.request.contextPath}/MergeServlet"
-				enctype="multipart/form-data" onsubmit='showLoading();'>
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<!-- ################################################################################################ -->
+		<div class="wrapper row3">
+			<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+			<div class="inner">
+				<input type="hidden" id="g-recaptcha-response"
+					name="g-recaptcha-response">
 				<div class="form_settings">
 					<h4>Competency Questions catalog</h4>
 					<table style="width: 100%;">
 						<tr>
 							<th></th>
 							<th>Conference Domain</th>
+						</tr>
+						<tr>
+							<td colspan="2"><b>Positive CQs</b></td>
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ1</td>
@@ -107,7 +116,7 @@ Licence URI: http://www.os-templates.com/template-terms
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ3</td>
-							<td>Can ''Reviewer'' be a type of person in conference
+							<td>Can ''Reviewer'' be a type of person in the conference
 								domain?</td>
 						</tr>
 						<tr>
@@ -129,7 +138,7 @@ Licence URI: http://www.os-templates.com/template-terms
 						</tr>
 						<tr>
 							<td>CQ8</td>
-							<td>Does conference proceeding can have an ISBN?</td>
+							<td>Does conference proceedings can have an ISBN?</td>
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ9</td>
@@ -193,8 +202,7 @@ Licence URI: http://www.os-templates.com/template-terms
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ23</td>
-							<td>Can information for the participant be part of the
-								conference document?</td>
+							<td>Can information of the participants be part of the conference document?</td>
 						</tr>
 						<tr>
 							<td>CQ24</td>
@@ -202,11 +210,11 @@ Licence URI: http://www.os-templates.com/template-terms
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ25</td>
-							<td>Can a short paper be a contribution to the conference?</td>
+							<td>Can a short paper be a contribution at the conference?</td>
 						</tr>
 						<tr>
 							<td>CQ26</td>
-							<td>Which type of session exists in the conference?</td>
+							<td>Which type of session exists at the conference?</td>
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ27</td>
@@ -218,17 +226,95 @@ Licence URI: http://www.os-templates.com/template-terms
 						</tr>
 						<tr style="background: #F0EFE2;">
 							<td>CQ29</td>
-							<td>Which type of deadline exists in the conference</td>
+							<td>Which type of deadline exists at the conference</td>
 						</tr>
 						<tr>
 							<td>CQ30</td>
 							<td>Which type of award can be given at the conference?</td>
 						</tr>
+						<tr>
+							<td colspan="2"><b>Negative CQs</b></td>
+						</tr>
+							<tr style="background: #F0EFE2;">
+							<td>CQ31</td>
+							<td>How should discussions on the poster held?
+							</td>
+						</tr>
+							<tr>
+							<td>CQ32</td>
+							<td>Is there any information regarding the past venue of the conference?
+							</td>
+						</tr>
+							<tr style="background: #F0EFE2;">
+							<td>CQ33</td>
+							<td>is there any relation between an author and a company? (Can an author employ by a company?)
+							</td>
+						</tr>
+							<tr>
+							<td>CQ34</td>
+							<td>Do authors have a CV and accessible during the conference presentation?
+							</td>
+						</tr>
+							<tr style="background: #F0EFE2;">
+							<td>CQ35</td>
+							<td>Is there any visa information available for the participant?
+							</td>
+						</tr>
 					</table>
 					<span style="font-weight: bold; color: red; width: 100%;">${msg}</span>
 				</div>
 
-
+				<br> <br>
+				<div id="cqRes">
+				<hh>Competency questions on the OWL restrictions conflicts: </hh>
+				<table style="width: 100%;">
+					<tr>
+						<th></th>
+						<th>Conference Domain</th>
+					</tr>
+					<tr style="background: #F0EFE2;">
+						<td>CQ1</td>
+						<td>Does a Person have an email?</td>
+					</tr>
+					<tr>
+						<td>CQ2</td>
+						<td>Who can have an email?</td>
+					</tr>
+					<tr style="background: #F0EFE2;">
+						<td>CQ3</td>
+						<td>How many emails can a Person have?</td>
+					</tr>
+					<tr>
+						<td>CQ4</td>
+						<td>Does a Conference have a name?</td>
+					</tr>
+					<tr style="background: #F0EFE2;">
+						<td>CQ5</td>
+						<td>Who can have a name?</td>
+					</tr>
+					<tr>
+						<td>CQ6</td>
+						<td>How many names can a Conference have?</td>
+					</tr>
+					<tr style="background: #F0EFE2;">
+						<td>CQ7</td>
+						<td>Has a Review only a Reviewer as author?</td>
+					</tr>
+					<tr>
+						<td>CQ8</td>
+						<td>By whom is a Review written by?</td>
+					</tr>
+					<tr style="background: #F0EFE2;">
+						<td>CQ9</td>
+						<td>What can have a title?</td>
+					</tr>
+					<tr>
+						<td>CQ10</td>
+						<td>Which range does the title have?</td>
+					</tr>
+				</table>
+			</div>
+			
 				<div class="form_settings">
 
 					<div id="loadingmsg" style="display: none;">
@@ -237,10 +323,19 @@ Licence URI: http://www.os-templates.com/template-terms
 					</div>
 					<div id="loadingover" style="display: none;"></div>
 				</div>
+				<div class="g-recaptcha"
+					data-sitekey="6LfFuU4UAAAAAN-_yVxOMIBF955f-EwAI4EQmfBB"></div>
 
-			</form>
-		</div>
-		</main>
+
+				<div id="loadingmsg" style="display: none;">
+					<img
+						src="${pageContext.request.contextPath}/layout/images/load.gif"
+						border="0" />
+				</div>
+				<div id="loadingover" style="display: none;"></div>
+	</form>
+	</div>
+	</main>
 	</div>
 	<!-- ################################################################################################ -->
 	<!-- ################################################################################################ -->

@@ -38,6 +38,9 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDataProperty;
@@ -48,6 +51,8 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.model.HModel;
+
+import org.semanticweb.owlapi.vocab.SKOSVocabulary;
 
 public class HMapping {
 	public static void main(String[] args) throws Exception {
@@ -87,7 +92,7 @@ public class HMapping {
 		if (alignF != null) {
 			String[] nm = alignF.split(";");
 			for (int ontID = 0; ontID < nm.length; ontID++) {
-				if (!nm[ontID].toString().equals("null")) {
+				if (!nm[ontID].toString().equals("null") && nm[ontID].toString().length() > 1) {
 					String OntName = nm[ontID];
 					try {
 						File file = new File(OntName);
@@ -109,8 +114,10 @@ public class HMapping {
 							String s2 = cell.element("entity2").attributeValue("resource");
 
 							// TODO: delete this condition
-							if (ontology.containsClassInSignature(IRI.create(s1))
-									&& ontology.containsClassInSignature(IRI.create(s2))) {
+							if ((ontology.containsClassInSignature(IRI.create(s1))
+									&& ontology.containsClassInSignature(IRI.create(s2)))
+									|| findClassInOS(ontM, s1, s2)) {
+
 								OWLClass cls1 = factory.getOWLClass(IRI.create(s1));
 								OWLClass cls2 = factory.getOWLClass(IRI.create(s2));
 								if (cls1 == null || cls2 == null) {
@@ -142,8 +149,9 @@ public class HMapping {
 									RefClass.add(RefClass.size(), HtempClass);
 
 								}
-							} else if (ontology.containsObjectPropertyInSignature(IRI.create(s1))
-									&& ontology.containsObjectPropertyInSignature(IRI.create(s2))) {
+							} else if ((ontology.containsObjectPropertyInSignature(IRI.create(s1))
+									&& ontology.containsObjectPropertyInSignature(IRI.create(s2)))
+									|| findObjInOS(ontM, s1, s2)) {
 								OWLObjectProperty pro1 = factory.getOWLObjectProperty(IRI.create(s1));
 								OWLObjectProperty pro2 = factory.getOWLObjectProperty(IRI.create(s2));
 								if (pro1 == null || pro2 == null) {
@@ -175,8 +183,9 @@ public class HMapping {
 									RefObjPro.add(RefObjPro.size(), HtempObjPro);
 								}
 
-							} else if (ontology.containsDataPropertyInSignature(IRI.create(s1))
-									&& ontology.containsDataPropertyInSignature(IRI.create(s2))) {
+							} else if ((ontology.containsDataPropertyInSignature(IRI.create(s1))
+									&& ontology.containsDataPropertyInSignature(IRI.create(s2)))
+									|| findDproInOS(ontM, s1, s2)) {
 								OWLDataProperty pro1 = factory.getOWLDataProperty(IRI.create(s1));
 								OWLDataProperty pro2 = factory.getOWLDataProperty(IRI.create(s2));
 								if (pro1 == null || pro2 == null) {
@@ -207,7 +216,7 @@ public class HMapping {
 									HtempDataPro.setLenDpro(HtempClass.getMappedCalss().size());
 									RefDataPro.add(RefDataPro.size(), HtempDataPro);
 								}
-							} 
+							}
 						}
 
 					} catch (DocumentException e) {
@@ -223,8 +232,9 @@ public class HMapping {
 		ontM = determineRefClass(ontM, RefClass);
 		ontM = determineRefObjPro(ontM, RefObjPro);
 		ontM = determineRefDataPro(ontM, RefDataPro);
-		// TODO: correct labeling;
-		// SKOSVocabulary.ALTLABEL.getIRI()
+
+		// if we need only to print pair of corresponding entities
+		// printCorr(RefClass,RefObjPro,RefDataPro);
 
 		ontM.SetEqClasses(RefClass);
 		ontM.SetEqObjProperties(RefObjPro);
@@ -255,12 +265,86 @@ public class HMapping {
 
 	}
 
-	
+	private boolean findClassInOS(HModel ontM, String s1, String s2) {
+		boolean first = false, second = false;
+		for (OWLOntology os : ontM.getInputOwlOntModel()) {
+			if (os.containsClassInSignature(IRI.create(s1)))
+				first = true;
+
+			if (os.containsClassInSignature(IRI.create(s2)))
+				second = true;
+		}
+		if (first && second)
+			return true;
+
+		return false;
+	}
+
+	private boolean findObjInOS(HModel ontM, String s1, String s2) {
+
+		boolean first = false, second = false;
+		for (OWLOntology os : ontM.getInputOwlOntModel()) {
+			if (os.containsObjectPropertyInSignature(IRI.create(s1)))
+				first = true;
+
+			if (os.containsObjectPropertyInSignature(IRI.create(s2)))
+				second = true;
+		}
+		if (first && second)
+			return true;
+		
+		return false;
+	}
+
+	private boolean findDproInOS(HModel ontM, String s1, String s2) {
+
+		boolean first = false, second = false;
+		for (OWLOntology os : ontM.getInputOwlOntModel()) {
+			if (os.containsDataPropertyInSignature(IRI.create(s1)))
+				first = true;
+
+			if (os.containsDataPropertyInSignature(IRI.create(s2)))
+				second = true;
+		}
+		if (first && second)
+			return true;
+		return false;
+	}
+
+	private void printCorr(ArrayList<HMappedClass> refClass, ArrayList<HMappedObj> refObjPro,
+			ArrayList<HMappedDpro> refDataPro) {
+		for (int i = 0; i < refClass.size(); i++) {
+			String refC = refClass.get(i).getRefClass().toString();
+			Iterator<OWLClass> cc = refClass.get(i).getMappedCalss().iterator();
+			while (cc.hasNext()) {
+				String c = cc.next().toString();
+				System.out.println(c + "," + refC);
+			}
+		}
+		for (int i = 0; i < refObjPro.size(); i++) {
+			String refC = refObjPro.get(i).getRefObj().toString();
+			Iterator<OWLObjectProperty> cc = refObjPro.get(i).getMappedObj().iterator();
+			while (cc.hasNext()) {
+				String c = cc.next().toString();
+				System.out.println(c + "," + refC);
+			}
+		}
+		for (int i = 0; i < refDataPro.size(); i++) {
+			String refC = refDataPro.get(i).getRefDpro().toString();
+			Iterator<OWLDataProperty> cc = refDataPro.get(i).getMappedDpro().iterator();
+			while (cc.hasNext()) {
+				String c = cc.next().toString();
+				System.out.println(c + "," + refC);
+			}
+		}
+	}
+
 	private HModel determineRefDataPro(HModel ontM, ArrayList<HMappedDpro> cList) {
 		HashMap<OWLDataProperty, OWLDataProperty> keyValue = new HashMap<OWLDataProperty, OWLDataProperty>();
 		for (int i = 0; i < cList.size(); i++) {
 			OWLDataProperty c = findRefDataPro(ontM, cList.get(i).getMappedDpro());
 			cList.get(i).setRefDpro(c);
+			ontM = addAllLabelsToDataPro(ontM, cList.get(i).getMappedDpro(), c);
 
 			Iterator<OWLDataProperty> iter = cList.get(i).getMappedDpro().iterator();
 			while (iter.hasNext())
@@ -276,6 +360,7 @@ public class HMapping {
 		for (int i = 0; i < cList.size(); i++) {
 			OWLObjectProperty c = findRefObjPro(ontM, cList.get(i).getMappedObj());
 			cList.get(i).setRefObj(c);
+			ontM = addAllLabelsToObjProperties(ontM, cList.get(i).getMappedObj(), c);
 
 			Iterator<OWLObjectProperty> iter = cList.get(i).getMappedObj().iterator();
 			while (iter.hasNext())
@@ -291,6 +376,7 @@ public class HMapping {
 		for (int i = 0; i < cList.size(); i++) {
 			OWLClass c = findRefClass(ontM, cList.get(i).getMappedCalss());
 			cList.get(i).setRefClass(c);
+			ontM = addAllLabelsToClass(ontM, cList.get(i).getMappedCalss(), c);
 
 			Iterator<OWLClass> iter = cList.get(i).getMappedCalss().iterator();
 			while (iter.hasNext())
@@ -299,6 +385,72 @@ public class HMapping {
 		}
 		ontM.setKeyValueEqClass(keyValue);
 		ontM.SetEqClasses(cList);
+		return ontM;
+	}
+
+	private HModel addAllLabelsToClass(HModel ontM, Set<OWLClass> cList, OWLClass c) {
+		OWLOntology ont = ontM.getOwlModel();
+		OWLOntologyManager manager = ont.getOWLOntologyManager();
+		OWLDataFactory factory = manager.getOWLDataFactory();
+
+		OWLAnnotationProperty labels = factory.getRDFSLabel();
+
+		Iterator<OWLClass> iter = cList.iterator();
+		while (iter.hasNext()) {
+			OWLClass cc = iter.next();
+			IRI iri = cc.getIRI();
+
+			OWLAnnotation pA1 = factory.getOWLAnnotation(labels, iri);
+			OWLAnnotationAssertionAxiom myAxiom1 = factory.getOWLAnnotationAssertionAxiom(c.getIRI(), pA1);
+			manager.addAxiom(ont, myAxiom1);
+		}
+
+		ontM.SetManager(manager);
+		ontM.SetOwlModel(ont);
+		return ontM;
+	}
+
+	private HModel addAllLabelsToObjProperties(HModel ontM, Set<OWLObjectProperty> set, OWLObjectProperty c) {
+		OWLOntology ont = ontM.getOwlModel();
+		OWLOntologyManager manager = ont.getOWLOntologyManager();
+		OWLDataFactory factory = manager.getOWLDataFactory();
+
+		OWLAnnotationProperty labels = factory.getRDFSLabel();
+
+		Iterator<OWLObjectProperty> iter = set.iterator();
+		while (iter.hasNext()) {
+			OWLObjectProperty cc = iter.next();
+			IRI iri = cc.getIRI();
+
+			OWLAnnotation pA1 = factory.getOWLAnnotation(labels, iri);
+			OWLAnnotationAssertionAxiom myAxiom1 = factory.getOWLAnnotationAssertionAxiom(c.getIRI(), pA1);
+			manager.addAxiom(ont, myAxiom1);
+		}
+
+		ontM.SetManager(manager);
+		ontM.SetOwlModel(ont);
+		return ontM;
+	}
+
+	private HModel addAllLabelsToDataPro(HModel ontM, Set<OWLDataProperty> set, OWLDataProperty c) {
+		OWLOntology ont = ontM.getOwlModel();
+		OWLOntologyManager manager = ont.getOWLOntologyManager();
+		OWLDataFactory factory = manager.getOWLDataFactory();
+
+		OWLAnnotationProperty labels = factory.getRDFSLabel();
+
+		Iterator<OWLDataProperty> iter = set.iterator();
+		while (iter.hasNext()) {
+			OWLDataProperty cc = iter.next();
+			IRI iri = cc.getIRI();
+
+			OWLAnnotation pA1 = factory.getOWLAnnotation(labels, iri);
+			OWLAnnotationAssertionAxiom myAxiom1 = factory.getOWLAnnotationAssertionAxiom(c.getIRI(), pA1);
+			manager.addAxiom(ont, myAxiom1);
+		}
+
+		ontM.SetManager(manager);
+		ontM.SetOwlModel(ont);
 		return ontM;
 	}
 
@@ -313,11 +465,9 @@ public class HMapping {
 
 		// if nothing return, means 1- they are equal or 2- the mapped pair does
 		// not belong to preferred ontology
-		String[] sList = convertToStringClass(cList);
-		String type = "class";
-		// String res = LabelIdentifier.identifyCommonWords(sList, type);
-		String res = LabelIdentifier.createLabel(sList, type);
+		String res = LabelIdentifier.createLabelClass(cList);
 		OWLClass refClass = ontM.getManager().getOWLDataFactory().getOWLClass(IRI.create("http://merged#" + res));
+
 		return refClass;
 
 	}
@@ -333,9 +483,8 @@ public class HMapping {
 
 		// if nothing return, means 1- they are equal or 2- the mapped pair does
 		// not belong to preferred ontology
-		String[] sList = convertToStringObjPro(cList);
-		String type = "object";
-		String res = LabelIdentifier.createLabel(sList, type);
+
+		String res = LabelIdentifier.createLabelObjPro(cList);
 		OWLObjectProperty refClass = ontM.getManager().getOWLDataFactory()
 				.getOWLObjectProperty(IRI.create("http://merged#" + res));
 		return refClass;
@@ -386,9 +535,8 @@ public class HMapping {
 
 		// if nothing return, means 1- they are equal or 2- the mapped pair does
 		// not belong to preferred ontology
-		String[] sList = convertToStringDataPro(cList);
-		String type = "object";
-		String res = LabelIdentifier.createLabel(sList, type);
+
+		String res = LabelIdentifier.createLabelDPro(cList);
 		OWLDataProperty refClass = ontM.getManager().getOWLDataFactory()
 				.getOWLDataProperty(IRI.create("http://merged#" + res));
 		return refClass;

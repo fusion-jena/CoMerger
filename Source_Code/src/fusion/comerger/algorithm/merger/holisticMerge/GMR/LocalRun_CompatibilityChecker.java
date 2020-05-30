@@ -71,6 +71,17 @@ public class LocalRun_CompatibilityChecker {
 		GMRs = GMRs + "," + "UnconnClCheck"; // R19
 		GMRs = GMRs + "," + "UnconnProCheck"; // R20
 
+		/*
+		 * You should copy-paste the file RulesConflictNum.csv (exist in this
+		 * package) to your local folder c:\\uploads\\RulesConflictNum.csv or go
+		 * to Demo.java and change the variable RuleInfo
+		 */
+
+		/*
+		 * the graph will be saved as a csv file in the folder c:\\uploads.
+		 * either create this folder in your local computer, or go to the
+		 * UserCliqueExtractor.java and adapt readCSV and SaveCSV functions.
+		 */
 		RSets = CompatibilityChecker.RuleConflict(GMRs, numSuggestion);
 
 		// Please put this output in a basic HMTL page

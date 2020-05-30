@@ -138,7 +138,66 @@ public class BlockShareFunc {
 		return -1;
 	}
 
-	public static HashMap<OWLClassExpression, HashSet<OWLClassExpression>> createAdjacentClassesList(HModel ontM) {
+	public static HashMap<OWLClassExpression, HashSet<OWLClassExpression>> createAdjacentClassesListNewCorrectOne(HModel ontM) {
+		long startTime = System.currentTimeMillis();
+		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> res = new HashMap<OWLClassExpression, HashSet<OWLClassExpression>>();
+
+//		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> listParent = new HashMap<OWLClassExpression, HashSet<OWLClassExpression>>();
+//		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> listChild = new HashMap<OWLClassExpression, HashSet<OWLClassExpression>>();
+		HashSet<OWLClassExpression> temp = new HashSet<OWLClassExpression>();
+
+		Iterator<OWLSubClassOfAxiom> is_a = ontM.getOwlModel().getAxioms(AxiomType.SUBCLASS_OF).iterator();
+
+		while (is_a.hasNext()) {
+
+			OWLSubClassOfAxiom axiom = is_a.next();
+			OWLClassExpression SuperClass = ((OWLSubClassOfAxiom) axiom).getSuperClass();// parent
+			OWLClassExpression SubClass = ((OWLSubClassOfAxiom) axiom).getSubClass();// child
+
+			// if (SuperClass instanceof OWLClassImpl && SubClass instanceof
+			// OWLClassImpl) {
+			// add parent to the child list
+			temp = new HashSet<OWLClassExpression>();
+			HashSet<OWLClassExpression> cc = res.get(SubClass);
+			if (cc == null || cc.size() < 1) {
+				// it means this class was not already in the list of
+				// adjacent
+				temp.add(SuperClass);
+				res.put(SubClass, temp);
+			} else {
+				cc.add(SuperClass);// never arrive here
+				res.put(SubClass, cc);
+			}
+			// add child to parent
+			temp = new HashSet<OWLClassExpression>();
+			HashSet<OWLClassExpression> ccc = res.get(SuperClass);
+			if (ccc == null || ccc.size() < 1) {
+				// it means this class was not already in the list of
+				// adjacent
+				temp.add(SubClass);
+				res.put(SuperClass, temp);
+			} else {
+				ccc.add(SubClass);// never arrive here
+				res.put(SuperClass, ccc);
+			}
+			// }
+		}
+
+//		ontM.setParentList(listParent);
+//		ontM.setChildList(listChild);
+		ontM.setAlterStatus(false);
+
+//		res.putAll(listParent);
+//		res.putAll(listChild);
+
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = stopTime - startTime;
+		MyLogging.log(Level.INFO,
+				"A list of adjacent classes has been successfully created. Total time: " + elapsedTime + " ms. \n");
+		return res;
+	}
+	
+	public static HashMap<OWLClassExpression, HashSet<OWLClassExpression>> createAdjacentClassesList(HModel ontM) { //with last result
 		long startTime = System.currentTimeMillis();
 		HashMap<OWLClassExpression, HashSet<OWLClassExpression>> res = new HashMap<OWLClassExpression, HashSet<OWLClassExpression>>();
 

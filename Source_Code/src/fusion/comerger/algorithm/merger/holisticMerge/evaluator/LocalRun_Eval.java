@@ -28,9 +28,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
 import fusion.comerger.servlets.MergingProcess;
+import fusion.comerger.algorithm.merger.holisticMerge.SingleBuilder;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.GenerateOutput;
 import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.model.HModel;
@@ -38,7 +40,7 @@ import fusion.comerger.algorithm.merger.model.ModelReader;
 
 public class LocalRun_Eval {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws OWLOntologyCreationException {
 		/**
 		 * @param inputOnts
 		 *            List of source ontologies
@@ -69,7 +71,7 @@ public class LocalRun_Eval {
 		// csv file
 		String ResultPath = "C:\\YOUR_LOCAL_FOLDER\\testt.csv";
 		StatisticTest.result = new HashMap<String, String>();
-
+		String MergeOutputType = "RDF/XML";
 		// Set the required evaluation dimension
 		String evalDim = "CompletenessCheck";
 		evalDim = evalDim + "," + "MinimalityCheck";
@@ -82,7 +84,8 @@ public class LocalRun_Eval {
 		evalDim = evalDim + "," + "CompactnessCheck";
 		evalDim = evalDim + "," + "CoverageCheck";
 
-		mergedModel = ModelReader.createReadModel(inputOnts, mappingFile, mergedOnt, preferredOnt);
+		
+		mergedModel = SingleBuilder.run(mergedOnt, inputOnts, mappingFile, "equal", MergeOutputType);
 		try {
 			mergedModel = MergingProcess.DoMergeEval(mergedModel, evalDim);
 		} catch (FileNotFoundException e) {

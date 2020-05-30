@@ -36,12 +36,13 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
 import fusion.comerger.servlets.MatchingProcess;
+import fusion.comerger.algorithm.merger.holisticMerge.SingleBuilder;
 import fusion.comerger.algorithm.merger.model.HModel;
 import fusion.comerger.algorithm.merger.model.ModelReader;
 
 public class LocalRun_Consistency {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws OWLOntologyCreationException {
 		/**
 		 * @param sourceOntologies
 		 *            List of source ontologies
@@ -68,8 +69,9 @@ public class LocalRun_Consistency {
 		sourceOntologies = sourceOntologies + ";" + "C:\\YOUR_LOCAL_FOLDER\\conference.owl";
 		sourceOntologies = sourceOntologies + ";" + "C:\\YOUR_LOCAL_FOLDER\\confOf.owl";
 		String mergedOnt = "C:\\YOUR_LOCAL_FOLDER\\MergedOnt745.owl";
-		String mappingFile = MatchingProcess.CreateMap(sourceOntologies, "1", "1", DIRECTORY);
-
+		String matchType = "Jacard"; // "SeeCOnt";
+		String mappingFile = MatchingProcess.CreateMap(sourceOntologies, "1", "1", DIRECTORY, matchType);
+		String MergeOutputType = "RDF/XML";
 		String preferredOnt = "equal";
 		// set: to rank all unsatisfiable classes (set "all") or only root
 		// classes (set "root")
@@ -81,7 +83,7 @@ public class LocalRun_Consistency {
 
 		String userConsParam = rootAllClasses + "," + numJustification;
 
-		HModel mergedModel = ModelReader.createReadModel(sourceOntologies, mappingFile, mergedOnt, preferredOnt);
+		HModel mergedModel = SingleBuilder.run(mergedOnt, sourceOntologies, mappingFile, "equal", MergeOutputType);
 		try {
 			mergedModel = ConsistencyProcess.DoConsistencyCheck(mergedModel, userConsParam);
 		} catch (OWLOntologyCreationException e) {

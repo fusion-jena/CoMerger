@@ -89,6 +89,7 @@ public class HModel {
 	int numRewAx;
 	HashSet<OWLAxiom> isaBreakingAxioms;
 	HashSet<OWLAxiom> otherBreakingAxioms;
+	HashSet<OWLAxiom> unconnectedAxioms;
 	int refineActionCluster;
 	int refineActionMerge;
 	boolean alter = false;
@@ -98,6 +99,7 @@ public class HModel {
 	String subOntZip;
 	String dimensionLabel;
 	HashMap<String, String> evalHash;
+	String plan ;
 
 	public int getInputClassSizeTotal() {
 		return inputClassSize;
@@ -420,6 +422,15 @@ public class HModel {
 
 	}
 
+	public HashSet<OWLAxiom> getUnconnectedAxiom() {
+		return unconnectedAxioms;
+	}
+
+	public void SetUnconnectedAxiom(HashSet<OWLAxiom> brAx) {
+		unconnectedAxioms = brAx;
+
+	}
+	
 	public HashSet<OWLAxiom> getOtherBreakingAxiom() {
 		return otherBreakingAxioms;
 	}
@@ -499,5 +510,13 @@ public class HModel {
 	
 	public HashMap<String, String> getEvalHashResult() {
 		return evalHash;
+	}
+
+	public void setSuggestedPlan(String batchPlan) {
+		plan =batchPlan;		
+	}
+	
+	public String getSuggestedPlan() {
+		return plan ;
 	}
 }

@@ -26,13 +26,16 @@ package fusion.comerger.algorithm.merger.model;
  */
 import java.util.logging.Level;
 
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+
 import fusion.comerger.algorithm.merger.holisticMerge.HBuilder;
 import fusion.comerger.algorithm.merger.holisticMerge.MyLogging;
+import fusion.comerger.algorithm.merger.holisticMerge.localTest.StatisticTest;
 import fusion.comerger.algorithm.merger.holisticMerge.mapping.HMapping;
 
 public class ModelReader {
 
-		public static HModel createReadModel(String inputFile, String mapFile, String mergeFile, String preferedOnt) {
+		public static HModel createReadModel(String inputFile, String mapFile, String mergeFile, String preferedOnt, String MergeOutputType) throws OWLOntologyCreationException {
 		long startTime = System.currentTimeMillis();
 		
 		HModel ontM = new HModel();
@@ -40,14 +43,16 @@ public class ModelReader {
 		ontM.setOntName(mergeFile);
 
 		ontM.SetPreferedOnt(preferedOnt);
+		ontM.setMergeOutputType(MergeOutputType);
 		ontM = HBuilder.run(ontM);
+		StatisticTest.result.put("Merged_ontology_name", mergeFile);
 		// Builder.BuildOntEval(ontM);
 
 		// 2 -- Read Mapping
 		HMapping hp = new HMapping();
 		ontM = hp.run(ontM, mapFile);
 
-		//TODO: in merge process after this phase, the merged ont will be revised, and some axioms will be delete, but here, no!
+		//in merge process after this phase, the merged ont will be revised, and some axioms will be delete, but here, no!
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;

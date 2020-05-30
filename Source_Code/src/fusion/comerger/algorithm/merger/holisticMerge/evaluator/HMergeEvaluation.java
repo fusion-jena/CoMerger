@@ -85,8 +85,8 @@ public class HMergeEvaluation {
 				existNS = true;
 			if (!ns.startsWith("http"))
 				errorNS++;
-			if (!ns.endsWith("#"))
-				errorNS++;
+			//if (!ns.endsWith("#"))
+				//errorNS++;
 		}
 		if (existNS == false || errorNS > 0) {
 			res[2] = cross;
@@ -197,8 +197,7 @@ public class HMergeEvaluation {
 				if (Character.isLowerCase(className.charAt(0)))
 					lowercase++;
 			} catch (IllegalStateException e) {
-				// e.printStackTrace();
-				System.out.println("Error during UnifyNaming evaluator");
+				System.out.println("Error during UnifyNaming evaluator for class: " + c);
 			}
 		}
 
@@ -267,7 +266,7 @@ public class HMergeEvaluation {
 			res[1] = "<span style=\"font-weight: bold; color: orange; width: 100%;\">No entity declration found for all entities! <br></span>";
 		} else {
 			res[0] = tick;
-			res[1] = "Enitiies are declraed!<br>";
+			res[1] = "Entities are declraed!<br>";
 		}
 
 		StatisticTest.result.put("Entity_Type_Declaration", res[0]);

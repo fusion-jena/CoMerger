@@ -77,7 +77,7 @@ public class BinaryLadder {
 		 * @param numberDataSet
 		 *            set the number of dataset as the number of your di folders
 		 */
-		
+
 		HolisticMerger MA = new HolisticMerger();
 		HEvaluator Eval = new HEvaluator();
 		String Refinement_without_local = StatisticTest.SetRefinement();
@@ -111,10 +111,12 @@ public class BinaryLadder {
 				HModel ontM = new HModel();
 				String testVersion = "d" + i + "v5_b";
 				int mergeCounter = 0;
-				/* 
-				 * run version 4: non-perfect mapping with refinement with local refinement
+				/*
+				 * run version 4: non-perfect mapping with refinement with local
+				 * refinement
 				 */
 				UPLOAD_DIRECTORY = UPLOAD_DIRECTORY + "temp\\";
+				String matchType = "Jacard"; // "SeeCOnt";
 				for (int j = 1; j < inputOnt.length; j++) {
 					String mappingFile = "";
 					try {
@@ -123,7 +125,8 @@ public class BinaryLadder {
 								.format(Calendar.getInstance().getTime());
 						System.out.println("start creating mapping for " + inputOntList + "\t" + currentTime);
 						System.gc();
-						mappingFile = MatchingProcess.CreateMap(inputOntList, ch[0], ch[1], UPLOAD_DIRECTORY);
+						mappingFile = MatchingProcess.CreateMap(inputOntList, ch[0], ch[1], UPLOAD_DIRECTORY,
+								matchType);
 						System.out.println("Finished create mapping for " + inputOntList);
 					} catch (Exception e) {
 						System.out.println("Error for " + inputOntList + "\n" + e);
