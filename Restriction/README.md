@@ -7,5 +7,5 @@ This repository contains the detection and resolution table and also the case st
 
 
 # Publication
-Grygorova, Elena and Babalou, Samira and König-Ries, Birgitta, "Toward OWL Restriction Reconciliation in Merging Knowledge", In In ESWC, Poster and Demo Track, 2020.
+Grygorova, Elena and Babalou, Samira and König-Ries, Birgitta, "Toward OWL Restriction Reconciliation in Merging Knowledge", In ESWC, Poster and Demo Track, 2020.
 
