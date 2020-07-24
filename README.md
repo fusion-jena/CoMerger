@@ -13,7 +13,7 @@ CoMerger is a holistic multiple ontologies merging tool, available at http://com
 6. Babalou, Samira, Elena Grygorova, and Birgitta König-Ries. "*CoMerger: A Customizable Online Tool for Building a Consistent Quality-Assured Merged Ontology*." Submitted to ESWC2020 Demo Tracks.
 7. Babalou, Samira, Elena Grygorova, and Birgitta König-Ries. "*How good is this merged ontology?*."  in ESWC2020, Poster and Demo track.
 8. Babalou, Samira, Elena Grygorova, and Birgitta König-Ries. , "*How good is this merged ontology? Towards a customizable quality evaluation*", submitted to EKAW2020.
-8. Babalou, Samira, and Birgitta König-Ries. "*Towards Building Knowledge by Merging Multiple Ontologies with CoMerger: A Partitioning-based Approach."* arXiv preprint arXiv:2005.02659 (2020). The paper is under review of ISWC2020.
+8. Babalou, Samira, and Birgitta König-Ries. "*Towards Building Knowledge by Merging Multiple Ontologies with CoMerger: A Partitioning-based Approach."* arXiv preprint arXiv:2005.02659 (2020). 
 
 
 # Repository's files:
