@@ -1,9 +1,5 @@
 # Competency Questions in the conference domain
 <table>
-  <th>
-    <th align="center">id</th>
-    <th align="center">CQ</th>
-  </th>
   <tr>
     <td align="center">CQ1</td>
     <td align="center">Which type of documents can include in the conference document?</td>
