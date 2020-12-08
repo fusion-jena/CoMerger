@@ -147,11 +147,11 @@
 			<systemPath>${project.basedir}\external-jars\fusion\oapt\agg\1.0\agg.jar</systemPath>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-		</dependency>
+		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/org.openrdf.sesame/sesame-repository-api -->
 		<dependency>
 			<groupId>org.openrdf.sesame</groupId>
