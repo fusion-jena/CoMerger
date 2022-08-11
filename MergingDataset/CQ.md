@@ -130,7 +130,7 @@ We used a set of CQs in the conference domain, a combination of yes/no questions
 </table>
 
 We re-write each query for each source and merged ontology as they have different naming for some classes.
-Here you see the SPARQL queries on one of the tested ontologies.
+Here you see the SPARQL queries on one of the tested ontology.
 
 
 <table>
