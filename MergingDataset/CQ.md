@@ -1,4 +1,7 @@
 # Competency Questions in the conference domain
+
+We used a set of CQs in the conference domain, a combination of yes/no questions with W-questions.
+
 <table>
     <tr>
     <th align="center">id</th>
@@ -123,5 +126,136 @@
   <tr>
     <td align="center">CQ30</td>
     <td align="center">Which type of award can be given at the conference?</td>
+  </tr>
+</table>
+
+We re-write each query for each source and merged ontology as they have different naming for some classes.
+Here you see the SPARQL queries on one of the tested ontologies.
+
+
+<table>
+    <tr>
+    <th align="center">id</th>
+    <th align="center">SPARQL</th>
+  </tr>
+  <tr>
+    <td align="center">CQ1</td>
+    <td align="center">SELECT ?x  WHERE {?x rdfs:subClassOf  &lt;http://merged#Document&gt;}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ2</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://merged#Person&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ3</td>
+    <td align="center">ASK { &lt;http://merged#Reviewer&gt; rdfs:subClassOf &lt;http://merged#Person&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ4</td>
+    <td align="center">SELECT ?x WHERE  { { SELECT ?x WHERE { &lt;http://conference#Conference_participant&gt; rdfs:subClassOf ?x} } UNION { SELECT ?x WHERE {?x rdfs:subClassOf  &lt;http://conference#Conference_participant&gt; } } }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ5</td>
+    <td align="center">ASK { &lt;http://conference#Publisher&gt; rdf:type  owl:Class }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ6</td>
+    <td align="center">SELECT  ?x WHERE {   &lt;http://conference#issues&gt; rdfs:domain ?x .  ?p rdfs:range &lt;http://conference#Conference_proceedings&gt;.}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ7</td>
+    <td align="center">SELECT  ?x WHERE {   &lt;http://cmt#assignExternalReviewer&gt; rdfs:domain ?x .}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ8</td>
+    <td align="center">ASK { &lt;http://conference#has_an_ISBN&gt; rdfs:domain &lt;http://conference#Conference_proceedings&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ9</td>
+    <td align="center">ASK { &lt;http://cmt#ConferenceMember&gt; rdfs:subClassOf &lt;http://merged#author&gt; } </td>
+  </tr>
+  <tr>
+    <td align="center">CQ10</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://conference#Conference_contribution&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ11</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://conference#Conference_fees&gt;}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ12</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://confOf#Event&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ13</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://confOf#Social_event&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ14</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://merged#Organization&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ15</td>
+    <td align="center">SELECT  ?x WHERE {   &lt;http://cmt#assignReviewer&gt; rdfs:domain ?x .}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ16</td>
+    <td align="center">ASK { &lt;http://merged#Poster&gt; rdfs:subClassOf  &lt;http://conference#Conference_contribution&gt;}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ17</td>
+    <td align="center">SELECT ?x  WHERE {  ?x rdfs:subClassOf  &lt;http://merged#paper&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ18</td>
+    <td align="center">ASK {  &lt;http://merged#Tutorial&gt; rdf:type  owl:Class }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ19</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdf:type &lt;http://merged#Country&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ20</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://cmt#Decision&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ21</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://cmt#ConferenceMember&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ22</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://conference#Committee&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ23</td>
+    <td align="center">ASK { &lt;http://conference#Information_for_participants&gt; rdfs:subClassOf  &lt;http://conference#Conference_document&gt;}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ24</td>
+    <td align="center">ASK {  &lt;http://confOf#Workshop&gt; rdf:type  owl:Class }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ25</td>
+    <td align="center">ASK { &lt;http://confOf#Short_paper&gt; rdfs:subClassOf  &lt;http://confOf#Contribution&gt;}</td>
+  </tr>
+  <tr>
+    <td align="center">CQ26</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://ekaw#Session&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ27</td>
+    <td align="center">ASK {  &lt;http://ekaw#Demo_Session&gt; rdf:type  owl:Class }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ28</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://iasted#Audiovisual_equipment&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ29</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://iasted#Deadline&gt; }</td>
+  </tr>
+  <tr>
+    <td align="center">CQ30</td>
+    <td align="center">SELECT ?x WHERE{ ?x  rdfs:subClassOf &lt;http://sigkdd#Award&gt; }</td>
   </tr>
 </table>
